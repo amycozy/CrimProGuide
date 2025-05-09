@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal Procedure Guide - Print Version</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+    <style>
+        @media screen {
+            body {
+                max-width: 210mm; /* A4 width */
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f0f0f0;
+            }
+            .print-container {
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .print-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                padding: 10px 20px;
+                background-color: #0066cc;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            }
+            .print-button:hover {
+                background-color: #0055aa;
+            }
+            .print-instructions {
+                background-color: #ffffdd;
+                border: 1px solid #ddddaa;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Mermaid
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'default',
+                fontFamily: 'Times New Roman',
+                fontSize: 12,
+                flowchart: {
+                    htmlLabels: true,
+                    useMaxWidth: true,
+                    curve: 'basis'
+                }
+            });
+            
+            // Add print button functionality
+            const printButton = document.getElementById('print-button');
+            if (printButton) {
+                printButton.addEventListener('click', function() {
+                    window.print();
+                });
+            }
+            
+            // Make sure all diagrams are rendered
+            setTimeout(function() {
+                mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div class="print-instructions">
+        <h3>Instructions for Saving as PDF</h3>
+        <ol>
+            <li>Click the "Print to PDF" button below or use your browser's Print function (Ctrl+P or Cmd+P)</li>
+            <li>In the print dialog, select "Save as PDF" as the destination</li>
+            <li>Make sure "Paper size" is set to "Letter"</li>
+            <li>Set "Margins" to "None" or "Minimum"</li>
+            <li>Enable "Background graphics" option (important for flowcharts)</li>
+            <li>Click "Save" to create your PDF file</li>
+        </ol>
+        <p><strong>Note:</strong> This optimized version is designed for e-readers and print.</p>
+    </div>
+
+    <button id="print-button" class="print-button">Print to PDF</button>
+
+    <div class="print-container">
+        <h1>Criminal Procedure: Comprehensive Guide</h1>
+        
+        <div class="main-navigation">
+            <h3>Table of Contents:</h3>
+            <a href="#overview">Overview</a>
+            <a href="#fourth-amendment-applicability-section">To Whom the Fourth Amendment Applies</a>
+            <a href="#search-seizure-section">Fourth Amendment: Search & Seizure</a>
+            <a href="#technology-searches-section">Technology and the Fourth Amendment</a>
+            <a href="#fourth-amendment-standing-section">Fourth Amendment Standing</a>
+            <a href="#warrant-requirements-section">Warrant Requirements</a>
+            <a href="#warrant-exceptions-section">Warrant Exceptions</a>
+            <a href="#special-needs-section">Special Needs & Administrative Searches</a>
+            <a href="#third-party-doctrine-section">Third-Party Doctrine</a>
+            <a href="#terry-stops-section">Terry Stops</a>
+            <a href="#exclusionary-rule-section">Exclusionary Rule</a>
+            <a href="#interrogations-section">Interrogations & Confessions</a>
+            <a href="#right-to-counsel-section">Right to Counsel</a>
+        </div>
+
+        <div class="note print-intro">
+            <p><strong>Note:</strong> This guide provides a systematic approach to evaluating key doctrines in Criminal Procedure, with a focus on Professor Sood's course. Each section includes detailed flowcharts with specific criteria for applying the constitutional standards along with key cases.</p>
+        </div>
+
+        <!-- Overview Section -->
+        <div id="section-overview-content">
+            <h2 id="overview">Course Overview</h2>
+            <div id="overview-content"></div>
+        </div>
+        
+        <!-- Fourth Amendment Applicability Section -->
+        <div id="section-fourth-amendment-applicability-content">
+            <div class="section-divider"></div>
+            <h2 id="fourth-amendment-applicability-section">To Whom the Fourth Amendment Applies</h2>
+            <div id="fourth-amendment-applicability-content"></div>
+        </div>
+        
+        <!-- Search & Seizure Section -->
+        <div id="section-search-seizure-content">
+            <div class="section-divider"></div>
+            <h2 id="search-seizure-section">Fourth Amendment: Search & Seizure</h2>
+            <div id="search-seizure-content"></div>
+        </div>
+        
+        <!-- Technology and Searches Section -->
+        <div id="section-technology-searches-content">
+            <div class="section-divider"></div>
+            <h2 id="technology-searches-section">Technology and the Fourth Amendment</h2>
+            <div id="technology-searches-content"></div>
+        </div>
+        
+        <!-- Fourth Amendment Standing Section -->
+        <div id="section-fourth-amendment-standing-content">
+            <div class="section-divider"></div>
+            <h2 id="fourth-amendment-standing-section">Fourth Amendment Standing</h2>
+            <div id="fourth-amendment-standing-content"></div>
+        </div>
+        
+        <!-- Warrant Requirements Section -->
+        <div id="section-warrant-requirements-content">
+            <div class="section-divider"></div>
+            <h2 id="warrant-requirements-section">Fourth Amendment: Warrant Requirements</h2>
+            <div id="warrant-requirements-content"></div>
+        </div>
+        
+        <!-- Warrant Exceptions Section -->
+        <div id="section-warrant-exceptions-content">
+            <div class="section-divider"></div>
+            <h2 id="warrant-exceptions-section">Fourth Amendment: Warrant Exceptions</h2>
+            <div id="warrant-exceptions-content"></div>
+        </div>
+        
+        <!-- Terry Stops Section -->
+        <div id="section-terry-stops-content">
+            <div class="section-divider"></div>
+            <h2 id="terry-stops-section">Terry Stops and Investigative Detentions</h2>
+            <div id="terry-stops-content"></div>
+        </div>
+        
+        <!-- Exclusionary Rule Section -->
+        <div id="section-exclusionary-rule-content">
+            <div class="section-divider"></div>
+            <h2 id="exclusionary-rule-section">The Exclusionary Rule</h2>
+            <div id="exclusionary-rule-content"></div>
+        </div>
+        
+        <!-- Interrogations Section -->
+        <div id="section-interrogations-content">
+            <div class="section-divider"></div>
+            <h2 id="interrogations-section">Interrogations and Confessions</h2>
+            <div id="interrogations-content"></div>
+        </div>
+        
+        <!-- Right to Counsel Section -->
+        <div id="section-right-to-counsel-content">
+            <div class="section-divider"></div>
+            <h2 id="right-to-counsel-section">Sixth Amendment Right to Counsel</h2>
+            <div id="right-to-counsel-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Function to load section content
+        function loadSection(sectionId, fileName) {
+            const contentElement = document.getElementById(sectionId + '-content');
+            if (!contentElement) return;
+            
+            fetch('sections/' + fileName + '.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Section file not found');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    contentElement.innerHTML = html;
+                    // Re-initialize mermaid for the new content
+                    mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+                })
+                .catch(error => {
+                    console.error('Error loading section ' + sectionId + ':', error);
+                    contentElement.innerHTML = 
+                        '<div class="warning"><p>This section is available in the interactive version.</p></div>';
+                });
+        }
+
+        // Load all sections
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSection('overview', 'overview');
+            loadSection('fourth-amendment-applicability', 'fourth-amendment-applicability');
+            loadSection('search-seizure', 'search-seizure');
+            loadSection('technology-searches', 'technology-searches');
+            loadSection('fourth-amendment-standing', 'fourth-amendment-standing');
+            loadSection('warrant-requirements', 'warrant-requirements');
+            loadSection('warrant-exceptions', 'warrant-exceptions');
+            loadSection('special-needs', 'special-needs');
+            loadSection('third-party-doctrine', 'third-party-doctrine');
+            loadSection('terry-stops', 'terry-stops');
+            loadSection('exclusionary-rule', 'exclusionary-rule');
+            loadSection('interrogations', 'interrogations');
+            loadSection('right-to-counsel', 'right-to-counsel');
+        });
+    </script>
+</body>
+</html>

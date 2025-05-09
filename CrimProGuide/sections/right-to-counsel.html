@@ -1,0 +1,329 @@
+<h2 id="right-to-counsel-section">Sixth Amendment Right to Counsel</h2>
+
+<div class="section-navigation">
+    <a href="#overview">Right to Counsel Overview</a>
+    <a href="#attachment">Attachment of the Right</a>
+    <a href="#massiah">Massiah Doctrine</a>
+    <a href="#effective-assistance">Effective Assistance</a>
+    <a href="#indigent-defendants">Indigent Defendants</a>
+</div>
+
+<div class="explanation" id="overview">
+    <h3>Overview of the Sixth Amendment Right to Counsel</h3>
+    
+    <p>The Sixth Amendment provides that "In all criminal prosecutions, the accused shall enjoy the right... to have the Assistance of Counsel for his defence." This right is fundamental to our adversarial system of justice, ensuring that the accused can meaningfully contest the government's case. The Supreme Court has interpreted this provision to include several distinct but related rights:</p>
+    
+    <div class="key-point">
+        <h4>Components of Right to Counsel</h4>
+        <ul>
+            <li><strong>Right to Retained Counsel</strong>: Right to hire and be represented by a lawyer of one's choosing</li>
+            <li><strong>Right to Appointed Counsel</strong>: Right to have counsel appointed if indigent (<em>Gideon v. Wainwright</em>)</li>
+            <li><strong>Right to Self-Representation</strong>: Right to proceed pro se if competent to do so (<em>Faretta v. California</em>)</li>
+            <li><strong>Right to Conflict-Free Counsel</strong>: Right to representation free from conflicts of interest</li>
+            <li><strong>Right to Effective Assistance</strong>: Right to counsel who provides reasonably effective assistance (<em>Strickland v. Washington</em>)</li>
+        </ul>
+    </div>
+    
+    <p>The Sixth Amendment right to counsel serves multiple purposes: it enables the defendant to navigate complex legal procedures, protects against government overreach, ensures the reliability of the adversarial testing process, and promotes the legitimacy of the criminal justice system.</p>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["SIXTH AMENDMENT RIGHT TO COUNSEL ANALYSIS"] --> attachment["STEP 1: Attachment of Right
+        Has the right to counsel attached?
+        - Formal charge, preliminary hearing,
+          indictment, arraignment, or
+        - First appearance before judicial officer"]
+        
+        attachment -- "NO: Not yet attached" --> noright["NO SIXTH AMENDMENT RIGHT (YET):
+        Fifth Amendment/Miranda may
+        still apply in custodial interrogation"]
+        
+        attachment -- "YES: Right has attached" --> type["STEP 2: Type of Proceeding
+        Is this a 'critical stage' of the prosecution?
+        - Interrogation after charges
+        - Line-up/identification after charges
+        - Preliminary hearing
+        - Plea negotiations or entry
+        - Trial
+        - Sentencing"]
+        
+        type -- "NO: Not a critical stage" --> noclaim["NO SIXTH AMENDMENT CLAIM:
+        Right to counsel doesn't apply
+        to non-critical stages"]
+        
+        type -- "YES: Critical stage" --> counsel["STEP 3: Was counsel provided or waived?
+        - Was defendant represented OR
+        - Did defendant validly waive counsel?"]
+        
+        counsel -- "YES: Represented or waived" --> efficacy["STEP 4: Was counsel effective?
+        Strickland test:
+        - Deficient performance
+        - Prejudice to outcome"]
+        
+        counsel -- "NO: Neither represented nor waived" --> violation["SIXTH AMENDMENT VIOLATION:
+        Denial of right to counsel
+        Typically requires reversal"]
+        
+        efficacy -- "YES: Effective assistance" --> noviolation["NO SIXTH AMENDMENT VIOLATION:
+        Right to counsel satisfied"]
+        
+        efficacy -- "NO: Ineffective assistance" --> violation
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        
+        class start process
+        class attachment,type,counsel,efficacy question
+        class violation negative
+        class noright,noclaim,noviolation positive
+    </div>
+</div>
+
+<div class="explanation" id="attachment">
+    <h3>Attachment of the Right to Counsel</h3>
+    
+    <p>The Sixth Amendment right to counsel "attaches" only at or after the initiation of adversarial judicial criminal proceedings. This is a critical threshold that determines when the government's conduct is regulated by the Sixth Amendment rather than other constitutional provisions.</p>
+    
+    <div class="key-point">
+        <h4>When the Right Attaches</h4>
+        <p>The Supreme Court has held that the right attaches at or after:</p>
+        <ul>
+            <li>Formal charge</li>
+            <li>Preliminary hearing</li>
+            <li>Indictment</li>
+            <li>Information</li>
+            <li>Arraignment</li>
+            <li>Initial appearance before judicial officer</li>
+        </ul>
+    </div>
+    
+    <p>The key consideration is whether "the government has committed itself to prosecute" and the defendant "finds himself faced with the prosecutorial forces of organized society." (<em>Kirby v. Illinois</em>)</p>
+    
+    <h4>Important Limitations</h4>
+    <ul>
+        <li><strong>Investigation vs. Prosecution</strong>: Pre-charge investigative activities are not governed by the Sixth Amendment, even if the suspect is the focus of an investigation</li>
+        <li><strong>Offense-Specific</strong>: The right attaches only to the specific charged offense, not to other uncharged offenses (<em>Texas v. Cobb</em>)</li>
+        <li><strong>Pre-attachment Interrogation</strong>: Statements obtained before attachment of the right are not subject to Sixth Amendment scrutiny, though they may implicate Fifth Amendment/Miranda protection</li>
+        <li><strong>Critical Stages</strong>: Even after attachment, the right applies only at "critical stages" of the prosecution</li>
+    </ul>
+    
+    <h4>Critical Stages of Prosecution</h4>
+    <p>After the right attaches, counsel is guaranteed only at "critical stages" of the prosecution, defined as proceedings where the defendant faces potential substantial prejudice and where counsel's assistance can help avoid that prejudice. These include:</p>
+    <ul>
+        <li>Post-indictment interrogations (<em>Massiah v. United States</em>)</li>
+        <li>Post-indictment lineups and show-ups (<em>United States v. Wade</em>)</li>
+        <li>Preliminary hearings where rights may be lost</li>
+        <li>Arraignments where defenses must be asserted</li>
+        <li>Plea negotiations and entry of plea</li>
+        <li>Trial</li>
+        <li>Sentencing</li>
+        <li>First appeal as of right (<em>Douglas v. California</em>)</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Rothgery v. Gillespie County</span> <span class="case-citation">554 U.S. 191 (2008)</span></h4>
+    <p class="case-rule">The Sixth Amendment right to counsel attaches at a defendant's initial appearance before a judicial officer, where the defendant is informed of the charge against him and restrictions are imposed on his liberty, regardless of whether a prosecutor is involved in the proceeding.</p>
+    <p class="case-facts">Rothgery was arrested based on an erroneous criminal record showing he was a felon. He was brought before a magistrate for an initial appearance (called a "magistration" under Texas law), where he was informed of the charge, his bail was set, and he was jailed. Despite multiple requests, he was not appointed counsel until six months after this initial appearance. After counsel was appointed, the attorney obtained evidence proving Rothgery had no prior felony conviction, and the charges were dismissed.</p>
+    <p class="case-reasoning">The Supreme Court held that the Sixth Amendment right to counsel attaches at the initial appearance before a judicial officer, regardless of whether a prosecutor is aware of or involved in that proceeding. Justice Souter, writing for the majority, emphasized that attachment occurs when the defendant is brought before a judicial officer, informed of a formal accusation, and restrictions are imposed on his liberty. The Court rejected the county's argument that attachment requires prosecutorial awareness or involvement, noting that by the time of the initial appearance, the government has committed itself to prosecution. The Court clarified that while attachment triggers the right to counsel, counsel need only be appointed "within a reasonable time after attachment to allow for adequate representation at any critical stage before trial, as well as at trial itself." This decision resolved a circuit split regarding when the right to counsel attaches and emphasized the importance of the initial appearance as a significant step in a criminal prosecution.</p>
+</div>
+
+<div class="explanation" id="massiah">
+    <h3>The Massiah Doctrine</h3>
+    
+    <p>The Massiah doctrine, named after <em>Massiah v. United States</em> (1964), prohibits the government from deliberately eliciting incriminating statements from a defendant after the right to counsel has attached and without counsel present or a valid waiver. This doctrine extends the Sixth Amendment's protection beyond formal interrogations to any situation where the government deliberately attempts to obtain incriminating information.</p>
+    
+    <div class="key-point">
+        <h4>Key Elements of Massiah Violation</h4>
+        <ol>
+            <li><strong>Attachment of Right</strong>: Formal criminal proceedings must have begun against the defendant</li>
+            <li><strong>Deliberate Elicitation</strong>: Government must deliberately attempt to elicit incriminating information</li>
+            <li><strong>Government Agent</strong>: The elicitation must be by a government agent (including informants, undercover officers, etc.)</li>
+            <li><strong>Absence of Counsel</strong>: Counsel must be absent and the defendant must not have validly waived counsel</li>
+        </ol>
+    </div>
+    
+    <h4>Deliberate Elicitation vs. Miranda Interrogation</h4>
+    <p>The Massiah standard of "deliberate elicitation" differs from Miranda's "custodial interrogation" standard:</p>
+    <ul>
+        <li>No custody requirement under Massiah</li>
+        <li>Includes more subtle forms of questioning or conversation designed to elicit incriminating responses</li>
+        <li>Applies even when the defendant doesn't know they're speaking to a government agent (<em>United States v. Henry</em>)</li>
+        <li>Mere listening or passive reception of information is not a violation (<em>Kuhlmann v. Wilson</em>)</li>
+    </ul>
+    
+    <h4>Government Agents</h4>
+    <p>A "government agent" for Massiah purposes includes:</p>
+    <ul>
+        <li>Police officers and prosecutors</li>
+        <li>Informants instructed to elicit information</li>
+        <li>Co-defendants or cellmates working with the government</li>
+        <li>Government-directed civilians</li>
+    </ul>
+    
+    <h4>Waiver of Massiah Rights</h4>
+    <p>A defendant may waive Massiah rights, but the government bears a heavy burden of showing a valid waiver:</p>
+    <ul>
+        <li>Must be knowing, intelligent, and voluntary</li>
+        <li>Miranda warnings generally sufficient for explicit waiver (<em>Patterson v. Illinois</em>)</li>
+        <li>No waiver if government actively conceals agent's identity</li>
+    </ul>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["MASSIAH DOCTRINE ANALYSIS"] --> rightAttached["STEP 1: Is Right to Counsel Attached?
+        Has defendant been formally charged,
+        indicted, or arraigned on the offense?"]
+        
+        rightAttached -- "NO: Not yet attached" --> noViolation1["NO MASSIAH VIOLATION:
+        May still violate Fifth Amendment/Miranda
+        if custodial interrogation without warnings"]
+        
+        rightAttached -- "YES: Right has attached" --> govAgent["STEP 2: Government Agent
+        Was information obtained by a government agent?
+        - Police officer/prosecutor
+        - Informant/cooperator acting under instruction
+        - Person knowingly acting on behalf of government"]
+        
+        govAgent -- "NO: Not government agent" --> noViolation1
+        
+        govAgent -- "YES: Government agent" --> deliberate["STEP 3: Deliberate Elicitation
+        Did agent deliberately elicit incriminating information?
+        - Direct questioning
+        - Conversation designed to elicit response
+        - Actions likely to induce incriminating statements
+        
+        Note: Mere passive listening is not deliberate elicitation"]
+        
+        deliberate -- "NO: No deliberate elicitation" --> noViolation1
+        
+        deliberate -- "YES: Deliberate elicitation" --> waiver["STEP 4: Valid Waiver
+        Did defendant validly waive Sixth Amendment rights?
+        - Knowing and intelligent waiver
+        - No deception about agent's identity"]
+        
+        waiver -- "YES: Valid waiver" --> noViolation2["NO MASSIAH VIOLATION:
+        Valid waiver of Sixth Amendment rights"]
+        
+        waiver -- "NO: No valid waiver" --> violation["MASSIAH VIOLATION:
+        Statement inadmissible in prosecution's
+        case-in-chief against defendant"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        
+        class start process
+        class rightAttached,govAgent,deliberate,waiver question
+        class violation negative
+        class noViolation1,noViolation2 positive
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Massiah v. United States</span> <span class="case-citation">377 U.S. 201 (1964)</span></h4>
+    <p class="case-rule">The government violates a defendant's Sixth Amendment right to counsel when it deliberately elicits incriminating statements from the defendant after the right to counsel has attached, without counsel present and without a valid waiver.</p>
+    <p class="case-facts">Massiah was indicted for federal narcotics violations, retained a lawyer, pleaded not guilty, and was released on bail. A co-defendant, Colson, agreed to cooperate with the government. He arranged a meeting with Massiah in Colson's car, where government agents had installed a radio transmitter. During their conversation, which was monitored by an agent, Massiah made incriminating statements that were later used against him at trial.</p>
+    <p class="case-reasoning">The Supreme Court held that the government violated Massiah's Sixth Amendment right to counsel by deliberately eliciting incriminating statements after he had been indicted and in the absence of his counsel. Justice Stewart, writing for the majority, emphasized that the right to counsel would be meaningless if the government could circumvent it by surreptitiously extracting incriminating statements. The Court noted that Massiah was denied the "basic protections" of the Sixth Amendment when government agents deliberately elicited incriminating statements from him after indictment and outside his lawyer's presence. This landmark decision established that the Sixth Amendment prohibits not just direct interrogation after formal charges, but any deliberate government effort to obtain incriminating statements from an accused without counsel present or a valid waiver.</p>
+</div>
+
+<div class="explanation" id="effective-assistance">
+    <h3>Effective Assistance of Counsel</h3>
+    
+    <p>The Sixth Amendment right to counsel includes the right to effective assistance of counsel. In <em>Strickland v. Washington</em> (1984), the Supreme Court established a two-prong test for determining whether a defendant's right to effective assistance of counsel has been violated.</p>
+    
+    <div class="key-point">
+        <h4>The Strickland Test</h4>
+        <p>To establish ineffective assistance of counsel, a defendant must show:</p>
+        <ol>
+            <li><strong>Deficient Performance</strong>: Counsel's performance fell below an objective standard of reasonableness under prevailing professional norms</li>
+            <li><strong>Prejudice</strong>: There is a reasonable probability that, but for counsel's unprofessional errors, the result of the proceeding would have been different</li>
+        </ol>
+    </div>
+    
+    <h4>Analyzing Deficient Performance</h4>
+    <ul>
+        <li><strong>Strong Presumption of Competence</strong>: Courts must be highly deferential to counsel's judgments</li>
+        <li><strong>Strategic Decisions</strong>: Tactical choices made after thorough investigation are virtually unchallengeable</li>
+        <li><strong>Prevailing Professional Norms</strong>: Performance evaluated against objective standards of reasonableness</li>
+        <li><strong>Contemporaneous Assessment</strong>: Judged based on circumstances at the time, not with hindsight</li>
+    </ul>
+    
+    <h4>Establishing Prejudice</h4>
+    <ul>
+        <li><strong>Reasonable Probability</strong>: Less than a preponderance of evidence but sufficient to undermine confidence in the outcome</li>
+        <li><strong>Effect on Outcome</strong>: Must show that the error actually had an adverse effect on the defense</li>
+        <li><strong>Fundamental Fairness</strong>: Focus on whether the trial produced a just result, not whether counsel's errors affected the outcome</li>
+    </ul>
+    
+    <h4>Per Se Prejudice Situations</h4>
+    <p>In certain circumstances, prejudice is presumed without requiring specific proof:</p>
+    <ul>
+        <li><strong>Actual or Constructive Denial of Counsel</strong>: Complete absence of counsel at critical stage</li>
+        <li><strong>State Interference</strong>: Government interference with counsel's ability to represent defendant</li>
+        <li><strong>Actual Conflict of Interest</strong>: Counsel labors under actual conflict that adversely affects performance (<em>Cuyler v. Sullivan</em>)</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Strickland v. Washington</span> <span class="case-citation">466 U.S. 668 (1984)</span></h4>
+    <p class="case-rule">To establish ineffective assistance of counsel, a defendant must show that (1) counsel's performance was deficient, falling below an objective standard of reasonableness, and (2) the deficient performance prejudiced the defense, creating a reasonable probability that, but for counsel's errors, the result would have been different.</p>
+    <p class="case-facts">Washington pleaded guilty to multiple murder charges against the advice of his appointed counsel. At the sentencing hearing, counsel did minimal preparation, not seeking character witnesses or requesting a psychiatric examination. Counsel's strategy was to rely on Washington's acceptance of responsibility and remorse, but the judge sentenced him to death.</p>
+    <p class="case-reasoning">The Supreme Court established a two-part test for evaluating claims of ineffective assistance of counsel. Justice O'Connor, writing for the majority, emphasized the need for objective standards while maintaining deference to counsel's strategic decisions. For the performance prong, the Court held that a defendant must show counsel's representation fell below an "objective standard of reasonableness" under "prevailing professional norms." For the prejudice prong, the defendant must show a "reasonable probability that, but for counsel's unprofessional errors, the result of the proceeding would have been different." The Court stressed that judicial scrutiny of counsel's performance must be "highly deferential" and courts must apply a "strong presumption" of competence. Applying this test, the Court found that Washington's counsel's conduct fell within the wide range of reasonable professional assistance, and even if it hadn't, Washington failed to show prejudice. This case established the standard that continues to govern ineffective assistance claims.</p>
+</div>
+
+<div class="explanation" id="indigent-defendants">
+    <h3>Right to Counsel for Indigent Defendants</h3>
+    
+    <p>The Supreme Court has established that the Sixth Amendment requires the government to provide counsel to indigent defendants who cannot afford to hire their own attorneys in certain criminal proceedings. This right has evolved significantly over time.</p>
+    
+    <div class="key-point">
+        <h4>Development of Right to Appointed Counsel</h4>
+        <ul>
+            <li><strong><em>Gideon v. Wainwright</em> (1963)</strong>: Established right to appointed counsel for indigent defendants in all felony cases</li>
+            <li><strong><em>Argersinger v. Hamlin</em> (1972)</strong>: Extended right to any case resulting in actual imprisonment</li>
+            <li><strong><em>Scott v. Illinois</em> (1979)</strong>: Limited right to cases where imprisonment is actually imposed, not merely authorized</li>
+            <li><strong><em>Alabama v. Shelton</em> (2002)</strong>: Extended right to suspended sentences that may result in imprisonment</li>
+        </ul>
+    </div>
+    
+    <h4>Scope of the Right to Appointed Counsel</h4>
+    <p>The right to appointed counsel applies in:</p>
+    <ul>
+        <li><strong>Felony Prosecutions</strong>: All felony cases regardless of potential sentence</li>
+        <li><strong>Misdemeanor Prosecutions</strong>: Only if actual imprisonment is imposed</li>
+        <li><strong>Juvenile Delinquency Proceedings</strong>: Where liberty may be curtailed (<em>In re Gault</em>)</li>
+        <li><strong>First Appeal as of Right</strong>: But not discretionary appeals (<em>Douglas v. California</em>)</li>
+        <li><strong>Probation/Parole Revocation</strong>: Only in complex cases or where fairness requires (<em>Gagnon v. Scarpelli</em>)</li>
+    </ul>
+    
+    <h4>Standard for Indigency</h4>
+    <ul>
+        <li>No uniform federal standard; determined by courts based on financial circumstances</li>
+        <li>Inability to afford counsel, not complete destitution</li>
+        <li>Considers income, assets, debts, and family obligations</li>
+        <li>May require partial payment if defendant can contribute something</li>
+    </ul>
+    
+    <h4>Quality of Appointed Counsel</h4>
+    <ul>
+        <li>Right to effective assistance applies equally to appointed and retained counsel</li>
+        <li>No constitutional right to counsel of choice for appointed attorneys</li>
+        <li>No constitutional right to a "meaningful relationship" with appointed counsel (<em>Morris v. Slappy</em>)</li>
+        <li>Systematic deficiencies in public defender systems may raise constitutional concerns</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Gideon v. Wainwright</span> <span class="case-citation">372 U.S. 335 (1963)</span></h4>
+    <p class="case-rule">The Sixth Amendment right to counsel is fundamental and essential to a fair trial, and this right requires that counsel be appointed for indigent defendants in state criminal prosecutions.</p>
+    <p class="case-facts">Clarence Earl Gideon was charged with breaking and entering a poolroom with intent to commit a misdemeanor, a felony under Florida law. When he appeared in court without funds and asked the court to appoint counsel for him, the judge refused, stating that Florida law only required appointment of counsel in capital cases. Gideon conducted his own defense and was convicted. From prison, he filed a handwritten petition to the Supreme Court.</p>
+    <p class="case-reasoning">The Supreme Court unanimously overruled <em>Betts v. Brady</em> (1942), which had held that the Sixth Amendment right to counsel was not a fundamental right essential to a fair trial and thus not applicable to the states. Justice Black, writing for the Court, emphasized that lawyers in criminal courts are "necessities, not luxuries" and that the "noble ideal" of ensuring fair trials cannot be realized if the poor person charged with a crime must face his accusers without a lawyer. The Court noted that governments spend vast sums to establish prosecutorial systems and to try defendants, recognizing the immense importance of counsel in criminal cases. This landmark decision established that states must provide counsel to criminal defendants who cannot afford their own attorneys, significantly expanding access to legal representation and fundamentally changing the criminal justice system.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#right-to-counsel-section">Back to Top</a>
+</div>

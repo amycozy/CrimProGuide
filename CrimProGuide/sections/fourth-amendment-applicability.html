@@ -1,0 +1,257 @@
+<h2 id="fourth-amendment-applicability-section">To Whom the Fourth Amendment Applies</h2>
+
+<div class="section-navigation">
+    <a href="#protected-persons">Protected Persons</a>
+    <a href="#territorial-scope">Territorial Scope</a>
+    <a href="#state-action">State Action Requirement</a>
+    <a href="#private-searches">Private Searches</a>
+</div>
+
+<div class="explanation" id="protected-persons">
+    <h3>Persons Protected by the Fourth Amendment</h3>
+    
+    <p>The Fourth Amendment begins with the phrase "The right of the people to be secure..." The scope of who constitutes "the people" protected by this amendment has evolved through Supreme Court jurisprudence.</p>
+    
+    <div class="key-point">
+        <h4>Who Is Protected?</h4>
+        <ul>
+            <li><strong>U.S. Citizens</strong>: Fully protected regardless of location within U.S. territory</li>
+            <li><strong>Legal Permanent Residents</strong>: Generally protected the same as citizens within U.S. territory</li>
+            <li><strong>Non-citizens legally in the U.S.</strong>: Generally protected while within U.S. territory</li>
+            <li><strong>Undocumented immigrants</strong>: Protected while present in the U.S., with some limitations in border contexts</li>
+            <li><strong>Non-citizens outside U.S. territory</strong>: Generally not protected (<em>United States v. Verdugo-Urquidez</em>)</li>
+            <li><strong>Corporations and businesses</strong>: Receive Fourth Amendment protections, though sometimes lesser than individuals</li>
+        </ul>
+    </div>
+    
+    <p>The Court has interpreted "the people" to refer to "a class of persons who are part of a national community or who have otherwise developed sufficient connection with this country to be considered part of that community."</p>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["FOURTH AMENDMENT APPLICABILITY ANALYSIS"] --> person["STEP 1: Protected Person Analysis
+        Is the party seeking protection among 'the people'
+        covered by the Fourth Amendment?"]
+        
+        person --> citizen["U.S. Citizens or
+        Permanent Residents?"]
+        
+        person --> non_citizen["Non-Citizen?"]
+        
+        person --> entity["Entity (Corporation,
+        Organization, etc.)?"]
+        
+        citizen -- "YES" --> protected1["PROTECTED:
+        Full Fourth Amendment
+        protections apply"]
+        
+        non_citizen --> location["Where was the search/seizure?"]
+        
+        location -- "Within U.S. territory" --> connection["Sufficient connection test:
+        Has person developed substantial
+        connections with United States?"]
+        
+        location -- "Outside U.S. territory" --> generally_not["GENERALLY NOT PROTECTED:
+        Fourth Amendment typically doesn't
+        apply extraterritorially to non-citizens
+        (Verdugo-Urquidez)"]
+        
+        connection -- "YES: Substantial connection exists" --> protected2["PROTECTED:
+        Fourth Amendment protections
+        apply with some limitations"]
+        
+        connection -- "NO: No substantial connection" --> limited["LIMITED PROTECTION:
+        May have reduced Fourth Amendment
+        protections, especially in border contexts"]
+        
+        entity -- "YES" --> commercial["PROTECTED WITH LIMITATIONS:
+        - Less protection in closely regulated industries
+        - Administrative searches more easily justified
+        - Most protection in private areas"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef partial fill:#e0f2f1,stroke:#00796b,stroke-width:1px
+        
+        class start,person process
+        class citizen,non_citizen,entity,location,connection question
+        class generally_not negative
+        class protected1,protected2 positive
+        class limited,commercial partial
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">United States v. Verdugo-Urquidez</span> <span class="case-citation">494 U.S. 259 (1990)</span></h4>
+    <p class="case-rule">The Fourth Amendment does not apply to the search and seizure by United States agents of property owned by a nonresident alien and located in a foreign country. The term "the people" in the Fourth Amendment refers to a class of persons who are part of a national community or who have otherwise developed sufficient connection with the United States to be considered part of that community.</p>
+    <p class="case-facts">Verdugo-Urquidez, a Mexican citizen and resident, was arrested in Mexico by Mexican authorities and transported to the United States for drug-related offenses. Following his arrest, DEA agents, working with Mexican authorities, searched his residences in Mexico without a U.S. warrant and seized documents. Verdugo-Urquidez moved to suppress the evidence, claiming the searches violated the Fourth Amendment.</p>
+    <p class="case-reasoning">Chief Justice Rehnquist, writing for the majority, held that the Fourth Amendment did not apply to the search of a non-resident alien's property located outside the United States. The Court focused on the text of the amendment, which protects "the right of the people," interpreting this phrase to refer to "a class of persons who are part of a national community or who have otherwise developed sufficient connection with this country." The Court emphasized that Verdugo-Urquidez was a citizen and resident of Mexico with no voluntary attachment to the United States, and was in the U.S. only because he had been brought here forcibly. The Court distinguished this case from ones involving the Fifth and Sixth Amendments, which apply to "persons" rather than "the people," noting that the Fourth Amendment's protections were intended primarily for the domestic population. The Court also cited practical considerations about the difficulty of applying Fourth Amendment standards to overseas operations conducted jointly with foreign officials.</p>
+</div>
+
+<div class="explanation" id="territorial-scope">
+    <h3>Territorial Scope of the Fourth Amendment</h3>
+    
+    <p>The Fourth Amendment's application varies based on the location of the search or seizure and the status of the person seeking its protection.</p>
+    
+    <h4>Within the United States</h4>
+    <ul>
+        <li><strong>Full territory</strong>: Applies throughout all U.S. states and incorporated territories</li>
+        <li><strong>Borders</strong>: Reduced protections at international borders and their functional equivalents (border search exception)</li>
+        <li><strong>Special areas</strong>: Some modifications in schools, prisons, and military contexts</li>
+    </ul>
+    
+    <h4>Outside the United States</h4>
+    <p>The Supreme Court has generally limited the extraterritorial application of the Fourth Amendment:</p>
+    <ul>
+        <li><strong>U.S. citizens abroad</strong>: Some Fourth Amendment protections apply, though possibly with different standards</li>
+        <li><strong>Non-citizens abroad</strong>: Generally not protected unless they have developed substantial connections to the U.S.</li>
+        <li><strong>U.S.-controlled territories</strong>: Variable protections based on the territory's status and the person's connection to the U.S.</li>
+    </ul>
+    
+    <div class="key-point">
+        <h4>The "Sufficient Connection" Test</h4>
+        <p>In <em>Verdugo-Urquidez</em>, the Court established that a non-citizen must have "developed sufficient connection with this country to be considered part of [the national] community" to receive Fourth Amendment protections. Factors that may establish this connection include:</p>
+        <ul>
+            <li>Legal status in the United States</li>
+            <li>Duration of stay in the country</li>
+            <li>Voluntary presence in the United States</li>
+            <li>Property or business interests within the country</li>
+            <li>Family ties or other substantial connections</li>
+        </ul>
+    </div>
+</div>
+
+<div class="explanation" id="state-action">
+    <h3>The State Action Requirement</h3>
+    
+    <p>The Fourth Amendment only restricts government action; it does not apply to searches or seizures conducted by private parties acting on their own initiative and without government involvement. This is known as the "state action" requirement.</p>
+    
+    <div class="key-point">
+        <h4>Who Is Bound by the Fourth Amendment?</h4>
+        <ul>
+            <li><strong>Law enforcement officers</strong>: Federal, state, and local police</li>
+            <li><strong>Other government officials</strong>: Any agent of the government at any level</li>
+            <li><strong>Public school officials</strong>: When conducting searches of students (<em>New Jersey v. T.L.O.</em>)</li>
+            <li><strong>Government employers</strong>: When searching employee workspaces</li>
+            <li><strong>Private parties acting as government agents</strong>: When sufficiently directed or encouraged by the government</li>
+        </ul>
+    </div>
+    
+    <h4>Government Agent Analysis</h4>
+    <p>Courts consider multiple factors to determine if a private party has become a government agent for Fourth Amendment purposes:</p>
+    <ol>
+        <li><strong>Government knowledge/acquiescence</strong>: Did the government know of and acquiesce in the search?</li>
+        <li><strong>Government encouragement</strong>: Did the government encourage, initiate, or instigate the search?</li>
+        <li><strong>Private party's intent</strong>: Did the private party intend to assist law enforcement or had their own independent motivation?</li>
+        <li><strong>Government control</strong>: Did the government direct, participate in, or exercise control over the search?</li>
+    </ol>
+    
+    <p>No single factor is determinative, and courts consider the totality of circumstances in each case.</p>
+</div>
+
+<div class="explanation" id="private-searches">
+    <h3>Private Searches Doctrine</h3>
+    
+    <p>When a private party conducts a search without government involvement, the Fourth Amendment does not apply, and evidence discovered may generally be used in court. This principle has several important corollaries:</p>
+    
+    <h4>Key Principles of Private Searches</h4>
+    <ul>
+        <li><strong>Initial private search</strong>: Not subject to Fourth Amendment constraints</li>
+        <li><strong>Government replication</strong>: Police may generally recreate or examine the same areas already searched by the private party without triggering the Fourth Amendment</li>
+        <li><strong>Government expansion</strong>: If police exceed the scope of the private search, the additional intrusion must satisfy the Fourth Amendment</li>
+        <li><strong>Prior private search does not "unseal" container</strong>: The government cannot exceed the scope of the private search without complying with the Fourth Amendment</li>
+        <li><strong>Related concept</strong>: For information voluntarily disclosed to third parties, see the <a href="#third-party-doctrine-section" data-section="third-party-doctrine">Third-Party Doctrine section</a></li>
+    </ul>
+    
+    <div class="example">
+        <h4>Common Private Search Scenarios</h4>
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Fourth Amendment Applies?</th>
+            </tr>
+            <tr>
+                <td>Hotel staff searching a room and calling police</td>
+                <td>No (to private search); Yes (to any additional government searching)</td>
+            </tr>
+            <tr>
+                <td>Airline employee opening suspicious package</td>
+                <td>No (to private search); Yes (to any expansion by government)</td>
+            </tr>
+            <tr>
+                <td>Computer repair technician finding contraband</td>
+                <td>No (to private discovery); Yes (to government searches beyond what technician viewed)</td>
+            </tr>
+            <tr>
+                <td>Security guard employed by government agency</td>
+                <td>Yes (considered government agent)</td>
+            </tr>
+            <tr>
+                <td>Off-duty police officer working as private security</td>
+                <td>Generally Yes (usually considered government agent)</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["PRIVATE SEARCH ANALYSIS"] --> who["STEP 1: Who conducted the search/seizure?
+        Government actor or private party?"]
+        
+        who -- "Government actor" --> fourth["Fourth Amendment applies:
+        Must satisfy constitutional requirements"]
+        
+        who -- "Private party" --> agency["STEP 2: Government Agency Analysis
+        Was the private party acting as a
+        government agent?"]
+        
+        agency --> knowledge["Government knowledge/acquiescence:
+        Did government know of and
+        acquiescence in the search?"]
+        
+        agency --> purpose["Private party's purpose:
+        Did private party intend to
+        help law enforcement?"]
+        
+        agency --> instigation["Government instigation:
+        Did government encourage, direct,
+        or initiate the search?"]
+        
+        knowledge & purpose & instigation --> agent_test["STEP 3: Based on totality of circumstances,
+        was the private party acting as a government agent?"]
+        
+        agent_test -- "YES: Acting as government agent" --> fourth
+        
+        agent_test -- "NO: Truly private action" --> scope["STEP 4: If government later examines evidence,
+        did they expand beyond the scope of private search?"]
+        
+        scope -- "NO: Within scope of private search" --> no_fourth["Fourth Amendment does not apply:
+        Government may view what private party saw
+        without constitutional violation"]
+        
+        scope -- "YES: Exceeded private search scope" --> fourth
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef factors fill:#e0f2f1,stroke:#00796b,stroke-width:1px
+        
+        class start,who,agency,agent_test,scope process
+        class knowledge,purpose,instigation factors
+        class fourth positive
+        class no_fourth negative
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">United States v. Jacobsen</span> <span class="case-citation">466 U.S. 109 (1984)</span></h4>
+    <p class="case-rule">When a private party conducts a search, the Fourth Amendment does not apply. If government officials then examine or test the evidence discovered in the private search, they do not violate the Fourth Amendment as long as they do not exceed the scope of the private search.</p>
+    <p class="case-facts">Federal Express employees opened a damaged package and discovered a suspicious white powder in plastic bags within a tube. They contacted the DEA, whose agents arrived, reopened the package, removed the plastic bags, and conducted a field test that confirmed the substance was cocaine.</p>
+    <p class="case-reasoning">Justice Stevens, writing for the majority, held that the initial opening by FedEx employees was a private search not subject to Fourth Amendment constraints. The Court then analyzed the DEA agents' actions in two parts. First, reopening the package and examining its contents did not violate the Fourth Amendment because this did not exceed the scope of the private search that had already occurred. The Court explained that "the additional invasions of respondents' privacy by the government agent must be tested by the degree to which they exceeded the scope of the private search." Since the agents merely observed what had already been observed privately, this did not infringe any legitimate expectation of privacy. Second, the Court held that the field test of the powder did constitute a search but was reasonable under the Fourth Amendment because it could only reveal whether the substance was cocaine and no other private information, making it minimally intrusive. This case established the "private search doctrine," holding that government actions that do not exceed the scope of a previous private search do not implicate the Fourth Amendment.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#fourth-amendment-applicability-section">Back to Top</a>
+</div>

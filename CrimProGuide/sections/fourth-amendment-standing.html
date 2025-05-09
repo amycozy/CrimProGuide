@@ -1,0 +1,252 @@
+<h2 id="fourth-amendment-standing-section">Fourth Amendment Standing</h2>
+
+<div class="section-navigation">
+    <a href="#standing-overview">Standing Overview</a>
+    <a href="#reasonable-expectation">Reasonable Expectation Test</a>
+    <a href="#property-interest">Property Interests</a>
+    <a href="#target-standing">Target Standing</a>
+    <a href="#standing-contexts">Contextual Applications</a>
+</div>
+
+<div class="explanation" id="standing-overview">
+    <h3>Overview of Fourth Amendment Standing</h3>
+    
+    <p>Fourth Amendment standing refers to whether a particular defendant has the right to challenge the legality of a search or seizure. The Supreme Court has established that Fourth Amendment rights are personal rights which may not be vicariously asserted. A defendant can only challenge a search or seizure if their own reasonable expectation of privacy was violated or their own property was trespassed upon.</p>
+    
+    <div class="key-point">
+        <h4>Key Principles of Fourth Amendment Standing</h4>
+        <ul>
+            <li><strong>Personal Rights</strong>: The Fourth Amendment protects people, not places, but standing remains a personal right</li>
+            <li><strong>Two-Part Analysis</strong>: Based on either a reasonable expectation of privacy or a property-based approach</li>
+            <li><strong>Procedural Point</strong>: Standing is a threshold inquiry—without it, a court will not address the merits of a Fourth Amendment claim</li>
+            <li><strong>No "Target Standing"</strong>: A person cannot challenge a search merely because they were the target of the investigation</li>
+            <li><strong>Automatic Standing Doctrine</strong>: Abandoned by the Supreme Court in <em>United States v. Salvucci</em> (1980)</li>
+        </ul>
+    </div>
+    
+    <p>Standing is a critical gatekeeper that limits who can seek the exclusionary remedy. Without standing, even if a search or seizure was clearly unconstitutional, a defendant cannot benefit from the exclusionary rule.</p>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["FOURTH AMENDMENT STANDING ANALYSIS"] --> violated["STEP 1: Was defendant's personal Fourth Amendment right violated?
+        Question: Did government action intrude upon either:
+        - Defendant's reasonable expectation of privacy OR
+        - Defendant's property interest protected by the Fourth Amendment?"]
+        
+        violated -- "NO: Not defendant's right" --> nostanding["NO STANDING:
+        Defendant cannot challenge search/seizure
+        even if it was clearly unconstitutional"]
+        
+        violated -- "YES: Defendant's right affected" --> interest_type["STEP 2: Nature of protected interest
+        What is the basis for standing?"]
+        
+        interest_type --> privacy["PRIVACY BASIS:
+        Did defendant have reasonable
+        expectation of privacy in
+        area searched?"]
+        
+        interest_type --> property["PROPERTY BASIS:
+        Did government physically intrude
+        on defendant's property for
+        purpose of gathering information?"]
+        
+        privacy --> katz["Apply Katz Test:
+        1) Subjective expectation of privacy
+        2) Society recognizes expectation as reasonable"]
+        
+        property --> jones["Apply Jones/Jardines Analysis:
+        Did government physically intrude on:
+        - Defendant's person, house, papers, effects
+        - Without permission
+        - To gather information?"]
+        
+        katz -- "YES: Reasonable expectation" --> standing["STANDING ESTABLISHED:
+        Defendant may challenge
+        constitutionality of search/seizure"]
+        
+        katz -- "NO: No reasonable expectation" --> nostanding
+        
+        jones -- "YES: Property interest invaded" --> standing
+        
+        jones -- "NO: No property interest invaded" --> nostanding
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef options fill:#e3f2fd,stroke:#1976d2,stroke-width:1px
+        
+        class start,violated,interest_type process
+        class privacy,property,katz,jones question
+        class nostanding negative
+        class standing positive
+    </div>
+</div>
+
+<div class="explanation" id="reasonable-expectation">
+    <h3>Reasonable Expectation of Privacy Analysis</h3>
+    
+    <p>The primary basis for Fourth Amendment standing is whether the defendant had a reasonable expectation of privacy in the place searched or the item seized. This test, derived from <em>Katz v. United States</em> (1967), involves a two-part inquiry:</p>
+    
+    <ol>
+        <li><strong>Subjective expectation</strong>: Did the person actually expect privacy?</li>
+        <li><strong>Objective reasonableness</strong>: Is society prepared to recognize this expectation as reasonable?</li>
+    </ol>
+    
+    <p>In <em>Rakas v. Illinois</em> (1978), the Supreme Court effectively merged the standing inquiry with the substantive Fourth Amendment question, holding that a defendant can claim Fourth Amendment protection only if they have a "legitimate expectation of privacy in the invaded place."</p>
+    
+    <h4>Factors Courts Consider</h4>
+    <ul>
+        <li><strong>Ownership or possession</strong> of the property (though not determinative)</li>
+        <li><strong>Right to exclude others</strong> from the place or item</li>
+        <li><strong>Lawful presence</strong> in the area at the time of the search</li>
+        <li><strong>Efforts to maintain privacy</strong> (locks, fences, passwords, etc.)</li>
+        <li><strong>Nature of the place</strong> (home vs. open field vs. commercial property)</li>
+        <li><strong>Historical understanding</strong> of the type of place or information</li>
+    </ul>
+    
+    <div class="note">
+        <p>The Court has generally recognized heightened expectations of privacy in one's own home, person, luggage, and personal effects, but reduced expectations in automobiles, open fields, and shared or public areas.</p>
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Rakas v. Illinois</span> <span class="case-citation">439 U.S. 128 (1978)</span></h4>
+    <p class="case-rule">A defendant can claim Fourth Amendment protection only if they demonstrate a legitimate expectation of privacy in the place searched. Passengers in a vehicle generally lack standing to challenge a search of the vehicle unless they have a possessory interest in the vehicle or the items seized.</p>
+    <p class="case-facts">Police stopped a suspected getaway car and searched it, finding a rifle under the front passenger seat and ammunition in the glove compartment. Rakas and other passengers, who did not own the car, sought to suppress this evidence, claiming the search violated their Fourth Amendment rights.</p>
+    <p class="case-reasoning">The Supreme Court rejected the defendants' claim, holding they lacked standing to challenge the search because they had no legitimate expectation of privacy in the areas searched. Justice Rehnquist, writing for the majority, rejected the traditional "legitimately on premises" standard from <em>Jones v. United States</em>, replacing it with the "legitimate expectation of privacy" test. The Court emphasized that Fourth Amendment rights are personal and cannot be vicariously asserted. Mere passengers without ownership or possessory interest in a vehicle or the items seized lack a sufficient expectation of privacy to challenge the search. The Court also effectively merged the standing inquiry with the substantive Fourth Amendment analysis, holding that the question is not whether the defendant has "standing," but whether their own Fourth Amendment rights were violated.</p>
+</div>
+
+<div class="explanation" id="property-interest">
+    <h3>Property-Based Standing</h3>
+    
+    <p>In recent years, the Supreme Court has revitalized a property-based approach to the Fourth Amendment. Beginning with <em>United States v. Jones</em> (2012) and continuing with <em>Florida v. Jardines</em> (2013), the Court has held that a physical intrusion into a constitutionally protected area (persons, houses, papers, and effects) for the purpose of obtaining information constitutes a "search" under the Fourth Amendment.</p>
+    
+    <p>Under this approach, standing exists when:</p>
+    <ol>
+        <li>The defendant had a property interest (ownership or possessory) in the place or item searched</li>
+        <li>The government physically intruded upon that property without permission</li>
+        <li>The purpose of the intrusion was to gather information</li>
+    </ol>
+    
+    <div class="key-point">
+        <h4>The Two Approaches Coexist</h4>
+        <p>The Court has made clear that the Katz reasonable-expectation-of-privacy test did not replace the traditional property-based understanding of the Fourth Amendment but rather supplemented it. A defendant can establish standing under either approach.</p>
+        <p>Justice Scalia in <em>Jones</em>: "The Katz reasonable-expectation-of-privacy test has been added to, not substituted for, the common-law trespassory test."</p>
+    </div>
+    
+    <h4>Applications of Property-Based Standing</h4>
+    <ul>
+        <li><strong>GPS tracking devices</strong>: In <em>Jones</em>, attachment of GPS tracker to a vehicle was a search requiring a warrant</li>
+        <li><strong>Drug-sniffing dogs</strong>: In <em>Jardines</em>, bringing a drug-sniffing dog onto the front porch was a search</li>
+        <li><strong>Cell phones</strong>: Physical inspection of a cell phone's contents is a search of the owner's "papers" and "effects"</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">United States v. Jones</span> <span class="case-citation">565 U.S. 400 (2012)</span></h4>
+    <p class="case-rule">The government's installation of a GPS tracking device on a vehicle, and its use of that device to monitor the vehicle's movements, constitutes a search under the Fourth Amendment. A physical intrusion (trespass) into a constitutionally protected area for the purpose of obtaining information qualifies as a "search" independent of the Katz reasonable-expectation-of-privacy test.</p>
+    <p class="case-facts">Police placed a GPS tracking device on Jones's wife's vehicle (which Jones used exclusively) without a valid warrant and tracked its movements for 28 days. Jones was eventually convicted of drug trafficking based in part on evidence obtained through the GPS tracking.</p>
+    <p class="case-reasoning">The Supreme Court held that the government's physical intrusion on Jones's "effect" (the vehicle) for the purpose of obtaining information constituted a Fourth Amendment search. Justice Scalia, writing for the majority, revived the property-based approach to the Fourth Amendment, explaining that the Katz reasonable-expectation-of-privacy test added to, rather than replaced, the common-law trespassory test. The Court emphasized that, at minimum, the Fourth Amendment protects against physical intrusions into constitutionally protected areas (persons, houses, papers, and effects) for the purpose of gathering information. Because the government physically occupied private property (the vehicle) for this purpose, a search occurred regardless of whether Jones had a reasonable expectation of privacy in the vehicle's locations on public roads. The Court noted that Jones had standing because he was the exclusive driver of the vehicle, even though his wife was the registered owner.</p>
+</div>
+
+<div class="explanation" id="target-standing">
+    <h3>Target Standing (Rejected Doctrine)</h3>
+    
+    <p>The Supreme Court has consistently rejected the concept of "target standing," which would allow a defendant to challenge the constitutionality of a search simply because they were the target of the investigation or because evidence gathered was used against them.</p>
+    
+    <div class="key-point">
+        <h4>Alderman v. United States (1969)</h4>
+        <p>The Court explicitly held that Fourth Amendment rights cannot be vicariously asserted, stating: "The established principle is that suppression of the product of a Fourth Amendment violation can be successfully urged only by those whose rights were violated by the search itself, not by those who are aggrieved solely by the introduction of damaging evidence."</p>
+    </div>
+    
+    <p>This principle was reaffirmed in numerous cases, including <em>Rakas</em>, <em>Rawlings v. Kentucky</em> (1980), and <em>Minnesota v. Carter</em> (1998). The Court has consistently held that:</p>
+    <ul>
+        <li>A defendant cannot challenge a search of a third party's property merely because evidence discovered was used against them</li>
+        <li>The fact that a defendant was the "target" or "ultimate victim" of the search is irrelevant to standing</li>
+        <li>Standing depends solely on whether the defendant's own Fourth Amendment rights were violated</li>
+    </ul>
+    
+    <h4>Automatic Standing (Abandoned Doctrine)</h4>
+    <p>The Court once recognized a doctrine of "automatic standing" for defendants charged with possessory crimes in <em>Jones v. United States</em> (1960). This allowed defendants to challenge searches without having to admit possession of contraband, which would incriminate them.</p>
+    <p>However, in <em>United States v. Salvucci</em> (1980), the Court overruled this doctrine, holding that defendants charged with possessory crimes must establish that they had a legitimate expectation of privacy in the area searched, just like any other defendant.</p>
+</div>
+
+<div class="explanation" id="standing-contexts">
+    <h3>Standing in Specific Contexts</h3>
+    
+    <h4>Homes and Residences</h4>
+    <ul>
+        <li><strong>Homeowners/tenants</strong>: Generally have standing to challenge searches of their homes</li>
+        <li><strong>Overnight guests</strong>: Have standing (<em>Minnesota v. Olson</em>, 1990)</li>
+        <li><strong>Short-term visitors</strong>: Generally lack standing unless they have a previous connection to the home (<em>Minnesota v. Carter</em>, 1998)</li>
+        <li><strong>Hotel rooms</strong>: Paying guests have standing, but not after checkout time</li>
+    </ul>
+    
+    <h4>Vehicles</h4>
+    <ul>
+        <li><strong>Owners/drivers</strong>: Generally have standing</li>
+        <li><strong>Passengers</strong>: Generally lack standing to challenge vehicle searches (<em>Rakas</em>)</li>
+        <li><strong>Passengers - personal items</strong>: Have standing to challenge searches of their own belongings in the vehicle</li>
+        <li><strong>Rental cars</strong>: Authorized drivers have standing; unauthorized drivers generally don't (<em>Byrd v. United States</em>, 2018)</li>
+        <li><strong>Seized vehicles</strong>: All occupants have standing to challenge the stop/seizure of the vehicle itself (<em>Brendlin v. California</em>, 2007)</li>
+    </ul>
+    
+    <h4>Shared Spaces and Items</h4>
+    <ul>
+        <li><strong>Common areas</strong>: Generally no standing in apartment building common areas or shared spaces</li>
+        <li><strong>Shared computer/electronic data</strong>: Standing requires a reasonable expectation of privacy in the specific areas accessed</li>
+        <li><strong>Business employees</strong>: May have standing in their personal workspaces but not generally in common areas</li>
+        <li><strong>Abandoned property</strong>: No standing (e.g., discarded trash left for collection, <em>California v. Greenwood</em>, 1988)</li>
+    </ul>
+    
+    <div class="example">
+        <h4>Common Standing Scenarios</h4>
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Standing?</th>
+                <th>Key Case</th>
+            </tr>
+            <tr>
+                <td>Owner of house</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Overnight guest</td>
+                <td>Yes</td>
+                <td><em>Minnesota v. Olson</em> (1990)</td>
+            </tr>
+            <tr>
+                <td>Short-term visitor for business</td>
+                <td>Generally No</td>
+                <td><em>Minnesota v. Carter</em> (1998)</td>
+            </tr>
+            <tr>
+                <td>Passenger in car (vehicle search)</td>
+                <td>No</td>
+                <td><em>Rakas v. Illinois</em> (1978)</td>
+            </tr>
+            <tr>
+                <td>Passenger in car (stop of car)</td>
+                <td>Yes</td>
+                <td><em>Brendlin v. California</em> (2007)</td>
+            </tr>
+            <tr>
+                <td>Person with no ownership interest in searched property</td>
+                <td>No</td>
+                <td><em>Rawlings v. Kentucky</em> (1980)</td>
+            </tr>
+            <tr>
+                <td>Unauthorized driver of rental car</td>
+                <td>Possibly Yes</td>
+                <td><em>Byrd v. United States</em> (2018)</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="back-to-top">
+    <a href="#fourth-amendment-standing-section">Back to Top</a>
+</div>

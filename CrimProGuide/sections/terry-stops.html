@@ -1,0 +1,376 @@
+<h2 id="terry-stops-section">Terry Stops and Investigative Detentions</h2>
+
+<div class="section-navigation">
+    <a href="#terry-overview">Terry Doctrine Overview</a>
+    <a href="#reasonable-suspicion">Reasonable Suspicion</a>
+    <a href="#scope-limits">Scope and Limits</a>
+    <a href="#frisk-requirement">Frisk Requirements</a>
+    <a href="#traffic-stops">Traffic Stops</a>
+</div>
+
+<div class="explanation" id="terry-overview">
+    <h3>The Terry Doctrine</h3>
+    
+    <p>In <em>Terry v. Ohio</em> (1968), the Supreme Court recognized that police officers may briefly detain a person for investigative purposes if the officer has a reasonable suspicion that criminal activity is afoot. Additionally, if the officer reasonably believes the person may be armed and dangerous, the officer may conduct a limited pat-down search (frisk) for weapons. This exception to the warrant requirement carved out a middle ground between consensual encounters (which require no suspicion) and full arrests (which require probable cause).</p>
+    
+    <div class="key-point">
+        <h4>Key Elements of Terry Stops</h4>
+        <ul>
+            <li><strong>Investigative Detention</strong>: Brief seizure based on reasonable suspicion of criminal activity</li>
+            <li><strong>Limited Duration</strong>: Only long enough to confirm or dispel the suspicion</li>
+            <li><strong>Limited Scope</strong>: Actions must be reasonably related to the justification for the stop</li>
+            <li><strong>Protective Frisk</strong>: Permitted only if reasonable belief that person is armed and dangerous</li>
+            <li><strong>Limited Frisk Scope</strong>: Pat-down of outer clothing solely to find weapons, not evidence</li>
+        </ul>
+    </div>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["TERRY STOP ANALYSIS"] --> encounter["STEP 1: Determine Type of Encounter
+        Is this a seizure requiring justification?
+        - No seizure: consensual encounter
+        - Brief seizure: Terry stop
+        - Full seizure: arrest"]
+        
+        encounter -- "Consensual encounter" --> noseizure["NO FOURTH AMENDMENT SEIZURE:
+        No suspicion required
+        Person free to leave/refuse cooperation"]
+        
+        encounter -- "Terry stop" --> reasonable["STEP 2: Assess Reasonable Suspicion
+        Is there reasonable suspicion of criminal activity?
+        - Specific, articulable facts
+        - Totality of circumstances
+        - Officer's training and experience
+        - Not just a hunch"]
+        
+        encounter -- "Arrest" --> probable["Requires probable cause
+        (higher standard than reasonable suspicion)"]
+        
+        reasonable -- "NO: No reasonable suspicion" --> invalid["INVALID TERRY STOP:
+        Fourth Amendment violation
+        Evidence likely inadmissible"]
+        
+        reasonable -- "YES: Reasonable suspicion exists" --> duration["STEP 3: Evaluate Duration & Scope
+        Was the stop limited in time and scope?
+        - Only long enough to confirm/dispel suspicion
+        - Methods reasonably related to purpose
+        - Diligence in pursuing investigation"]
+        
+        duration -- "NO: Exceeded proper duration/scope" --> deFactoArrest["DE FACTO ARREST:
+        Requires probable cause
+        If no PC, evidence likely inadmissible"]
+        
+        duration -- "YES: Properly limited" --> frisk["STEP 4: Was a Frisk Conducted?"]
+        
+        frisk -- "NO: No frisk conducted" --> validStop["VALID TERRY STOP:
+        Detention was lawful
+        Evidence from stop admissible"]
+        
+        frisk -- "YES: Frisk conducted" --> friskJustified["STEP 5: Was Frisk Justified?
+        Reasonable belief person
+        armed and dangerous?"]
+        
+        friskJustified -- "NO: Frisk not justified" --> invalidFrisk["INVALID FRISK:
+        Evidence from frisk inadmissible
+        Stop itself may still be valid"]
+        
+        friskJustified -- "YES: Frisk justified" --> friskScope["STEP 6: Was Frisk Properly Limited?
+        - Pat-down of outer clothing only
+        - Only to find weapons, not evidence
+        - No manipulation of non-weapon objects"]
+        
+        friskScope -- "NO: Exceeded proper scope" --> invalidFrisk
+        
+        friskScope -- "YES: Properly limited" --> validTerry["VALID TERRY STOP AND FRISK:
+        Evidence admissible"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef warning fill:#ffecb3,stroke:#ffa000,stroke-width:1px
+        
+        class start,encounter process
+        class reasonable,duration,frisk,friskJustified,friskScope question
+        class invalid,invalidFrisk negative
+        class noseizure,validStop,validTerry positive
+        class deFactoArrest,probable warning
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Terry v. Ohio</span> <span class="case-citation">392 U.S. 1 (1968)</span></h4>
+    <p class="case-rule">Police officers may briefly detain a person for investigative purposes if they have reasonable suspicion of criminal activity, and may conduct a limited pat-down search for weapons if they reasonably believe the person is armed and dangerous.</p>
+    <p class="case-facts">Detective McFadden observed Terry and two other men repeatedly walking past a store and peering in the window, behavior that the officer's experience indicated was consistent with casing the store for a robbery. McFadden approached the men, identified himself as a police officer, and patted down Terry's outer clothing, discovering a concealed weapon. Terry was convicted of carrying a concealed weapon.</p>
+    <p class="case-reasoning">The Supreme Court recognized a middle ground between consensual encounters and full arrests. The Court held that a brief investigative detention is a "seizure" under the Fourth Amendment, but does not require the traditional justification of probable cause. Instead, the Court applied a reasonableness standard, assessing the government's need for the stop against the invasion of personal security. The Court held that when an officer observes unusual conduct leading to a reasonable suspicion of criminal activity and potential armed danger, the officer may conduct a brief stop and a limited frisk for weapons. The Court emphasized that the frisk must be limited to a pat-down of outer clothing solely to discover weapons, not to find evidence. This balancing approach established the "reasonable suspicion" standard that requires "specific and articulable facts" rather than mere hunches.</p>
+</div>
+
+<div class="explanation" id="reasonable-suspicion">
+    <h3>Reasonable Suspicion Standard</h3>
+    
+    <p>Reasonable suspicion is the level of suspicion required to justify a Terry stop. It is a lower standard than probable cause but requires more than a mere hunch or general suspicion.</p>
+    
+    <div class="key-point">
+        <h4>Reasonable Suspicion Requirements</h4>
+        <ul>
+            <li><strong>Specific and Articulable Facts</strong>: Officer must be able to point to specific facts, not just intuition</li>
+            <li><strong>Totality of Circumstances</strong>: All factors are considered together, not in isolation</li>
+            <li><strong>Objective Standard</strong>: Based on what a reasonable officer would conclude, not subjective beliefs</li>
+            <li><strong>Less than Probable Cause</strong>: Requires less evidence than needed for an arrest</li>
+            <li><strong>Criminal Activity</strong>: Must relate to actual or imminent criminal activity, not just unusual behavior</li>
+        </ul>
+    </div>
+    
+    <h4>Factors Considered in Reasonable Suspicion Analysis</h4>
+    <p>Courts consider various factors when determining whether reasonable suspicion exists:</p>
+    <ul>
+        <li><strong>Location</strong>: High crime area (though this alone is insufficient)</li>
+        <li><strong>Time of Day</strong>: Late hours in certain contexts</li>
+        <li><strong>Behavior</strong>: Evasive actions, flight from police, furtive movements</li>
+        <li><strong>Appearance</strong>: Matching description of suspect</li>
+        <li><strong>Officer Experience</strong>: Training and experience in identifying criminal activity</li>
+        <li><strong>Information from Others</strong>: Tips from informants (reliability varies)</li>
+        <li><strong>Proximity to Crime</strong>: Temporal and geographic closeness to reported crime</li>
+    </ul>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["REASONABLE SUSPICION ANALYSIS"] --> facts["STEP 1: Identify Specific Facts
+        What specific, articulable facts did the officer observe?
+        - Personal observation
+        - Information from others
+        - Combination of factors"]
+        
+        facts --> totality["STEP 2: Totality of Circumstances
+        Consider all factors together:
+        - Location (high crime area?)
+        - Time of day
+        - Suspect's behavior
+        - Evasive actions
+        - Officer's experience
+        - Proximity to crime
+        - Description matching"]
+        
+        totality --> collective["STEP 3: Collective Knowledge
+        Consider knowledge of all officers involved
+        (collective knowledge doctrine)"]
+        
+        collective --> objective["STEP 4: Apply Objective Standard
+        Would a reasonable officer conclude
+        there is fair possibility of criminal activity?"]
+        
+        objective -- "NO: Objective standard not met" --> noSuspicion["NO REASONABLE SUSPICION:
+        Terry stop not justified
+        Evidence from stop inadmissible"]
+        
+        objective -- "YES: Objective standard met" --> suspicion["REASONABLE SUSPICION EXISTS:
+        Terry stop justified
+        Proceed to scope and duration analysis"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef factors fill:#e0f7fa,stroke:#00acc1,stroke-width:1px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        
+        class start process
+        class facts,totality,collective factors
+        class objective question
+        class noSuspicion negative
+        class suspicion positive
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Illinois v. Wardlow</span> <span class="case-citation">528 U.S. 119 (2000)</span></h4>
+    <p class="case-rule">Unprovoked flight from police in a high-crime area can establish reasonable suspicion justifying a Terry stop.</p>
+    <p class="case-facts">Police officers were patrolling a Chicago neighborhood known for heavy narcotics trafficking. When Wardlow saw the officers, he fled. The officers caught up with him, conducted a protective pat-down search, and discovered a handgun. Wardlow was charged with unlawful use of a weapon by a felon.</p>
+    <p class="case-reasoning">The Supreme Court held that unprovoked flight from police in a high-crime area can create reasonable suspicion justifying a Terry stop. Chief Justice Rehnquist, writing for the majority, noted that an individual's presence in a high-crime area, standing alone, is not enough to support reasonable suspicion, and neither is unprovoked flight, standing alone. However, when considering both factors together under the totality of the circumstances approach, the officers had reasonable suspicion that Wardlow was involved in criminal activity. The Court emphasized that "headlong flight" is the "consummate act of evasion" and is certainly suggestive of wrongdoing, though a Terry stop is still subject to the condition that the officer must have been justified in being in proximity to the individual in the first place. This case exemplifies the totality of circumstances approach to reasonable suspicion.</p>
+</div>
+
+<div class="explanation" id="scope-limits">
+    <h3>Scope and Duration Limitations</h3>
+    
+    <p>Terry stops must be limited in scope and duration to what is necessary to effectuate the purpose of the stop. A stop that exceeds these limitations may convert into a de facto arrest requiring probable cause.</p>
+    
+    <h4>Duration Limitations</h4>
+    <p>A Terry stop must be temporary and last no longer than necessary to effectuate the purpose of the stop:</p>
+    <ul>
+        <li>Officers must diligently pursue their investigation</li>
+        <li>The stop should last only long enough to confirm or dispel suspicion</li>
+        <li>There is no rigid time limit, but excessive delay suggests a de facto arrest</li>
+        <li>Detention of 20-30 minutes may be reasonable if justified by circumstances</li>
+        <li>Additional time may be justified to conduct reasonable investigative steps</li>
+    </ul>
+    
+    <h4>Scope Limitations</h4>
+    <p>The investigative methods must be reasonably related to the justification for the stop:</p>
+    <ul>
+        <li>Questions must be related to the suspected criminal activity</li>
+        <li>Officers may request identification and run warrant checks</li>
+        <li>Suspects may be moved short distances if reasonably necessary</li>
+        <li>Use of handcuffs or drawn weapons may convert stop to arrest unless justified by safety concerns</li>
+        <li>Limited detention of property related to the suspected offense</li>
+    </ul>
+    
+    <h4>De Facto Arrest</h4>
+    <p>A Terry stop can transform into a de facto arrest requiring probable cause when:</p>
+    <ul>
+        <li>The duration becomes excessive</li>
+        <li>The investigative techniques become too intrusive</li>
+        <li>The suspect is transported to a police station without consent</li>
+        <li>Restraints are used without specific safety justifications</li>
+        <li>Multiple officers create a show of force beyond what is necessary</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">United States v. Sharpe</span> <span class="case-citation">470 U.S. 675 (1985)</span></h4>
+    <p class="case-rule">There is no rigid time limitation on Terry stops; courts must examine whether the police diligently pursued a means of investigation that was likely to confirm or dispel their suspicions quickly.</p>
+    <p class="case-facts">DEA Agent Cooke observed Sharpe and Savage traveling in tandem in a pickup truck and a Pontiac. Suspecting drug trafficking, Cooke followed the vehicles and requested backup. When the officer tried to stop the vehicles, they took evasive actions. The pickup, driven by Savage, was stopped quickly, but Sharpe, in the Pontiac, was stopped about a half-mile away. Savage was detained for about 20 minutes while Cooke returned to question Sharpe. The officer noticed the strong odor of marijuana coming from Savage's truck and subsequently discovered marijuana during a search.</p>
+    <p class="case-reasoning">The Supreme Court held that the 20-minute detention was reasonable under the circumstances and did not convert the stop into a de facto arrest. Chief Justice Burger, writing for the majority, emphasized that courts should not indulge in "unrealistic second-guessing" of police actions during Terry stops. The Court rejected a rigid time limitation, instead focusing on whether police diligently pursued their investigation. The Court noted several factors supporting the reasonableness of the detention: (1) the original traffic stop was supported by reasonable suspicion; (2) the police acted diligently in pursuing their investigation; (3) the delay was attributable to the evasive actions of the suspects in attempting to elude police; and (4) the 20-minute detention was not unnecessarily prolonged. This case established that the proper inquiry is whether the officers acted reasonably, not whether they pursued the least intrusive means possible.</p>
+</div>
+
+<div class="explanation" id="frisk-requirement">
+    <h3>Requirements for Protective Frisks</h3>
+    
+    <p>Under <em>Terry</em>, a frisk (pat-down) for weapons is permitted only when the officer reasonably believes the person is "armed and presently dangerous to the officer or to others." This requires a separate justification beyond the reasonable suspicion needed for the stop itself.</p>
+    
+    <div class="key-point">
+        <h4>Two-Step Analysis for Frisks</h4>
+        <ol>
+            <li><strong>Justification</strong>: Reasonable belief that the person is armed and dangerous</li>
+            <li><strong>Scope</strong>: Limited to a pat-down of outer clothing, only to find weapons</li>
+        </ol>
+    </div>
+    
+    <h4>Factors Supporting Armed and Dangerous Determination</h4>
+    <ul>
+        <li>Nature of the suspected crime (e.g., violent crimes or drug trafficking)</li>
+        <li>Bulge in clothing suggesting a weapon</li>
+        <li>Furtive movements or reaching for areas where weapons might be concealed</li>
+        <li>Threatening behavior or statements</li>
+        <li>Previous knowledge of the suspect's violent tendencies</li>
+        <li>Time of day and location (isolated or high-crime area)</li>
+        <li>Lack of cooperation or evasive answers</li>
+    </ul>
+    
+    <h4>Scope Limitations on Frisks</h4>
+    <ul>
+        <li>Limited to a pat-down of outer clothing</li>
+        <li>Purpose must be solely to find weapons, not evidence</li>
+        <li>No opening or removal of clothing unless a weapon is detected</li>
+        <li>No manipulation of objects that clearly cannot be weapons</li>
+        <li>Further searches require additional justification (e.g., plain feel doctrine)</li>
+    </ul>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["PROTECTIVE FRISK ANALYSIS"] --> validStop["STEP 1: Confirm Valid Terry Stop
+        Is there reasonable suspicion of criminal activity
+        to justify the initial stop?"]
+        
+        validStop -- "NO: Stop not valid" --> invalid["INVALID FRISK:
+        If stop is invalid, frisk is invalid
+        Evidence inadmissible"]
+        
+        validStop -- "YES: Stop is valid" --> dangerBelief["STEP 2: Armed and Dangerous
+        Does officer reasonably believe the person
+        is armed and presently dangerous?
+        Based on:
+        - Nature of suspected crime
+        - Bulges in clothing
+        - Furtive movements
+        - Threatening behavior
+        - Known history of violence
+        - Other factors"]
+        
+        dangerBelief -- "NO: No reasonable belief" --> invalid
+        
+        dangerBelief -- "YES: Reasonable belief" --> scope["STEP 3: Proper Scope
+        Was the frisk limited to a pat-down of
+        outer clothing to find weapons?
+        No manipulation of non-weapon objects"]
+        
+        scope -- "NO: Exceeded proper scope" --> partiallyInvalid["PARTIALLY INVALID FRISK:
+        Any evidence obtained from improper
+        aspects of frisk inadmissible"]
+        
+        scope -- "YES: Properly limited" --> plainFeel["STEP 4: Plain Feel Doctrine
+        If contraband was felt during proper frisk,
+        was its nature immediately apparent without
+        manipulation?"]
+        
+        plainFeel -- "YES: Immediately apparent" --> valid["VALID FRISK:
+        Evidence admissible"]
+        
+        plainFeel -- "NO: Not immediately apparent" --> partiallyInvalid
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef warning fill:#ffecb3,stroke:#ffa000,stroke-width:1px
+        
+        class start process
+        class validStop,dangerBelief,scope,plainFeel question
+        class invalid negative
+        class valid positive
+        class partiallyInvalid warning
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Minnesota v. Dickerson</span> <span class="case-citation">508 U.S. 366 (1993)</span></h4>
+    <p class="case-rule">Under the "plain feel" doctrine, police may seize contraband detected through the sense of touch during a legitimate Terry frisk, but only if the contraband's identity is immediately apparent without further manipulation.</p>
+    <p class="case-facts">Police observed Dickerson leaving a known crack house and behaving evasively upon noticing police. Officers stopped him and conducted a pat-down search, finding no weapons. However, the officer felt a small lump in Dickerson's jacket pocket, manipulated it with his fingers, and then reached into the pocket to retrieve what turned out to be a small bag of cocaine.</p>
+    <p class="case-reasoning">The Supreme Court recognized the "plain feel" doctrine as an extension of the plain view doctrine, allowing officers to seize contraband detected during a lawful Terry frisk when its identity is immediately apparent. However, the Court held that the seizure in this case was unconstitutional because the officer determined the lump was contraband only after squeezing, sliding, and manipulating it, which exceeded the limited scope permitted for a Terry frisk. Justice White emphasized that Terry only authorizes a search for weapons, not contraband, and that any further search beyond what is necessary to determine if the suspect is armed constitutes an additional, unjustified intrusion. The key distinction is between immediately recognizing contraband during a lawful pat-down (permissible) versus manipulating an object to determine its incriminating nature (impermissible).</p>
+</div>
+
+<div class="explanation" id="traffic-stops">
+    <h3>Traffic Stops</h3>
+    
+    <p>Traffic stops are considered a form of Terry stop and are governed by similar principles. However, traffic stops have some unique characteristics and limitations. (Note: For vehicle searches after stops, also see the <a href="#automobile-section" data-section="warrant-exceptions">Automobile Exception</a> in the Warrant Exceptions section.)</p>
+    
+    <div class="key-point">
+        <h4>Basis for Traffic Stops</h4>
+        <ul>
+            <li><strong>Traffic Violations</strong>: Any observed traffic violation, no matter how minor, provides objective justification</li>
+            <li><strong>Reasonable Suspicion</strong>: Stop may be based on reasonable suspicion of criminal activity (not just traffic violations)</li>
+            <li><strong>Pretextual Stops</strong>: Subjective motivations of officer do not invalidate stop if objective basis exists (<em>Whren v. United States</em>)</li>
+            <li><strong>Mistakes of Law</strong>: Reasonable mistakes about traffic laws can justify a stop (<em>Heien v. North Carolina</em>)</li>
+        </ul>
+    </div>
+    
+    <h4>Permissible Actions During Traffic Stops</h4>
+    <p>During a routine traffic stop, officers may:</p>
+    <ul>
+        <li>Request driver's license, registration, and proof of insurance</li>
+        <li>Run computer checks on these documents</li>
+        <li>Question driver and passengers about travel plans and identity</li>
+        <li>Check for outstanding warrants</li>
+        <li>Conduct dog sniff if it doesn't extend the stop (<em>Illinois v. Caballes</em>)</li>
+        <li>Order driver and passengers out of the vehicle (<em>Pennsylvania v. Mimms</em>, <em>Maryland v. Wilson</em>)</li>
+        <li>Conduct a frisk of driver or passengers if reasonable suspicion they are armed/dangerous</li>
+    </ul>
+    
+    <h4>Duration Limitations</h4>
+    <p>Traffic stops cannot be prolonged beyond the time needed to complete the "mission" of the stop (<em>Rodriguez v. United States</em>):</p>
+    <ul>
+        <li>The mission includes addressing the traffic violation and related safety concerns</li>
+        <li>Unrelated investigations are permitted only if they do not extend the stop</li>
+        <li>Once the purpose of the stop has been completed, the driver must be free to leave</li>
+        <li>Further detention requires additional reasonable suspicion or consent</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Rodriguez v. United States</span> <span class="case-citation">575 U.S. 348 (2015)</span></h4>
+    <p class="case-rule">A police officer may not extend a completed traffic stop, even by a brief amount of time, to conduct a dog sniff without reasonable suspicion or consent.</p>
+    <p class="case-facts">Officer Struble pulled Rodriguez over for driving on the shoulder of the highway. After completing all the tasks related to the traffic violation, including checking license, registration, and insurance, and issuing a warning, Struble asked Rodriguez for permission to walk his drug-sniffing dog around the vehicle. When Rodriguez refused, Struble detained him until a second officer arrived, then conducted the dog sniff, which revealed methamphetamine.</p>
+    <p class="case-reasoning">The Supreme Court held that a police stop exceeding the time needed to handle the matter for which the stop was made violates the Fourth Amendment. Justice Ginsburg, writing for the majority, emphasized that a traffic stop becomes unlawful if prolonged beyond the time reasonably required to complete its mission. The "mission" includes addressing the traffic violation and related safety concerns, such as checking driver's license, vehicle registration, and insurance, and looking for outstanding warrants. Absent reasonable suspicion of criminal activity, police may not extend a traffic stop to conduct unrelated investigations, including dog sniffs. The Court rejected the government's argument that an officer may prolong a stop for a "de minimis" amount of time, clarifying that the critical question is not whether the dog sniff occurs before or after the officer issues a ticket, but whether the sniff adds time to the stop. This decision clarified the temporal limitations on traffic stops and emphasized that any extension, even brief, constitutes a separate seizure requiring independent justification.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#terry-stops-section">Back to Top</a>
+</div>

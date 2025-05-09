@@ -1,0 +1,300 @@
+<h2 id="search-seizure-section">Fourth Amendment: Search and Seizure Fundamentals</h2>
+
+<div class="section-navigation">
+    <a href="#fourth-amendment-text">Fourth Amendment Text</a>
+    <a href="#search-definition">What Is a "Search"?</a>
+    <a href="#expectation-privacy">Reasonable Expectation of Privacy</a>
+    <a href="#trespass-theory">Physical Trespass Theory</a>
+    <a href="#seizure-definition">What Is a "Seizure"?</a>
+</div>
+
+<div class="explanation" id="fourth-amendment-text">
+    <h3>The Fourth Amendment Text</h3>
+    
+    <div class="key-point">
+        <p>"The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized."</p>
+    </div>
+    
+    <p>The Fourth Amendment contains two distinct clauses:</p>
+    <ol>
+        <li><strong>The Reasonableness Clause</strong>: Prohibits "unreasonable searches and seizures"</li>
+        <li><strong>The Warrant Clause</strong>: Establishes the requirements for a valid warrant (probable cause, particularity, and oath/affirmation)</li>
+    </ol>
+    
+    <p>The relationship between these clauses has been a source of ongoing debate. The Supreme Court's current approach generally requires law enforcement to obtain a warrant before conducting a search or seizure, unless a recognized exception to the warrant requirement applies. However, the ultimate touchstone of the Fourth Amendment is "reasonableness."</p>
+</div>
+
+<div class="explanation" id="search-definition">
+    <h3>What Constitutes a "Search"?</h3>
+    
+    <p>Not all government actions or investigations constitute a "search" under the Fourth Amendment. The Supreme Court has established two primary theories to determine whether government conduct qualifies as a search:</p>
+    
+    <ol>
+        <li><strong>The Reasonable Expectation of Privacy Test</strong>: Established in <em>Katz v. United States</em> (1967)</li>
+        <li><strong>The Physical Trespass/Property Test</strong>: Revitalized in <em>United States v. Jones</em> (2012)</li>
+    </ol>
+    
+    <p>If government conduct does not qualify as a "search" under either test, then the Fourth Amendment does not apply, and no warrant or exception is required.</p>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["DETERMINING IF A 'SEARCH' OCCURRED"] --> twoTests["Apply both tests:
+        1. Reasonable Expectation of Privacy Test (Katz)
+        2. Physical Trespass/Property Test (Jones)"]
+        
+        twoTests --> katzTest["KATZ TEST:
+        Did the government invade a reasonable 
+        expectation of privacy?"]
+        
+        twoTests --> jonesTest["JONES TEST:
+        Did the government physically intrude on 
+        a constitutionally protected area to obtain information?"]
+        
+        katzTest --> katz1["STEP 1: Subjective Expectation
+        Did the individual exhibit an actual (subjective) 
+        expectation of privacy?"]
+        
+        katz1 -- "NO: No subjective expectation" --> notSearchKatz["NOT A SEARCH
+        under the Katz test"]
+        
+        katz1 -- "YES: Had subjective expectation" --> katz2["STEP 2: Objective Reasonableness
+        Is the expectation one that society is 
+        prepared to recognize as reasonable?"]
+        
+        katz2 -- "NO: Not objectively reasonable" --> notSearchKatz
+        
+        katz2 -- "YES: Objectively reasonable" --> isSearchKatz["IS A SEARCH
+        under the Katz test"]
+        
+        jonesTest --> jones1["STEP 1: Protected Area
+        Is the target a constitutionally protected area?
+        (persons, houses, papers, effects)"]
+        
+        jones1 -- "NO: Not protected area" --> notSearchJones["NOT A SEARCH
+        under the Jones test"]
+        
+        jones1 -- "YES: Protected area" --> jones2["STEP 2: Physical Intrusion
+        Did government physically intrude/trespass
+        on the protected area?"]
+        
+        jones2 -- "NO: No physical intrusion" --> notSearchJones
+        
+        jones2 -- "YES: Physical intrusion" --> jones3["STEP 3: Information Gathering
+        Was the intrusion for the purpose
+        of obtaining information?"]
+        
+        jones3 -- "NO: Not to obtain information" --> notSearchJones
+        
+        jones3 -- "YES: To obtain information" --> isSearchJones["IS A SEARCH
+        under the Jones test"]
+        
+        isSearchKatz --> result["FOURTH AMENDMENT APPLIES:
+        Warrant or exception required"]
+        
+        isSearchJones --> result
+        
+        notSearchKatz --> eitherTest["Does it qualify as 
+        a search under either test?"]
+        
+        notSearchJones --> eitherTest
+        
+        eitherTest -- "YES: Qualifies under at least one test" --> result
+        
+        eitherTest -- "NO: Fails both tests" --> noSearch["NOT A FOURTH AMENDMENT SEARCH:
+        No warrant or exception required
+        Fourth Amendment does not apply"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef neutral fill:#f5f5f5,stroke:#616161,stroke-width:1px
+        
+        class start,twoTests process
+        class katzTest,jonesTest,katz1,katz2,jones1,jones2,jones3,eitherTest question
+        class notSearchKatz,notSearchJones,noSearch negative
+        class isSearchKatz,isSearchJones,result positive
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Katz v. United States</span> <span class="case-citation">389 U.S. 347 (1967)</span></h4>
+    <p class="case-rule">A "search" under the Fourth Amendment occurs when the government violates a person's "reasonable expectation of privacy." This analysis requires: (1) the person exhibited an actual (subjective) expectation of privacy, and (2) the expectation is one that society is prepared to recognize as reasonable.</p>
+    <p class="case-facts">FBI agents attached an electronic listening device to the outside of a public telephone booth that Katz regularly used to place illegal gambling wagers. Agents recorded only Katz's end of the conversations. Katz was convicted based partly on these recordings. The lower courts rejected Katz's Fourth Amendment argument because there was no physical intrusion into the phone booth.</p>
+    <p class="case-reasoning">The Supreme Court rejected the government's argument that no Fourth Amendment violation occurred because there was no physical intrusion into the phone booth. The Court shifted the focus from physical spaces to people, stating famously that "the Fourth Amendment protects people, not places." Justice Harlan's influential concurrence articulated the two-part test that became the standard: a person must have (1) exhibited an actual (subjective) expectation of privacy and (2) that expectation must be one that society recognizes as reasonable. The Court found that Katz exhibited an expectation of privacy by entering the phone booth and closing the door behind him, and society recognizes as reasonable a person's expectation that their phone conversation will not be broadcast to the world, even from a glass phone booth. Therefore, the FBI's actions constituted a search requiring a warrant.</p>
+</div>
+
+<div class="explanation" id="expectation-privacy">
+    <h3>Reasonable Expectation of Privacy Test</h3>
+    
+    <p>The <em>Katz</em> test asks whether the government has invaded a "reasonable expectation of privacy." This requires a two-part analysis:</p>
+    
+    <ol>
+        <li><strong>Subjective Expectation</strong>: Did the individual exhibit an actual (subjective) expectation of privacy?</li>
+        <li><strong>Objective Reasonableness</strong>: Is the expectation one that society is prepared to recognize as reasonable?</li>
+    </ol>
+    
+    <div class="key-point">
+        <h4>Factors Affecting Reasonable Expectations of Privacy</h4>
+        <ul>
+            <li><strong>Location</strong>: Greater protection in homes than in public spaces</li>
+            <li><strong>Property Interests</strong>: Ownership or possessory rights can strengthen privacy claims</li>
+            <li><strong>Steps to Ensure Privacy</strong>: Measures taken to shield activities from public view</li>
+            <li><strong>Third-Party Exposure</strong>: Information voluntarily shared with others may lose protection (see <a href="#third-party-doctrine-section" data-section="third-party-doctrine">Third-Party Doctrine section</a>)</li>
+            <li><strong>Technology Used</strong>: Use of sophisticated technology not in general public use may constitute a search</li>
+            <li><strong>Historical Understanding</strong>: Traditional protections at the time of the Fourth Amendment's adoption</li>
+        </ul>
+    </div>
+    
+    <div class="example">
+        <h4>Areas With Heightened Privacy Protection</h4>
+        <ul>
+            <li><strong>Homes</strong>: The highest level of Fourth Amendment protection (<em>Payton v. New York</em>)</li>
+            <li><strong>Curtilage</strong>: The area immediately surrounding the home also enjoys robust protection (<em>United States v. Dunn</em>)</li>
+            <li><strong>Hotel Rooms</strong>: Temporary lodging receives protection similar to homes (<em>Stoner v. California</em>)</li>
+            <li><strong>Businesses</strong>: Commercial premises have some protection, though less than homes (<em>See v. City of Seattle</em>)</li>
+        </ul>
+    </div>
+    
+    <div class="example">
+        <h4>Areas With Diminished or No Privacy Protection</h4>
+        <ul>
+            <li><strong>Open Fields</strong>: Areas outside the curtilage of the home, even if privately owned, are not protected (<em>Oliver v. United States</em>)</li>
+            <li><strong>Abandoned Property</strong>: Items discarded or left in public areas (<em>California v. Greenwood</em> - trash left at curb)</li>
+            <li><strong>Shared Spaces</strong>: Common areas of apartment buildings, shared driveways</li>
+            <li><strong>Public Transportation</strong>: Public areas of buses, trains, airports</li>
+        </ul>
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">United States v. Jones</span> <span class="case-citation">565 U.S. 400 (2012)</span></h4>
+    <p class="case-rule">The government conducts a Fourth Amendment search when it physically intrudes on a constitutionally protected area (persons, houses, papers, effects) for the purpose of obtaining information.</p>
+    <p class="case-facts">Law enforcement installed a GPS tracking device on the undercarriage of Jones's wife's vehicle (which Jones regularly used) without a valid warrant and tracked the vehicle's movements for 28 days. The tracking data connected Jones to a drug trafficking conspiracy, leading to his conviction.</p>
+    <p class="case-reasoning">The Court revitalized the property-based approach to the Fourth Amendment, holding that the government's physical intrusion on Jones's vehicle (an "effect" under the Fourth Amendment) for the purpose of obtaining information constituted a search. Justice Scalia, writing for the majority, emphasized that the <em>Katz</em> reasonable expectation of privacy test supplemented, rather than replaced, the traditional property-based understanding of the Fourth Amendment. The Court clarified that when the government physically intrudes on constitutionally protected areas to obtain information, a search occurs regardless of whether there is a reasonable expectation of privacy. The Court emphasized the continuing importance of the physical trespass theory, particularly in light of advancing surveillance technologies.</p>
+</div>
+
+<div class="explanation" id="trespass-theory">
+    <h3>Physical Trespass Theory</h3>
+    
+    <p>In <em>United States v. Jones</em> (2012), the Supreme Court revitalized the property-based approach to the Fourth Amendment. Under this approach, a search occurs when:</p>
+    
+    <ol>
+        <li>The government physically intrudes or trespasses on a constitutionally protected area (persons, houses, papers, or effects)</li>
+        <li>The intrusion is for the purpose of obtaining information</li>
+    </ol>
+    
+    <p>This test applies <em>in addition to</em> the <em>Katz</em> reasonable expectation of privacy test. A government action may constitute a search under either or both tests.</p>
+    
+    <div class="key-point">
+        <h4>Important Aspects of the Trespass Theory</h4>
+        <ul>
+            <li>Focuses on physical intrusion rather than privacy expectations</li>
+            <li>Limited to the specifically enumerated areas in the Fourth Amendment: "persons, houses, papers, and effects"</li>
+            <li>Requires minimal physical contact ("trespass") with the protected area</li>
+            <li>The intrusion must be for the purpose of gathering information</li>
+            <li>Provides protection even in situations where there might not be a reasonable expectation of privacy</li>
+        </ul>
+    </div>
+    
+    <p>The <em>Jones</em> decision has been particularly significant for cases involving new technologies. In <em>Florida v. Jardines</em> (2013), the Court held that using a drug-sniffing dog on a homeowner's porch to investigate the contents of the home was a search because officers physically entered the curtilage of the home to gather evidence.</p>
+</div>
+
+<div class="explanation" id="seizure-definition">
+    <h3>What Constitutes a "Seizure"?</h3>
+    
+    <p>The Fourth Amendment protects against unreasonable "seizures" as well as "searches." The seizure analysis differs depending on whether it involves a person or property:</p>
+    
+    <div class="key-point">
+        <h4>Seizure of a Person</h4>
+        <p>A seizure of a person occurs when, in view of all the circumstances, a reasonable person would not feel free to terminate the encounter and leave. The Supreme Court has articulated this standard in various ways:</p>
+        <ul>
+            <li><strong><em>United States v. Mendenhall</em> (1980)</strong>: A seizure occurs when "a reasonable person would have believed that he was not free to leave"</li>
+            <li><strong><em>Florida v. Bostick</em> (1991)</strong>: In settings where freedom of movement is restricted (like a bus), the test is whether a reasonable person would feel free to decline the officer's requests or otherwise terminate the encounter</li>
+            <li><strong><em>California v. Hodari D.</em> (1991)</strong>: A seizure requires either physical force or submission to a show of authority</li>
+        </ul>
+    </div>
+    
+    <div class="key-point">
+        <h4>Seizure of Property</h4>
+        <p>A seizure of property occurs when there is "some meaningful interference with an individual's possessory interests in that property" (<em>United States v. Jacobsen</em>, 1984).</p>
+        <ul>
+            <li>Temporary detentions of property may constitute seizures</li>
+            <li>Destruction or damage to property may constitute a seizure</li>
+            <li>Taking custody or control of property is clearly a seizure</li>
+        </ul>
+    </div>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["DETERMINING IF A 'SEIZURE' OCCURRED"] --> personOrProperty["Is it a seizure of a person or property?"]
+        
+        personOrProperty -- "PERSON" --> personTest["SEIZURE OF PERSON:
+        Would a reasonable person feel free to 
+        terminate the encounter and leave?"]
+        
+        personOrProperty -- "PROPERTY" --> propertyTest["SEIZURE OF PROPERTY:
+        Was there meaningful interference with 
+        possessory interests in the property?"]
+        
+        personTest --> physicalForce["Was physical force applied?"]
+        
+        physicalForce -- "YES" --> seizurePerson["SEIZURE OF PERSON:
+        Fourth Amendment applies"]
+        
+        physicalForce -- "NO" --> showAuthority["Was there a show of authority 
+        that would cause a reasonable 
+        person to feel not free to leave?"]
+        
+        showAuthority -- "NO: No show of authority" --> notSeizurePerson["NOT A SEIZURE OF PERSON:
+        Fourth Amendment does not apply"]
+        
+        showAuthority -- "YES: Show of authority" --> submission["Did the person submit 
+        to the show of authority?"]
+        
+        submission -- "NO: No submission" --> notSeizurePerson
+        
+        submission -- "YES: Submitted" --> seizurePerson
+        
+        propertyTest --> meaningfulInterference["Was there meaningful interference 
+        with possessory interests?
+        - Taking control/custody
+        - Destruction/damage
+        - Significant restriction on use"]
+        
+        meaningfulInterference -- "NO: No meaningful interference" --> notSeizureProperty["NOT A SEIZURE OF PROPERTY:
+        Fourth Amendment does not apply"]
+        
+        meaningfulInterference -- "YES: Meaningful interference" --> seizureProperty["SEIZURE OF PROPERTY:
+        Fourth Amendment applies"]
+        
+        seizurePerson --> reasonable["REASONABLENESS ANALYSIS:
+        Was the seizure reasonable?
+        - Warrant or exception required
+        - Level of suspicion required depends 
+          on type and duration of seizure"]
+        
+        seizureProperty --> reasonable
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        
+        class start,personOrProperty,personTest,propertyTest process
+        class physicalForce,showAuthority,submission,meaningfulInterference question
+        class notSeizurePerson,notSeizureProperty negative
+        class seizurePerson,seizureProperty,reasonable positive
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Florida v. Jardines</span> <span class="case-citation">569 U.S. 1 (2013)</span></h4>
+    <p class="case-rule">The government conducts a Fourth Amendment search when it physically intrudes on the curtilage of the home to gather evidence.</p>
+    <p class="case-facts">Police took a drug-sniffing dog to Jardines' front porch where the dog signaled the presence of drugs inside the home. Based on this alert, officers obtained a warrant to search the home, which revealed marijuana plants. Jardines moved to suppress the evidence, arguing that using the drug dog on his porch was a warrantless search.</p>
+    <p class="case-reasoning">The Supreme Court held that the use of the drug-sniffing dog on Jardines' front porch was a search under the Fourth Amendment. Using the physical trespass theory from <em>Jones</em>, the Court determined that when police physically enter the curtilage of a home (the area immediately surrounding the house) to gather evidence, a search occurs. The Court emphasized that while visitors might have an implied license to approach the front door, that license does not extend to bringing a trained police dog to explore the area for evidence. The Court specifically noted that it was resolving the case using the property-based approach from <em>Jones</em> rather than the <em>Katz</em> reasonable expectation of privacy test, demonstrating how the two tests operate independently.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#search-seizure-section">Back to Top</a>
+</div>

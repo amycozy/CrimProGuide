@@ -1,0 +1,383 @@
+'\<h2 id="interrogations-section">Interrogations and Confessions</h2>
+
+<div class="section-navigation">
+    <a href="#fifth-amendment">Fifth Amendment Protection</a>
+    <a href="#due-process">Due Process Voluntariness</a>
+    <a href="#miranda-rights">Miranda Rights</a>
+    <a href="#miranda-waiver">Waiver of Miranda</a>
+    <a href="#miranda-exceptions">Exceptions to Miranda</a>
+</div>
+
+<div class="explanation" id="fifth-amendment">
+    <h3>Fifth Amendment Protection Against Self-Incrimination</h3>
+    
+    <p>The Fifth Amendment provides that no person "shall be compelled in any criminal case to be a witness against himself." This constitutional protection is the foundation of rules governing police interrogations and forms the basis for the Miranda doctrine. The privilege applies in any setting where the government seeks to compel potentially incriminating testimony.</p>
+    
+    <div class="key-point">
+        <h4>Key Aspects of the Fifth Amendment Privilege</h4>
+        <ul>
+            <li><strong>Compulsion Requirement</strong>: The privilege protects against compelled testimonial self-incrimination</li>
+            <li><strong>Testimonial Evidence</strong>: Only applies to communicative or testimonial evidence, not physical evidence</li>
+            <li><strong>Self-Incrimination</strong>: Statement must tend to incriminate the individual</li>
+            <li><strong>Criminal Case</strong>: Protects against use in criminal proceedings, though may be invoked in civil or administrative proceedings if criminal liability is possible</li>
+            <li><strong>Personal Right</strong>: Can only be invoked for oneself, not on behalf of others</li>
+        </ul>
+    </div>
+    
+    <p>The Supreme Court has recognized that custodial interrogations can be inherently coercive environments. In <em>Miranda v. Arizona</em> (1966), the Court established procedural safeguards to protect the Fifth Amendment privilege in the context of custodial interrogations.</p>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["FIFTH AMENDMENT ANALYSIS"] --> testimony["STEP 1: Testimonial Evidence
+        Is the evidence testimonial in nature?
+        - Communication of facts or beliefs
+        - Expressive or communicative content
+        - NOT mere physical evidence"]
+        
+        testimony -- "NO: Not testimonial" --> notestimony["NO FIFTH AMENDMENT PROTECTION:
+        Non-testimonial evidence (physical samples,
+        biometric data, etc.) not protected"]
+        
+        testimony -- "YES: Testimonial" --> compulsion["STEP 2: Government Compulsion
+        Was there compulsion by the government?
+        - Direct force or threat
+        - Psychological pressure
+        - Legal compulsion (subpoena)
+        - Custodial interrogation"]
+        
+        compulsion -- "NO: No compulsion" --> nocompulsion["NO FIFTH AMENDMENT PROTECTION:
+        Voluntary statements not protected
+        even if self-incriminating"]
+        
+        compulsion -- "YES: Compulsion present" --> incrimination["STEP 3: Self-Incrimination
+        Would the statement tend to incriminate?
+        - Admit guilt or elements of crime
+        - Furnish link in chain of evidence
+        - Provide investigative leads"]
+        
+        incrimination -- "NO: Not incriminating" --> noincrimination["NO FIFTH AMENDMENT PROTECTION:
+        Non-incriminating testimony not protected
+        even if compelled"]
+        
+        incrimination -- "YES: Potentially incriminating" --> violation["FIFTH AMENDMENT VIOLATION:
+        Compelled testimonial self-incrimination
+        Statement inadmissible in criminal proceedings"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        
+        class start process
+        class testimony,compulsion,incrimination question
+        class notestimony,nocompulsion,noincrimination negative
+        class violation positive
+    </div>
+</div>
+
+<div class="explanation" id="due-process">
+    <h3>Due Process Voluntariness Test</h3>
+    
+    <p>Before <em>Miranda</em>, the Supreme Court evaluated the admissibility of confessions under a Due Process "voluntariness" test. This test, which continues to apply alongside Miranda, focuses on whether a confession was the product of the suspect's free and rational choice or was involuntarily extracted through coercion.</p>
+    
+    <div class="key-point">
+        <h4>Factors in Voluntariness Analysis</h4>
+        <ul>
+            <li><strong>Police Conduct</strong>: Nature and degree of coercion, including physical force, threats, deception, and psychological pressure</li>
+            <li><strong>Suspect Characteristics</strong>: Age, education, intelligence, mental state, and prior experience with law enforcement</li>
+            <li><strong>Environmental Factors</strong>: Length of detention, deprivation of basic needs, access to outside contact</li>
+            <li><strong>Totality of Circumstances</strong>: All factors considered together rather than in isolation</li>
+        </ul>
+    </div>
+    
+    <p>A confession deemed involuntary under the Due Process test is inadmissible for any purpose, including impeachment. This is a broader prohibition than for Miranda violations, which may be used for certain limited purposes.</p>
+    
+    <h4>Police Conduct Rendering Confessions Involuntary</h4>
+    <ul>
+        <li>Physical abuse or threats of violence (<em>Brown v. Mississippi</em>)</li>
+        <li>Extended periods of interrogation without rest</li>
+        <li>Deprivation of food, water, or sleep</li>
+        <li>Threats against family members</li>
+        <li>Extreme psychological coercion</li>
+        <li>False promises that induce confessions</li>
+        <li>Exploitation of mental illness or intellectual disability</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Colorado v. Connelly</span> <span class="case-citation">479 U.S. 157 (1986)</span></h4>
+    <p class="case-rule">Coercive police activity is a necessary predicate to finding that a confession is involuntary under the Due Process Clause. Mental illness alone, without police coercion, does not render a confession involuntary.</p>
+    <p class="case-facts">Connelly approached a police officer on the street and confessed to a murder. At the time, he appeared normal, was advised of his Miranda rights, and waived them. Later, it was discovered that Connelly suffered from chronic schizophrenia and was experiencing command hallucinations telling him to confess or commit suicide. A psychiatrist testified that Connelly's psychosis motivated his confession.</p>
+    <p class="case-reasoning">The Supreme Court held that Connelly's confession was voluntary for Due Process purposes, despite his mental illness. Chief Justice Rehnquist, writing for the majority, emphasized that police coercion is a necessary element of an involuntary confession claim. The Court reasoned that the purpose of excluding involuntary confessions is to deter police misconduct, not to ensure the reliability of confessions. While acknowledging that mental illness might affect the reliability of a confession, the Court held that this concern should be addressed through state evidence law regarding reliability, not through constitutional Due Process analysis. The Court explicitly rejected the notion that the "fundamental fairness" guaranteed by the Due Process Clause is concerned with internal psychological factors in the absence of police coercion.</p>
+</div>
+
+<div class="explanation" id="miranda-rights">
+    <h3>Miranda Rights and Requirements</h3>
+    
+    <p>In <em>Miranda v. Arizona</em> (1966), the Supreme Court established procedural safeguards to protect the Fifth Amendment privilege against self-incrimination during custodial interrogations. These safeguards require police to inform suspects of specific rights before custodial interrogation.</p>
+    
+    <div class="key-point">
+        <h4>The Miranda Warnings</h4>
+        <p>Before custodial interrogation, suspects must be warned that:</p>
+        <ol>
+            <li>They have the right to remain silent</li>
+            <li>Anything they say can and will be used against them in court</li>
+            <li>They have the right to consult with an attorney and to have the attorney present during questioning</li>
+            <li>If they cannot afford an attorney, one will be appointed for them</li>
+        </ol>
+    </div>
+    
+    <h4>Triggering Miranda: Custody + Interrogation</h4>
+    <p>Miranda warnings are required only when a suspect is both (1) in custody and (2) subject to interrogation:</p>
+    
+    <p><strong>Custody Analysis</strong></p>
+    <ul>
+        <li>Objective test: Whether a reasonable person would feel free to terminate the encounter and leave</li>
+        <li>Not limited to formal arrest; includes "restraint on freedom of movement of the degree associated with formal arrest" (<em>California v. Beheler</em>)</li>
+        <li>Relevant factors: Location, duration, restraints, presence of multiple officers, display of weapons, physical contact, language used, whether suspect was told they were free to leave</li>
+        <li>Special rules for certain contexts:
+            <ul>
+                <li>Traffic stops generally not custody (<em>Berkemer v. McCarty</em>)</li>
+                <li>Terry stops generally not custody</li>
+                <li>Detention in one's home may be custody (<em>Orozco v. Texas</em>)</li>
+                <li>Prison inmates not automatically in Miranda custody (<em>Howes v. Fields</em>)</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <p><strong>Interrogation Analysis</strong></p>
+    <ul>
+        <li>Express questioning about crime</li>
+        <li>Functional equivalent: Words or actions police should know are reasonably likely to elicit an incriminating response (<em>Rhode Island v. Innis</em>)</li>
+        <li>Booking questions exception: Routine booking questions not designed to elicit incriminating responses</li>
+        <li>Spontaneous statements not made in response to interrogation do not require Miranda warnings</li>
+    </ul>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["MIRANDA RIGHTS ANALYSIS"] --> custody["STEP 1: Was Suspect in Custody?
+        Would reasonable person feel free to leave?
+        Factors:
+        - Formal arrest
+        - Degree of restraint
+        - Location and duration
+        - Number of officers
+        - Show of authority
+        - Isolated from outside world"]
+        
+        custody -- "NO: No custody" --> noMiranda["MIRANDA DOES NOT APPLY:
+        Warnings not required
+        Statement admissible if voluntary"]
+        
+        custody -- "YES: In custody" --> interrogation["STEP 2: Was There Interrogation?
+        - Express questioning about crime OR
+        - Functional equivalent: words/actions
+          likely to elicit incriminating response"]
+        
+        interrogation -- "NO: No interrogation" --> noMiranda
+        
+        interrogation -- "YES: Interrogation" --> warnings["STEP 3: Were Miranda Warnings Given?
+        1. Right to remain silent
+        2. Statements can be used against suspect
+        3. Right to attorney
+        4. Right to appointed attorney if indigent"]
+        
+        warnings -- "NO: No warnings" --> violation["MIRANDA VIOLATION:
+        Statements inadmissible in prosecution's
+        case-in-chief (may be usable for impeachment)"]
+        
+        warnings -- "YES: Warnings given" --> waiver["STEP 4: Valid Waiver of Rights?
+        - Knowing and intelligent
+        - Voluntary
+        - Express or implied by conduct"]
+        
+        waiver -- "NO: No valid waiver" --> violation
+        
+        waiver -- "YES: Valid waiver" --> admissible["STATEMENTS ADMISSIBLE:
+        Miranda requirements satisfied"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        
+        class start process
+        class custody,interrogation,warnings,waiver question
+        class violation negative
+        class noMiranda,admissible positive
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Miranda v. Arizona</span> <span class="case-citation">384 U.S. 436 (1966)</span></h4>
+    <p class="case-rule">Prior to any custodial interrogation, a person must be warned that they have the right to remain silent, that anything they say can be used against them in court, that they have the right to the presence of an attorney, and that if they cannot afford an attorney one will be appointed for them.</p>
+    <p class="case-facts">Ernesto Miranda was arrested for kidnapping and rape. He was interrogated for two hours without being advised of his rights, ultimately signing a confession. The confession included a typed paragraph stating the confession was voluntary and made with full knowledge of legal rights, but Miranda was not specifically informed of his right to counsel.</p>
+    <p class="case-reasoning">The Supreme Court held that the Fifth Amendment privilege against self-incrimination applies to custodial police interrogations, which contain "inherently compelling pressures which work to undermine the individual's will to resist and to compel him to speak." To counteract these pressures, the Court mandated procedural safeguards, now known as the Miranda warnings. Chief Justice Warren, writing for the majority, emphasized that these warnings are necessary to ensure suspects can exercise their constitutional rights, as the right to remain silent would be meaningless if suspects were unaware of it. The Court noted that statements obtained without these warnings are presumptively the product of compulsion and therefore inadmissible. The Court emphasized that after the warnings, a suspect may knowingly and intelligently waive these rights, but the prosecution bears the heavy burden of proving waiver. This landmark case fundamentally transformed police interrogation practices nationwide.</p>
+</div>
+
+<div class="explanation" id="miranda-waiver">
+    <h3>Waiver of Miranda Rights</h3>
+    
+    <p>After Miranda warnings are given, a suspect may waive their rights and agree to speak with law enforcement. For such a waiver to be valid, it must be voluntary, knowing, and intelligent. The prosecution bears the burden of proving a valid waiver.</p>
+    
+    <div class="key-point">
+        <h4>Requirements for Valid Waiver</h4>
+        <ul>
+            <li><strong>Voluntary</strong>: Free from coercion, intimidation, or deception</li>
+            <li><strong>Knowing and Intelligent</strong>: With full awareness of the nature of the right being abandoned and the consequences of the decision to abandon it</li>
+            <li><strong>Form of Waiver</strong>: May be express (verbal or written) or implied through conduct</li>
+        </ul>
+    </div>
+    
+    <h4>Express vs. Implied Waivers</h4>
+    <ul>
+        <li><strong>Express Waiver</strong>: Defendant explicitly states (orally or in writing) that they waive their rights</li>
+        <li><strong>Implied Waiver</strong>: Defendant demonstrates understanding of rights but chooses to speak anyway (<em>Berghuis v. Thompkins</em>)</li>
+    </ul>
+    
+    <h4>Factors Courts Consider</h4>
+    <ul>
+        <li>Defendant's age, education, intelligence, and mental state</li>
+        <li>Prior experience with criminal justice system</li>
+        <li>Length and conditions of detention</li>
+        <li>Nature of interrogation</li>
+        <li>Whether rights were explained in a language the defendant understands</li>
+        <li>Whether defendant was under the influence of drugs or alcohol</li>
+    </ul>
+    
+    <h4>Invoking Miranda Rights</h4>
+    <p>Suspects may invoke their Miranda rights during questioning, which requires police to cease interrogation:</p>
+    <ul>
+        <li><strong>Right to Silence</strong>: Must be invoked unambiguously (<em>Berghuis v. Thompkins</em>)</li>
+        <li><strong>Right to Counsel</strong>: Must also be unambiguous (<em>Davis v. United States</em>), e.g., "I want a lawyer"</li>
+        <li><strong>Effect of Invocation</strong>:
+            <ul>
+                <li>Right to silence: Questioning must cease, but may resume after a break with fresh Miranda warnings</li>
+                <li>Right to counsel: All questioning must cease until attorney is present or defendant initiates further communication (<em>Edwards v. Arizona</em>)</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Berghuis v. Thompkins</span> <span class="case-citation">560 U.S. 370 (2010)</span></h4>
+    <p class="case-rule">A suspect must unambiguously invoke their right to remain silent, and a waiver of Miranda rights may be implied by a suspect who understands their rights but engages in a course of conduct indicating waiver, such as making an uncoerced statement to police.</p>
+    <p class="case-facts">After being arrested for murder, Thompkins was given Miranda warnings and acknowledged understanding them but did not explicitly agree to talk. He remained largely silent during a three-hour interrogation, giving only occasional one-word responses. Eventually, he answered "yes" when asked if he prayed to God for forgiveness for shooting the victim. Thompkins moved to suppress this statement, arguing he had invoked his right to remain silent by remaining silent.</p>
+    <p class="case-reasoning">The Supreme Court held that Thompkins did not invoke his right to remain silent by remaining silent, ruling that invocation of this right must be unambiguous and unequivocal. Justice Kennedy, writing for the majority, noted that if police are unsure whether a suspect has invoked their rights, they are not required to end questioning. Additionally, the Court held that Thompkins had impliedly waived his Miranda rights by answering the detective's question after receiving and understanding the warnings. The Court established that a waiver can be implied from "the defendant's silence, coupled with an understanding of his rights and a course of conduct indicating waiver." This decision placed the burden on suspects to clearly invoke their right to remain silent, rather than requiring police to obtain an explicit waiver before questioning.</p>
+</div>
+
+<div class="explanation" id="miranda-exceptions">
+    <h3>Exceptions to Miranda Requirements</h3>
+    
+    <p>The Supreme Court has recognized several exceptions to the Miranda rule, allowing statements obtained without proper warnings or after Miranda violations to be used in certain circumstances.</p>
+    
+    <div class="key-point">
+        <h4>Major Exceptions to Miranda</h4>
+        <ul>
+            <li><strong>Public Safety Exception</strong>: Immediate questions necessary to secure public safety (<em>New York v. Quarles</em>)</li>
+            <li><strong>Routine Booking Questions</strong>: Basic biographical data and administrative information</li>
+            <li><strong>Impeachment Use</strong>: Statements obtained in violation of Miranda usable to impeach defendant's testimony (<em>Harris v. New York</em>)</li>
+            <li><strong>Fruit of Poisonous Tree Limitations</strong>: Physical evidence discovered as a result of un-Mirandized but voluntary statements may be admissible (<em>United States v. Patane</em>)</li>
+            <li><strong>Undercover Agents</strong>: Questioning by someone the suspect doesn't know is a government agent (<em>Illinois v. Perkins</em>)</li>
+            <li><strong>Independent Source/Inevitable Discovery</strong>: Evidence that would have been found through independent legal means</li>
+        </ul>
+    </div>
+    
+    <h4>Public Safety Exception</h4>
+    <p>The public safety exception, established in <em>New York v. Quarles</em>, allows police to temporarily forego Miranda warnings when necessary to address an immediate threat to public safety. Key elements include:</p>
+    <ul>
+        <li>Immediate necessity to secure safety (e.g., location of discarded weapon in public place)</li>
+        <li>Questions must be reasonably prompted by safety concerns, not investigative purposes</li>
+        <li>Exception applies only until the immediate danger is addressed</li>
+    </ul>
+    
+    <h4>Derivative Evidence and Miranda</h4>
+    <p>The Supreme Court has limited the application of the "fruit of the poisonous tree" doctrine in the Miranda context:</p>
+    <ul>
+        <li>Subsequent statements obtained after proper warnings may be admissible despite earlier Miranda violations (<em>Oregon v. Elstad</em>)</li>
+        <li>Physical evidence obtained as a result of un-Mirandized but voluntary statements may be admissible (<em>United States v. Patane</em>)</li>
+        <li>Witness testimony discovered through un-Mirandized statements generally admissible (<em>Michigan v. Tucker</em>)</li>
+    </ul>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["MIRANDA EXCEPTIONS ANALYSIS"] --> violation["Was there a Miranda violation?
+        - No warnings before custodial interrogation OR
+        - Questioning after invocation of rights"]
+        
+        violation -- "NO: No violation" --> admissible1["STATEMENTS ADMISSIBLE:
+        No Miranda violation occurred"]
+        
+        violation -- "YES: Miranda violation" --> voluntary["Were the statements voluntary
+        under Due Process standards?
+        (No coercion by police)"]
+        
+        voluntary -- "NO: Involuntary statements" --> inadmissible["STATEMENTS INADMISSIBLE:
+        Involuntary statements barred for all purposes"]
+        
+        voluntary -- "YES: Voluntary despite Miranda violation" --> purpose["For what purpose is the
+        evidence being offered?"]
+        
+        purpose --> impeachment["IMPEACHMENT EXCEPTION:
+        Statements used to impeach
+        defendant's testimony?"]
+        
+        purpose --> publicSafety["PUBLIC SAFETY EXCEPTION:
+        Questions necessary to address
+        immediate public danger?"]
+        
+        purpose --> physicalFruits["PHYSICAL FRUITS:
+        Physical evidence discovered
+        as result of statements?"]
+        
+        purpose --> booking["BOOKING EXCEPTION:
+        Routine administrative
+        booking questions?"]
+        
+        impeachment -- "YES" --> admissible2["ADMISSIBLE FOR IMPEACHMENT:
+        Can be used to contradict defendant's testimony"]
+        
+        publicSafety -- "YES" --> admissible3["ADMISSIBLE UNDER PUBLIC SAFETY:
+        Immediate danger justified questions"]
+        
+        physicalFruits -- "YES" --> admissible4["PHYSICAL EVIDENCE ADMISSIBLE:
+        Under Patane, physical fruits may be admissible"]
+        
+        booking -- "YES" --> admissible5["ADMISSIBLE UNDER BOOKING EXCEPTION:
+        Administrative questions not subject to Miranda"]
+        
+        impeachment -- "NO" --> caseinchief["CASE-IN-CHIEF:
+        Being used in prosecution's
+        main case?"]
+        
+        publicSafety -- "NO" --> caseinchief
+        physicalFruits -- "NO" --> caseinchief
+        booking -- "NO" --> caseinchief
+        
+        caseinchief -- "YES" --> inadmissible2["INADMISSIBLE IN CASE-IN-CHIEF:
+        Miranda violation without exception"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef options fill:#e0f7fa,stroke:#00acc1,stroke-width:1px
+        
+        class start process
+        class violation,voluntary question
+        class inadmissible,inadmissible2 negative
+        class admissible1,admissible2,admissible3,admissible4,admissible5 positive
+        class purpose,impeachment,publicSafety,physicalFruits,booking,caseinchief options
+    </div>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">New York v. Quarles</span> <span class="case-citation">467 U.S. 649 (1984)</span></h4>
+    <p class="case-rule">Police officers may question a suspect without first giving Miranda warnings when necessary to address an immediate threat to public safety.</p>
+    <p class="case-facts">Police apprehended Quarles, a rape suspect, in a supermarket after a brief chase. Upon frisking him, an officer discovered an empty shoulder holster and, without giving Miranda warnings, asked where the gun was. Quarles nodded toward some empty cartons and said, "the gun is over there." The officer retrieved the gun and then read Quarles his Miranda rights.</p>
+    <p class="case-reasoning">The Supreme Court created a "public safety" exception to the Miranda requirement, holding that the need for immediate answers to protect public safety can outweigh the need for Miranda warnings. Justice Rehnquist, writing for the majority, emphasized that police officers should not be placed in the untenable position of having to choose between protecting the public and preserving evidence. The Court reasoned that in situations presenting a danger to the public or officers, the primary social cost of the Miranda rule—the possibility that a guilty person might go free—was outweighed by the need for immediate information to neutralize the danger. The Court noted that this exception applies only in situations presenting an immediate threat to public safety and does not depend on the subjective motivation of the officer. This pragmatic exception recognizes that real-world policing sometimes requires immediate action to protect the public.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#interrogations-section">Back to Top</a>
+</div>

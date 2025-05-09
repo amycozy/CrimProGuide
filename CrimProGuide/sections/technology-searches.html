@@ -1,0 +1,216 @@
+<h2 id="technology-searches-section">Technology and the Fourth Amendment</h2>
+
+<div class="section-navigation">
+    <a href="#technology-overview">Technology Overview</a>
+    <a href="#kyllo-test">The Kyllo Test</a>
+    <a href="#gps-tracking">GPS Tracking</a>
+    <a href="#aerial-surveillance">Aerial Surveillance</a>
+    <a href="#binary-searches">Binary Searches</a>
+</div>
+
+<div class="explanation" id="technology-overview">
+    <h3>Technology and Fourth Amendment Analysis</h3>
+    
+    <p>The rise of new technologies has presented significant challenges for Fourth Amendment jurisprudence. As surveillance capabilities advance, courts must determine when the use of technology to gather information constitutes a "search" requiring warrant protection.</p>
+    
+    <div class="key-point">
+        <h4>Two Key Questions for Technology-Based Surveillance</h4>
+        <ol>
+            <li><strong>Law Enforcement Use of Technology</strong>: When officers use new technology to gather information, courts apply the <em>Kyllo</em> test</li>
+            <li><strong>Suspect Use of Technology</strong>: When suspects use new technology to send/receive information, courts apply traditional <em>Katz</em> and <em>Jones</em> frameworks, along with the third-party doctrine</li>
+        </ol>
+    </div>
+    
+    <p>The Supreme Court has increasingly recognized that technology can fundamentally alter the balance of power between citizens and government, requiring new approaches to Fourth Amendment protection. As Justice Sotomayor noted in <em>Jones</em>, modern surveillance technologies can "alter the relationship between citizen and government in a way that is inimical to democratic society."</p>
+    
+    <div class="mermaid">
+    flowchart TD
+        start["TECHNOLOGY AND FOURTH AMENDMENT ANALYSIS"] --> techType["What type of technology is involved?"]
+        
+        techType --> survTech["SURVEILLANCE TECHNOLOGY:
+        Technology used by law enforcement
+        to gather information"]
+        
+        techType --> commTech["COMMUNICATION TECHNOLOGY:
+        Technology used by suspect to
+        communicate or store information"]
+        
+        survTech --> kyllo["Apply Kyllo Test:
+        1. Did technology obtain information that couldn't 
+           be obtained without physical intrusion?
+        2. Is the technology in general public use?"]
+        
+        commTech --> katz["Apply Katz/Jones Framework:
+        1. Did suspect exhibit subjective expectation of privacy?
+        2. Is that expectation objectively reasonable?
+        3. Was there physical trespass to obtain information?"]
+        
+        commTech --> third["Consider Third-Party Doctrine:
+        Information voluntarily shared with third parties
+        may lose Fourth Amendment protection"]
+        
+        kyllo -- "YES to Q1, NO to Q2" --> search1["FOURTH AMENDMENT SEARCH:
+        Warrant generally required"]
+        
+        kyllo -- "NO to Q1 or YES to Q2" --> nosearch1["NOT A FOURTH AMENDMENT SEARCH:
+        No warrant required"]
+        
+        katz -- "YES to both Katz questions
+        or YES to trespass question" --> search2["FOURTH AMENDMENT SEARCH:
+        Warrant generally required"]
+        
+        katz -- "NO to both Katz questions
+        and NO to trespass question" --> nosearch2["NOT A FOURTH AMENDMENT SEARCH:
+        No warrant required"]
+        
+        third --> third_result["Third-party doctrine may eliminate
+        Fourth Amendment protection even if
+        Katz or Jones would otherwise apply"]
+        
+        classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
+        classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
+        classDef negative fill:#ffebee,stroke:#c62828,stroke-width:2px
+        classDef positive fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        classDef neutral fill:#f5f5f5,stroke:#616161,stroke-width:1px
+        
+        class start,techType process
+        class survTech,commTech,kyllo,katz,third question
+        class nosearch1,nosearch2 negative
+        class search1,search2 positive
+        class third_result neutral
+    </div>
+</div>
+
+<div class="explanation" id="kyllo-test">
+    <h3>The Kyllo Test for New Technology</h3>
+    
+    <p>In <em>Kyllo v. United States</em> (2001), the Supreme Court established a framework for analyzing when the use of technology to obtain information constitutes a Fourth Amendment search.</p>
+    
+    <div class="key-point">
+        <h4>The Kyllo Two-Part Test</h4>
+        <ol>
+            <li><strong>Information That Requires Physical Intrusion</strong>: Using technology to obtain information "that could not otherwise have been obtained without physical intrusion into a constitutionally protected area" will likely be deemed a search</li>
+            <li><strong>Technology Not in General Public Use</strong>: The analysis also considers whether the technology in question "is not in general public use"</li>
+        </ol>
+    </div>
+    
+    <p>This test focuses primarily on two factors:</p>
+    <ul>
+        <li><strong>Type of Information Obtained</strong>: The critical question is what information was learned, especially if it reveals details of the home that would traditionally be protected</li>
+        <li><strong>Method of Collection</strong>: The commonality of the technology matters, as more widespread technologies receive less Fourth Amendment scrutiny</li>
+    </ul>
+    
+    <h4>Applying the Kyllo Test</h4>
+    <p>When applying <em>Kyllo</em>, courts consider:</p>
+    <ul>
+        <li>Whether the technology reveals intimate details that would traditionally require physical entry</li>
+        <li>The level of technical sophistication of the surveillance method</li>
+        <li>The commonality of the technology among the general public</li>
+        <li>Whether the surveillance targeted a constitutionally protected area (especially the home)</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Kyllo v. United States</span> <span class="case-citation">533 U.S. 27 (2001)</span></h4>
+    <p class="case-rule">When the government uses a device that is not in general public use to explore details of the home that would previously have been unknowable without physical intrusion, the surveillance is a "search" and is presumptively unreasonable without a warrant.</p>
+    <p class="case-facts">Federal agents suspected Kyllo was growing marijuana in his home. Without obtaining a warrant, they used a thermal imaging device to detect higher than normal heat emanating from his roof and one wall. Based on the thermal imaging and other information, agents obtained a warrant to search Kyllo's home, where they found marijuana growing. Kyllo moved to suppress the evidence, arguing that the use of thermal imaging constituted an unreasonable search.</p>
+    <p class="case-reasoning">Justice Scalia, writing for the majority, held that the use of the thermal imaging device constituted a search under the Fourth Amendment. The Court emphasized that the thermal imager revealed information about the interior of the home that would not have been obtainable without physical intrusion. The Court rejected the government's argument that thermal imaging only detected "waste heat" emanating from the exterior of the home, noting that such an approach would leave homeowners "at the mercy of advancing technology." Instead, the Court established a bright-line rule that when the government uses a device not in general public use to explore details of the home that would have been unknowable without physical intrusion, a search occurs requiring a warrant. The Court noted the importance of drawing a firm line at the entrance to the house, which represents the very core of Fourth Amendment protection.</p>
+</div>
+
+<div class="explanation" id="gps-tracking">
+    <h3>GPS Tracking and the Trespass Theory</h3>
+    
+    <p>In <em>United States v. Jones</em> (2012), the Supreme Court revitalized the trespass-based approach to the Fourth Amendment in the context of GPS tracking. This marked a significant shift in how courts analyze the use of technology for surveillance.</p>
+    
+    <h4>The Jones Trespass Approach to Technology</h4>
+    <p>Key elements of the trespass approach include:</p>
+    <ul>
+        <li><strong>Physical Intrusion</strong>: Even minor physical intrusions (like attaching a GPS device) can constitute a search</li>
+        <li><strong>Constitutionally Protected Area</strong>: The intrusion must be on a constitutionally protected area (persons, houses, papers, effects)</li>
+        <li><strong>Purpose of Obtaining Information</strong>: The intrusion must be for the purpose of gathering information</li>
+    </ul>
+    
+    <div class="key-point">
+        <h4>Sotomayor's Concerns About Technology and Privacy</h4>
+        <p>Justice Sotomayor's concurrence in <em>Jones</em> raised important considerations about how technology threatens reasonable expectations of privacy:</p>
+        <ul>
+            <li>GPS monitoring creates "a precise, comprehensive record of a person's public movements that reflects a wealth of detail about familial, political, professional, religious, and sexual associations"</li>
+            <li>Because GPS monitoring is cheap, surreptitious, and evades ordinary checks on police power, it may fundamentally alter the citizen-government relationship</li>
+            <li>Government monitoring may "chill associational and expressive freedoms"</li>
+            <li>The third-party doctrine may need reconsideration in the digital age, as information shared for limited purposes should not necessarily lose all Fourth Amendment protection</li>
+        </ul>
+    </div>
+    
+    <h4>The Mosaic Theory</h4>
+    <p>Alito's concurrence in <em>Jones</em> suggested that long-term monitoring of movements might violate the Fourth Amendment even without a physical trespass. This "mosaic theory" suggests that prolonged surveillance can reveal an intimate picture of a person's life that should be protected, even if individual data points are publicly exposed.</p>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">United States v. Jones</span> <span class="case-citation">565 U.S. 400 (2012)</span></h4>
+    <p class="case-rule">The government conducts a Fourth Amendment search when it physically intrudes on a constitutionally protected area (persons, houses, papers, effects) for the purpose of obtaining information, regardless of whether the individual has a reasonable expectation of privacy in the area.</p>
+    <p class="case-facts">Without a valid warrant, law enforcement installed a GPS tracking device on Jones's vehicle and monitored its movements for 28 days, tracking the vehicle across multiple jurisdictions, including when parked in a garage adjoining Jones's residence. The government used this data to link Jones to a drug trafficking conspiracy.</p>
+    <p class="case-reasoning">Justice Scalia, writing for the majority, held that the installation of the GPS device on Jones's vehicle constituted a search under the Fourth Amendment because the government physically occupied private property (the vehicle, an "effect" under the Fourth Amendment) for the purpose of obtaining information. The Court emphasized that the Katz reasonable expectation of privacy test did not replace the traditional property-based understanding of the Fourth Amendment but rather supplemented it. The Court clarified that when the government physically intrudes on constitutionally protected areas to obtain information, a search occurs regardless of whether there is a reasonable expectation of privacy. This case marked a significant return to trespass concepts in Fourth Amendment jurisprudence, particularly in the context of new surveillance technologies.</p>
+</div>
+
+<div class="explanation" id="aerial-surveillance">
+    <h3>Aerial Surveillance and Technology</h3>
+    
+    <p>The Supreme Court has addressed whether aerial surveillance constitutes a Fourth Amendment search, establishing that observations from publicly navigable airspace generally do not implicate the Fourth Amendment, even when viewing curtilage.</p>
+    
+    <h4>Key Principles for Aerial Surveillance</h4>
+    <ul>
+        <li><strong>Type of Information Revealed</strong>: Courts consider whether the surveillance reveals intimate details or merely outlines/general information</li>
+        <li><strong>Public Navigable Airspace</strong>: Observations from legally navigable airspace are generally permitted</li>
+        <li><strong>Technology Enhancement</strong>: The level of technological enhancement affects the analysis</li>
+        <li><strong>Routine Nature</strong>: Whether the flight path is one routinely used by the public matters</li>
+    </ul>
+    
+    <div class="key-point">
+        <h4>Dow Chemical Standard</h4>
+        <p>In <em>Dow Chemical Co. v. United States</em> (1986), the Court held that aerial photographs of an industrial facility were not "so revealing of intimate details as to raise constitutional concerns." Key factors included:</p>
+        <ul>
+            <li>The photographs revealed only outlines of the facility's buildings and equipment</li>
+            <li>The industrial facility was more akin to an "open field" than curtilage</li>
+            <li>The same technology used to photograph private residences might yield a different result</li>
+        </ul>
+    </div>
+    
+    <p>The aerial surveillance cases demonstrate the Court's approach to balancing Fourth Amendment protections against the legitimate needs of law enforcement in an era of advancing technology. They suggest a willingness to permit observation from public vantage points, while remaining cautious about surveillance that reveals intimate details typically protected from public view.</p>
+</div>
+
+<div class="explanation" id="binary-searches">
+    <h3>Binary Searches and Technology</h3>
+    
+    <p>Binary searches are investigative techniques that reveal only whether something illegal is present, with no other information disclosed. Courts have taken different approaches to binary searches depending on the context and technology involved.</p>
+    
+    <h4>Drug-Sniffing Dogs: A Traditional Binary Search</h4>
+    <p>The Supreme Court has addressed whether using drug-detection dogs constitutes a Fourth Amendment search:</p>
+    <ul>
+        <li><strong>Public Places</strong>: Dog sniffs in public areas generally do not constitute searches (<em>Illinois v. Caballes</em>)</li>
+        <li><strong>Curtilage</strong>: Using a drug-sniffing dog on the curtilage of a home is a search (<em>Florida v. Jardines</em>)</li>
+        <li><strong>Traffic Stops</strong>: Dog sniffs during legitimate traffic stops are permitted if they do not prolong the stop (<em>Rodriguez v. United States</em>)</li>
+    </ul>
+    
+    <div class="key-point">
+        <h4>Technological Binary Searches</h4>
+        <p>As technology advances, courts have had to consider more sophisticated forms of binary searches:</p>
+        <ul>
+            <li><strong>Field Tests</strong>: Chemical tests that reveal only whether a substance is contraband are generally not searches</li>
+            <li><strong>Specialized Detectors</strong>: Devices designed to detect only contraband items may be treated differently than those capturing broader information</li>
+            <li><strong>Digital Binary Searches</strong>: Software designed to identify only illegal content may raise distinct Fourth Amendment questions</li>
+        </ul>
+    </div>
+    
+    <p>The binary search doctrine highlights a core principle: investigative techniques that reveal only contraband, and nothing about lawful activity, may receive different Fourth Amendment treatment than techniques that reveal legally protected information along with contraband.</p>
+</div>
+
+<div class="case-box">
+    <h4><span class="case-name">Florida v. Jardines</span> <span class="case-citation">569 U.S. 1 (2013)</span></h4>
+    <p class="case-rule">The use of a drug-sniffing dog on the curtilage of a home constitutes a search under the Fourth Amendment when officers physically intrude on the curtilage for the purpose of gathering evidence.</p>
+    <p class="case-facts">Police officers brought a drug-detection dog to Jardines' front porch, where the dog alerted to the presence of drugs. Based on this alert, the officers obtained a warrant to search the home, which revealed marijuana plants. Jardines moved to suppress the evidence, arguing that using the drug dog on his porch was a warrantless search.</p>
+    <p class="case-reasoning">Justice Scalia, writing for the majority, held that the use of a drug-sniffing dog on Jardines' front porch was a search under the Fourth Amendment. The Court applied the physical trespass theory from <em>Jones</em>, finding that when police physically enter the curtilage of a home to gather evidence, a search occurs. The Court emphasized that while visitors might have an implied license to approach the front door (the "knock and talk" exception), that license does not extend to bringing a trained police dog to explore the area for evidence. The Court specifically noted that it was resolving the case using the property-based approach rather than the <em>Katz</em> reasonable expectation of privacy test, demonstrating how the two tests operate independently and can yield similar results through different analyses.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#technology-searches-section">Back to Top</a>
+</div>
