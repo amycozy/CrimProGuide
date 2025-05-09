@@ -11,6 +11,16 @@ https://[your-username].github.io/[repository-name]/
 
 Replace `[your-username]` with your GitHub username and `[repository-name]` with the name of this repository.
 
+### Repository Structure for GitHub Pages
+
+The repository is structured to work properly with GitHub Pages:
+
+- `/index.html` - A redirect file at the root level that points to the `/CrimProGuide/` directory
+- `/CrimProGuide/index.html` - The main guide application with all functionality
+- All supporting files (CSS, JavaScript, section content) are in the CrimProGuide directory
+
+This structure allows the guide to work correctly when hosted on GitHub Pages, which serves the root index.html file by default.
+
 ## Local Server Instructions
 
 This section explains how to run the Criminal Procedure Guide locally using the included server.
