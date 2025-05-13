@@ -5,9 +5,13 @@ description: A flowchart-based study guide for Criminal Procedure covering key F
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
+# Include CrimProGuide directory in the build
+include: ["CrimProGuide"]
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
+keep_files: ["CrimProGuide"]
 
 # Jekyll plugins
 plugins:
@@ -28,7 +32,6 @@ defaults:
       layout: "default"
   -
     scope:
-      path: ""
-      type: "sections"
+      path: "CrimProGuide/sections"
     values:
       layout: "section"

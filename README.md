@@ -1,84 +1,78 @@
-# Criminal Procedure Guide
+# Criminal Procedure Study Guide Server
 
-This repository contains a comprehensive Criminal Procedure Guide. You can access it either through GitHub Pages online or run it locally using the included server.
+This is a Jekyll-based web application that serves a Criminal Procedure Study Guide with interactive flowcharts and case analyses.
 
-## Online Access (GitHub Pages)
+## Structure
 
-The guide is available online through GitHub Pages at:
+The guide is organized with the following structure:
+
 ```
-https://[your-username].github.io/[repository-name]/
-```
-
-Replace `[your-username]` with your GitHub username and `[repository-name]` with the name of this repository.
-
-### Repository Structure for GitHub Pages
-
-The repository is structured to work properly with GitHub Pages:
-
-- `/index.html` - A redirect file at the root level that points to the `/CrimProGuide/` directory
-- `/CrimProGuide/index.html` - The main guide application with all functionality
-- All supporting files (CSS, JavaScript, section content) are in the CrimProGuide directory
-
-This structure allows the guide to work correctly when hosted on GitHub Pages, which serves the root index.html file by default.
-
-## Local Server Instructions
-
-This section explains how to run the Criminal Procedure Guide locally using the included server.
-
-### Quick Start
-
-1. Double-click the `Launch_CrimPro_Guide.bat` file
-2. A browser window should open automatically to display the guide
-3. When finished, close the command prompt window to stop the server
-
-### What This Does
-
-The launcher starts a small web server on your computer that:
-- Runs on port 8000
-- Serves the Criminal Procedure Guide files
-- Automatically opens your default web browser
-- Allows the guide to load all sections correctly
-
-### Troubleshooting
-
-#### Browser doesn't open automatically
-If your browser doesn't open automatically, manually go to:
-```
-http://localhost:8000
+CrimProGuideServer/
+├── _config.yml               # Jekyll configuration
+├── _layouts/                 # Jekyll layout templates
+│   ├── default.html          # Main layout template
+│   └── section.html          # Section-specific layout
+├── CrimProGuide/             # Main content directory
+│   ├── index.html            # Main entry point
+│   ├── print.html            # Printable version
+│   ├── css/                  # Styling
+│   ├── js/                   # JavaScript
+│   └── sections/             # Content sections (Fourth Amendment, etc.)
+├── Printouts/                # PDF versions of guides
+└── server.py                 # Simple Python HTTP server
 ```
 
-#### "Port already in use" error
-If you see this error, either:
-- A previous instance of the server is still running (close any command prompt windows)
-- Another application is using port 8000
-  - Try closing other applications
-  - Or modify the PORT variable in server.py to use a different port (e.g., 8080)
+## Features
 
-#### Python not found
-If you see "Python not found":
-1. Download and install Python from [python.org](https://www.python.org/downloads/)
-2. During installation, check the box "Add Python to PATH"
-3. Restart your computer
-4. Try launching again
+- Interactive flowcharts for learning Criminal Procedure concepts
+- Dynamic content loading with JavaScript
+- PDF export capability
+- Responsive design
+- Jekyll integration for automatic "last updated" date
 
-#### Can't find the CrimProGuide folder
-If the server can't find the CrimProGuide folder:
-1. Ensure the server.py and batch file are in the same directory as the CrimProGuide folder
-2. The folder name must be exactly "CrimProGuide" (case-sensitive)
+## Running Locally
 
-### For Advanced Users
+### Using the Python Server (No Jekyll Features)
 
-- The server runs using Python's built-in HTTP server
-- The server.py file can be modified if needed
-- To run manually: open a command prompt and type `python server.py`
+If you don't have Jekyll installed, you can use the included Python server:
 
-## Repository Structure
+1. Run `Launch_CrimPro_Guide.bat` or execute `python server.py`
+2. Open your browser to http://localhost:8000
 
-- `/CrimProGuide` - Contains all the HTML, CSS, and JavaScript files for the guide
-- `/Printouts` - Contains PDF versions of the guide sections
-- `server.py` - Python script for running the guide locally
-- `index.html` - Redirect file for GitHub Pages
+This method will serve the static files without Jekyll processing, so the "last updated" date won't be dynamic.
 
-## Questions or Problems?
+### Using Jekyll (Full Features)
 
-If you encounter any issues that aren't addressed by the troubleshooting steps above, please contact your course administrator for assistance.
+To use all features including the dynamic "last updated" date:
+
+1. Install Ruby and Jekyll if you haven't already:
+   - Download Ruby from https://rubyinstaller.org/
+   - Run `gem install jekyll bundler`
+
+2. Install dependencies:
+   ```
+   bundle install
+   ```
+
+3. Run the Jekyll server:
+   ```
+   bundle exec jekyll serve
+   ```
+
+4. Open your browser to http://localhost:4000
+
+## Deployment
+
+This site can be deployed to GitHub Pages:
+
+1. Create a repository
+2. Push this code to the repository
+3. Enable GitHub Pages in the repository settings
+
+## License
+
+Educational use only. Not for redistribution.
+
+## Contact
+
+For questions or assistance: contact.amyc@pm.me
