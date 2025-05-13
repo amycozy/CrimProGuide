@@ -1,11 +1,17 @@
+---
+layout: null
+title: Criminal Procedure Study Guide - Print Version
+last_modified_at: {{ site.time }}
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criminal Procedure Guide - Print Version</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/print.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
     <style>
         @media screen {
@@ -93,7 +99,7 @@
     <button id="print-button" class="print-button">Print to PDF</button>
 
     <div class="print-container">
-        <h1>Criminal Procedure: Comprehensive Guide</h1>
+        <h1>Criminal Procedure: Study Guide</h1>
         
         <div class="main-navigation">
             <h3>Table of Contents:</h3>
@@ -113,7 +119,7 @@
         </div>
 
         <div class="note print-intro">
-            <p><strong>Note:</strong> This guide provides a systematic approach to evaluating key doctrines in Criminal Procedure, with a focus on Professor Sood's course. Each section includes detailed flowcharts with specific criteria for applying the constitutional standards along with key cases.</p>
+            <p><strong>Note:</strong> This guide provides a systematic approach to evaluating key doctrines in Criminal Procedure. Each section includes detailed flowcharts with specific criteria for applying the constitutional standards along with key cases.</p>
         </div>
 
         <!-- Overview Section -->
@@ -192,6 +198,13 @@
             <div id="right-to-counsel-content"></div>
         </div>
     </div>
+    
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            <p>Last Updated: {% if page.last_modified_at %}{{ page.last_modified_at | date: "%B %d, %Y" }}{% else %}{{ site.time | date: "%B %d, %Y" }}{% endif %}</p>
+        </div>
+    </footer>
 
     <script>
         // Function to load section content

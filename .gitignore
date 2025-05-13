@@ -1,0 +1,13 @@
+# Jekyll build directory
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Temporary files
+*.swp
+*~
+.DS_Store
+Thumbs.db

@@ -1,0 +1,34 @@
+# Site settings
+title: Criminal Procedure Study Guide
+email: contact.amyc@pm.me
+description: A flowchart-based study guide for Criminal Procedure covering key Fourth, Fifth, and Sixth Amendment doctrines.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Jekyll plugins
+plugins:
+  - jekyll-last-modified-at # For automatic last updated timestamps
+
+# Collections
+collections:
+  sections:
+    output: true
+    permalink: /:collection/:name/
+
+# Default front matter
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "sections"
+    values:
+      layout: "section"

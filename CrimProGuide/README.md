@@ -1,6 +1,6 @@
-# Criminal Procedure Guide - Professor Sood's Class
+# Criminal Procedure Study Guide
 
-A comprehensive flowchart-based guide to Criminal Procedure covering key Fourth, Fifth, and Sixth Amendment doctrines.
+A flowchart-based study guide to Criminal Procedure covering key Fourth, Fifth, and Sixth Amendment doctrines.
 
 ## Overview
 
