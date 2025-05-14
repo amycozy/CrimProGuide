@@ -88,7 +88,7 @@ function setupNavigation() {
         contentContainer.innerHTML = '<div class="loading">Loading content...</div>';
         
                 // Get paths relative to current location rather than using Jekyll
-                fetch(`./sections/${sectionName}.html`)
+                fetch(`/CrimProGuideServer/CrimProGuide/sections/${sectionName}.html`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Section not found');
