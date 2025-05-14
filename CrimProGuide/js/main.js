@@ -87,7 +87,11 @@ function setupNavigation() {
     function loadSection(sectionName) {
         contentContainer.innerHTML = '<div class="loading">Loading content...</div>';
         
-        fetch(`sections/${sectionName}.html`)
+                // Use proper baseurl path for GitHub Pages
+                const baseUrl = document.querySelector('meta[name="baseurl"]') ? 
+                    document.querySelector('meta[name="baseurl"]').getAttribute('content') : '';
+                
+                fetch(`${baseUrl}/CrimProGuide/sections/${sectionName}.html`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Section not found');
