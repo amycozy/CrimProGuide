@@ -2,7 +2,7 @@
 title: Criminal Procedure Study Guide
 email: contact.amyc@pm.me
 description: A flowchart-based study guide for Criminal Procedure covering key Fourth, Fifth, and Sixth Amendment doctrines.
-baseurl: "/CrimProGuideServer" # the subpath of your site (repository name)
+baseurl: "" # the subpath of your site (repository name)
 url: "" # the base hostname & protocol for your site
 
 # Include CrimProGuide directory in the build

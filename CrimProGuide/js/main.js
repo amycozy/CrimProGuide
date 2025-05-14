@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Initialize Mermaid diagrams
 function initializeMermaid() {
     mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,  // We'll manually initialize
         theme: 'default',
         fontFamily: 'Georgia, Times New Roman, serif',
         fontSize: 14,
@@ -22,13 +22,19 @@ function initializeMermaid() {
             htmlLabels: true,
             useMaxWidth: true,
             curve: 'basis'
-        }
+        },
+        securityLevel: 'loose'
     });
     
     // Make sure diagrams are rendered after a short delay to ensure DOM is ready
     setTimeout(function() {
-        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-    }, 1000);
+        try {
+            mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+            console.log("Mermaid initialized from main.js");
+        } catch (error) {
+            console.error("Mermaid initialization error:", error);
+        }
+    }, 2000);
 }
 
 // Set up navigation and content loading
@@ -88,7 +94,7 @@ function setupNavigation() {
         contentContainer.innerHTML = '<div class="loading">Loading content...</div>';
         
                 // Get paths relative to current location rather than using Jekyll
-                fetch(`/CrimProGuideServer/CrimProGuide/sections/${sectionName}.html`)
+                fetch(`./sections/${sectionName}.html`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Section not found');

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="baseurl" content="{{ site.baseurl }}">
     <title>Criminal Procedure Study Guide</title>
-    <link rel="stylesheet" href="/CrimProGuideServer/CrimProGuide/css/styles.css">
-    <link rel="stylesheet" href="/CrimProGuideServer/CrimProGuide/css/footer.css">
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
-    <script src="/CrimProGuideServer/CrimProGuide/js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <h1>Criminal Procedure: Study Guide</h1>
@@ -67,7 +67,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize Mermaid with our new color scheme
             mermaid.initialize({
-                startOnLoad: true,
+                startOnLoad: false,  // We'll manually initialize
                 theme: 'default',
                 fontFamily: 'Georgia, Times New Roman, serif',
                 fontSize: 14,
@@ -85,13 +85,19 @@
                     lineColor: '#5A7A5F',
                     secondaryColor: '#A3D2C3',
                     tertiaryColor: '#F5F0DC'
-                }
+                },
+                securityLevel: 'loose'
             });
             
-            // Make sure diagrams are rendered after a short delay to ensure DOM is ready
+            // Make sure diagrams are rendered after content loads
             setTimeout(function() {
-                mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-            }, 1000);
+                try {
+                    mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+                    console.log("Mermaid initialized");
+                } catch (error) {
+                    console.error("Mermaid initialization error:", error);
+                }
+            }, 2000);
             
             // Set up navigation and content loading
             setupNavigation();
@@ -157,7 +163,7 @@
                 contentContainer.innerHTML = '<div class="loading">Loading content...</div>';
                 
                 // Get paths relative to current location rather than using Jekyll
-                fetch(`/CrimProGuideServer/CrimProGuide/sections/${sectionName}.html`)
+                fetch(`./sections/${sectionName}.html`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Section not found');
