@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="baseurl" content="{{ site.baseurl }}">
     <title>Criminal Procedure Study Guide</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/CrimProGuide/css/styles.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/CrimProGuide/css/footer.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
-    <script src="{{ site.baseurl }}/CrimProGuide/js/main.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <h1>Criminal Procedure: Study Guide</h1>
@@ -156,11 +156,8 @@
             function loadSection(sectionName) {
                 contentContainer.innerHTML = '<div class="loading">Loading content...</div>';
                 
-                // Use proper baseurl path for GitHub Pages
-                const baseUrl = document.querySelector('meta[name="baseurl"]') ? 
-                    document.querySelector('meta[name="baseurl"]').getAttribute('content') : '';
-                
-                fetch(`${baseUrl}/CrimProGuide/sections/${sectionName}.html`)
+                // Get paths relative to current location rather than using Jekyll
+                fetch(`./sections/${sectionName}.html`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Section not found');
