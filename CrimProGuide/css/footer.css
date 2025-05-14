@@ -2,11 +2,12 @@
 .site-footer {
     margin-top: 50px;
     padding: 20px 0;
-    border-top: 1px solid #eaeaea;
-    background-color: #f8f8f8;
+    border-top: 1px solid var(--light-teal);
+    background-color: rgba(131, 188, 169, 0.1);
     text-align: center;
     font-size: 14px;
-    color: #666;
+    color: var(--dark-charcoal);
+    border-radius: 8px 8px 0 0;
 }
 
 .footer-content {
@@ -16,12 +17,14 @@
 }
 
 .site-footer a {
-    color: #0066cc;
+    color: var(--teal);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 .site-footer a:hover {
     text-decoration: underline;
+    color: var(--light-forest-green);
 }
 
 .site-footer p {

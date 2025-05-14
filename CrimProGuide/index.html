@@ -34,7 +34,7 @@
     </div>
 
     <div class="note">
-        <p><strong>Note:</strong> This guide provides a systematic approach to evaluating key doctrines in Criminal Procedure. Each section includes detailed flowcharts with specific criteria for applying the constitutional standards along with key cases.</p>
+        <p><strong>Note:</strong> This guide provides a systematic approach to evaluating key doctrines in Criminal Procedure. Each section includes detailed flowcharts with specific criteria for applying the constitutional standards along with key cases. The guide features character mascots to help illustrate and remember key concepts.</p>
     </div>
 
     <!-- This div will be populated with content from the sections -->
@@ -59,12 +59,12 @@
         <p>3. Set paper size to "Letter" and orientation to "Portrait"</p>
         <p>4. Set margins to "None" for maximum content</p>
         <p>5. Enable "Background graphics" option if available</p>
-        <p><button id="cancel-print">Cancel</button></p>
+        <p><button id="cancel-print" class="control-button">Cancel</button></p>
     </div>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Mermaid
+            // Initialize Mermaid with our new color scheme
             mermaid.initialize({
                 startOnLoad: true,
                 theme: 'default',
@@ -73,7 +73,17 @@
                 flowchart: {
                     htmlLabels: true,
                     useMaxWidth: true,
-                    curve: 'basis'
+                    curve: 'basis',
+                    nodeSpacing: 60,
+                    rankSpacing: 80
+                },
+                themeVariables: {
+                    primaryColor: '#83BCA9',
+                    primaryTextColor: '#fff',
+                    primaryBorderColor: '#83BCA9',
+                    lineColor: '#A3D2C3',
+                    secondaryColor: '#A3D2C3',
+                    tertiaryColor: '#F5F0DC'
                 }
             });
             

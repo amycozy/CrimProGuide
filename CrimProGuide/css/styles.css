@@ -1,19 +1,46 @@
 /* Main styles for Criminal Procedure Guide */
 
+:root {
+    /* Primary color palette */
+    --forest-green: #3E5641;
+    --light-forest-green: #5A7A5F;
+    --lighter-forest-green: #7A9A7F;
+    
+    --rust-red: #A24936;
+    --light-rust: #C47666;
+    --lighter-rust: #E5A696;
+    
+    --bright-orange: #D36135;
+    --light-orange: #E48B66;
+    --lighter-orange: #F5B596;
+    
+    --dark-charcoal: #282B28;
+    --light-charcoal: #4A4D4A;
+    --lighter-charcoal: #6A6D6A;
+    
+    --teal: #83BCA9;
+    --light-teal: #A3D2C3;
+    --lighter-teal: #C4E8DD;
+    
+    --cream: #F5F0DC;
+    --white: #FFFFFF;
+}
+
 body {
     font-family: 'Noto Serif', 'Times New Roman', serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--dark-charcoal);
     margin: 0;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: var(--cream);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2383BCA9' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', serif;
-    color: #2c3e50;
+    color: var(--dark-charcoal);
     margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -21,24 +48,27 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.2em;
     text-align: center;
-    border-bottom: 2px solid #2980b9;
+    border-bottom: 2px solid var(--teal);
     padding-bottom: 0.3em;
     margin-bottom: 0;
+    color: var(--teal);
 }
 
 h2 {
     font-size: 1.8em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--light-teal);
     padding-bottom: 0.2em;
+    color: var(--dark-charcoal);
 }
 
 h3 {
     font-size: 1.5em;
-    color: #2980b9;
+    color: var(--teal);
 }
 
 h4 {
     font-size: 1.3em;
+    color: var(--dark-charcoal);
 }
 
 p {
@@ -46,27 +76,32 @@ p {
 }
 
 a {
-    color: #2980b9;
+    color: var(--teal);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+    color: var(--light-forest-green);
 }
 
 /* Navigation styles */
 .main-navigation {
-    background-color: #ffffff;
+    background-color: rgba(131, 188, 169, 0.15);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 30px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--teal);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .main-navigation h3 {
     margin-top: 0;
     margin-bottom: 15px;
+    color: var(--teal);
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 8px;
+    text-align: center;
 }
 
 .main-navigation a {
@@ -75,128 +110,171 @@ a:hover {
     margin-bottom: 8px;
     padding: 8px 12px;
     border-radius: 4px;
+    color: var(--dark-charcoal);
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .main-navigation a:hover {
-    background-color: #e9ecef;
+    background-color: var(--light-teal);
+    color: var(--dark-charcoal);
     text-decoration: none;
 }
 
+.main-navigation a.active {
+    background-color: var(--teal);
+    color: white;
+}
+
 .section-navigation {
-    background-color: #e3f2fd;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgba(131, 188, 169, 0.1);
+    padding: 12px;
+    border-radius: 6px;
     margin-bottom: 20px;
+    border-left: 4px solid var(--teal);
 }
 
 .section-navigation a {
     display: inline-block;
     margin-right: 10px;
-    padding: 3px 8px;
-    border-radius: 3px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--dark-charcoal);
 }
 
 .section-navigation a:hover {
-    background-color: #bbdefb;
+    background-color: var(--light-teal);
+    color: var(--dark-charcoal);
     text-decoration: none;
 }
 
 /* Content containers */
 .explanation {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .key-point {
-    background-color: #e1f5fe;
-    border-left: 5px solid #03a9f4;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 3px;
-}
-
-.example {
-    background-color: #f1f8e9;
-    border-left: 5px solid #7cb342;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 3px;
-}
-
-.warning {
-    background-color: #fff3e0;
-    border-left: 5px solid #ff9800;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 3px;
-}
-
-.note {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background-color: rgba(131, 188, 169, 0.1);
+    border-left: 5px solid var(--teal);
     padding: 15px;
     margin: 20px 0;
     border-radius: 4px;
+}
+
+.example {
+    background-color: rgba(131, 188, 169, 0.2);
+    border-left: 5px solid var(--light-teal);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.warning {
+    background-color: rgba(211, 97, 53, 0.1);
+    border-left: 5px solid var(--bright-orange);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.note {
+    background-color: var(--white);
+    border: 1px solid var(--light-teal);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .section-divider {
-    border-top: 1px dashed #ccc;
+    border-top: 1px dashed var(--light-teal);
     margin: 40px 0;
 }
 
 /* Universal Disclaimer */
 .universal-disclaimer {
-    background-color: #eaf2f8;
-    border-bottom: 2px solid #2980b9;
+    background-color: #FFFDE7;
+    border-bottom: 2px solid var(--light-teal);
     padding: 12px;
     margin: 0 auto 25px auto;
     text-align: center;
     font-size: 0.9em;
     max-width: 85%;
+    border-left: 5px solid var(--teal);
+    border-right: 5px solid var(--teal);
 }
 
 .universal-disclaimer p {
     margin: 0;
-    color: #34495e;
+    color: var(--dark-charcoal);
     font-style: italic;
 }
 
 .universal-disclaimer strong {
-    color: #2980b9;
+    color: var(--dark-charcoal);
     font-style: normal;
+    font-weight: bold;
 }
 
 /* Case box styling */
 .case-box {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    background-color: var(--white);
+    border: 1px solid var(--light-teal);
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.case-header {
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .case-name {
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--dark-charcoal);
+    font-size: 1.2em;
 }
 
 .case-citation {
     font-style: italic;
-    color: #7f8c8d;
+    color: var(--light-charcoal);
+    margin-top: 5px;
 }
 
 .case-rule {
     font-weight: bold;
-    margin: 10px 0;
+    margin: 15px 0;
+    background-color: rgba(131, 188, 169, 0.1);
+    padding: 10px;
+    border-radius: 4px;
 }
 
 .case-facts {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.case-facts h4, .case-reasoning h4 {
+    color: var(--teal);
+    margin-bottom: 8px;
 }
 
 .case-reasoning {
     text-align: justify;
+    border-top: 1px solid var(--light-teal);
+    padding-top: 15px;
+}
+
+.case-implications {
+    border-top: 1px dashed var(--light-teal);
+    margin-top: 15px;
+    padding-top: 15px;
+    font-style: italic;
 }
 
 /* Tables */
@@ -204,21 +282,25 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 8px;
+    padding: 10px 12px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid var(--light-teal);
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: var(--teal);
+    color: white;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: rgba(131, 188, 169, 0.05);
 }
 
 /* Mermaid diagrams */
@@ -226,6 +308,87 @@ tr:nth-child(even) {
     text-align: center;
     margin: 30px 0;
     overflow-x: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Meet Your Guides Section */
+.guides-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid var(--light-teal);
+}
+
+.guides-section h3 {
+    color: var(--teal);
+    text-align: center;
+    border-bottom: 2px solid var(--light-teal);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.guide-intro {
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+    color: var(--dark-charcoal);
+}
+
+.guide-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.guide-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(131, 188, 169, 0.05);
+    transition: transform 0.2s;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.guide-card h4 {
+    color: var(--dark-charcoal);
+    margin: 10px 0;
+}
+
+.guide-card p {
+    font-style: italic;
+    color: var(--dark-charcoal);
+    font-size: 0.9em;
+}
+
+/* Character poses */
+.character-default {
+    /* Default pose styling */
+}
+
+.character-confused {
+    /* Confused pose styling - to be used with FAQs */
+}
+
+.character-action {
+    /* Action pose styling - role-specific actions */
 }
 
 /* For print view */
@@ -236,22 +399,23 @@ tr:nth-child(even) {
 /* Control buttons */
 .control-button {
     padding: 10px 15px;
-    background-color: #2980b9;
+    background-color: var(--teal);
     color: white;
     border: none;
     border-radius: 4px;
     margin-right: 10px;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.2s;
 }
 
 .control-button:hover {
-    background-color: #3498db;
+    background-color: var(--light-teal);
 }
 
 .print-instructions {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background-color: var(--cream);
+    border: 1px solid var(--light-teal);
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -261,6 +425,20 @@ tr:nth-child(even) {
 .back-to-top {
     text-align: right;
     margin: 30px 0;
+}
+
+.back-to-top a {
+    background-color: var(--teal);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.back-to-top a:hover {
+    background-color: var(--light-teal);
 }
 
 /* Responsive adjustments */
@@ -276,5 +454,14 @@ tr:nth-child(even) {
     
     .mermaid {
         font-size: 12px;
+    }
+    
+    .guide-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .guide-card {
+        max-width: 100%;
     }
 }
