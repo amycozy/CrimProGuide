@@ -35,7 +35,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--cream);
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2383BCA9' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233e5641' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,24 +51,24 @@ h1 {
     border-bottom: 2px solid var(--teal);
     padding-bottom: 0.3em;
     margin-bottom: 0;
-    color: var(--teal);
+    color: var(--dark-charcoal);
 }
 
 h2 {
     font-size: 1.8em;
     border-bottom: 1px solid var(--light-teal);
     padding-bottom: 0.2em;
-    color: var(--dark-charcoal);
+    color: var(--forest-green);
 }
 
 h3 {
     font-size: 1.5em;
-    color: var(--teal);
+    color: var(--dark-charcoal);
 }
 
 h4 {
     font-size: 1.3em;
-    color: var(--dark-charcoal);
+    color: var(--forest-green);
 }
 
 p {
@@ -76,13 +76,13 @@ p {
 }
 
 a {
-    color: var(--teal);
+    color: var(--rust-red);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color: var(--light-forest-green);
+    color: var(--bright-orange);
 }
 
 /* Navigation styles */
@@ -98,7 +98,7 @@ a:hover {
 .main-navigation h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: var(--teal);
+    color: var(--dark-charcoal);
     border-bottom: 2px solid var(--teal);
     padding-bottom: 8px;
     text-align: center;
@@ -157,7 +157,7 @@ a:hover {
 }
 
 .key-point {
-    background-color: rgba(131, 188, 169, 0.1);
+    background-color: rgba(131, 188, 169, 0.15);
     border-left: 5px solid var(--teal);
     padding: 15px;
     margin: 20px 0;
@@ -165,8 +165,8 @@ a:hover {
 }
 
 .example {
-    background-color: rgba(131, 188, 169, 0.2);
-    border-left: 5px solid var(--light-teal);
+    background-color: rgba(62, 86, 65, 0.1);
+    border-left: 5px solid var(--forest-green);
     padding: 15px;
     margin: 20px 0;
     border-radius: 4px;
@@ -196,15 +196,15 @@ a:hover {
 
 /* Universal Disclaimer */
 .universal-disclaimer {
-    background-color: #FFFDE7;
-    border-bottom: 2px solid var(--light-teal);
+    background-color: rgba(245, 240, 220, 0.8);
+    border-bottom: 2px solid var(--light-orange);
     padding: 12px;
     margin: 0 auto 25px auto;
     text-align: center;
     font-size: 0.9em;
     max-width: 85%;
-    border-left: 5px solid var(--teal);
-    border-right: 5px solid var(--teal);
+    border-left: 5px solid var(--light-orange);
+    border-right: 5px solid var(--light-orange);
 }
 
 .universal-disclaimer p {
@@ -214,9 +214,8 @@ a:hover {
 }
 
 .universal-disclaimer strong {
-    color: var(--dark-charcoal);
+    color: var(--rust-red);
     font-style: normal;
-    font-weight: bold;
 }
 
 /* Case box styling */
@@ -237,7 +236,7 @@ a:hover {
 
 .case-name {
     font-weight: bold;
-    color: var(--dark-charcoal);
+    color: var(--forest-green);
     font-size: 1.2em;
 }
 
@@ -260,7 +259,7 @@ a:hover {
 }
 
 .case-facts h4, .case-reasoning h4 {
-    color: var(--teal);
+    color: var(--dark-charcoal);
     margin-bottom: 8px;
 }
 
@@ -325,9 +324,9 @@ tr:nth-child(even) {
 }
 
 .guides-section h3 {
-    color: var(--teal);
+    color: var(--dark-charcoal);
     text-align: center;
-    border-bottom: 2px solid var(--light-teal);
+    border-bottom: 2px solid var(--teal);
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -368,7 +367,7 @@ tr:nth-child(even) {
 }
 
 .guide-card h4 {
-    color: var(--dark-charcoal);
+    color: var(--forest-green);
     margin: 10px 0;
 }
 
@@ -410,7 +409,7 @@ tr:nth-child(even) {
 }
 
 .control-button:hover {
-    background-color: var(--light-teal);
+    background-color: var(--light-forest-green);
 }
 
 .print-instructions {
@@ -438,7 +437,7 @@ tr:nth-child(even) {
 }
 
 .back-to-top a:hover {
-    background-color: var(--light-teal);
+    background-color: var(--light-forest-green);
 }
 
 /* Responsive adjustments */

@@ -17,14 +17,14 @@
 }
 
 .site-footer a {
-    color: var(--teal);
+    color: var(--rust-red);
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .site-footer a:hover {
     text-decoration: underline;
-    color: var(--light-forest-green);
+    color: var(--bright-orange);
 }
 
 .site-footer p {
