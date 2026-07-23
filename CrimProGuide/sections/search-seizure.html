@@ -38,71 +38,47 @@
     
     <div class="mermaid">
     flowchart TD
-        start["DETERMINING IF A 'SEARCH' OCCURRED"] --> twoTests["Apply both tests:
-        1. Reasonable Expectation of Privacy Test (Katz)
-        2. Physical Trespass/Property Test (Jones)"]
+        start["DETERMINING IF A 'SEARCH' OCCURRED"] --> twoTests["Apply both tests:<br/>1. Reasonable Expectation of Privacy Test (Katz)<br/>2. Physical Trespass/Property Test (Jones)"]
         
-        twoTests --> katzTest["KATZ TEST:
-        Did the government invade a reasonable 
-        expectation of privacy?"]
+        twoTests --> katzTest["KATZ TEST:<br/>Did the government invade a reasonable<br/>expectation of privacy?"]
         
-        twoTests --> jonesTest["JONES TEST:
-        Did the government physically intrude on 
-        a constitutionally protected area to obtain information?"]
+        twoTests --> jonesTest["JONES TEST:<br/>Did the government physically intrude on<br/>a constitutionally protected area to obtain information?"]
         
-        katzTest --> katz1["STEP 1: Subjective Expectation
-        Did the individual exhibit an actual (subjective) 
-        expectation of privacy?"]
+        katzTest --> katz1["STEP 1: Subjective Expectation<br/>Did the individual exhibit an actual (subjective)<br/>expectation of privacy?"]
         
-        katz1 -- "NO: No subjective expectation" --> notSearchKatz["NOT A SEARCH
-        under the Katz test"]
+        katz1 -- "NO: No subjective expectation" --> notSearchKatz["NOT A SEARCH<br/>under the Katz test"]
         
-        katz1 -- "YES: Had subjective expectation" --> katz2["STEP 2: Objective Reasonableness
-        Is the expectation one that society is 
-        prepared to recognize as reasonable?"]
+        katz1 -- "YES: Had subjective expectation" --> katz2["STEP 2: Objective Reasonableness<br/>Is the expectation one that society is<br/>prepared to recognize as reasonable?"]
         
         katz2 -- "NO: Not objectively reasonable" --> notSearchKatz
         
-        katz2 -- "YES: Objectively reasonable" --> isSearchKatz["IS A SEARCH
-        under the Katz test"]
+        katz2 -- "YES: Objectively reasonable" --> isSearchKatz["IS A SEARCH<br/>under the Katz test"]
         
-        jonesTest --> jones1["STEP 1: Protected Area
-        Is the target a constitutionally protected area?
-        (persons, houses, papers, effects)"]
+        jonesTest --> jones1["STEP 1: Protected Area<br/>Is the target a constitutionally protected area?<br/>(persons, houses, papers, effects)"]
         
-        jones1 -- "NO: Not protected area" --> notSearchJones["NOT A SEARCH
-        under the Jones test"]
+        jones1 -- "NO: Not protected area" --> notSearchJones["NOT A SEARCH<br/>under the Jones test"]
         
-        jones1 -- "YES: Protected area" --> jones2["STEP 2: Physical Intrusion
-        Did government physically intrude/trespass
-        on the protected area?"]
+        jones1 -- "YES: Protected area" --> jones2["STEP 2: Physical Intrusion<br/>Did government physically intrude/trespass<br/>on the protected area?"]
         
         jones2 -- "NO: No physical intrusion" --> notSearchJones
         
-        jones2 -- "YES: Physical intrusion" --> jones3["STEP 3: Information Gathering
-        Was the intrusion for the purpose
-        of obtaining information?"]
+        jones2 -- "YES: Physical intrusion" --> jones3["STEP 3: Information Gathering<br/>Was the intrusion for the purpose<br/>of obtaining information?"]
         
         jones3 -- "NO: Not to obtain information" --> notSearchJones
         
-        jones3 -- "YES: To obtain information" --> isSearchJones["IS A SEARCH
-        under the Jones test"]
+        jones3 -- "YES: To obtain information" --> isSearchJones["IS A SEARCH<br/>under the Jones test"]
         
-        isSearchKatz --> result["FOURTH AMENDMENT APPLIES:
-        Warrant or exception required"]
+        isSearchKatz --> result["FOURTH AMENDMENT APPLIES:<br/>Warrant or exception required"]
         
         isSearchJones --> result
         
-        notSearchKatz --> eitherTest["Does it qualify as 
-        a search under either test?"]
+        notSearchKatz --> eitherTest["Does it qualify as<br/>a search under either test?"]
         
         notSearchJones --> eitherTest
         
         eitherTest -- "YES: Qualifies under at least one test" --> result
         
-        eitherTest -- "NO: Fails both tests" --> noSearch["NOT A FOURTH AMENDMENT SEARCH:
-        No warrant or exception required
-        Fourth Amendment does not apply"]
+        eitherTest -- "NO: Fails both tests" --> noSearch["NOT A FOURTH AMENDMENT SEARCH:<br/>No warrant or exception required<br/>Fourth Amendment does not apply"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -229,50 +205,31 @@
     flowchart TD
         start["DETERMINING IF A 'SEIZURE' OCCURRED"] --> personOrProperty["Is it a seizure of a person or property?"]
         
-        personOrProperty -- "PERSON" --> personTest["SEIZURE OF PERSON:
-        Would a reasonable person feel free to 
-        terminate the encounter and leave?"]
+        personOrProperty -- "PERSON" --> personTest["SEIZURE OF PERSON:<br/>Would a reasonable person feel free to<br/>terminate the encounter and leave?"]
         
-        personOrProperty -- "PROPERTY" --> propertyTest["SEIZURE OF PROPERTY:
-        Was there meaningful interference with 
-        possessory interests in the property?"]
+        personOrProperty -- "PROPERTY" --> propertyTest["SEIZURE OF PROPERTY:<br/>Was there meaningful interference with<br/>possessory interests in the property?"]
         
         personTest --> physicalForce["Was physical force applied?"]
         
-        physicalForce -- "YES" --> seizurePerson["SEIZURE OF PERSON:
-        Fourth Amendment applies"]
+        physicalForce -- "YES" --> seizurePerson["SEIZURE OF PERSON:<br/>Fourth Amendment applies"]
         
-        physicalForce -- "NO" --> showAuthority["Was there a show of authority 
-        that would cause a reasonable 
-        person to feel not free to leave?"]
+        physicalForce -- "NO" --> showAuthority["Was there a show of authority<br/>that would cause a reasonable<br/>person to feel not free to leave?"]
         
-        showAuthority -- "NO: No show of authority" --> notSeizurePerson["NOT A SEIZURE OF PERSON:
-        Fourth Amendment does not apply"]
+        showAuthority -- "NO: No show of authority" --> notSeizurePerson["NOT A SEIZURE OF PERSON:<br/>Fourth Amendment does not apply"]
         
-        showAuthority -- "YES: Show of authority" --> submission["Did the person submit 
-        to the show of authority?"]
+        showAuthority -- "YES: Show of authority" --> submission["Did the person submit<br/>to the show of authority?"]
         
         submission -- "NO: No submission" --> notSeizurePerson
         
         submission -- "YES: Submitted" --> seizurePerson
         
-        propertyTest --> meaningfulInterference["Was there meaningful interference 
-        with possessory interests?
-        - Taking control/custody
-        - Destruction/damage
-        - Significant restriction on use"]
+        propertyTest --> meaningfulInterference["Was there meaningful interference<br/>with possessory interests?<br/>- Taking control/custody<br/>- Destruction/damage<br/>- Significant restriction on use"]
         
-        meaningfulInterference -- "NO: No meaningful interference" --> notSeizureProperty["NOT A SEIZURE OF PROPERTY:
-        Fourth Amendment does not apply"]
+        meaningfulInterference -- "NO: No meaningful interference" --> notSeizureProperty["NOT A SEIZURE OF PROPERTY:<br/>Fourth Amendment does not apply"]
         
-        meaningfulInterference -- "YES: Meaningful interference" --> seizureProperty["SEIZURE OF PROPERTY:
-        Fourth Amendment applies"]
+        meaningfulInterference -- "YES: Meaningful interference" --> seizureProperty["SEIZURE OF PROPERTY:<br/>Fourth Amendment applies"]
         
-        seizurePerson --> reasonable["REASONABLENESS ANALYSIS:
-        Was the seizure reasonable?
-        - Warrant or exception required
-        - Level of suspicion required depends 
-          on type and duration of seizure"]
+        seizurePerson --> reasonable["REASONABLENESS ANALYSIS:<br/>Was the seizure reasonable?<br/>- Warrant or exception required<br/>- Level of suspicion required depends<br/>on type and duration of seizure"]
         
         seizureProperty --> reasonable
         

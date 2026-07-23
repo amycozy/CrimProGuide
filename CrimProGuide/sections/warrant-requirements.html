@@ -29,39 +29,19 @@
     flowchart TD
         start["WARRANT ANALYSIS"] --> exists["Does a valid search warrant exist?"]
         
-        exists -- "NO: No warrant" --> exception["Does a recognized warrant exception apply?
-        - Exigent circumstances
-        - Search incident to arrest
-        - Automobile exception
-        - Consent
-        - Plain view
-        - Special needs
-        - Terry stop"]
+        exists -- "NO: No warrant" --> exception["Does a recognized warrant exception apply?<br/>- Exigent circumstances<br/>- Search incident to arrest<br/>- Automobile exception<br/>- Consent<br/>- Plain view<br/>- Special needs<br/>- Terry stop"]
         
-        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:
-        Violates Fourth Amendment
-        Evidence likely inadmissible"]
+        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:<br/>Violates Fourth Amendment<br/>Evidence likely inadmissible"]
         
-        exception -- "YES: Exception applies" --> excReq["Are all requirements for 
-        the specific exception met?"]
+        exception -- "YES: Exception applies" --> excReq["Are all requirements for<br/>the specific exception met?"]
         
         excReq -- "NO: Requirements not met" --> invalid
         
-        excReq -- "YES: Requirements met" --> valid["VALID SEARCH:
-        Fourth Amendment satisfied
-        Evidence potentially admissible"]
+        excReq -- "YES: Requirements met" --> valid["VALID SEARCH:<br/>Fourth Amendment satisfied<br/>Evidence potentially admissible"]
         
-        exists -- "YES: Warrant exists" --> requirements["Does the warrant satisfy all requirements?
-        1. Probable cause
-        2. Particularity 
-        3. Neutral magistrate
-        4. Proper execution"]
+        exists -- "YES: Warrant exists" --> requirements["Does the warrant satisfy all requirements?<br/>1. Probable cause<br/>2. Particularity<br/>3. Neutral magistrate<br/>4. Proper execution"]
         
-        requirements -- "NO: Requirements not met" --> defective["DEFECTIVE WARRANT:
-        May still be valid if:
-        - Good faith exception applies
-        - Severability doctrine applies
-        - Harmless error analysis"]
+        requirements -- "NO: Requirements not met" --> defective["DEFECTIVE WARRANT:<br/>May still be valid if:<br/>- Good faith exception applies<br/>- Severability doctrine applies<br/>- Harmless error analysis"]
         
         requirements -- "YES: All requirements met" --> valid
         
@@ -132,48 +112,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["PROBABLE CAUSE ANALYSIS"] --> informant["Information Source Assessment:
-        - Citizen witness/victim
-        - Police officer
-        - Confidential informant
-        - Anonymous informant"]
+        start["PROBABLE CAUSE ANALYSIS"] --> informant["Information Source Assessment:<br/>- Citizen witness/victim<br/>- Police officer<br/>- Confidential informant<br/>- Anonymous informant"]
         
-        informant --> basisKnowledge["Basis of Knowledge:
-        How did informant obtain information?
-        - Personal observation (strongest)
-        - Second-hand information
-        - Rumor or speculation (weakest)"]
+        informant --> basisKnowledge["Basis of Knowledge:<br/>How did informant obtain information?<br/>- Personal observation (strongest)<br/>- Second-hand information<br/>- Rumor or speculation (weakest)"]
         
-        informant --> veracity["Veracity/Reliability:
-        - Track record of reliability
-        - Motives to be truthful or lie
-        - Admissions against interest
-        - Statements under oath"]
+        informant --> veracity["Veracity/Reliability:<br/>- Track record of reliability<br/>- Motives to be truthful or lie<br/>- Admissions against interest<br/>- Statements under oath"]
         
-        informant --> corroboration["Corroboration:
-        - Independent police verification
-        - Consistency with other information
-        - Consistency with verifiable facts
-        - Predictive information confirmed"]
+        informant --> corroboration["Corroboration:<br/>- Independent police verification<br/>- Consistency with other information<br/>- Consistency with verifiable facts<br/>- Predictive information confirmed"]
         
-        basisKnowledge --> totality["TOTALITY OF CIRCUMSTANCES:
-        Assess all factors together"]
+        basisKnowledge --> totality["TOTALITY OF CIRCUMSTANCES:<br/>Assess all factors together"]
         
         veracity --> totality
         
         corroboration --> totality
         
-        totality --> sufficient["Is there fair probability that:
-        1. Criminal activity has occurred/is occurring, AND
-        2. Evidence will be found in the place to be searched?"]
+        totality --> sufficient["Is there fair probability that:<br/>1. Criminal activity has occurred/is occurring, AND<br/>2. Evidence will be found in the place to be searched?"]
         
-        sufficient -- "YES: Sufficient probability" --> probableCause["PROBABLE CAUSE EXISTS:
-        Warrant may properly issue or
-        warrant exception may apply"]
+        sufficient -- "YES: Sufficient probability" --> probableCause["PROBABLE CAUSE EXISTS:<br/>Warrant may properly issue or<br/>warrant exception may apply"]
         
-        sufficient -- "NO: Insufficient probability" --> noProbableCause["NO PROBABLE CAUSE:
-        Warrant should not issue
-        Search would be improper"]
+        sufficient -- "NO: Insufficient probability" --> noProbableCause["NO PROBABLE CAUSE:<br/>Warrant should not issue<br/>Search would be improper"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef factors fill:#e0f7fa,stroke:#00acc1,stroke-width:1px
@@ -301,40 +258,19 @@
     
     <div class="mermaid">
     flowchart TD
-        start["WARRANT EXECUTION ANALYSIS"] --> announce["KNOCK AND ANNOUNCE RULE:
-        Did officers:
-        1. Announce presence and authority
-        2. State purpose of entry
-        3. Wait reasonable time before forced entry?"]
+        start["WARRANT EXECUTION ANALYSIS"] --> announce["KNOCK AND ANNOUNCE RULE:<br/>Did officers:<br/>1. Announce presence and authority<br/>2. State purpose of entry<br/>3. Wait reasonable time before forced entry?"]
         
-        announce -- "YES: Proper announcement" --> scope["SCOPE OF SEARCH:
-        Did officers stay within authorized scope of warrant?
-        - Searched only places where target items could be
-        - Seized only items described in warrant or exceptions
-        - Completed search in reasonable time"]
+        announce -- "YES: Proper announcement" --> scope["SCOPE OF SEARCH:<br/>Did officers stay within authorized scope of warrant?<br/>- Searched only places where target items could be<br/>- Seized only items described in warrant or exceptions<br/>- Completed search in reasonable time"]
         
-        announce -- "NO: Improper announcement" --> exception["Was an exception to announcement justified?
-        - Destruction of evidence risk
-        - Danger to officers
-        - Futility
-        - Other exigent circumstances"]
+        announce -- "NO: Improper announcement" --> exception["Was an exception to announcement justified?<br/>- Destruction of evidence risk<br/>- Danger to officers<br/>- Futility<br/>- Other exigent circumstances"]
         
         exception -- "YES: Exception applies" --> scope
         
-        exception -- "NO: No exception applies" --> knockViolation["KNOCK & ANNOUNCE VIOLATION:
-        Hudson v. Michigan: 
-        Exclusionary rule does not apply
-        (Evidence still admissible)"]
+        exception -- "NO: No exception applies" --> knockViolation["KNOCK & ANNOUNCE VIOLATION:<br/>Hudson v. Michigan:<br/>Exclusionary rule does not apply<br/>(Evidence still admissible)"]
         
-        scope -- "YES: Within scope" --> properExecution["PROPER WARRANT EXECUTION:
-        Evidence admissible"]
+        scope -- "YES: Within scope" --> properExecution["PROPER WARRANT EXECUTION:<br/>Evidence admissible"]
         
-        scope -- "NO: Exceeded scope" --> exceedScope["SCOPE VIOLATION:
-        Evidence outside scope may be suppressed
-        Unless exception applies:
-        - Plain view
-        - Protective sweep
-        - Inevitable discovery"]
+        scope -- "NO: Exceeded scope" --> exceedScope["SCOPE VIOLATION:<br/>Evidence outside scope may be suppressed<br/>Unless exception applies:<br/>- Plain view<br/>- Protective sweep<br/>- Inevitable discovery"]
         
         knockViolation --> scope
         

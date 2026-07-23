@@ -31,56 +31,33 @@
     
     <div class="mermaid">
     flowchart TD
-        start["WARRANT EXCEPTION ANALYSIS"] --> search["Was there a search or seizure?
-        Apply Katz expectation of privacy test
-        or Jones physical trespass test"]
+        start["WARRANT EXCEPTION ANALYSIS"] --> search["Was there a search or seizure?<br/>Apply Katz expectation of privacy test<br/>or Jones physical trespass test"]
         
-        search -- "NO: Not a search/seizure" --> nowarrant["NO WARRANT REQUIRED:
-        Fourth Amendment not implicated"]
+        search -- "NO: Not a search/seizure" --> nowarrant["NO WARRANT REQUIRED:<br/>Fourth Amendment not implicated"]
         
         search -- "YES: Search/seizure occurred" --> warrant["Was there a valid warrant?"]
         
-        warrant -- "YES: Valid warrant" --> valid["VALID SEARCH:
-        If warrant properly executed"]
+        warrant -- "YES: Valid warrant" --> valid["VALID SEARCH:<br/>If warrant properly executed"]
         
-        warrant -- "NO: No warrant" --> exception["Does an established 
-        exception apply?"]
+        warrant -- "NO: No warrant" --> exception["Does an established<br/>exception apply?"]
         
-        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:
-        Fourth Amendment violation
-        Evidence likely inadmissible"]
+        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:<br/>Fourth Amendment violation<br/>Evidence likely inadmissible"]
         
         exception -- "YES: Exception applies" --> exceptionType["Which exception applies?"]
         
-        exceptionType --> consent["CONSENT:
-        - Voluntary
-        - Authority to consent
-        - Scope of consent"]
+        exceptionType --> consent["CONSENT:<br/>- Voluntary<br/>- Authority to consent<br/>- Scope of consent"]
         
-        exceptionType --> auto["AUTOMOBILE:
-        - Probable cause
-        - Mobile vehicle"]
+        exceptionType --> auto["AUTOMOBILE:<br/>- Probable cause<br/>- Mobile vehicle"]
         
-        exceptionType --> exigent["EXIGENT CIRCUMSTANCES:
-        - Emergency situation
-        - No time for warrant"]
+        exceptionType --> exigent["EXIGENT CIRCUMSTANCES:<br/>- Emergency situation<br/>- No time for warrant"]
         
-        exceptionType --> plainView["PLAIN VIEW:
-        - Lawful vantage point
-        - Immediately apparent
-          contraband/evidence"]
+        exceptionType --> plainView["PLAIN VIEW:<br/>- Lawful vantage point<br/>- Immediately apparent<br/>contraband/evidence"]
         
-        exceptionType --> sia["SEARCH INCIDENT TO ARREST:
-        - Lawful arrest
-        - Arrestee's person and 
-          area within immediate control"]
+        exceptionType --> sia["SEARCH INCIDENT TO ARREST:<br/>- Lawful arrest<br/>- Arrestee's person and<br/>area within immediate control"]
         
-        exceptionType --> special["SPECIAL NEEDS:
-        - Beyond normal law enforcement
-        - Reasonable given circumstances"]
+        exceptionType --> special["SPECIAL NEEDS:<br/>- Beyond normal law enforcement<br/>- Reasonable given circumstances"]
         
-        consent --> reqMet["Are all requirements 
-        for the exception met?"]
+        consent --> reqMet["Are all requirements<br/>for the exception met?"]
         
         auto --> reqMet
         exigent --> reqMet
@@ -122,37 +99,19 @@
     
     <div class="mermaid">
     flowchart TD
-        start["CONSENT SEARCH ANALYSIS"] --> voluntary["STEP 1: Voluntariness
-        Was the consent voluntary, not coerced?
-        Totality of circumstances test:
-        - Age, education, intelligence
-        - Knowledge of right to refuse
-        - Length of detention
-        - Repeated requests
-        - Show of force/authority
-        - Threatening presence of officers"]
+        start["CONSENT SEARCH ANALYSIS"] --> voluntary["STEP 1: Voluntariness<br/>Was the consent voluntary, not coerced?<br/>Totality of circumstances test:<br/>- Age, education, intelligence<br/>- Knowledge of right to refuse<br/>- Length of detention<br/>- Repeated requests<br/>- Show of force/authority<br/>- Threatening presence of officers"]
         
-        voluntary -- "NO: Involuntary consent" --> invalid["INVALID CONSENT:
-        Search violates Fourth Amendment
-        unless another exception applies"]
+        voluntary -- "NO: Involuntary consent" --> invalid["INVALID CONSENT:<br/>Search violates Fourth Amendment<br/>unless another exception applies"]
         
-        voluntary -- "YES: Voluntary consent" --> authority["STEP 2: Authority to Consent
-        Did the person have actual or apparent
-        authority over the area searched?"]
+        voluntary -- "YES: Voluntary consent" --> authority["STEP 2: Authority to Consent<br/>Did the person have actual or apparent<br/>authority over the area searched?"]
         
         authority -- "NO: No actual or apparent authority" --> invalid
         
-        authority -- "YES: Had authority" --> scope["STEP 3: Scope of Consent
-        Did the search stay within the
-        scope of the consent given?"]
+        authority -- "YES: Had authority" --> scope["STEP 3: Scope of Consent<br/>Did the search stay within the<br/>scope of the consent given?"]
         
-        scope -- "NO: Exceeded scope" --> partialValid["PARTIALLY VALID SEARCH:
-        Items found within scope: admissible
-        Items found outside scope: inadmissible
-        unless another exception applies"]
+        scope -- "NO: Exceeded scope" --> partialValid["PARTIALLY VALID SEARCH:<br/>Items found within scope: admissible<br/>Items found outside scope: inadmissible<br/>unless another exception applies"]
         
-        scope -- "YES: Within scope" --> valid["VALID CONSENT SEARCH:
-        Items found are admissible"]
+        scope -- "YES: Within scope" --> valid["VALID CONSENT SEARCH:<br/>Items found are admissible"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -227,33 +186,17 @@
     
     <div class="mermaid">
     flowchart TD
-        start["AUTOMOBILE EXCEPTION ANALYSIS"] --> vehicle["STEP 1: Determine if Target is a Vehicle
-        Does the exception apply to:
-        - Automobiles
-        - Trucks
-        - Recreational vehicles
-        - Boats
-        - Mobile homes (if readily mobile)"]
+        start["AUTOMOBILE EXCEPTION ANALYSIS"] --> vehicle["STEP 1: Determine if Target is a Vehicle<br/>Does the exception apply to:<br/>- Automobiles<br/>- Trucks<br/>- Recreational vehicles<br/>- Boats<br/>- Mobile homes (if readily mobile)"]
         
-        vehicle -- "NO: Not a vehicle or mobile home used as residence" --> noException["EXCEPTION DOES NOT APPLY:
-        Need warrant or different exception"]
+        vehicle -- "NO: Not a vehicle, or a mobile home used as a fixed dwelling (not readily mobile)" --> noException["EXCEPTION DOES NOT APPLY:<br/>Need warrant or different exception"]
         
-        vehicle -- "YES: Covered vehicle" --> pc["STEP 2: Assess Probable Cause
-        Is there probable cause to believe
-        evidence of crime is in vehicle?"]
+        vehicle -- "YES: Covered vehicle" --> pc["STEP 2: Assess Probable Cause<br/>Is there probable cause to believe<br/>evidence of crime is in vehicle?"]
         
         pc -- "NO: No probable cause" --> noException
         
-        pc -- "YES: Probable cause exists" --> scope["STEP 3: Define Scope of Search
-        Probable cause determines permissible areas:
-        - Entire vehicle if general PC
-        - Specific area if PC limited
-        - Containers that could hold object of search"]
+        pc -- "YES: Probable cause exists" --> scope["STEP 3: Define Scope of Search<br/>Probable cause determines permissible areas:<br/>- Entire vehicle if general PC<br/>- Specific area if PC limited<br/>- Containers that could hold object of search"]
         
-        scope --> valid["VALID AUTOMOBILE EXCEPTION SEARCH:
-        No warrant required
-        All areas supported by PC may be searched
-        Search may occur at scene or later at station"]
+        scope --> valid["VALID AUTOMOBILE EXCEPTION SEARCH:<br/>No warrant required<br/>All areas supported by PC may be searched<br/>Search may occur at scene or later at station"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -301,45 +244,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["EXIGENT CIRCUMSTANCES ANALYSIS"] --> type["Identify Type of Exigency:
-        - Hot pursuit
-        - Destruction of evidence
-        - Emergency aid
-        - Officer safety
-        - Risk of escape"]
+        start["EXIGENT CIRCUMSTANCES ANALYSIS"] --> type["Identify Type of Exigency:<br/>- Hot pursuit<br/>- Destruction of evidence<br/>- Emergency aid<br/>- Officer safety<br/>- Risk of escape"]
         
-        type --> pc["STEP 1: Probable Cause
-        Is there probable cause to search/seize?
-        (For emergency aid: reasonable belief)"]
+        type --> pc["STEP 1: Probable Cause<br/>Is there probable cause to search/seize?<br/>(For emergency aid: reasonable belief)"]
         
-        pc -- "NO: No probable cause" --> invalid["INVALID SEARCH:
-        Exception does not apply
-        Need warrant or different exception"]
+        pc -- "NO: No probable cause" --> invalid["INVALID SEARCH:<br/>Exception does not apply<br/>Need warrant or different exception"]
         
-        pc -- "YES: Probable cause exists" --> created["STEP 2: Creation of Exigency
-        Did police improperly create the exigency?
-        (Kentucky v. King: lawful police action
-        that causes reaction doesn't invalidate)"]
+        pc -- "YES: Probable cause exists" --> created["STEP 2: Creation of Exigency<br/>Did police improperly create the exigency?<br/>(Kentucky v. King: lawful police action<br/>that causes reaction doesn't invalidate)"]
         
         created -- "YES: Improperly created" --> invalid
         
-        created -- "NO: Not improperly created" --> genuine["STEP 3: Genuineness of Exigency
-        Was there an actual emergency requiring
-        immediate action? Could officers reasonably
-        have obtained a warrant first?"]
+        created -- "NO: Not improperly created" --> genuine["STEP 3: Genuineness of Exigency<br/>Was there an actual emergency requiring<br/>immediate action? Could officers reasonably<br/>have obtained a warrant first?"]
         
         genuine -- "NO: No genuine emergency" --> invalid
         
-        genuine -- "YES: Genuine emergency" --> scope["STEP 4: Scope of Search
-        Was search limited to addressing 
-        the exigency?"]
+        genuine -- "YES: Genuine emergency" --> scope["STEP 4: Scope of Search<br/>Was search limited to addressing<br/>the exigency?"]
         
-        scope -- "NO: Exceeded necessary scope" --> partialValid["PARTIALLY VALID SEARCH:
-        Evidence from areas within scope: admissible
-        Evidence from areas beyond scope: inadmissible"]
+        scope -- "NO: Exceeded necessary scope" --> partialValid["PARTIALLY VALID SEARCH:<br/>Evidence from areas within scope: admissible<br/>Evidence from areas beyond scope: inadmissible"]
         
-        scope -- "YES: Within necessary scope" --> valid["VALID EXIGENT CIRCUMSTANCES SEARCH:
-        Evidence admissible"]
+        scope -- "YES: Within necessary scope" --> valid["VALID EXIGENT CIRCUMSTANCES SEARCH:<br/>Evidence admissible"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -393,38 +316,23 @@
     
     <div class="mermaid">
     flowchart TD
-        start["PLAIN VIEW DOCTRINE ANALYSIS"] --> position["STEP 1: Lawful Vantage Point
-        Were officers lawfully in position
-        to observe the item?
-        - Pursuant to warrant
-        - Valid exception to warrant requirement
-        - Public place/open field"]
+        start["PLAIN VIEW DOCTRINE ANALYSIS"] --> position["STEP 1: Lawful Vantage Point<br/>Were officers lawfully in position<br/>to observe the item?<br/>- Pursuant to warrant<br/>- Valid exception to warrant requirement<br/>- Public place/open field"]
         
-        position -- "NO: Not lawfully present" --> invalid["INVALID PLAIN VIEW SEIZURE:
-        Evidence likely inadmissible
-        unless another exception applies"]
+        position -- "NO: Not lawfully present" --> invalid["INVALID PLAIN VIEW SEIZURE:<br/>Evidence likely inadmissible<br/>unless another exception applies"]
         
-        position -- "YES: Lawfully present" --> apparent["STEP 2: Immediately Apparent
-        Was incriminating nature immediately apparent?
-        (Probable cause that item is evidence,
-        contraband, or fruits of crime)"]
+        position -- "YES: Lawfully present" --> apparent["STEP 2: Immediately Apparent<br/>Was incriminating nature immediately apparent?<br/>(Probable cause that item is evidence,<br/>contraband, or fruits of crime)"]
         
         apparent -- "NO: Not immediately apparent" --> invalid
         
-        apparent -- "YES: Immediately apparent" --> access["STEP 3: Lawful Access
-        Did officers have lawful physical
-        access to the object?"]
+        apparent -- "YES: Immediately apparent" --> access["STEP 3: Lawful Access<br/>Did officers have lawful physical<br/>access to the object?"]
         
         access -- "NO: No lawful access" --> invalid
         
-        access -- "YES: Lawful access" --> manipulation["STEP 4: No Additional Search
-        Did officers move or manipulate object
-        to expose hidden aspects?"]
+        access -- "YES: Lawful access" --> manipulation["STEP 4: No Additional Search<br/>Did officers move or manipulate object<br/>to expose hidden aspects?"]
         
         manipulation -- "YES: Manipulated object" --> invalid
         
-        manipulation -- "NO: No manipulation" --> valid["VALID PLAIN VIEW SEIZURE:
-        Evidence admissible"]
+        manipulation -- "NO: No manipulation" --> valid["VALID PLAIN VIEW SEIZURE:<br/>Evidence admissible"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -467,32 +375,17 @@
     
     <div class="mermaid">
     flowchart TD
-        start["SPECIAL NEEDS ANALYSIS"] --> purpose["STEP 1: Primary Purpose
-        Is the primary purpose of the search 
-        beyond ordinary law enforcement?
-        - Administrative/regulatory function
-        - School discipline/safety
-        - Public safety (non-criminal)
-        - Government as employer/supervisor"]
+        start["SPECIAL NEEDS ANALYSIS"] --> purpose["STEP 1: Primary Purpose<br/>Is the primary purpose of the search<br/>beyond ordinary law enforcement?<br/>- Administrative/regulatory function<br/>- School discipline/safety<br/>- Public safety (non-criminal)<br/>- Government as employer/supervisor"]
         
-        purpose -- "NO: Ordinary law enforcement" --> invalid["SPECIAL NEEDS EXCEPTION DOES NOT APPLY:
-        Need warrant, probable cause, or other exception"]
+        purpose -- "NO: Ordinary law enforcement" --> invalid["SPECIAL NEEDS EXCEPTION DOES NOT APPLY:<br/>Need warrant, probable cause, or other exception"]
         
-        purpose -- "YES: Beyond ordinary law enforcement" --> balancing["STEP 2: Balancing Test
-        Apply balancing test:
-        - Government interest/special need
-        - Individual privacy expectation
-        - Nature and intrusiveness of search
-        - Effectiveness of search method"]
+        purpose -- "YES: Beyond ordinary law enforcement" --> balancing["STEP 2: Balancing Test<br/>Apply balancing test:<br/>- Government interest/special need<br/>- Individual privacy expectation<br/>- Nature and intrusiveness of search<br/>- Effectiveness of search method"]
         
-        balancing --> result["Is the search reasonable under the balancing test?
-        Is it a reasonable way to address the special need?"]
+        balancing --> result["Is the search reasonable under the balancing test?<br/>Is it a reasonable way to address the special need?"]
         
         result -- "NO: Not reasonable" --> invalid
         
-        result -- "YES: Reasonable given special need" --> valid["VALID SPECIAL NEEDS SEARCH:
-        Evidence admissible even without
-        warrant or individualized suspicion"]
+        result -- "YES: Reasonable given special need" --> valid["VALID SPECIAL NEEDS SEARCH:<br/>Evidence admissible even without<br/>warrant or individualized suspicion"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px

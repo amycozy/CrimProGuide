@@ -25,50 +25,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["THIRD-PARTY DOCTRINE ANALYSIS"] --> shared["STEP 1: Determine if information was shared
-        Ask: Did the person voluntarily disclose
-        information to a third party?"]
+        start["THIRD-PARTY DOCTRINE ANALYSIS"] --> shared["STEP 1: Determine if information was shared<br/>Ask: Did the person voluntarily disclose<br/>information to a third party?"]
         
-        shared -- "NO: Information not shared" --> notapply["DOCTRINE DOES NOT APPLY:
-        Information not voluntarily
-        shared with a third party"]
+        shared -- "NO: Information not shared" --> notapply["DOCTRINE DOES NOT APPLY:<br/>Information not voluntarily<br/>shared with a third party"]
         
-        shared -- "YES: Information shared" --> vol["STEP 2: Evaluate the voluntariness
-        Was the disclosure truly voluntary?"]
+        shared -- "YES: Information shared" --> vol["STEP 2: Evaluate the voluntariness<br/>Was the disclosure truly voluntary?"]
         
         vol -- "NO: Disclosure not voluntary" --> notapply
         
-        vol -- "YES: Truly voluntary" --> digital["STEP 3: Determine information type and scope
-        Is this a comprehensive digital dataset?
-        Consider:
-        - Nature and quantity of information
-        - Degree of revealing personal details
-        - Automatic/passive nature of disclosure"]
+        vol -- "YES: Truly voluntary" --> digital["STEP 3: Determine information type and scope<br/>Is this a comprehensive digital dataset?<br/>Consider:<br/>- Nature and quantity of information<br/>- Degree of revealing personal details<br/>- Automatic/passive nature of disclosure"]
         
-        digital -- "YES: Comprehensive digital data" --> carpenter["STEP 4: Apply Carpenter analysis
-        Does it reveal the 'privacies of life'?
-        - Revealing historical location data
-        - Exhaustive record of movements
-        - Retrospective tracking capability
-        - Details about private areas"]
+        digital -- "YES: Comprehensive digital data" --> carpenter["STEP 4: Apply Carpenter analysis<br/>Does it reveal the 'privacies of life'?<br/>- Revealing historical location data<br/>- Exhaustive record of movements<br/>- Retrospective tracking capability<br/>- Details about private areas"]
         
-        digital -- "NO: Traditional third-party data" --> traditional["STEP 5: Apply traditional analysis
-        Per Smith/Miller, government may access:
-        - Bank records
-        - Basic phone/utility records
-        - Limited transactional information
-        - Business records shared for business purposes"]
+        digital -- "NO: Traditional third-party data" --> traditional["STEP 5: Apply traditional analysis<br/>Per Smith/Miller, government may access:<br/>- Bank records<br/>- Basic phone/utility records<br/>- Limited transactional information<br/>- Business records shared for business purposes"]
         
-        carpenter -- "YES: Reveals privacies of life" --> warrant["REQUIRES WARRANT:
-        Despite sharing with a third party,
-        Carpenter limits the doctrine for
-        comprehensive digital datasets"]
+        carpenter -- "YES: Reveals privacies of life" --> warrant["REQUIRES WARRANT:<br/>Despite sharing with a third party,<br/>Carpenter limits the doctrine for<br/>comprehensive digital datasets"]
         
         carpenter -- "NO: Limited information" --> traditional
         
-        traditional --> noreq["NO FOURTH AMENDMENT PROTECTION:
-        Government may obtain without a warrant
-        (though statutory protections may apply)"]
+        traditional --> noreq["NO FOURTH AMENDMENT PROTECTION:<br/>Government may obtain without a warrant<br/>(though statutory protections may apply)"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -225,7 +200,7 @@
         <h4>Unresolved Questions</h4>
         <p>The Court in <em>Carpenter</em> left many questions unresolved about the third-party doctrine's application to digital data:</p>
         <ul>
-            <li>How long must location tracking last to trigger Fourth Amendment protection? <em>Carpenter</em> involved seven days, but the Court did not set a minimum threshold.</li>
+            <li>How long must location tracking last to trigger Fourth Amendment protection? <em>Carpenter</em> itself involved 127 days of records and held that accessing seven days or more of CSLI is a search, but the Court expressly declined to decide whether a shorter period would qualify.</li>
             <li>Does the doctrine apply differently to content vs. metadata?</li>
             <li>How do automatic disclosures (without active user choice) affect the analysis?</li>
             <li>How comprehensive must information be to fall under <em>Carpenter</em> rather than <em>Smith/Miller</em>?</li>

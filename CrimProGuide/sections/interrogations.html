@@ -28,40 +28,19 @@
     
     <div class="mermaid">
     flowchart TD
-        start["FIFTH AMENDMENT ANALYSIS"] --> testimony["STEP 1: Testimonial Evidence
-        Is the evidence testimonial in nature?
-        - Communication of facts or beliefs
-        - Expressive or communicative content
-        - NOT mere physical evidence"]
+        start["FIFTH AMENDMENT ANALYSIS"] --> testimony["STEP 1: Testimonial Evidence<br/>Is the evidence testimonial in nature?<br/>- Communication of facts or beliefs<br/>- Expressive or communicative content<br/>- NOT mere physical evidence"]
         
-        testimony -- "NO: Not testimonial" --> notestimony["NO FIFTH AMENDMENT PROTECTION:
-        Non-testimonial evidence (physical samples,
-        biometric data, etc.) not protected"]
+        testimony -- "NO: Not testimonial" --> notestimony["NO FIFTH AMENDMENT PROTECTION:<br/>Non-testimonial evidence (physical samples,<br/>biometric data, etc.) not protected"]
         
-        testimony -- "YES: Testimonial" --> compulsion["STEP 2: Government Compulsion
-        Was there compulsion by the government?
-        - Direct force or threat
-        - Psychological pressure
-        - Legal compulsion (subpoena)
-        - Custodial interrogation"]
+        testimony -- "YES: Testimonial" --> compulsion["STEP 2: Government Compulsion<br/>Was there compulsion by the government?<br/>- Direct force or threat<br/>- Psychological pressure<br/>- Legal compulsion (subpoena)<br/>- Custodial interrogation"]
         
-        compulsion -- "NO: No compulsion" --> nocompulsion["NO FIFTH AMENDMENT PROTECTION:
-        Voluntary statements not protected
-        even if self-incriminating"]
+        compulsion -- "NO: No compulsion" --> nocompulsion["NO FIFTH AMENDMENT PROTECTION:<br/>Voluntary statements not protected<br/>even if self-incriminating"]
         
-        compulsion -- "YES: Compulsion present" --> incrimination["STEP 3: Self-Incrimination
-        Would the statement tend to incriminate?
-        - Admit guilt or elements of crime
-        - Furnish link in chain of evidence
-        - Provide investigative leads"]
+        compulsion -- "YES: Compulsion present" --> incrimination["STEP 3: Self-Incrimination<br/>Would the statement tend to incriminate?<br/>- Admit guilt or elements of crime<br/>- Furnish link in chain of evidence<br/>- Provide investigative leads"]
         
-        incrimination -- "NO: Not incriminating" --> noincrimination["NO FIFTH AMENDMENT PROTECTION:
-        Non-incriminating testimony not protected
-        even if compelled"]
+        incrimination -- "NO: Not incriminating" --> noincrimination["NO FIFTH AMENDMENT PROTECTION:<br/>Non-incriminating testimony not protected<br/>even if compelled"]
         
-        incrimination -- "YES: Potentially incriminating" --> violation["FIFTH AMENDMENT VIOLATION:
-        Compelled testimonial self-incrimination
-        Statement inadmissible in criminal proceedings"]
+        incrimination -- "YES: Potentially incriminating" --> violation["FIFTH AMENDMENT VIOLATION:<br/>Compelled testimonial self-incrimination<br/>Statement inadmissible in criminal proceedings"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -99,7 +78,7 @@
         <li>Deprivation of food, water, or sleep</li>
         <li>Threats against family members</li>
         <li>Extreme psychological coercion</li>
-        <li>False promises that induce confessions</li>
+        <li>False promises significant enough to overbear the suspect's will (vague promises of leniency alone are not coercive)</li>
         <li>Exploitation of mental illness or intellectual disability</li>
     </ul>
 </div>
@@ -186,46 +165,23 @@
     
     <div class="mermaid">
     flowchart TD
-        start["MIRANDA RIGHTS ANALYSIS"] --> custody["STEP 1: Was Suspect in Custody?
-        Would reasonable person feel free to leave?
-        Factors:
-        - Formal arrest
-        - Degree of restraint
-        - Location and duration
-        - Number of officers
-        - Show of authority
-        - Isolated from outside world"]
+        start["MIRANDA RIGHTS ANALYSIS"] --> custody["STEP 1: Was Suspect in Custody?<br/>Would reasonable person feel free to leave?<br/>Factors:<br/>- Formal arrest<br/>- Degree of restraint<br/>- Location and duration<br/>- Number of officers<br/>- Show of authority<br/>- Isolated from outside world"]
         
-        custody -- "NO: No custody" --> noMiranda["MIRANDA DOES NOT APPLY:
-        Warnings not required
-        Statement admissible if voluntary"]
+        custody -- "NO: No custody" --> noMiranda["MIRANDA DOES NOT APPLY:<br/>Warnings not required<br/>Statement admissible if voluntary"]
         
-        custody -- "YES: In custody" --> interrogation["STEP 2: Was There Interrogation?
-        - Express questioning about crime OR
-        - Functional equivalent: words/actions
-          likely to elicit incriminating response"]
+        custody -- "YES: In custody" --> interrogation["STEP 2: Was There Interrogation?<br/>- Express questioning about crime OR<br/>- Functional equivalent: words/actions<br/>likely to elicit incriminating response"]
         
         interrogation -- "NO: No interrogation" --> noMiranda
         
-        interrogation -- "YES: Interrogation" --> warnings["STEP 3: Were Miranda Warnings Given?
-        1. Right to remain silent
-        2. Statements can be used against suspect
-        3. Right to attorney
-        4. Right to appointed attorney if indigent"]
+        interrogation -- "YES: Interrogation" --> warnings["STEP 3: Were Miranda Warnings Given?<br/>1. Right to remain silent<br/>2. Statements can be used against suspect<br/>3. Right to attorney<br/>4. Right to appointed attorney if indigent"]
         
-        warnings -- "NO: No warnings" --> violation["MIRANDA VIOLATION:
-        Statements inadmissible in prosecution's
-        case-in-chief (may be usable for impeachment)"]
+        warnings -- "NO: No warnings" --> violation["MIRANDA VIOLATION:<br/>Statements inadmissible in prosecution's<br/>case-in-chief (may be usable for impeachment)"]
         
-        warnings -- "YES: Warnings given" --> waiver["STEP 4: Valid Waiver of Rights?
-        - Knowing and intelligent
-        - Voluntary
-        - Express or implied by conduct"]
+        warnings -- "YES: Warnings given" --> waiver["STEP 4: Valid Waiver of Rights?<br/>- Knowing and intelligent<br/>- Voluntary<br/>- Express or implied by conduct"]
         
         waiver -- "NO: No valid waiver" --> violation
         
-        waiver -- "YES: Valid waiver" --> admissible["STATEMENTS ADMISSIBLE:
-        Miranda requirements satisfied"]
+        waiver -- "YES: Valid waiver" --> admissible["STATEMENTS ADMISSIBLE:<br/>Miranda requirements satisfied"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px

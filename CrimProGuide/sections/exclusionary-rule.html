@@ -1,7 +1,7 @@
 <h2 id="exclusionary-rule-section">The Exclusionary Rule</h2>
 
 <div style="text-align: center; margin: 20px 0;">
-    <img src="../assets/Etana.png" alt="Etana the Exclusionary Rule Elephant" class="character-default" style="max-width: 150px; height: auto;">
+    <img src="assets/Etana.png" alt="Etana the Exclusionary Rule Elephant" class="character-default" style="max-width: 150px; height: auto;">
 </div>
 
 <div class="section-navigation">
@@ -31,48 +31,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["EXCLUSIONARY RULE ANALYSIS"] --> violation["STEP 1: Constitutional Violation
-        Was there a violation of the Fourth, 
-        Fifth, or Sixth Amendment?"]
+        start["EXCLUSIONARY RULE ANALYSIS"] --> violation["STEP 1: Constitutional Violation<br/>Was there a violation of the Fourth,<br/>Fifth, or Sixth Amendment?"]
         
-        violation -- "NO: No constitutional violation" --> admissible["EVIDENCE ADMISSIBLE:
-        No basis for exclusion"]
+        violation -- "NO: No constitutional violation" --> admissible["EVIDENCE ADMISSIBLE:<br/>No basis for exclusion"]
         
-        violation -- "YES: Constitutional violation occurred" --> standing["STEP 2: Standing to Challenge
-        Does the defendant have standing to challenge?
-        - Personal constitutional rights violated
-        - Legitimate expectation of privacy in place searched
-        - Not merely a third party's rights"]
+        violation -- "YES: Constitutional violation occurred" --> standing["STEP 2: Standing to Challenge<br/>Does the defendant have standing to challenge?<br/>- Personal constitutional rights violated<br/>- Legitimate expectation of privacy in place searched<br/>- Not merely a third party's rights"]
         
         standing -- "NO: No standing" --> admissible
         
-        standing -- "YES: Has standing" --> exceptions["STEP 3: Check for Exceptions
-        Does an exception to the exclusionary rule apply?
-        - Good faith exception
-        - Inevitable discovery
-        - Independent source
-        - Attenuation doctrine
-        - Impeachment use
-        - Public safety exception"]
+        standing -- "YES: Has standing" --> exceptions["STEP 3: Check for Exceptions<br/>Does an exception to the exclusionary rule apply?<br/>- Good faith exception<br/>- Inevitable discovery<br/>- Independent source<br/>- Attenuation doctrine<br/>- Impeachment use<br/>- In-court identification"]
         
         exceptions -- "YES: Exception applies" --> admissible
         
-        exceptions -- "NO: No exception applies" --> balancing["STEP 4: Cost-Benefit Analysis
-        Courts increasingly apply balancing test:
-        - Deterrence benefits of exclusion
-        - vs. Social costs of excluding evidence"]
+        exceptions -- "NO: No exception applies" --> balancing["STEP 4: Cost-Benefit Analysis<br/>Courts increasingly apply balancing test:<br/>- Deterrence benefits of exclusion<br/>- vs. Social costs of excluding evidence"]
         
-        balancing -- "Benefits outweigh costs" --> exclude["EVIDENCE EXCLUDED:
-        Cannot be used in prosecution's case-in-chief"]
+        balancing -- "Benefits outweigh costs" --> exclude["EVIDENCE EXCLUDED:<br/>Cannot be used in prosecution's case-in-chief"]
         
         balancing -- "Costs outweigh benefits" --> admissible
         
-        exclude --> otherUses["STEP 5: Consider Other Uses
-        Evidence may still be usable:
-        - For impeachment purposes
-        - In non-criminal proceedings
-        - In grand jury
-        - For sentencing"]
+        exclude --> otherUses["STEP 5: Consider Other Uses<br/>Evidence may still be usable:<br/>- For impeachment purposes<br/>- In non-criminal proceedings<br/>- In grand jury<br/>- For sentencing"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -135,7 +112,7 @@
     <h3>Exceptions to the Exclusionary Rule</h3>
     
 <div style="float: right; margin: 0 0 15px 15px;">
-        <img src="../assets/etana-confused.png" alt="Etana confused about exclusionary rule exceptions" class="character-confused" style="max-width: 120px; height: auto;">
+        <img src="assets/etana-confused.png" alt="Etana confused about exclusionary rule exceptions" class="character-confused" style="max-width: 120px; height: auto;">
     </div>
     
     <p>The Supreme Court has recognized several significant exceptions to the exclusionary rule, reflecting its view that the rule should apply only where its deterrence benefits outweigh its substantial social costs.</p>
@@ -160,47 +137,27 @@
     
     <div class="mermaid">
     flowchart TD
-        start["EXCLUSIONARY RULE EXCEPTIONS"] --> goodFaith["GOOD FAITH EXCEPTION:
-        Did officers reasonably rely on:
-        - Facially valid warrant from neutral magistrate
-        - Statute later declared unconstitutional
-        - Court records with erroneous information
-        - Binding precedent later overruled?"]
+        start["EXCLUSIONARY RULE EXCEPTIONS"] --> goodFaith["GOOD FAITH EXCEPTION:<br/>Did officers reasonably rely on:<br/>- Facially valid warrant from neutral magistrate<br/>- Statute later declared unconstitutional<br/>- Court records with erroneous information<br/>- Binding precedent later overruled?"]
         
-        goodFaith -- "YES: Good faith reliance" --> admissible["EVIDENCE ADMISSIBLE:
-        Exclusion would not deter future police misconduct"]
+        goodFaith -- "YES: Good faith reliance" --> admissible["EVIDENCE ADMISSIBLE:<br/>Exclusion would not deter future police misconduct"]
         
-        goodFaith -- "NO: No good faith" --> independent["INDEPENDENT SOURCE:
-        Was evidence discovered through means 
-        wholly independent of the illegal activity?"]
+        goodFaith -- "NO: No good faith" --> independent["INDEPENDENT SOURCE:<br/>Was evidence discovered through means<br/>wholly independent of the illegal activity?"]
         
         independent -- "YES: Independent source" --> admissible
         
-        independent -- "NO: Not independent" --> inevitable["INEVITABLE DISCOVERY:
-        Would the evidence inevitably have been
-        discovered by lawful means?"]
+        independent -- "NO: Not independent" --> inevitable["INEVITABLE DISCOVERY:<br/>Would the evidence inevitably have been<br/>discovered by lawful means?"]
         
         inevitable -- "YES: Inevitable discovery" --> admissible
         
-        inevitable -- "NO: Not inevitable" --> attenuation["ATTENUATION DOCTRINE:
-        Is the connection between the illegality
-        and evidence attenuated by:
-        - Significant time passage
-        - Intervening circumstances
-        - Flagrancy of police misconduct?"]
+        inevitable -- "NO: Not inevitable" --> attenuation["ATTENUATION DOCTRINE:<br/>Is the connection between the illegality<br/>and evidence attenuated by:<br/>- Significant time passage<br/>- Intervening circumstances<br/>- Flagrancy of police misconduct?"]
         
         attenuation -- "YES: Sufficiently attenuated" --> admissible
         
-        attenuation -- "NO: Not attenuated" --> impeachment["IMPEACHMENT USE:
-        Is evidence being used only to
-        impeach defendant's testimony?"]
+        attenuation -- "NO: Not attenuated" --> impeachment["IMPEACHMENT USE:<br/>Is evidence being used only to<br/>impeach defendant's testimony?"]
         
-        impeachment -- "YES: For impeachment only" --> limitedUse["LIMITED ADMISSIBILITY:
-        Only for impeachment
-        Not in case-in-chief"]
+        impeachment -- "YES: For impeachment only" --> limitedUse["LIMITED ADMISSIBILITY:<br/>Only for impeachment<br/>Not in case-in-chief"]
         
-        impeachment -- "NO: Not for impeachment" --> excluded["EVIDENCE EXCLUDED:
-        No exception applies"]
+        impeachment -- "NO: Not for impeachment" --> excluded["EVIDENCE EXCLUDED:<br/>No exception applies"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -227,7 +184,7 @@
     <h3>Fruit of the Poisonous Tree Doctrine</h3>
     
 <div style="float: left; margin: 0 15px 15px 0;">
-        <img src="../assets/etana-action.png" alt="Etana actively blocking evidence" class="character-action" style="max-width: 120px; height: auto;">
+        <img src="assets/etana-action.png" alt="Etana actively blocking evidence" class="character-action" style="max-width: 120px; height: auto;">
     </div>
     
     <p>The "fruit of the poisonous tree" doctrine, first articulated in <em>Silverthorne Lumber Co. v. United States</em> (1920) and named in <em>Nardone v. United States</em> (1939), holds that evidence derived from information obtained in an illegal search or seizure is also inadmissible. The doctrine extends the exclusionary rule beyond direct products of constitutional violations to their indirect fruits.</p>
@@ -295,40 +252,21 @@
     
     <div class="mermaid">
     flowchart TD
-        start["STANDING ANALYSIS"] --> violation["STEP 1: Constitutional Violation
-        Was there actually a Fourth Amendment violation?
-        (Only proceed to standing if there was a violation)"]
+        start["STANDING ANALYSIS"] --> violation["STEP 1: Constitutional Violation<br/>Was there actually a Fourth Amendment violation?<br/>(Only proceed to standing if there was a violation)"]
         
-        violation -- "NO: No violation" --> noNeed["NO NEED FOR STANDING ANALYSIS:
-        No constitutional violation occurred
-        Evidence admissible"]
+        violation -- "NO: No violation" --> noNeed["NO NEED FOR STANDING ANALYSIS:<br/>No constitutional violation occurred<br/>Evidence admissible"]
         
-        violation -- "YES: Violation occurred" --> personal["STEP 2: Personal Privacy Interest
-        Did the defendant have a legitimate 
-        expectation of privacy in:
-        - The place searched?
-        - The item seized?"]
+        violation -- "YES: Violation occurred" --> personal["STEP 2: Personal Privacy Interest<br/>Did the defendant have a legitimate<br/>expectation of privacy in:<br/>- The place searched?<br/>- The item seized?"]
         
-        personal -- "NO: No personal privacy interest" --> noStanding["NO STANDING:
-        Cannot invoke exclusionary rule
-        Evidence admissible against defendant"]
+        personal -- "NO: No personal privacy interest" --> noStanding["NO STANDING:<br/>Cannot invoke exclusionary rule<br/>Evidence admissible against defendant"]
         
-        personal -- "YES: Had privacy interest" --> reasonable["STEP 3: Reasonableness
-        Is this expectation of privacy one that
-        society recognizes as reasonable?"]
+        personal -- "YES: Had privacy interest" --> reasonable["STEP 3: Reasonableness<br/>Is this expectation of privacy one that<br/>society recognizes as reasonable?"]
         
         reasonable -- "NO: Not reasonable expectation" --> noStanding
         
-        reasonable -- "YES: Reasonable expectation" --> ownership["STEP 4: Factors Supporting Standing
-        - Property ownership/possession
-        - Right to exclude others
-        - Regular use of area/item
-        - Precautions taken for privacy
-        - Nature of place (home vs. public area)"]
+        reasonable -- "YES: Reasonable expectation" --> ownership["STEP 4: Factors Supporting Standing<br/>- Property ownership/possession<br/>- Right to exclude others<br/>- Regular use of area/item<br/>- Precautions taken for privacy<br/>- Nature of place (home vs. public area)"]
         
-        ownership --> hasStanding["STANDING EXISTS:
-        Defendant may invoke exclusionary rule
-        Proceed to exclusionary rule analysis"]
+        ownership --> hasStanding["STANDING EXISTS:<br/>Defendant may invoke exclusionary rule<br/>Proceed to exclusionary rule analysis"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px

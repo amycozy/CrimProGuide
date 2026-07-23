@@ -27,45 +27,25 @@
     flowchart TD
         start["TECHNOLOGY AND FOURTH AMENDMENT ANALYSIS"] --> techType["What type of technology is involved?"]
         
-        techType --> survTech["SURVEILLANCE TECHNOLOGY:
-        Technology used by law enforcement
-        to gather information"]
+        techType --> survTech["SURVEILLANCE TECHNOLOGY:<br/>Technology used by law enforcement<br/>to gather information"]
         
-        techType --> commTech["COMMUNICATION TECHNOLOGY:
-        Technology used by suspect to
-        communicate or store information"]
+        techType --> commTech["COMMUNICATION TECHNOLOGY:<br/>Technology used by suspect to<br/>communicate or store information"]
         
-        survTech --> kyllo["Apply Kyllo Test:
-        1. Did technology obtain information that couldn't 
-           be obtained without physical intrusion?
-        2. Is the technology in general public use?"]
+        survTech --> kyllo["Apply Kyllo Test:<br/>1. Did technology obtain information that couldn't<br/>be obtained without physical intrusion?<br/>2. Is the technology in general public use?"]
         
-        commTech --> katz["Apply Katz/Jones Framework:
-        1. Did suspect exhibit subjective expectation of privacy?
-        2. Is that expectation objectively reasonable?
-        3. Was there physical trespass to obtain information?"]
+        commTech --> katz["Apply Katz/Jones Framework:<br/>1. Did suspect exhibit subjective expectation of privacy?<br/>2. Is that expectation objectively reasonable?<br/>3. Was there physical trespass to obtain information?"]
         
-        commTech --> third["Consider Third-Party Doctrine:
-        Information voluntarily shared with third parties
-        may lose Fourth Amendment protection"]
+        commTech --> third["Consider Third-Party Doctrine:<br/>Information voluntarily shared with third parties<br/>may lose Fourth Amendment protection"]
         
-        kyllo -- "YES to Q1, NO to Q2" --> search1["FOURTH AMENDMENT SEARCH:
-        Warrant generally required"]
+        kyllo -- "YES to Q1, NO to Q2" --> search1["FOURTH AMENDMENT SEARCH:<br/>Warrant generally required"]
         
-        kyllo -- "NO to Q1 or YES to Q2" --> nosearch1["NOT A FOURTH AMENDMENT SEARCH:
-        No warrant required"]
+        kyllo -- "NO to Q1 or YES to Q2" --> nosearch1["NOT A FOURTH AMENDMENT SEARCH:<br/>No warrant required"]
         
-        katz -- "YES to both Katz questions
-        or YES to trespass question" --> search2["FOURTH AMENDMENT SEARCH:
-        Warrant generally required"]
+        katz -- "YES to both Katz questions<br/>or YES to trespass question" --> search2["FOURTH AMENDMENT SEARCH:<br/>Warrant generally required"]
         
-        katz -- "NO to both Katz questions
-        and NO to trespass question" --> nosearch2["NOT A FOURTH AMENDMENT SEARCH:
-        No warrant required"]
+        katz -- "NO to both Katz questions<br/>and NO to trespass question" --> nosearch2["NOT A FOURTH AMENDMENT SEARCH:<br/>No warrant required"]
         
-        third --> third_result["Third-party doctrine may eliminate
-        Fourth Amendment protection even if
-        Katz or Jones would otherwise apply"]
+        third --> third_result["Third-party doctrine may eliminate<br/>Fourth Amendment protection even if<br/>Katz or Jones would otherwise apply"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px

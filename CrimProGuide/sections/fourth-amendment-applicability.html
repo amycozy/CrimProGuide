@@ -28,45 +28,27 @@
     
     <div class="mermaid">
     flowchart TD
-        start["FOURTH AMENDMENT APPLICABILITY ANALYSIS"] --> person["STEP 1: Protected Person Analysis
-        Is the party seeking protection among 'the people'
-        covered by the Fourth Amendment?"]
+        start["FOURTH AMENDMENT APPLICABILITY ANALYSIS"] --> person["STEP 1: Protected Person Analysis<br/>Is the party seeking protection among 'the people'<br/>covered by the Fourth Amendment?"]
         
-        person --> citizen["U.S. Citizens or
-        Permanent Residents?"]
+        person --> citizen["U.S. Citizens or<br/>Permanent Residents?"]
         
         person --> non_citizen["Non-Citizen?"]
         
-        person --> entity["Entity (Corporation,
-        Organization, etc.)?"]
+        person --> entity["Entity (Corporation,<br/>Organization, etc.)?"]
         
-        citizen -- "YES" --> protected1["PROTECTED:
-        Full Fourth Amendment
-        protections apply"]
+        citizen -- "YES" --> protected1["PROTECTED:<br/>Full Fourth Amendment<br/>protections apply"]
         
         non_citizen --> location["Where was the search/seizure?"]
         
-        location -- "Within U.S. territory" --> connection["Sufficient connection test:
-        Has person developed substantial
-        connections with United States?"]
+        location -- "Within U.S. territory" --> connection["Sufficient connection test:<br/>Has person developed substantial<br/>connections with United States?"]
         
-        location -- "Outside U.S. territory" --> generally_not["GENERALLY NOT PROTECTED:
-        Fourth Amendment typically doesn't
-        apply extraterritorially to non-citizens
-        (Verdugo-Urquidez)"]
+        location -- "Outside U.S. territory" --> generally_not["GENERALLY NOT PROTECTED:<br/>Fourth Amendment typically doesn't<br/>apply extraterritorially to non-citizens<br/>(Verdugo-Urquidez)"]
         
-        connection -- "YES: Substantial connection exists" --> protected2["PROTECTED:
-        Fourth Amendment protections
-        apply with some limitations"]
+        connection -- "YES: Substantial connection exists" --> protected2["PROTECTED:<br/>Fourth Amendment protections<br/>apply with some limitations"]
         
-        connection -- "NO: No substantial connection" --> limited["LIMITED PROTECTION:
-        May have reduced Fourth Amendment
-        protections, especially in border contexts"]
+        connection -- "NO: No substantial connection" --> limited["LIMITED PROTECTION:<br/>May have reduced Fourth Amendment<br/>protections, especially in border contexts"]
         
-        entity -- "YES" --> commercial["PROTECTED WITH LIMITATIONS:
-        - Less protection in closely regulated industries
-        - Administrative searches more easily justified
-        - Most protection in private areas"]
+        entity -- "YES" --> commercial["PROTECTED WITH LIMITATIONS:<br/>- Less protection in closely regulated industries<br/>- Administrative searches more easily justified<br/>- Most protection in private areas"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -196,39 +178,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["PRIVATE SEARCH ANALYSIS"] --> who["STEP 1: Who conducted the search/seizure?
-        Government actor or private party?"]
+        start["PRIVATE SEARCH ANALYSIS"] --> who["STEP 1: Who conducted the search/seizure?<br/>Government actor or private party?"]
         
-        who -- "Government actor" --> fourth["Fourth Amendment applies:
-        Must satisfy constitutional requirements"]
+        who -- "Government actor" --> fourth["Fourth Amendment applies:<br/>Must satisfy constitutional requirements"]
         
-        who -- "Private party" --> agency["STEP 2: Government Agency Analysis
-        Was the private party acting as a
-        government agent?"]
+        who -- "Private party" --> agency["STEP 2: Government Agency Analysis<br/>Was the private party acting as a<br/>government agent?"]
         
-        agency --> knowledge["Government knowledge/acquiescence:
-        Did government know of and
-        acquiescence in the search?"]
+        agency --> knowledge["Government knowledge/acquiescence:<br/>Did government know of and<br/>acquiesce in the search?"]
         
-        agency --> purpose["Private party's purpose:
-        Did private party intend to
-        help law enforcement?"]
+        agency --> purpose["Private party's purpose:<br/>Did private party intend to<br/>help law enforcement?"]
         
-        agency --> instigation["Government instigation:
-        Did government encourage, direct,
-        or initiate the search?"]
+        agency --> instigation["Government instigation:<br/>Did government encourage, direct,<br/>or initiate the search?"]
         
-        knowledge & purpose & instigation --> agent_test["STEP 3: Based on totality of circumstances,
-        was the private party acting as a government agent?"]
+        knowledge & purpose & instigation --> agent_test["STEP 3: Based on totality of circumstances,<br/>was the private party acting as a government agent?"]
         
         agent_test -- "YES: Acting as government agent" --> fourth
         
-        agent_test -- "NO: Truly private action" --> scope["STEP 4: If government later examines evidence,
-        did they expand beyond the scope of private search?"]
+        agent_test -- "NO: Truly private action" --> scope["STEP 4: If government later examines evidence,<br/>did they expand beyond the scope of private search?"]
         
-        scope -- "NO: Within scope of private search" --> no_fourth["Fourth Amendment does not apply:
-        Government may view what private party saw
-        without constitutional violation"]
+        scope -- "NO: Within scope of private search" --> no_fourth["Fourth Amendment does not apply:<br/>Government may view what private party saw<br/>without constitutional violation"]
         
         scope -- "YES: Exceeded private search scope" --> fourth
         

@@ -9,7 +9,7 @@
 </div>
 
 <div style="text-align: center; margin: 20px 0;">
-    <img src="../assets/tulio.png" alt="Tulio the Terry Stop Tapir" style="max-width: 200px;">
+    <img src="assets/tulio.png" alt="Tulio the Terry Stop Tapir" style="max-width: 200px;">
     <p style="font-style: italic; color: var(--dark-charcoal);">Tulio the Terry Stop Tapir will guide you through the principles of brief investigative detentions.</p>
 </div>
 
@@ -31,69 +31,39 @@
     
     <div class="mermaid">
     flowchart TD
-        start["TERRY STOP ANALYSIS"] --> encounter["STEP 1: Determine Type of Encounter
-        Is this a seizure requiring justification?
-        - No seizure: consensual encounter
-        - Brief seizure: Terry stop
-        - Full seizure: arrest"]
+        start["TERRY STOP ANALYSIS"] --> encounter["STEP 1: Determine Type of Encounter<br/>Is this a seizure requiring justification?<br/>- No seizure: consensual encounter<br/>- Brief seizure: Terry stop<br/>- Full seizure: arrest"]
         
-        encounter -- "Consensual encounter" --> noseizure["NO FOURTH AMENDMENT SEIZURE:
-        No suspicion required
-        Person free to leave/refuse cooperation"]
+        encounter -- "Consensual encounter" --> noseizure["NO FOURTH AMENDMENT SEIZURE:<br/>No suspicion required<br/>Person free to leave/refuse cooperation"]
         
-        encounter -- "Terry stop" --> reasonable["STEP 2: Assess Reasonable Suspicion
-        Is there reasonable suspicion of criminal activity?
-        - Specific, articulable facts
-        - Totality of circumstances
-        - Officer's training and experience
-        - Not just a hunch"]
+        encounter -- "Terry stop" --> reasonable["STEP 2: Assess Reasonable Suspicion<br/>Is there reasonable suspicion of criminal activity?<br/>- Specific, articulable facts<br/>- Totality of circumstances<br/>- Officer's training and experience<br/>- Not just a hunch"]
         
-        encounter -- "Arrest" --> probable["Requires probable cause
-        (higher standard than reasonable suspicion)"]
+        encounter -- "Arrest" --> probable["Requires probable cause<br/>(higher standard than reasonable suspicion)"]
         
-        reasonable -- "NO: No reasonable suspicion" --> invalid["INVALID TERRY STOP:
-        Fourth Amendment violation
-        Evidence likely inadmissible"]
+        reasonable -- "NO: No reasonable suspicion" --> invalid["INVALID TERRY STOP:<br/>Fourth Amendment violation<br/>Evidence likely inadmissible"]
         
-        reasonable -- "YES: Reasonable suspicion exists" --> duration["STEP 3: Evaluate Duration & Scope
-        Was the stop limited in time and scope?
-        - Only long enough to confirm/dispel suspicion
-        - Methods reasonably related to purpose
-        - Diligence in pursuing investigation"]
+        reasonable -- "YES: Reasonable suspicion exists" --> duration["STEP 3: Evaluate Duration & Scope<br/>Was the stop limited in time and scope?<br/>- Only long enough to confirm/dispel suspicion<br/>- Methods reasonably related to purpose<br/>- Diligence in pursuing investigation"]
         
-        duration -- "NO: Exceeded proper duration/scope" --> deFactoArrest["DE FACTO ARREST:
-        Requires probable cause
-        If no PC, evidence likely inadmissible"]
+        duration -- "NO: Exceeded proper duration/scope" --> deFactoArrest["DE FACTO ARREST:<br/>Requires probable cause<br/>If no PC, evidence likely inadmissible"]
         
         duration -- "YES: Properly limited" --> frisk["STEP 4: Was a Frisk Conducted?"]
         
-        frisk -- "NO: No frisk conducted" --> validStop["VALID TERRY STOP:
-        Detention was lawful
-        Evidence from stop admissible"]
+        frisk -- "NO: No frisk conducted" --> validStop["VALID TERRY STOP:<br/>Detention was lawful<br/>Evidence from stop admissible"]
         
-        frisk -- "YES: Frisk conducted" --> friskJustified["STEP 5: Was Frisk Justified?
-        Reasonable belief person
-        armed and dangerous?"]
+        frisk -- "YES: Frisk conducted" --> friskJustified["STEP 5: Was Frisk Justified?<br/>Reasonable belief person<br/>armed and dangerous?"]
         
-        friskJustified -- "NO: Frisk not justified" --> invalidFrisk["INVALID FRISK:
-        Evidence from frisk inadmissible
-        Stop itself may still be valid"]
+        friskJustified -- "NO: Frisk not justified" --> invalidFrisk["INVALID FRISK:<br/>Evidence from frisk inadmissible<br/>Stop itself may still be valid"]
         
-        friskJustified -- "YES: Frisk justified" --> friskScope["STEP 6: Was Frisk Properly Limited?
-        - Pat-down of outer clothing only
-        - Only to find weapons, not evidence
-        - No manipulation of non-weapon objects"]
+        friskJustified -- "YES: Frisk justified" --> friskScope["STEP 6: Was Frisk Properly Limited?<br/>- Pat-down of outer clothing only<br/>- Only to find weapons, not evidence<br/>- No manipulation of non-weapon objects"]
         
         friskScope -- "NO: Exceeded proper scope" --> invalidFrisk
         
-        friskScope -- "YES: Properly limited" --> validTerry["VALID TERRY STOP AND FRISK:
-        Evidence admissible"]
+        friskScope -- "YES: Properly limited" --> validTerry["VALID TERRY STOP AND FRISK:<br/>Evidence admissible"]
         
-        classDef process fill:rgba(131, 188, 169, 0.2),stroke:#83BCA9,stroke-width:2px
-        classDef question fill:rgba(90, 122, 95, 0.1),stroke:#5A7A5F,stroke-width:1px
-        classDef negative fill:rgba(211, 97, 53, 0.1),stroke:#D36135,stroke-width:2px
-        classDef positive fill:rgba(131, 188, 169, 0.15),stroke:#83BCA9,stroke-width:2px
-        classDef warning fill:rgba(228, 139, 102, 0.15),stroke:#E48B66,stroke-width:1px
+        classDef process fill:#E6F2EE,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#EEF2EF,stroke:#5A7A5F,stroke-width:1px
+        classDef negative fill:#FBEFEB,stroke:#D36135,stroke-width:2px
+        classDef positive fill:#ECF5F2,stroke:#83BCA9,stroke-width:2px
+        classDef warning fill:#FBEEE8,stroke:#E48B66,stroke-width:1px
         
         class start,encounter process
         class reasonable,duration,frisk,friskJustified,friskScope question
@@ -146,7 +116,7 @@
     </div>
     
     <div style="text-align: right; margin: 20px 0;">
-        <img src="../assets/tulio-confused.png" alt="Tulio confused about reasonable suspicion" style="max-width: 150px; float: right; margin-left: 15px;">
+        <img src="assets/tulio.png" alt="Tulio confused about reasonable suspicion" style="max-width: 150px; float: right; margin-left: 15px;">
         <div style="background-color: rgba(211, 97, 53, 0.1); border-radius: 10px; padding: 15px; display: inline-block; max-width: 70%; text-align: left;">
             <h4 style="margin-top: 0; color: var(--rust-red);">Common Confusion:</h4>
             <p>Many people confuse reasonable suspicion with probable cause. Remember that reasonable suspicion is a <em>lower</em> standard that requires only "specific, articulable facts" suggesting criminal activity, not the "fair probability" needed for probable cause.</p>
@@ -168,43 +138,23 @@
     
     <div class="mermaid">
     flowchart TD
-        start["REASONABLE SUSPICION ANALYSIS"] --> facts["STEP 1: Identify Specific Facts
-        What specific, articulable facts did the officer observe?
-        - Personal observation
-        - Information from others
-        - Combination of factors"]
+        start["REASONABLE SUSPICION ANALYSIS"] --> facts["STEP 1: Identify Specific Facts<br/>What specific, articulable facts did the officer observe?<br/>- Personal observation<br/>- Information from others<br/>- Combination of factors"]
         
-        facts --> totality["STEP 2: Totality of Circumstances
-        Consider all factors together:
-        - Location (high crime area?)
-        - Time of day
-        - Suspect's behavior
-        - Evasive actions
-        - Officer's experience
-        - Proximity to crime
-        - Description matching"]
+        facts --> totality["STEP 2: Totality of Circumstances<br/>Consider all factors together:<br/>- Location (high crime area?)<br/>- Time of day<br/>- Suspect's behavior<br/>- Evasive actions<br/>- Officer's experience<br/>- Proximity to crime<br/>- Description matching"]
         
-        totality --> collective["STEP 3: Collective Knowledge
-        Consider knowledge of all officers involved
-        (collective knowledge doctrine)"]
+        totality --> collective["STEP 3: Collective Knowledge<br/>Consider knowledge of all officers involved<br/>(collective knowledge doctrine)"]
         
-        collective --> objective["STEP 4: Apply Objective Standard
-        Would a reasonable officer conclude
-        there is fair possibility of criminal activity?"]
+        collective --> objective["STEP 4: Apply Objective Standard<br/>Would a reasonable officer conclude<br/>there is fair possibility of criminal activity?"]
         
-        objective -- "NO: Objective standard not met" --> noSuspicion["NO REASONABLE SUSPICION:
-        Terry stop not justified
-        Evidence from stop inadmissible"]
+        objective -- "NO: Objective standard not met" --> noSuspicion["NO REASONABLE SUSPICION:<br/>Terry stop not justified<br/>Evidence from stop inadmissible"]
         
-        objective -- "YES: Objective standard met" --> suspicion["REASONABLE SUSPICION EXISTS:
-        Terry stop justified
-        Proceed to scope and duration analysis"]
+        objective -- "YES: Objective standard met" --> suspicion["REASONABLE SUSPICION EXISTS:<br/>Terry stop justified<br/>Proceed to scope and duration analysis"]
         
-        classDef process fill:rgba(131, 188, 169, 0.2),stroke:#83BCA9,stroke-width:2px
-        classDef factors fill:rgba(131, 188, 169, 0.1),stroke:#83BCA9,stroke-width:1px
-        classDef question fill:rgba(90, 122, 95, 0.1),stroke:#5A7A5F,stroke-width:1px
-        classDef negative fill:rgba(211, 97, 53, 0.1),stroke:#D36135,stroke-width:2px
-        classDef positive fill:rgba(131, 188, 169, 0.15),stroke:#83BCA9,stroke-width:2px
+        classDef process fill:#E6F2EE,stroke:#83BCA9,stroke-width:2px
+        classDef factors fill:#F3F8F6,stroke:#83BCA9,stroke-width:1px
+        classDef question fill:#EEF2EF,stroke:#5A7A5F,stroke-width:1px
+        classDef negative fill:#FBEFEB,stroke:#D36135,stroke-width:2px
+        classDef positive fill:#ECF5F2,stroke:#83BCA9,stroke-width:2px
         
         class start process
         class facts,totality,collective factors
@@ -246,7 +196,7 @@
     <p>Terry stops must be limited in scope and duration to what is necessary to effectuate the purpose of the stop. A stop that exceeds these limitations may convert into a de facto arrest requiring probable cause.</p>
     
     <div style="text-align: left; margin: 20px 0;">
-        <img src="../assets/tulio-action.png" alt="Tulio demonstrating brief detention" style="max-width: 150px; float: left; margin-right: 15px;">
+        <img src="assets/tulio.png" alt="Tulio demonstrating brief detention" style="max-width: 150px; float: left; margin-right: 15px;">
         <div style="background-color: rgba(131, 188, 169, 0.1); border-radius: 10px; padding: 15px; display: inline-block; max-width: 70%; text-align: left;">
             <h4 style="margin-top: 0; color: var(--forest-green);">Key Concept:</h4>
             <p>The temporary nature of Terry stops is essential to their constitutionality. Tulio always carries an hourglass to remind us that these detentions must be brief and focused on confirming or dispelling the officer's suspicion.</p>
@@ -346,51 +296,29 @@
     
     <div class="mermaid">
     flowchart TD
-        start["PROTECTIVE FRISK ANALYSIS"] --> validStop["STEP 1: Confirm Valid Terry Stop
-        Is there reasonable suspicion of criminal activity
-        to justify the initial stop?"]
+        start["PROTECTIVE FRISK ANALYSIS"] --> validStop["STEP 1: Confirm Valid Terry Stop<br/>Is there reasonable suspicion of criminal activity<br/>to justify the initial stop?"]
         
-        validStop -- "NO: Stop not valid" --> invalid["INVALID FRISK:
-        If stop is invalid, frisk is invalid
-        Evidence inadmissible"]
+        validStop -- "NO: Stop not valid" --> invalid["INVALID FRISK:<br/>If stop is invalid, frisk is invalid<br/>Evidence inadmissible"]
         
-        validStop -- "YES: Stop is valid" --> dangerBelief["STEP 2: Armed and Dangerous
-        Does officer reasonably believe the person
-        is armed and presently dangerous?
-        Based on:
-        - Nature of suspected crime
-        - Bulges in clothing
-        - Furtive movements
-        - Threatening behavior
-        - Known history of violence
-        - Other factors"]
+        validStop -- "YES: Stop is valid" --> dangerBelief["STEP 2: Armed and Dangerous<br/>Does officer reasonably believe the person<br/>is armed and presently dangerous?<br/>Based on:<br/>- Nature of suspected crime<br/>- Bulges in clothing<br/>- Furtive movements<br/>- Threatening behavior<br/>- Known history of violence<br/>- Other factors"]
         
         dangerBelief -- "NO: No reasonable belief" --> invalid
         
-        dangerBelief -- "YES: Reasonable belief" --> scope["STEP 3: Proper Scope
-        Was the frisk limited to a pat-down of
-        outer clothing to find weapons?
-        No manipulation of non-weapon objects"]
+        dangerBelief -- "YES: Reasonable belief" --> scope["STEP 3: Proper Scope<br/>Was the frisk limited to a pat-down of<br/>outer clothing to find weapons?<br/>No manipulation of non-weapon objects"]
         
-        scope -- "NO: Exceeded proper scope" --> partiallyInvalid["PARTIALLY INVALID FRISK:
-        Any evidence obtained from improper
-        aspects of frisk inadmissible"]
+        scope -- "NO: Exceeded proper scope" --> partiallyInvalid["PARTIALLY INVALID FRISK:<br/>Any evidence obtained from improper<br/>aspects of frisk inadmissible"]
         
-        scope -- "YES: Properly limited" --> plainFeel["STEP 4: Plain Feel Doctrine
-        If contraband was felt during proper frisk,
-        was its nature immediately apparent without
-        manipulation?"]
+        scope -- "YES: Properly limited" --> plainFeel["STEP 4: Plain Feel Doctrine<br/>If contraband was felt during proper frisk,<br/>was its nature immediately apparent without<br/>manipulation?"]
         
-        plainFeel -- "YES: Immediately apparent" --> valid["VALID FRISK:
-        Evidence admissible"]
+        plainFeel -- "YES: Immediately apparent" --> valid["VALID FRISK:<br/>Evidence admissible"]
         
         plainFeel -- "NO: Not immediately apparent" --> partiallyInvalid
         
-        classDef process fill:rgba(131, 188, 169, 0.2),stroke:#83BCA9,stroke-width:2px
-        classDef question fill:rgba(90, 122, 95, 0.1),stroke:#5A7A5F,stroke-width:1px
-        classDef negative fill:rgba(211, 97, 53, 0.1),stroke:#D36135,stroke-width:2px
-        classDef positive fill:rgba(131, 188, 169, 0.15),stroke:#83BCA9,stroke-width:2px
-        classDef warning fill:rgba(228, 139, 102, 0.15),stroke:#E48B66,stroke-width:1px
+        classDef process fill:#E6F2EE,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#EEF2EF,stroke:#5A7A5F,stroke-width:1px
+        classDef negative fill:#FBEFEB,stroke:#D36135,stroke-width:2px
+        classDef positive fill:#ECF5F2,stroke:#83BCA9,stroke-width:2px
+        classDef warning fill:#FBEEE8,stroke:#E48B66,stroke-width:1px
         
         class start process
         class validStop,dangerBelief,scope,plainFeel question

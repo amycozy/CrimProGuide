@@ -28,56 +28,27 @@
     
     <div class="mermaid">
     flowchart TD
-        start["SPECIAL NEEDS DOCTRINE ANALYSIS"] --> purpose["STEP 1: Identify the purpose of the search program
-        Ask: What is the primary purpose of the search regime?"]
+        start["SPECIAL NEEDS DOCTRINE ANALYSIS"] --> purpose["STEP 1: Identify the purpose of the search program<br/>Ask: What is the primary purpose of the search regime?"]
         
-        purpose -- "Ordinary crime detection" --> criminal["NOT SPECIAL NEEDS:
-        If primary purpose is general
-        crime control, special needs
-        doctrine does not apply"]
+        purpose -- "Ordinary crime detection" --> criminal["NOT SPECIAL NEEDS:<br/>If primary purpose is general<br/>crime control, special needs<br/>doctrine does not apply"]
         
-        purpose -- "Non-law enforcement purpose" --> identify["STEP 2: Identify the special need
-        - Health and safety regulation
-        - School discipline and safety
-        - Workplace supervision
-        - Border control
-        - Transportation safety
-        - Government program integrity"]
+        purpose -- "Non-law enforcement purpose" --> identify["STEP 2: Identify the special need<br/>- Health and safety regulation<br/>- School discipline and safety<br/>- Workplace supervision<br/>- Border control<br/>- Transportation safety<br/>- Government program integrity"]
         
-        identify --> practicality["STEP 3: Assess practicality
-        Ask: Do special needs make the warrant and
-        probable cause requirements impracticable?"]
+        identify --> practicality["STEP 3: Assess practicality<br/>Ask: Do special needs make the warrant and<br/>probable cause requirements impracticable?"]
         
-        practicality -- "NO: Warrant/PC practical" --> notspecial["NOT SPECIAL NEEDS:
-        Traditional Fourth Amendment
-        standards apply"]
+        practicality -- "NO: Warrant/PC practical" --> notspecial["NOT SPECIAL NEEDS:<br/>Traditional Fourth Amendment<br/>standards apply"]
         
-        practicality -- "YES: Warrant/PC impractical" --> balance["STEP 4: Apply balancing test
-        Weigh the government's special need against
-        the individual's privacy interest"]
+        practicality -- "YES: Warrant/PC impractical" --> balance["STEP 4: Apply balancing test<br/>Weigh the government's special need against<br/>the individual's privacy interest"]
         
-        balance --> gov_interest["Government Interest Factors:
-        - Importance of the special need
-        - Effectiveness of the search in addressing the need
-        - Absence of less intrusive alternatives"]
+        balance --> gov_interest["Government Interest Factors:<br/>- Importance of the special need<br/>- Effectiveness of the search in addressing the need<br/>- Absence of less intrusive alternatives"]
         
-        balance --> priv_interest["Privacy Interest Factors:
-        - Context (school, workplace, public highway)
-        - Diminished expectations in certain settings
-        - Intrusiveness of the search
-        - Discretion given to officials"]
+        balance --> priv_interest["Privacy Interest Factors:<br/>- Context (school, workplace, public highway)<br/>- Diminished expectations in certain settings<br/>- Intrusiveness of the search<br/>- Discretion given to officials"]
         
-        gov_interest & priv_interest --> result["STEP 5: Determine reasonableness
-        Based on the balance of interests, is the
-        search program reasonable?"]
+        gov_interest & priv_interest --> result["STEP 5: Determine reasonableness<br/>Based on the balance of interests, is the<br/>search program reasonable?"]
         
-        result -- "Government interest outweighs privacy interest" --> reasonable["CONSTITUTIONALLY REASONABLE:
-        Special needs justifies departure from
-        traditional warrant/probable cause requirements"]
+        result -- "Government interest outweighs privacy interest" --> reasonable["CONSTITUTIONALLY REASONABLE:<br/>Special needs justifies departure from<br/>traditional warrant/probable cause requirements"]
         
-        result -- "Privacy interest outweighs government interest" --> unreasonable["UNCONSTITUTIONAL:
-        Special need does not justify
-        the intrusion on privacy"]
+        result -- "Privacy interest outweighs government interest" --> unreasonable["UNCONSTITUTIONAL:<br/>Special need does not justify<br/>the intrusion on privacy"]
         
         classDef process fill:#e0f7fa,stroke:#00acc1,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px

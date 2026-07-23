@@ -28,41 +28,21 @@
     
     <div class="mermaid">
     flowchart TD
-        start["FOURTH AMENDMENT STANDING ANALYSIS"] --> violated["STEP 1: Was defendant's personal Fourth Amendment right violated?
-        Question: Did government action intrude upon either:
-        - Defendant's reasonable expectation of privacy OR
-        - Defendant's property interest protected by the Fourth Amendment?"]
+        start["FOURTH AMENDMENT STANDING ANALYSIS"] --> violated["STEP 1: Was defendant's personal Fourth Amendment right violated?<br/>Question: Did government action intrude upon either:<br/>- Defendant's reasonable expectation of privacy OR<br/>- Defendant's property interest protected by the Fourth Amendment?"]
         
-        violated -- "NO: Not defendant's right" --> nostanding["NO STANDING:
-        Defendant cannot challenge search/seizure
-        even if it was clearly unconstitutional"]
+        violated -- "NO: Not defendant's right" --> nostanding["NO STANDING:<br/>Defendant cannot challenge search/seizure<br/>even if it was clearly unconstitutional"]
         
-        violated -- "YES: Defendant's right affected" --> interest_type["STEP 2: Nature of protected interest
-        What is the basis for standing?"]
+        violated -- "YES: Defendant's right affected" --> interest_type["STEP 2: Nature of protected interest<br/>What is the basis for standing?"]
         
-        interest_type --> privacy["PRIVACY BASIS:
-        Did defendant have reasonable
-        expectation of privacy in
-        area searched?"]
+        interest_type --> privacy["PRIVACY BASIS:<br/>Did defendant have reasonable<br/>expectation of privacy in<br/>area searched?"]
         
-        interest_type --> property["PROPERTY BASIS:
-        Did government physically intrude
-        on defendant's property for
-        purpose of gathering information?"]
+        interest_type --> property["PROPERTY BASIS:<br/>Did government physically intrude<br/>on defendant's property for<br/>purpose of gathering information?"]
         
-        privacy --> katz["Apply Katz Test:
-        1) Subjective expectation of privacy
-        2) Society recognizes expectation as reasonable"]
+        privacy --> katz["Apply Katz Test:<br/>1) Subjective expectation of privacy<br/>2) Society recognizes expectation as reasonable"]
         
-        property --> jones["Apply Jones/Jardines Analysis:
-        Did government physically intrude on:
-        - Defendant's person, house, papers, effects
-        - Without permission
-        - To gather information?"]
+        property --> jones["Apply Jones/Jardines Analysis:<br/>Did government physically intrude on:<br/>- Defendant's person, house, papers, effects<br/>- Without permission<br/>- To gather information?"]
         
-        katz -- "YES: Reasonable expectation" --> standing["STANDING ESTABLISHED:
-        Defendant may challenge
-        constitutionality of search/seizure"]
+        katz -- "YES: Reasonable expectation" --> standing["STANDING ESTABLISHED:<br/>Defendant may challenge<br/>constitutionality of search/seizure"]
         
         katz -- "NO: No reasonable expectation" --> nostanding
         
