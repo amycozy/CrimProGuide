@@ -1,0 +1,286 @@
+<h2 id="double-jeopardy-section">Double Jeopardy</h2>
+
+<div class="section-navigation">
+    <a href="#dj-overview">Overview and the Three Protections</a>
+    <a href="#dj-attachment">When Jeopardy Attaches</a>
+    <a href="#dj-same-offense">The "Same Offense" — Blockburger</a>
+    <a href="#dj-dual-sovereignty">Dual (Separate) Sovereignty</a>
+    <a href="#dj-retrials">Permissible Retrials</a>
+</div>
+
+<div class="explanation" id="dj-overview">
+    <h3>Overview and the Three Protections</h3>
+
+    <p>The Fifth Amendment's Double Jeopardy Clause provides that no person shall "be subject for the same offence to be twice put in jeopardy of life or limb." The Clause is applicable to the states through the Fourteenth Amendment. It safeguards a defendant's interest in the finality of a criminal proceeding and against the ordeal of repeated prosecutions for the same conduct.</p>
+
+    <div class="key-point">
+        <h4>The Three Guarantees of the Double Jeopardy Clause</h4>
+        <p>The Clause protects against:</p>
+        <ol>
+            <li><strong>A second prosecution for the same offense after ACQUITTAL;</strong></li>
+            <li><strong>A second prosecution for the same offense after CONVICTION; and</strong></li>
+            <li><strong>MULTIPLE PUNISHMENTS for the same offense.</strong></li>
+        </ol>
+        <p>The Clause does <strong>NOT</strong> bar a subsequent <strong>CIVIL</strong> action arising from the same conduct. A criminal defendant who is acquitted may still face civil liability (e.g., a wrongful death suit) for the same underlying acts, because the civil action is not a criminal "jeopardy."</p>
+    </div>
+
+    <p>Because double jeopardy is a highly tested bar subject, the analysis proceeds in a predictable sequence: (1) determine whether jeopardy <em>attached</em> in the first proceeding; (2) determine whether the two charges are the "<em>same offense</em>" under the <em>Blockburger</em> test; (3) ask whether the two prosecutions are brought by <em>separate sovereigns</em>; and (4) if the same sovereign is re-prosecuting, ask whether a recognized <em>exception</em> permits the retrial.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        start["DOUBLE JEOPARDY ANALYSIS"] --> attach["ATTACHMENT<br/>Did jeopardy attach in the first proceeding?<br/>Jury: jury empaneled and sworn<br/>Bench: first witness sworn"]
+        attach -- "NO: dismissed before attachment" --> noBar["NO DOUBLE JEOPARDY BAR<br/>Reprosecution permitted"]
+        attach -- "YES: jeopardy attached" --> same["SAME OFFENSE?<br/>Apply Blockburger:<br/>Does each offense require proof<br/>of an element the other does not?"]
+        same -- "YES: each has a distinct element" --> diffOffense["DIFFERENT OFFENSES<br/>Successive prosecution allowed"]
+        same -- "NO: not each has a distinct element" --> sovereign["SEPARATE SOVEREIGNS?<br/>Are the two prosecutions brought<br/>by different sovereigns?<br/>Federal vs. State, or State vs. State"]
+        sovereign -- "YES: separate sovereigns" --> dualOK["BOTH PROSECUTIONS ALLOWED<br/>Dual sovereignty doctrine"]
+        sovereign -- "NO: same sovereign" --> exception["RETRIAL EXCEPTION?<br/>Hung jury / manifest necessity?<br/>Mistrial at defendant's request?<br/>Retrial after successful appeal?"]
+        exception -- "YES: exception applies" --> retrialOK["RETRIAL PERMITTED<br/>But NOT if reversal was for<br/>insufficient evidence (Burks)"]
+        exception -- "NO: no exception" --> barred["PROSECUTION BARRED<br/>Double jeopardy applies"]
+
+        classDef process fill:#D5E8E0,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#FFF8E1,stroke:#FF8F00,stroke-width:2px
+        classDef negative fill:#FFEBEE,stroke:#C62828,stroke-width:2px
+        classDef positive fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+
+        class start process
+        class attach,same,sovereign,exception question
+        class barred negative
+        class noBar,diffOffense,dualOK,retrialOK positive
+    </div>
+</div>
+
+<div class="explanation" id="dj-attachment">
+    <h3>When Jeopardy Attaches</h3>
+
+    <p>Double jeopardy protections apply only once jeopardy has "attached." The moment of attachment marks the point at which the defendant is first placed at risk of conviction. If a case is dismissed <em>before</em> jeopardy attaches, there is no double-jeopardy bar to bringing the charges again.</p>
+
+    <div class="key-point">
+        <h4>Rule — Moment of Attachment</h4>
+        <ul>
+            <li><strong>Jury trial:</strong> Jeopardy attaches when the <strong>jury is empaneled and sworn</strong>.</li>
+            <li><strong>Bench trial:</strong> Jeopardy attaches when the <strong>first witness is sworn</strong>.</li>
+            <li><strong>Guilty plea:</strong> Jeopardy attaches when the court <strong>accepts the plea</strong>.</li>
+        </ul>
+        <p><strong>Consequence:</strong> A dismissal, nolle prosequi, or discharge occurring <em>before</em> these points does not bar a later prosecution, because the defendant was never actually placed in jeopardy.</p>
+    </div>
+
+    <div class="example">
+        <table>
+            <thead>
+                <tr>
+                    <th>Type of Proceeding</th>
+                    <th>Point of Attachment</th>
+                    <th>Dismissal Before This Point</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jury trial</td>
+                    <td>Jury empaneled and sworn</td>
+                    <td>No bar — may reprosecute</td>
+                </tr>
+                <tr>
+                    <td>Bench trial</td>
+                    <td>First witness sworn</td>
+                    <td>No bar — may reprosecute</td>
+                </tr>
+                <tr>
+                    <td>Guilty plea</td>
+                    <td>Court accepts the plea</td>
+                    <td>No bar — may refile</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="explanation" id="dj-same-offense">
+    <h3>The "Same Offense" — The Blockburger Test</h3>
+
+    <p>The Double Jeopardy Clause bars successive prosecution only for the "same offense." Two crimes arising from the same act or transaction are analyzed under the "same elements" test of <em>Blockburger v. United States</em>, 284 U.S. 299 (1932).</p>
+
+    <div class="key-point">
+        <h4>The Blockburger "Same Elements" Test</h4>
+        <p>Two offenses are the <strong>"same offense"</strong> unless <strong>each requires proof of an element the other does not</strong>.</p>
+        <ul>
+            <li>If <strong>each</strong> offense contains at least one distinct element that the other lacks, they are <strong>different offenses</strong>, and successive prosecution (or cumulative punishment) is permitted.</li>
+            <li>If one offense's elements are entirely contained within the other (so that one does <em>not</em> have a distinct element), they are the <strong>same offense</strong>, and the second prosecution is barred.</li>
+        </ul>
+    </div>
+
+    <div class="key-point">
+        <h4>Lesser-Included Offenses</h4>
+        <p>A lesser-included offense is one whose elements are a subset of the greater offense's elements — the lesser has no distinct element of its own. Under <em>Brown v. Ohio</em>:</p>
+        <ul>
+            <li>Conviction or acquittal of the <strong>greater</strong> offense <strong>bars</strong> a later prosecution for a <strong>lesser included</strong> offense; and</li>
+            <li>Conviction or acquittal of the <strong>lesser</strong> offense <strong>bars</strong> a later prosecution for the <strong>greater</strong> offense.</li>
+        </ul>
+        <p><em>Exception (not tested here as a limit but worth noting):</em> a later prosecution for the greater offense may be permitted where a necessary element (e.g., the victim's death) had not yet occurred at the time of the first prosecution.</p>
+    </div>
+
+    <div class="example">
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Blockburger Result</th>
+                    <th>Successive Prosecution?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Joyriding (taking auto without consent) then auto theft (same car)</td>
+                    <td>Joyriding is a lesser-included offense of auto theft; joyriding has no distinct element</td>
+                    <td>Barred (<em>Brown v. Ohio</em>)</td>
+                </tr>
+                <tr>
+                    <td>Robbery and possession of a firearm by a felon (same incident)</td>
+                    <td>Each requires proof of an element the other does not (taking vs. prior felony/possession)</td>
+                    <td>Permitted — different offenses</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Blockburger v. United States</div>
+        <div class="case-citation">284 U.S. 299 (1932)</div>
+    </div>
+    <div class="case-rule"><p>Where the same act or transaction constitutes a violation of two distinct statutory provisions, the test to determine whether there are two offenses or only one is whether each provision requires proof of a fact which the other does not.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Blockburger was convicted of multiple violations of the Harrison Narcotic Act arising from sales of morphine to the same purchaser. He challenged his cumulative sentences on two counts based on a single sale, arguing that he was being punished twice for the same offense.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court articulated what became the definitive "same elements" test. Two statutory provisions define the "same offense" only if neither requires proof of a fact that the other does not. Because one count required proof that the sale was not made from the original stamped package and the other required proof that the sale was not made pursuant to a written order, each demanded proof of a distinct element. The offenses were therefore separate, and cumulative punishment did not violate double jeopardy.</p></div>
+    <div class="case-implications"><p>Blockburger supplies the controlling constitutional definition of "same offense" for both the multiple-punishment and successive-prosecution branches of the Double Jeopardy Clause. If each offense has at least one distinct element, they are different offenses.</p></div>
+</div>
+
+<div class="explanation" id="dj-dual-sovereignty">
+    <h3>Dual (Separate) Sovereignty</h3>
+
+    <p>The Double Jeopardy Clause bars only a second prosecution by the <em>same</em> sovereign. Under the dual sovereignty doctrine, successive prosecutions for the same conduct brought by <strong>separate sovereigns</strong> are <strong>not</strong> barred, because an act denounced as a crime by two sovereigns is an offense against each.</p>
+
+    <div class="key-point">
+        <h4>Who Counts as a Separate Sovereign</h4>
+        <ul>
+            <li><strong>Federal government and a State</strong> are separate sovereigns (<em>Gamble v. United States</em>, 2019).</li>
+            <li><strong>Two different States</strong> are separate sovereigns (<em>Heath v. Alabama</em>).</li>
+            <li><strong>A municipality and its own State</strong> are the <strong>SAME</strong> sovereign (a city derives its power from the state), so successive prosecutions by a city and its state <em>are</em> barred.</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <table>
+            <thead>
+                <tr>
+                    <th>Two Prosecuting Entities</th>
+                    <th>Same or Separate Sovereign?</th>
+                    <th>Successive Prosecution?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>United States and a State</td>
+                    <td>Separate</td>
+                    <td>Permitted</td>
+                </tr>
+                <tr>
+                    <td>State A and State B</td>
+                    <td>Separate</td>
+                    <td>Permitted</td>
+                </tr>
+                <tr>
+                    <td>City and its own State</td>
+                    <td>Same</td>
+                    <td>Barred</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Gamble v. United States</div>
+        <div class="case-citation">587 U.S. 678 (2019)</div>
+    </div>
+    <div class="case-rule"><p>The dual sovereignty doctrine remains valid: because the federal government and a state are separate sovereigns, a defendant may be prosecuted by both for the same conduct without violating the Double Jeopardy Clause.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Terance Gamble was convicted in Alabama state court of possession of a firearm by a convicted felon. The federal government then prosecuted him under a federal felon-in-possession statute for the very same instance of possession. Gamble moved to dismiss the federal charge, urging the Court to overrule the dual sovereignty doctrine.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court declined to overrule the doctrine, reaffirming a rule with 170 years of precedent behind it. The word "offence" in the Clause refers to a violation of a sovereign's law, and where two sovereigns each have authority to define crimes, a single act constitutes two distinct offenses. The States and the federal government draw their power to punish from separate and independent sources, so a prosecution by one does not bar a prosecution by the other. Principles of stare decisis further counseled against disturbing the settled rule.</p></div>
+    <div class="case-implications"><p>Confirms that a defendant may face both federal and state prosecution for the same act. Contrast the municipality-and-state relationship, which involves a single sovereign and therefore falls within the Clause's bar.</p></div>
+</div>
+
+<div class="explanation" id="dj-retrials">
+    <h3>Permissible Retrials — When Jeopardy Does Not Bar a Second Trial</h3>
+
+    <p>Even after jeopardy has attached, several circumstances permit the government to try the defendant again. The unifying theme is that these situations do not implicate the finality interest the Clause protects — the first proceeding produced no valid acquittal on the merits.</p>
+
+    <div class="key-point">
+        <h4>Retrial Is Permitted After:</h4>
+        <ul>
+            <li><strong>A hung jury / mistrial for "manifest necessity."</strong> When a jury cannot reach a verdict, or a mistrial is declared out of manifest necessity (e.g., a deadlocked jury, a fundamentally prejudicial error), the defendant may be retried.</li>
+            <li><strong>A mistrial granted at the DEFENDANT'S request.</strong> A defendant who successfully moves for a mistrial generally may be retried — <strong>unless</strong> the prosecutor <em>goaded</em> the defendant into requesting the mistrial through intentional misconduct designed to provoke it (<em>Oregon v. Kennedy</em>).</li>
+            <li><strong>A defendant's SUCCESSFUL APPEAL.</strong> A defendant who obtains reversal of a conviction on appeal may ordinarily be retried, because the reversal wipes the slate clean.</li>
+        </ul>
+    </div>
+
+    <div class="key-point">
+        <h4>Two Critical Limits on Retrial After Appeal</h4>
+        <ul>
+            <li><strong>Insufficient evidence bars retrial.</strong> If a conviction is reversed because the evidence was <strong>legally insufficient</strong> to support it, retrial is <strong>barred</strong> — a reversal for insufficiency is the equivalent of an acquittal (<em>Burks v. United States</em>). This differs from reversal for <em>trial error</em> (e.g., improperly admitted evidence), after which retrial <em>is</em> allowed.</li>
+            <li><strong>Implied acquittal.</strong> A defendant cannot be retried for an offense of which he was <strong>impliedly acquitted</strong>. For example, if a jury convicts of a lesser offense but is silent on the greater charge, the silence operates as an acquittal of the greater offense, barring its retrial.</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <table>
+            <thead>
+                <tr>
+                    <th>Basis for Ending / Reversing First Trial</th>
+                    <th>Retrial Permitted?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hung jury (deadlocked)</td>
+                    <td>Yes — manifest necessity</td>
+                </tr>
+                <tr>
+                    <td>Mistrial at defendant's request (no prosecutorial goading)</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Mistrial defendant sought after prosecutor intentionally goaded it</td>
+                    <td>No — barred (<em>Oregon v. Kennedy</em>)</td>
+                </tr>
+                <tr>
+                    <td>Reversal on appeal for trial error</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Reversal on appeal for insufficient evidence</td>
+                    <td>No — barred (<em>Burks v. United States</em>)</td>
+                </tr>
+                <tr>
+                    <td>Greater offense on which jury was silent (implied acquittal)</td>
+                    <td>No — barred</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Burks v. United States</div>
+        <div class="case-citation">437 U.S. 1 (1978)</div>
+    </div>
+    <div class="case-rule"><p>The Double Jeopardy Clause bars retrial once a reviewing court has found the evidence at the first trial legally insufficient to sustain the conviction; a reversal for evidentiary insufficiency is functionally an acquittal.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Burks was convicted of bank robbery after raising an insanity defense. The Court of Appeals reversed, holding that the prosecution had failed to carry its burden of proving sanity — that is, the evidence was insufficient to support the verdict — and remanded to consider whether to order a new trial.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court distinguished reversals for trial error from reversals for insufficient evidence. Reversal for trial error implies nothing about guilt or innocence and simply means the defendant was convicted through a defective process, so retrial is permissible. A reversal for insufficiency, by contrast, means the government failed to prove its case and the defendant was entitled to a judgment of acquittal. Allowing the prosecution a second opportunity to supply evidence it failed to muster the first time would be precisely the abuse the Clause forbids.</p></div>
+    <div class="case-implications"><p>Draws the pivotal line for retrial after a successful appeal: trial-error reversals permit retrial, while insufficient-evidence reversals bar it. Coupled with the implied-acquittal principle, it defines the outer boundary of the successful-appeal exception.</p></div>
+</div>
+
+<div class="back-to-top">
+    <a href="#double-jeopardy-section">Back to Top</a>
+</div>

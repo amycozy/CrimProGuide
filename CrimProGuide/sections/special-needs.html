@@ -6,6 +6,9 @@
     <a href="#checkpoints">Checkpoints</a>
     <a href="#drug-testing">Drug Testing</a>
     <a href="#schools">School Searches</a>
+    <a href="#workplace-searches">Government Workplace</a>
+    <a href="#border-searches">Border Searches</a>
+    <a href="#inventory-searches">Inventory Searches</a>
 </div>
 
 <div class="explanation" id="special-needs-overview">
@@ -28,56 +31,27 @@
     
     <div class="mermaid">
     flowchart TD
-        start["SPECIAL NEEDS DOCTRINE ANALYSIS"] --> purpose["STEP 1: Identify the purpose of the search program
-        Ask: What is the primary purpose of the search regime?"]
+        start["SPECIAL NEEDS DOCTRINE ANALYSIS"] --> purpose["STEP 1: Identify the purpose of the search program<br/>Ask: What is the primary purpose of the search regime?"]
         
-        purpose -- "Ordinary crime detection" --> criminal["NOT SPECIAL NEEDS:
-        If primary purpose is general
-        crime control, special needs
-        doctrine does not apply"]
+        purpose -- "Ordinary crime detection" --> criminal["NOT SPECIAL NEEDS:<br/>If primary purpose is general<br/>crime control, special needs<br/>doctrine does not apply"]
         
-        purpose -- "Non-law enforcement purpose" --> identify["STEP 2: Identify the special need
-        - Health and safety regulation
-        - School discipline and safety
-        - Workplace supervision
-        - Border control
-        - Transportation safety
-        - Government program integrity"]
+        purpose -- "Non-law enforcement purpose" --> identify["STEP 2: Identify the special need<br/>- Health and safety regulation<br/>- School discipline and safety<br/>- Workplace supervision<br/>- Border control<br/>- Transportation safety<br/>- Government program integrity"]
         
-        identify --> practicality["STEP 3: Assess practicality
-        Ask: Do special needs make the warrant and
-        probable cause requirements impracticable?"]
+        identify --> practicality["STEP 3: Assess practicality<br/>Ask: Do special needs make the warrant and<br/>probable cause requirements impracticable?"]
         
-        practicality -- "NO: Warrant/PC practical" --> notspecial["NOT SPECIAL NEEDS:
-        Traditional Fourth Amendment
-        standards apply"]
+        practicality -- "NO: Warrant/PC practical" --> notspecial["NOT SPECIAL NEEDS:<br/>Traditional Fourth Amendment<br/>standards apply"]
         
-        practicality -- "YES: Warrant/PC impractical" --> balance["STEP 4: Apply balancing test
-        Weigh the government's special need against
-        the individual's privacy interest"]
+        practicality -- "YES: Warrant/PC impractical" --> balance["STEP 4: Apply balancing test<br/>Weigh the government's special need against<br/>the individual's privacy interest"]
         
-        balance --> gov_interest["Government Interest Factors:
-        - Importance of the special need
-        - Effectiveness of the search in addressing the need
-        - Absence of less intrusive alternatives"]
+        balance --> gov_interest["Government Interest Factors:<br/>- Importance of the special need<br/>- Effectiveness of the search in addressing the need<br/>- Absence of less intrusive alternatives"]
         
-        balance --> priv_interest["Privacy Interest Factors:
-        - Context (school, workplace, public highway)
-        - Diminished expectations in certain settings
-        - Intrusiveness of the search
-        - Discretion given to officials"]
+        balance --> priv_interest["Privacy Interest Factors:<br/>- Context (school, workplace, public highway)<br/>- Diminished expectations in certain settings<br/>- Intrusiveness of the search<br/>- Discretion given to officials"]
         
-        gov_interest & priv_interest --> result["STEP 5: Determine reasonableness
-        Based on the balance of interests, is the
-        search program reasonable?"]
+        gov_interest & priv_interest --> result["STEP 5: Determine reasonableness<br/>Based on the balance of interests, is the<br/>search program reasonable?"]
         
-        result -- "Government interest outweighs privacy interest" --> reasonable["CONSTITUTIONALLY REASONABLE:
-        Special needs justifies departure from
-        traditional warrant/probable cause requirements"]
+        result -- "Government interest outweighs privacy interest" --> reasonable["CONSTITUTIONALLY REASONABLE:<br/>Special needs justifies departure from<br/>traditional warrant/probable cause requirements"]
         
-        result -- "Privacy interest outweighs government interest" --> unreasonable["UNCONSTITUTIONAL:
-        Special need does not justify
-        the intrusion on privacy"]
+        result -- "Privacy interest outweighs government interest" --> unreasonable["UNCONSTITUTIONAL:<br/>Special need does not justify<br/>the intrusion on privacy"]
         
         classDef process fill:#e0f7fa,stroke:#00acc1,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -93,10 +67,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">New Jersey v. T.L.O.</span> <span class="case-citation">469 U.S. 325 (1985)</span></h4>
-    <p class="case-rule">School officials may search students based on reasonable suspicion rather than probable cause when the search is justified at its inception and reasonable in scope. This exception is based on the special needs of the school environment, where maintaining order requires flexibility.</p>
-    <p class="case-facts">A high school teacher found a 14-year-old student (T.L.O.) smoking in a restroom, violating school rules. When taken to the principal's office, T.L.O. denied smoking. The assistant vice principal searched her purse, finding cigarettes and rolling papers, which prompted a more thorough search that revealed marijuana and evidence of drug dealing.</p>
-    <p class="case-reasoning">Justice White, writing for the majority, held that the Fourth Amendment applies to searches conducted by school officials, but the school setting requires modification of the usual warrant and probable cause standards. The Court established a two-part test for school searches: (1) the search must be justified at its inception (reasonable grounds to suspect the search will turn up evidence of rule violation), and (2) the search must be reasonably related in scope to the circumstances that justified the initial interference. The Court balanced the student's legitimate expectation of privacy against the school's need to maintain discipline and order. The initial search for cigarettes was reasonable based on the report of smoking, and the discovery of rolling papers created reasonable suspicion justifying the further search that revealed marijuana. This case established the "special needs" doctrine for situations where the traditional warrant and probable cause requirements would unduly interfere with the needs of the particular context—here, the school environment.</p>
+    <div class="case-header">
+        <div class="case-name">New Jersey v. T.L.O.</div>
+        <div class="case-citation">469 U.S. 325 (1985)</div>
+    </div>
+    <div class="case-rule"><p>School officials may search students based on reasonable suspicion rather than probable cause when the search is justified at its inception and reasonable in scope. This exception is based on the special needs of the school environment, where maintaining order requires flexibility.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>A high school teacher found a 14-year-old student (T.L.O.) smoking in a restroom, violating school rules. When taken to the principal's office, T.L.O. denied smoking. The assistant vice principal searched her purse, finding cigarettes and rolling papers, which prompted a more thorough search that revealed marijuana and evidence of drug dealing.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice White, writing for the majority, held that the Fourth Amendment applies to searches conducted by school officials, but the school setting requires modification of the usual warrant and probable cause standards. The Court established a two-part test for school searches: (1) the search must be justified at its inception (reasonable grounds to suspect the search will turn up evidence of rule violation), and (2) the search must be reasonably related in scope to the circumstances that justified the initial interference. The Court balanced the student's legitimate expectation of privacy against the school's need to maintain discipline and order. The initial search for cigarettes was reasonable based on the report of smoking, and the discovery of rolling papers created reasonable suspicion justifying the further search that revealed marijuana. This case established the "special needs" doctrine for situations where the traditional warrant and probable cause requirements would unduly interfere with the needs of the particular context—here, the school environment.</p></div>
 </div>
 
 <div class="explanation" id="administrative-searches">
@@ -130,10 +107,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Camara v. Municipal Court</span> <span class="case-citation">387 U.S. 523 (1967)</span></h4>
-    <p class="case-rule">Administrative inspections of private residences for compliance with municipal codes require a warrant, but the probable cause standard is modified to focus on reasonable administrative standards rather than specific evidence of violations.</p>
-    <p class="case-facts">San Francisco housing inspectors routinely conducted inspections to enforce the city's housing code. When an inspector attempted to enter Camara's residence without a warrant, Camara refused entry. He was charged with refusing to permit an inspection authorized by the housing code.</p>
-    <p class="case-reasoning">Justice White, writing for the majority, overruled Frank v. Maryland and held that administrative searches of private residences are "significant intrusions upon the interests protected by the Fourth Amendment" and thus require a warrant. However, the Court created a modified "probable cause" standard for administrative warrants that doesn't require specific evidence of violations in particular buildings. Instead, probable cause for an administrative warrant can be based on "reasonable legislative or administrative standards for conducting an area inspection," such as the passage of time, nature of the building, or condition of the area. The Court balanced the government's need for inspections to prevent dangerous conditions against the limited invasion of privacy, concluding that warrants should be easily obtainable but still necessary to protect against arbitrary invasions. This case established the framework for administrative search warrants and began the development of the "special needs" doctrine.</p>
+    <div class="case-header">
+        <div class="case-name">Camara v. Municipal Court</div>
+        <div class="case-citation">387 U.S. 523 (1967)</div>
+    </div>
+    <div class="case-rule"><p>Administrative inspections of private residences for compliance with municipal codes require a warrant, but the probable cause standard is modified to focus on reasonable administrative standards rather than specific evidence of violations.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>San Francisco housing inspectors routinely conducted inspections to enforce the city's housing code. When an inspector attempted to enter Camara's residence without a warrant, Camara refused entry. He was charged with refusing to permit an inspection authorized by the housing code.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice White, writing for the majority, overruled Frank v. Maryland and held that administrative searches of private residences are "significant intrusions upon the interests protected by the Fourth Amendment" and thus require a warrant. However, the Court created a modified "probable cause" standard for administrative warrants that doesn't require specific evidence of violations in particular buildings. Instead, probable cause for an administrative warrant can be based on "reasonable legislative or administrative standards for conducting an area inspection," such as the passage of time, nature of the building, or condition of the area. The Court balanced the government's need for inspections to prevent dangerous conditions against the limited invasion of privacy, concluding that warrants should be easily obtainable but still necessary to protect against arbitrary invasions. This case established the framework for administrative search warrants and began the development of the "special needs" doctrine.</p></div>
 </div>
 
 <div class="explanation" id="checkpoints">
@@ -192,10 +172,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Michigan Dept. of State Police v. Sitz</span> <span class="case-citation">496 U.S. 444 (1990)</span></h4>
-    <p class="case-rule">Sobriety checkpoints at which police briefly stop all vehicles to check for signs of intoxication are constitutional under the Fourth Amendment when conducted according to guidelines that minimize officer discretion.</p>
-    <p class="case-facts">Michigan established a highway sobriety checkpoint program where all vehicles passing through designated checkpoints would be stopped briefly and the drivers examined for signs of intoxication. If intoxication was suspected, the driver would be directed to a location for further sobriety tests. During the only operation of the checkpoint, 126 vehicles were stopped for an average of 25 seconds each, and two drivers were arrested for DUI.</p>
-    <p class="case-reasoning">Chief Justice Rehnquist, writing for the majority, held that sobriety checkpoints are constitutional under the Fourth Amendment when conducted according to neutral guidelines. The Court applied a balancing test weighing the state's interest in preventing drunk driving, the effectiveness of the checkpoint program, and the level of intrusion on motorists' privacy. The Court found the state's interest in preventing drunk driving to be substantial, the objective intrusion (the stop itself) to be minimal, and the subjective intrusion (generating concern or fright in law-abiding motorists) to be limited by the visible presence of officers and marked vehicles. While acknowledging that the arrest rate was low (approximately 1.5%), the Court deferred to the judgment of law enforcement on effectiveness measures. This case established that brief, suspicionless stops at sobriety checkpoints are reasonable seizures under the Fourth Amendment's special needs doctrine when conducted with appropriate limitations.</p>
+    <div class="case-header">
+        <div class="case-name">Michigan Dept. of State Police v. Sitz</div>
+        <div class="case-citation">496 U.S. 444 (1990)</div>
+    </div>
+    <div class="case-rule"><p>Sobriety checkpoints at which police briefly stop all vehicles to check for signs of intoxication are constitutional under the Fourth Amendment when conducted according to guidelines that minimize officer discretion.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Michigan established a highway sobriety checkpoint program where all vehicles passing through designated checkpoints would be stopped briefly and the drivers examined for signs of intoxication. If intoxication was suspected, the driver would be directed to a location for further sobriety tests. During the only operation of the checkpoint, 126 vehicles were stopped for an average of 25 seconds each, and two drivers were arrested for DUI.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Chief Justice Rehnquist, writing for the majority, held that sobriety checkpoints are constitutional under the Fourth Amendment when conducted according to neutral guidelines. The Court applied a balancing test weighing the state's interest in preventing drunk driving, the effectiveness of the checkpoint program, and the level of intrusion on motorists' privacy. The Court found the state's interest in preventing drunk driving to be substantial, the objective intrusion (the stop itself) to be minimal, and the subjective intrusion (generating concern or fright in law-abiding motorists) to be limited by the visible presence of officers and marked vehicles. While acknowledging that the arrest rate was low (approximately 1.5%), the Court deferred to the judgment of law enforcement on effectiveness measures. This case established that brief, suspicionless stops at sobriety checkpoints are reasonable seizures under the Fourth Amendment's special needs doctrine when conducted with appropriate limitations.</p></div>
 </div>
 
 <div class="explanation" id="drug-testing">
@@ -255,10 +238,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Vernonia School District v. Acton</span> <span class="case-citation">515 U.S. 646 (1995)</span></h4>
-    <p class="case-rule">Random drug testing of student athletes is constitutional under the Fourth Amendment, as the government's interest in preventing drug use among students outweighs their diminished expectation of privacy in the school's custodial environment, particularly given the reduced requirements for participation in athletics.</p>
-    <p class="case-facts">The Vernonia School District implemented a policy requiring random urinalysis drug testing for all students participating in school athletic programs after experiencing a significant increase in drug use led by student athletes. James Acton, a seventh-grader, was denied participation in football when he and his parents refused to consent to the testing.</p>
-    <p class="case-reasoning">Justice Scalia, writing for the majority, applied the special needs doctrine and a balancing test to uphold the drug testing program. The Court identified three factors in its analysis: (1) the nature of the privacy interest, finding that students generally have reduced expectations of privacy and student athletes have even less due to communal changing and showering, physical examinations, and voluntary participation in regulated activities; (2) the character of the intrusion, concluding that the urinalysis procedures were relatively unobtrusive with conditions similar to public restrooms and results kept confidential and used only for school discipline, not law enforcement; and (3) the government interest, determining that preventing drug use among schoolchildren was compelling, especially given evidence of increased drug use led by athletes who risked particular physical harm while impaired. The Court emphasized the school's custodial role, the targeted nature of testing only athletes rather than all students, and the absence of less invasive alternatives. This case established that schools have significant latitude to implement drug testing in contexts where privacy expectations are reduced and important safety concerns are present.</p>
+    <div class="case-header">
+        <div class="case-name">Vernonia School District v. Acton</div>
+        <div class="case-citation">515 U.S. 646 (1995)</div>
+    </div>
+    <div class="case-rule"><p>Random drug testing of student athletes is constitutional under the Fourth Amendment, as the government's interest in preventing drug use among students outweighs their diminished expectation of privacy in the school's custodial environment, particularly given the reduced requirements for participation in athletics.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>The Vernonia School District implemented a policy requiring random urinalysis drug testing for all students participating in school athletic programs after experiencing a significant increase in drug use led by student athletes. James Acton, a seventh-grader, was denied participation in football when he and his parents refused to consent to the testing.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Scalia, writing for the majority, applied the special needs doctrine and a balancing test to uphold the drug testing program. The Court identified three factors in its analysis: (1) the nature of the privacy interest, finding that students generally have reduced expectations of privacy and student athletes have even less due to communal changing and showering, physical examinations, and voluntary participation in regulated activities; (2) the character of the intrusion, concluding that the urinalysis procedures were relatively unobtrusive with conditions similar to public restrooms and results kept confidential and used only for school discipline, not law enforcement; and (3) the government interest, determining that preventing drug use among schoolchildren was compelling, especially given evidence of increased drug use led by athletes who risked particular physical harm while impaired. The Court emphasized the school's custodial role, the targeted nature of testing only athletes rather than all students, and the absence of less invasive alternatives. This case established that schools have significant latitude to implement drug testing in contexts where privacy expectations are reduced and important safety concerns are present.</p></div>
 </div>
 
 <div class="explanation" id="schools">
@@ -319,10 +305,159 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Safford Unified School District v. Redding</span> <span class="case-citation">557 U.S. 364 (2009)</span></h4>
-    <p class="case-rule">While the reasonableness standard applies to school searches, a strip search of a student requires stronger justification than a standard search. The more intrusive the search, the more pressing must be the suspicion of danger or of resort to underwear for hiding evidence of wrongdoing.</p>
-    <p class="case-facts">School officials strip-searched 13-year-old Savana Redding based on a report from another student that she possessed prescription-strength ibuprofen and over-the-counter naproxen. After searching her backpack and outer clothing yielded nothing, they required her to pull out her bra and underwear, exposing her breasts and pelvic area. No pills were found.</p>
-    <p class="case-reasoning">Justice Souter, writing for the majority, applied the T.L.O. framework but emphasized that the intrusiveness of the search must be matched by the government's justification. The Court found that while school officials had reasonable suspicion to search Redding's backpack and outer clothing, extending the search to her underwear was excessively intrusive given the limited danger of the non-prescription drugs and the lack of any indication that Redding was hiding pills in her underwear. The Court noted that strip searches are "categorically distinct" from other school searches due to their significantly heightened level of intrusion on privacy and dignity interests. While acknowledging that the school had legitimate concerns about drug distribution, the Court ruled that the "content of the suspicion" did not match "the degree of intrusion." This case clarified that the sliding-scale approach to reasonableness in school searches requires substantially stronger evidence and more pressing concerns to justify highly intrusive searches of students' bodies.</p>
+    <div class="case-header">
+        <div class="case-name">Safford Unified School District v. Redding</div>
+        <div class="case-citation">557 U.S. 364 (2009)</div>
+    </div>
+    <div class="case-rule"><p>While the reasonableness standard applies to school searches, a strip search of a student requires stronger justification than a standard search. The more intrusive the search, the more pressing must be the suspicion of danger or of resort to underwear for hiding evidence of wrongdoing.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>School officials strip-searched 13-year-old Savana Redding based on a report from another student that she possessed prescription-strength ibuprofen and over-the-counter naproxen. After searching her backpack and outer clothing yielded nothing, they required her to pull out her bra and underwear, exposing her breasts and pelvic area. No pills were found.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Souter, writing for the majority, applied the T.L.O. framework but emphasized that the intrusiveness of the search must be matched by the government's justification. The Court found that while school officials had reasonable suspicion to search Redding's backpack and outer clothing, extending the search to her underwear was excessively intrusive given the limited danger of the non-prescription drugs and the lack of any indication that Redding was hiding pills in her underwear. The Court noted that strip searches are "categorically distinct" from other school searches due to their significantly heightened level of intrusion on privacy and dignity interests. While acknowledging that the school had legitimate concerns about drug distribution, the Court ruled that the "content of the suspicion" did not match "the degree of intrusion." This case clarified that the sliding-scale approach to reasonableness in school searches requires substantially stronger evidence and more pressing concerns to justify highly intrusive searches of students' bodies.</p></div>
+</div>
+
+<div class="explanation" id="workplace-searches">
+    <h3>Government Workplace Searches</h3>
+
+    <p>The government acts in a dual capacity toward its own employees: as sovereign and as employer. When the government searches in its role as an employer, the operational realities of the workplace justify a departure from the warrant and probable cause requirements. The public employer's need to supervise, control, and ensure the efficient operation of the workplace is treated as a "special need" that makes those requirements impracticable.</p>
+
+    <div class="key-point">
+        <h4>The O'Connor Standard for Public Employer Searches</h4>
+        <p>A public employer (or a supervisor acting for it) may conduct a warrantless search of an employee's desk, office, files, computer, or other work equipment without probable cause where the search is either:</p>
+        <ul>
+            <li><strong>Noninvestigatory and work-related</strong>: e.g., to retrieve a needed file, document, or piece of equipment for legitimate work purposes; or</li>
+            <li><strong>Investigatory of work-related misconduct</strong>: to investigate suspected violations of workplace rules or policies.</li>
+        </ul>
+        <p>Such a search is judged by a standard of <strong>reasonableness under all the circumstances</strong>, assessed at two points:</p>
+        <ol>
+            <li><strong>Justified at inception</strong>: reasonable grounds for suspecting the search will turn up evidence of misconduct, or a reasonable need for a noninvestigatory work-related purpose; and</li>
+            <li><strong>Reasonable in scope</strong>: the measures used are reasonably related to the objectives of the search and not excessively intrusive.</li>
+        </ol>
+        <p>A threshold question is whether the employee had a <strong>reasonable expectation of privacy</strong> in the place or item searched, which the employer may reduce through office practices, procedures, or announced policies.</p>
+    </div>
+
+    <div class="case-box">
+        <div class="case-header">
+            <div class="case-name">O'Connor v. Ortega</div>
+            <div class="case-citation">480 U.S. 709 (1987)</div>
+        </div>
+        <div class="case-rule"><p>Public employers may conduct warrantless, reasonable searches of an employee's office, desk, and files for noninvestigatory work-related purposes or to investigate work-related misconduct, without a warrant or probable cause; such searches are judged by a standard of reasonableness at their inception and in their scope.</p></div>
+        <div class="case-facts"><h4>Facts</h4><p>Dr. Magno Ortega, a physician and psychiatrist at a California state hospital, was placed on administrative leave while officials investigated possible improprieties in his management of a residency program. During the investigation, hospital administrators repeatedly entered and searched his office, seizing items from his desk and file cabinets, some of which were later used against him in administrative proceedings. Ortega sued under Section 1983, claiming the searches violated the Fourth Amendment.</p></div>
+        <div class="case-reasoning"><h4>Reasoning</h4><p>Justice O'Connor, writing for a plurality, held that public employees may have a reasonable expectation of privacy in their offices, desks, and file cabinets, but that expectation must be balanced against the government's need for supervision, control, and efficient operation as an employer. Requiring a warrant and probable cause for every work-related intrusion would seriously disrupt the routine conduct of business. The Court therefore held that both noninvestigatory work-related intrusions and investigations of work-related misconduct should be judged by the ordinary standard of reasonableness: the search must be justified at its inception and reasonably related in scope to the circumstances that justified it. Whether an employee's expectation of privacy is reasonable is decided case-by-case in light of the actual office practices, procedures, and legitimate regulation.</p></div>
+        <div class="case-implications"><p>O'Connor established the framework for government-workplace searches. The Court later applied this framework in <em>City of Ontario v. Quon</em> (2010), upholding a police department's review of a sergeant's text messages sent on a government-issued pager as a reasonable, work-related investigation into whether existing character limits were adequate, without deciding the broader scope of employees' privacy in electronic communications.</p></div>
+    </div>
+</div>
+
+<div class="explanation" id="border-searches">
+    <h3>Border Searches</h3>
+
+    <p>Searches conducted at the international border, or at its "functional equivalent," rest on the longstanding, historically recognized power of the sovereign to protect itself by examining persons and property entering the country. Because of this sovereign interest, the balance of privacy and government interest at the border "is qualitatively different" from the interior, and the ordinary requirements of a warrant, probable cause, and even reasonable suspicion are relaxed or eliminated.</p>
+
+    <div class="key-point">
+        <h4>The Routine / Nonroutine Distinction at the Border</h4>
+        <ul>
+            <li><strong>Routine border searches</strong>: Searches of persons and their effects at the international border or its functional equivalent (including the arrival area of an international airport) require <strong>no warrant, no probable cause, and no reasonable suspicion</strong>. The border crossing itself justifies the search.</li>
+            <li><strong>Functional equivalents</strong>: Locations that operate as the practical equivalent of a border crossing, such as an international airport terminal where passengers first arrive, or the first practical stopping point after a border-adjacent flight.</li>
+            <li><strong>Nonroutine, highly intrusive searches</strong>: Exceptionally invasive intrusions on the person, such as prolonged detention of a suspected alimentary-canal ("balloon") smuggler or highly invasive body searches, require <strong>reasonable suspicion</strong> of wrongdoing.</li>
+            <li><strong>Property</strong>: Even relatively invasive searches of property, such as disassembling a vehicle's fuel tank, are treated as routine and require <strong>no suspicion</strong>, because the dignity and privacy interests implicated are far lower than for intrusions on the person.</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <table>
+            <tr>
+                <th>Type of Border Search</th>
+                <th>Standard Required</th>
+                <th>Key Case</th>
+            </tr>
+            <tr>
+                <td>Routine search of person, luggage, or mail at the border</td>
+                <td>No suspicion required</td>
+                <td><em>United States v. Ramsey</em> (1977)</td>
+            </tr>
+            <tr>
+                <td>Fixed interior checkpoint (functional equivalent)</td>
+                <td>No suspicion required</td>
+                <td><em>United States v. Martinez-Fuerte</em> (1976)</td>
+            </tr>
+            <tr>
+                <td>Prolonged detention / invasive body search of a suspected smuggler</td>
+                <td>Reasonable suspicion</td>
+                <td><em>United States v. Montoya de Hernandez</em> (1985)</td>
+            </tr>
+            <tr>
+                <td>Disassembly of a vehicle's gas tank</td>
+                <td>No suspicion required</td>
+                <td><em>United States v. Flores-Montano</em> (2004)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="case-box">
+        <div class="case-header">
+            <div class="case-name">United States v. Montoya de Hernandez</div>
+            <div class="case-citation">473 U.S. 531 (1985)</div>
+        </div>
+        <div class="case-rule"><p>Routine border searches require no suspicion, but the prolonged detention of a traveler at the border in order to verify or dispel a reasonable suspicion that she is smuggling contraband in her alimentary canal is justified when customs agents have reasonable suspicion of such smuggling.</p></div>
+        <div class="case-facts"><h4>Facts</h4><p>Rosa Montoya de Hernandez arrived at Los Angeles International Airport on a flight from Bogota, Colombia. Customs agents developed reasonable suspicion, based on her travel pattern, lack of luggage, large amount of cash, and a firm-feeling abdomen, that she was smuggling drugs internally as a "balloon swallower." She declined an x-ray, and agents detained her for roughly 16 hours until a court-ordered examination and the passage of time produced balloons containing cocaine.</p></div>
+        <div class="case-reasoning"><h4>Reasoning</h4><p>Chief Justice Rehnquist, writing for the majority, reaffirmed that routine border searches require no suspicion because of the sovereign's paramount interest in protecting the integrity of the border. This detention, however, was nonroutine and far more intrusive, so it required reasonable suspicion, a standard the agents met on the totality of the circumstances. The Court held that the length of the detention was reasonable because it was largely a product of the traveler's own choice to resist an x-ray and of the natural digestive processes; the detention was not unreasonably long given the difficult problem of alimentary-canal smuggling. The Court declined to impose a rigid time limit or to require a "clear indication" standard.</p></div>
+        <div class="case-implications"><p>Montoya de Hernandez confirmed the routine/nonroutine distinction: the more intrusive the intrusion on the person, the greater the justification required. Highly invasive searches of the person require reasonable suspicion, whereas even substantial searches of property, such as taking apart a gas tank, remain suspicionless under <em>United States v. Flores-Montano</em> (2004).</p></div>
+    </div>
+</div>
+
+<div class="explanation" id="inventory-searches">
+    <h3>Inventory Searches</h3>
+
+    <p>When police lawfully take custody of a vehicle or a person's property, they may conduct a warrantless inventory of its contents. Inventory searches are not justified by the need to gather evidence; they serve caretaking and administrative functions and are therefore analyzed under the special needs / administrative rationale rather than under probable cause.</p>
+
+    <div class="key-point">
+        <h4>Requirements for a Valid Inventory Search</h4>
+        <ul>
+            <li><strong>Lawful custody</strong>: The property or vehicle must have been lawfully impounded, seized, or taken into custody (e.g., after a lawful arrest or a proper community-caretaking impoundment).</li>
+            <li><strong>Standardized procedures</strong>: The inventory must be conducted according to standardized criteria or an established routine that limits officer discretion. It may not be a ruse for a general, investigatory rummaging in search of incriminating evidence.</li>
+            <li><strong>Caretaking purposes</strong>: The recognized purposes are (1) to protect the owner's property while it remains in police custody, (2) to protect the police against claims of lost or stolen property, and (3) to protect the police and the public from potential danger.</li>
+            <li><strong>No warrant or probable cause required</strong>: Because the purpose is administrative rather than investigatory, neither a warrant nor probable cause is needed.</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <table>
+            <tr>
+                <th>Context</th>
+                <th>Holding</th>
+                <th>Key Case</th>
+            </tr>
+            <tr>
+                <td>Inventory of an impounded vehicle</td>
+                <td>Permissible under standard procedures</td>
+                <td><em>South Dakota v. Opperman</em> (1976)</td>
+            </tr>
+            <tr>
+                <td>Inventory of a closed container in an impounded vehicle</td>
+                <td>Permissible under standardized policy</td>
+                <td><em>Colorado v. Bertine</em> (1987)</td>
+            </tr>
+            <tr>
+                <td>Inventory of an arrestee's belongings at booking</td>
+                <td>Permissible station-house inventory</td>
+                <td><em>Illinois v. Lafayette</em> (1983)</td>
+            </tr>
+            <tr>
+                <td>Opening containers with no standardized policy</td>
+                <td>Impermissible; discretion unbounded</td>
+                <td><em>Florida v. Wells</em> (1990)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="case-box">
+        <div class="case-header">
+            <div class="case-name">South Dakota v. Opperman</div>
+            <div class="case-citation">428 U.S. 364 (1976)</div>
+        </div>
+        <div class="case-rule"><p>Police may conduct a warrantless inventory search of a lawfully impounded vehicle when it is carried out pursuant to standard police procedures and serves the caretaking purposes of protecting the owner's property, protecting the police against claims, and protecting the police and public from danger.</p></div>
+        <div class="case-facts"><h4>Facts</h4><p>A car was impounded for multiple parking violations. Following standard police procedure, an officer inventoried the contents of the unlocked vehicle, including items in the glove compartment, using a standard inventory form. In the glove compartment the officer found marijuana, which was later used to prosecute the owner, Opperman.</p></div>
+        <div class="case-reasoning"><h4>Reasoning</h4><p>Chief Justice Burger, writing for the majority, held that inventory searches of impounded vehicles are a well-recognized exception to the warrant requirement. Automobiles carry a reduced expectation of privacy, and the police were performing a routine, noncriminal caretaking function rather than investigating crime. The inventory served three legitimate purposes: protecting the owner's property while in police custody, protecting the police against later claims of lost or stolen property, and protecting police and the public from potential danger. Because the inventory followed standard, established procedures and was not a pretext for an investigatory search, it was reasonable under the Fourth Amendment.</p></div>
+        <div class="case-implications"><p>Opperman established the inventory-search exception. Later cases refined it: <em>Colorado v. Bertine</em> upheld opening closed containers when done under standardized criteria, <em>Illinois v. Lafayette</em> extended the doctrine to station-house inventories of an arrestee's personal effects, and <em>Florida v. Wells</em> made clear that the search is invalid where the department has no standardized policy governing the opening of containers, since unbridled discretion transforms the inventory into a forbidden general search for evidence.</p></div>
+    </div>
 </div>
 
 <div class="back-to-top">

@@ -6,6 +6,7 @@
     <a href="#automobile">Automobile Exception</a>
     <a href="#exigent">Exigent Circumstances</a>
     <a href="#plain-view">Plain View Doctrine</a>
+    <a href="#search-incident-arrest">Search Incident to Arrest</a>
     <a href="#special-needs">Special Needs Searches</a>
 </div>
 
@@ -31,56 +32,33 @@
     
     <div class="mermaid">
     flowchart TD
-        start["WARRANT EXCEPTION ANALYSIS"] --> search["Was there a search or seizure?
-        Apply Katz expectation of privacy test
-        or Jones physical trespass test"]
+        start["WARRANT EXCEPTION ANALYSIS"] --> search["Was there a search or seizure?<br/>Apply Katz expectation of privacy test<br/>or Jones physical trespass test"]
         
-        search -- "NO: Not a search/seizure" --> nowarrant["NO WARRANT REQUIRED:
-        Fourth Amendment not implicated"]
+        search -- "NO: Not a search/seizure" --> nowarrant["NO WARRANT REQUIRED:<br/>Fourth Amendment not implicated"]
         
         search -- "YES: Search/seizure occurred" --> warrant["Was there a valid warrant?"]
         
-        warrant -- "YES: Valid warrant" --> valid["VALID SEARCH:
-        If warrant properly executed"]
+        warrant -- "YES: Valid warrant" --> valid["VALID SEARCH:<br/>If warrant properly executed"]
         
-        warrant -- "NO: No warrant" --> exception["Does an established 
-        exception apply?"]
+        warrant -- "NO: No warrant" --> exception["Does an established<br/>exception apply?"]
         
-        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:
-        Fourth Amendment violation
-        Evidence likely inadmissible"]
+        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:<br/>Fourth Amendment violation<br/>Evidence likely inadmissible"]
         
         exception -- "YES: Exception applies" --> exceptionType["Which exception applies?"]
         
-        exceptionType --> consent["CONSENT:
-        - Voluntary
-        - Authority to consent
-        - Scope of consent"]
+        exceptionType --> consent["CONSENT:<br/>- Voluntary<br/>- Authority to consent<br/>- Scope of consent"]
         
-        exceptionType --> auto["AUTOMOBILE:
-        - Probable cause
-        - Mobile vehicle"]
+        exceptionType --> auto["AUTOMOBILE:<br/>- Probable cause<br/>- Mobile vehicle"]
         
-        exceptionType --> exigent["EXIGENT CIRCUMSTANCES:
-        - Emergency situation
-        - No time for warrant"]
+        exceptionType --> exigent["EXIGENT CIRCUMSTANCES:<br/>- Emergency situation<br/>- No time for warrant"]
         
-        exceptionType --> plainView["PLAIN VIEW:
-        - Lawful vantage point
-        - Immediately apparent
-          contraband/evidence"]
+        exceptionType --> plainView["PLAIN VIEW:<br/>- Lawful vantage point<br/>- Immediately apparent<br/>contraband/evidence"]
         
-        exceptionType --> sia["SEARCH INCIDENT TO ARREST:
-        - Lawful arrest
-        - Arrestee's person and 
-          area within immediate control"]
+        exceptionType --> sia["SEARCH INCIDENT TO ARREST:<br/>- Lawful arrest<br/>- Arrestee's person and<br/>area within immediate control"]
         
-        exceptionType --> special["SPECIAL NEEDS:
-        - Beyond normal law enforcement
-        - Reasonable given circumstances"]
+        exceptionType --> special["SPECIAL NEEDS:<br/>- Beyond normal law enforcement<br/>- Reasonable given circumstances"]
         
-        consent --> reqMet["Are all requirements 
-        for the exception met?"]
+        consent --> reqMet["Are all requirements<br/>for the exception met?"]
         
         auto --> reqMet
         exigent --> reqMet
@@ -122,37 +100,19 @@
     
     <div class="mermaid">
     flowchart TD
-        start["CONSENT SEARCH ANALYSIS"] --> voluntary["STEP 1: Voluntariness
-        Was the consent voluntary, not coerced?
-        Totality of circumstances test:
-        - Age, education, intelligence
-        - Knowledge of right to refuse
-        - Length of detention
-        - Repeated requests
-        - Show of force/authority
-        - Threatening presence of officers"]
+        start["CONSENT SEARCH ANALYSIS"] --> voluntary["STEP 1: Voluntariness<br/>Was the consent voluntary, not coerced?<br/>Totality of circumstances test:<br/>- Age, education, intelligence<br/>- Knowledge of right to refuse<br/>- Length of detention<br/>- Repeated requests<br/>- Show of force/authority<br/>- Threatening presence of officers"]
         
-        voluntary -- "NO: Involuntary consent" --> invalid["INVALID CONSENT:
-        Search violates Fourth Amendment
-        unless another exception applies"]
+        voluntary -- "NO: Involuntary consent" --> invalid["INVALID CONSENT:<br/>Search violates Fourth Amendment<br/>unless another exception applies"]
         
-        voluntary -- "YES: Voluntary consent" --> authority["STEP 2: Authority to Consent
-        Did the person have actual or apparent
-        authority over the area searched?"]
+        voluntary -- "YES: Voluntary consent" --> authority["STEP 2: Authority to Consent<br/>Did the person have actual or apparent<br/>authority over the area searched?"]
         
         authority -- "NO: No actual or apparent authority" --> invalid
         
-        authority -- "YES: Had authority" --> scope["STEP 3: Scope of Consent
-        Did the search stay within the
-        scope of the consent given?"]
+        authority -- "YES: Had authority" --> scope["STEP 3: Scope of Consent<br/>Did the search stay within the<br/>scope of the consent given?"]
         
-        scope -- "NO: Exceeded scope" --> partialValid["PARTIALLY VALID SEARCH:
-        Items found within scope: admissible
-        Items found outside scope: inadmissible
-        unless another exception applies"]
+        scope -- "NO: Exceeded scope" --> partialValid["PARTIALLY VALID SEARCH:<br/>Items found within scope: admissible<br/>Items found outside scope: inadmissible<br/>unless another exception applies"]
         
-        scope -- "YES: Within scope" --> valid["VALID CONSENT SEARCH:
-        Items found are admissible"]
+        scope -- "YES: Within scope" --> valid["VALID CONSENT SEARCH:<br/>Items found are admissible"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -169,10 +129,29 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Schneckloth v. Bustamonte</span> <span class="case-citation">412 U.S. 218 (1973)</span></h4>
-    <p class="case-rule">The voluntariness of consent to search must be determined from the totality of the circumstances. The government need not prove that the consenting person knew of the right to refuse consent, though this is one factor in the analysis.</p>
-    <p class="case-facts">Police stopped a car with six men inside for having a broken headlight and license plate light. When the officers asked if they could search the car, one of the passengers, Bustamonte, replied, "Sure, go ahead." During the search, officers found stolen checks, which were used to convict Bustamonte. He later challenged the search, claiming his consent was not voluntary because he had not been informed of his right to refuse consent.</p>
-    <p class="case-reasoning">The Supreme Court rejected the argument that consent is involuntary unless the police specifically inform the subject of their right to refuse. The Court adopted a "totality of the circumstances" test for determining whether consent was voluntary. The Court identified several factors to consider, including the characteristics of the consenting individual (age, education, intelligence), whether they knew of their right to refuse (though this was not required), the length of detention, repeated questioning, physical punishment, and the presence of a threatening or coercive environment. The Court was concerned that requiring police to inform subjects of their right to refuse would be impractical and undermine the usefulness of consent searches. The majority explicitly distinguished this from the custodial interrogation context, where Miranda warnings are required.</p>
+    <div class="case-header">
+        <div class="case-name">Schneckloth v. Bustamonte</div>
+        <div class="case-citation">412 U.S. 218 (1973)</div>
+    </div>
+    <div class="case-rule"><p>The voluntariness of consent to search must be determined from the totality of the circumstances. The government need not prove that the consenting person knew of the right to refuse consent, though this is one factor in the analysis.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police stopped a car with six men inside for having a broken headlight and license plate light. When the officers asked if they could search the car, one of the passengers, Bustamonte, replied, "Sure, go ahead." During the search, officers found stolen checks, which were used to convict Bustamonte. He later challenged the search, claiming his consent was not voluntary because he had not been informed of his right to refuse consent.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court rejected the argument that consent is involuntary unless the police specifically inform the subject of their right to refuse. The Court adopted a "totality of the circumstances" test for determining whether consent was voluntary. The Court identified several factors to consider, including the characteristics of the consenting individual (age, education, intelligence), whether they knew of their right to refuse (though this was not required), the length of detention, repeated questioning, physical punishment, and the presence of a threatening or coercive environment. The Court was concerned that requiring police to inform subjects of their right to refuse would be impractical and undermine the usefulness of consent searches. The majority explicitly distinguished this from the custodial interrogation context, where Miranda warnings are required.</p></div>
+</div>
+
+<div class="key-point">
+    <h4>Consent Vitiated by a False Claim of Authority</h4>
+    <p>Voluntariness is destroyed when an officer obtains "consent" only after falsely asserting lawful authority to search. In <em>Bumper v. North Carolina</em>, 391 U.S. 543 (1968), the Court held that consent given after an officer falsely claims to possess a warrant is not voluntary consent at all, but mere acquiescence to a claim of lawful authority. The prosecution cannot meet its burden of proving voluntary consent by showing submission to such a claim.</p>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Bumper v. North Carolina</div>
+        <div class="case-citation">391 U.S. 543 (1968)</div>
+    </div>
+    <div class="case-rule"><p>Consent to search is not voluntary when it is given only after a law enforcement officer asserts that he possesses a warrant. Acquiescence to a claim of lawful authority is not consent, and the state bears the burden of proving that consent was freely and voluntarily given.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Officers went to the home of the defendant's grandmother, where he lived, and told her, "I have a search warrant to search your house." The grandmother responded, "Go ahead," and allowed the officers inside, where they found a rifle later used as evidence against the defendant. At the suppression hearing, the prosecution did not rely on any warrant to justify the search; instead it attempted to justify the entry as a consensual search.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court held that when a prosecutor seeks to justify a warrantless search by consent, it bears the burden of proving that the consent was freely and voluntarily given. That burden cannot be discharged by showing acquiescence to a claim of lawful authority. A search conducted in reliance on a warrant cannot later be justified on the basis of consent when it turns out that no valid warrant existed. When an officer claims authority to search a home under a warrant, he announces in effect that the occupant has no right to resist; such coercion, albeit colorably lawful, cannot be the basis for voluntary consent.</p></div>
+    <div class="case-implications"><p>A false or even mistaken assertion of warrant authority "vitiates" consent. Officers cannot bootstrap an invalid warrant into a consent search, and any consent produced by a show of legal authority the officer does not actually have is invalid.</p></div>
 </div>
 
 <div class="explanation" id="consent-continued">
@@ -224,36 +203,25 @@
             <li><strong>Applies to All Vehicles</strong>: Cars, trucks, boats, motor homes, etc.</li>
         </ul>
     </div>
-    
+
+    <div class="key-point">
+        <h4>Scope Follows the Probable Cause</h4>
+        <p>The permissible scope of an automobile search is defined by the object of the search and the probable cause supporting it. If probable cause supports searching the vehicle generally, officers may search anywhere the object could be found, including the trunk and any container capable of holding it. But if probable cause is limited to a <strong>specific container</strong> that police observe being placed in the vehicle, only that container may be searched, not the entire vehicle. This is the mirror image of <em>California v. Acevedo</em>: <em>Acevedo</em> holds that probable cause as to a container permits a warrantless search of <em>that container</em> without a warrant, but it does not expand the search to areas of the vehicle unsupported by probable cause.</p>
+    </div>
+
     <div class="mermaid">
     flowchart TD
-        start["AUTOMOBILE EXCEPTION ANALYSIS"] --> vehicle["STEP 1: Determine if Target is a Vehicle
-        Does the exception apply to:
-        - Automobiles
-        - Trucks
-        - Recreational vehicles
-        - Boats
-        - Mobile homes (if readily mobile)"]
+        start["AUTOMOBILE EXCEPTION ANALYSIS"] --> vehicle["STEP 1: Determine if Target is a Vehicle<br/>Does the exception apply to:<br/>- Automobiles<br/>- Trucks<br/>- Recreational vehicles<br/>- Boats<br/>- Mobile homes (if readily mobile)"]
         
-        vehicle -- "NO: Not a vehicle or mobile home used as residence" --> noException["EXCEPTION DOES NOT APPLY:
-        Need warrant or different exception"]
+        vehicle -- "NO: Not a vehicle, or a mobile home used as a fixed dwelling (not readily mobile)" --> noException["EXCEPTION DOES NOT APPLY:<br/>Need warrant or different exception"]
         
-        vehicle -- "YES: Covered vehicle" --> pc["STEP 2: Assess Probable Cause
-        Is there probable cause to believe
-        evidence of crime is in vehicle?"]
+        vehicle -- "YES: Covered vehicle" --> pc["STEP 2: Assess Probable Cause<br/>Is there probable cause to believe<br/>evidence of crime is in vehicle?"]
         
         pc -- "NO: No probable cause" --> noException
         
-        pc -- "YES: Probable cause exists" --> scope["STEP 3: Define Scope of Search
-        Probable cause determines permissible areas:
-        - Entire vehicle if general PC
-        - Specific area if PC limited
-        - Containers that could hold object of search"]
+        pc -- "YES: Probable cause exists" --> scope["STEP 3: Define Scope of Search<br/>Probable cause determines permissible areas:<br/>- Entire vehicle if general PC<br/>- Specific area if PC limited<br/>- Containers that could hold object of search"]
         
-        scope --> valid["VALID AUTOMOBILE EXCEPTION SEARCH:
-        No warrant required
-        All areas supported by PC may be searched
-        Search may occur at scene or later at station"]
+        scope --> valid["VALID AUTOMOBILE EXCEPTION SEARCH:<br/>No warrant required<br/>All areas supported by PC may be searched<br/>Search may occur at scene or later at station"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -268,10 +236,24 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">California v. Acevedo</span> <span class="case-citation">500 U.S. 565 (1991)</span></h4>
-    <p class="case-rule">Police may search a container within an automobile without a warrant if they have probable cause to believe the container holds evidence of a crime, even if they lack probable cause to search the entire vehicle.</p>
-    <p class="case-facts">Police observed Acevedo leave an apartment, carrying a paper bag that they believed contained marijuana. Acevedo placed the bag in the trunk of his car and began to drive away. Officers stopped Acevedo, opened the trunk, and searched the bag, finding marijuana. Prior to this case, the Court had drawn a distinction between searches of entire vehicles (allowed under the automobile exception) and searches of specific containers placed in vehicles (which required warrants).</p>
-    <p class="case-reasoning">The Supreme Court eliminated the distinction between searches of containers found within vehicles and searches of the vehicles themselves. The Court held that if police have probable cause to believe a container placed in a vehicle contains evidence of a crime, they may search the container without a warrant under the automobile exception. The Court emphasized the need for a clear rule and the historical recognition of the automobile exception. Justice Scalia, concurring, noted that the Fourth Amendment does not specifically protect containers, so the focus should be on whether the search of the car itself was reasonable. This ruling simplified the automobile exception by allowing police to search containers in vehicles based on probable cause regardless of whether the probable cause extends to the entire vehicle or just the container.</p>
+    <div class="case-header">
+        <div class="case-name">California v. Acevedo</div>
+        <div class="case-citation">500 U.S. 565 (1991)</div>
+    </div>
+    <div class="case-rule"><p>Police may search a container within an automobile without a warrant if they have probable cause to believe the container holds evidence of a crime, even if they lack probable cause to search the entire vehicle.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police observed Acevedo leave an apartment, carrying a paper bag that they believed contained marijuana. Acevedo placed the bag in the trunk of his car and began to drive away. Officers stopped Acevedo, opened the trunk, and searched the bag, finding marijuana. Prior to this case, the Court had drawn a distinction between searches of entire vehicles (allowed under the automobile exception) and searches of specific containers placed in vehicles (which required warrants).</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court eliminated the distinction between searches of containers found within vehicles and searches of the vehicles themselves. The Court held that if police have probable cause to believe a container placed in a vehicle contains evidence of a crime, they may search the container without a warrant under the automobile exception. The Court emphasized the need for a clear rule and the historical recognition of the automobile exception. Justice Scalia, concurring, noted that the Fourth Amendment does not specifically protect containers, so the focus should be on whether the search of the car itself was reasonable. This ruling simplified the automobile exception by allowing police to search containers in vehicles based on probable cause regardless of whether the probable cause extends to the entire vehicle or just the container.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Collins v. Virginia</div>
+        <div class="case-citation">584 U.S. 586 (2018)</div>
+    </div>
+    <div class="case-rule"><p>The automobile exception does not authorize a warrantless entry onto the curtilage of a home to search a vehicle parked there. The scope of the automobile exception ends where the constitutionally protected curtilage of the home begins.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>An officer investigating a distinctive orange-and-black motorcycle that had eluded police developed probable cause to believe it was stolen and located at Collins's home. The officer walked up the driveway to a partially enclosed area at the top, near the house, where the motorcycle sat under a tarp. He removed the tarp, ran the plates and VIN confirming it was stolen, photographed it, and replaced the tarp, all without a warrant.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held that the part of the driveway where the motorcycle was parked constituted curtilage, an area intimately linked to the home and entitled to full Fourth Amendment protection. The automobile exception is rooted in a vehicle's mobility and the reduced expectation of privacy in a vehicle itself; it has never been understood to authorize entry into a home or its curtilage. Allowing officers to invade curtilage to reach a vehicle would untether the exception from its justifications and grant automobiles a kind of constitutional "get out of jail free" pass that trumps the sanctity of the home. Because the officer physically intruded onto curtilage to conduct the search, the automobile exception could not justify it.</p></div>
+    <div class="case-implications"><p>The automobile exception permits a warrantless search of a vehicle, but it does not permit the warrantless physical intrusion onto the curtilage of a home necessary to reach that vehicle. When a car is parked within the curtilage, officers generally need a warrant, consent, or a separate exception to enter and search it.</p></div>
 </div>
 
 <div class="explanation" id="exigent">
@@ -301,45 +283,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["EXIGENT CIRCUMSTANCES ANALYSIS"] --> type["Identify Type of Exigency:
-        - Hot pursuit
-        - Destruction of evidence
-        - Emergency aid
-        - Officer safety
-        - Risk of escape"]
+        start["EXIGENT CIRCUMSTANCES ANALYSIS"] --> type["Identify Type of Exigency:<br/>- Hot pursuit<br/>- Destruction of evidence<br/>- Emergency aid<br/>- Officer safety<br/>- Risk of escape"]
         
-        type --> pc["STEP 1: Probable Cause
-        Is there probable cause to search/seize?
-        (For emergency aid: reasonable belief)"]
+        type --> pc["STEP 1: Probable Cause<br/>Is there probable cause to search/seize?<br/>(For emergency aid: reasonable belief)"]
         
-        pc -- "NO: No probable cause" --> invalid["INVALID SEARCH:
-        Exception does not apply
-        Need warrant or different exception"]
+        pc -- "NO: No probable cause" --> invalid["INVALID SEARCH:<br/>Exception does not apply<br/>Need warrant or different exception"]
         
-        pc -- "YES: Probable cause exists" --> created["STEP 2: Creation of Exigency
-        Did police improperly create the exigency?
-        (Kentucky v. King: lawful police action
-        that causes reaction doesn't invalidate)"]
+        pc -- "YES: Probable cause exists" --> created["STEP 2: Creation of Exigency<br/>Did police improperly create the exigency?<br/>(Kentucky v. King: lawful police action<br/>that causes reaction doesn't invalidate)"]
         
         created -- "YES: Improperly created" --> invalid
         
-        created -- "NO: Not improperly created" --> genuine["STEP 3: Genuineness of Exigency
-        Was there an actual emergency requiring
-        immediate action? Could officers reasonably
-        have obtained a warrant first?"]
+        created -- "NO: Not improperly created" --> genuine["STEP 3: Genuineness of Exigency<br/>Was there an actual emergency requiring<br/>immediate action? Could officers reasonably<br/>have obtained a warrant first?"]
         
         genuine -- "NO: No genuine emergency" --> invalid
         
-        genuine -- "YES: Genuine emergency" --> scope["STEP 4: Scope of Search
-        Was search limited to addressing 
-        the exigency?"]
+        genuine -- "YES: Genuine emergency" --> scope["STEP 4: Scope of Search<br/>Was search limited to addressing<br/>the exigency?"]
         
-        scope -- "NO: Exceeded necessary scope" --> partialValid["PARTIALLY VALID SEARCH:
-        Evidence from areas within scope: admissible
-        Evidence from areas beyond scope: inadmissible"]
+        scope -- "NO: Exceeded necessary scope" --> partialValid["PARTIALLY VALID SEARCH:<br/>Evidence from areas within scope: admissible<br/>Evidence from areas beyond scope: inadmissible"]
         
-        scope -- "YES: Within necessary scope" --> valid["VALID EXIGENT CIRCUMSTANCES SEARCH:
-        Evidence admissible"]
+        scope -- "YES: Within necessary scope" --> valid["VALID EXIGENT CIRCUMSTANCES SEARCH:<br/>Evidence admissible"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -356,10 +318,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Kentucky v. King</span> <span class="case-citation">563 U.S. 452 (2011)</span></h4>
-    <p class="case-rule">The exigent circumstances exception applies even when police actions created the exigency, as long as the police did not engage in or threaten to engage in conduct that violates the Fourth Amendment.</p>
-    <p class="case-facts">Police officers followed a suspected drug dealer to an apartment complex. After losing sight of him, they smelled marijuana coming from one of the apartments. They knocked on the door, announced their presence, and then heard movements inside that they believed indicated evidence was being destroyed. The officers forced entry without a warrant, finding King and marijuana. The suspect they had originally followed was in a different apartment.</p>
-    <p class="case-reasoning">The Supreme Court rejected the lower court's finding that the police had "created" the exigency by knocking and announcing their presence. The Court held that the exigent circumstances exception applies when police do not create the exigency through actual or threatened Fourth Amendment violations. The Court emphasized that occupants who choose to destroy evidence have only themselves to blame for the warrantless entry that follows. A legal "knock and talk" by police does not constitute coercive or threatening conduct that would invalidate the exigent circumstances exception. The Court noted that a contrary rule would unreasonably restrict legitimate law enforcement strategies and would be difficult to apply consistently. The test is an objective one: whether the police conduct was reasonable under the circumstances.</p>
+    <div class="case-header">
+        <div class="case-name">Kentucky v. King</div>
+        <div class="case-citation">563 U.S. 452 (2011)</div>
+    </div>
+    <div class="case-rule"><p>The exigent circumstances exception applies even when police actions created the exigency, as long as the police did not engage in or threaten to engage in conduct that violates the Fourth Amendment.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police officers followed a suspected drug dealer to an apartment complex. After losing sight of him, they smelled marijuana coming from one of the apartments. They knocked on the door, announced their presence, and then heard movements inside that they believed indicated evidence was being destroyed. The officers forced entry without a warrant, finding King and marijuana. The suspect they had originally followed was in a different apartment.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court rejected the lower court's finding that the police had "created" the exigency by knocking and announcing their presence. The Court held that the exigent circumstances exception applies when police do not create the exigency through actual or threatened Fourth Amendment violations. The Court emphasized that occupants who choose to destroy evidence have only themselves to blame for the warrantless entry that follows. A legal "knock and talk" by police does not constitute coercive or threatening conduct that would invalidate the exigent circumstances exception. The Court noted that a contrary rule would unreasonably restrict legitimate law enforcement strategies and would be difficult to apply consistently. The test is an objective one: whether the police conduct was reasonable under the circumstances.</p></div>
 </div>
 
 <div class="explanation" id="plain-view">
@@ -393,38 +358,23 @@
     
     <div class="mermaid">
     flowchart TD
-        start["PLAIN VIEW DOCTRINE ANALYSIS"] --> position["STEP 1: Lawful Vantage Point
-        Were officers lawfully in position
-        to observe the item?
-        - Pursuant to warrant
-        - Valid exception to warrant requirement
-        - Public place/open field"]
+        start["PLAIN VIEW DOCTRINE ANALYSIS"] --> position["STEP 1: Lawful Vantage Point<br/>Were officers lawfully in position<br/>to observe the item?<br/>- Pursuant to warrant<br/>- Valid exception to warrant requirement<br/>- Public place/open field"]
         
-        position -- "NO: Not lawfully present" --> invalid["INVALID PLAIN VIEW SEIZURE:
-        Evidence likely inadmissible
-        unless another exception applies"]
+        position -- "NO: Not lawfully present" --> invalid["INVALID PLAIN VIEW SEIZURE:<br/>Evidence likely inadmissible<br/>unless another exception applies"]
         
-        position -- "YES: Lawfully present" --> apparent["STEP 2: Immediately Apparent
-        Was incriminating nature immediately apparent?
-        (Probable cause that item is evidence,
-        contraband, or fruits of crime)"]
+        position -- "YES: Lawfully present" --> apparent["STEP 2: Immediately Apparent<br/>Was incriminating nature immediately apparent?<br/>(Probable cause that item is evidence,<br/>contraband, or fruits of crime)"]
         
         apparent -- "NO: Not immediately apparent" --> invalid
         
-        apparent -- "YES: Immediately apparent" --> access["STEP 3: Lawful Access
-        Did officers have lawful physical
-        access to the object?"]
+        apparent -- "YES: Immediately apparent" --> access["STEP 3: Lawful Access<br/>Did officers have lawful physical<br/>access to the object?"]
         
         access -- "NO: No lawful access" --> invalid
         
-        access -- "YES: Lawful access" --> manipulation["STEP 4: No Additional Search
-        Did officers move or manipulate object
-        to expose hidden aspects?"]
+        access -- "YES: Lawful access" --> manipulation["STEP 4: No Additional Search<br/>Did officers move or manipulate object<br/>to expose hidden aspects?"]
         
         manipulation -- "YES: Manipulated object" --> invalid
         
-        manipulation -- "NO: No manipulation" --> valid["VALID PLAIN VIEW SEIZURE:
-        Evidence admissible"]
+        manipulation -- "NO: No manipulation" --> valid["VALID PLAIN VIEW SEIZURE:<br/>Evidence admissible"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -439,13 +389,153 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Horton v. California</span> <span class="case-citation">496 U.S. 128 (1990)</span></h4>
-    <p class="case-rule">For the plain view doctrine to apply, the discovery of the evidence need not be inadvertent; the other requirements of plain view (lawful position and immediately apparent incriminating nature) are sufficient.</p>
-    <p class="case-facts">A police officer investigating an armed robbery obtained a warrant to search Horton's home for the stolen property but not specifically for weapons used in the robbery. During the search, the officer found and seized weapons that matched the description of those used in the robbery, though he did not find the stolen property. The officer admitted he was looking for the weapons, even though they were not listed in the warrant.</p>
-    <p class="case-reasoning">The Supreme Court eliminated the "inadvertent discovery" requirement that some courts had imposed as part of the plain view doctrine. The Court held that the Fourth Amendment does not prohibit the seizure of evidence in plain view even if the discovery was not inadvertent, as long as the officer was lawfully in the position to observe the evidence and its incriminating nature was immediately apparent. Justice Stevens, writing for the majority, reasoned that the seizure of an object in plain view does not involve an invasion of privacy beyond that already authorized by the officer's lawful presence, and that the object's incriminating character is immediately apparent. The Court emphasized that the Fourth Amendment's concern with "particularity" relates to the scope of the places to be searched, not the seizure of items not particularized in a warrant.</p>
+    <div class="case-header">
+        <div class="case-name">Horton v. California</div>
+        <div class="case-citation">496 U.S. 128 (1990)</div>
+    </div>
+    <div class="case-rule"><p>For the plain view doctrine to apply, the discovery of the evidence need not be inadvertent; the other requirements of plain view (lawful position and immediately apparent incriminating nature) are sufficient.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>A police officer investigating an armed robbery obtained a warrant to search Horton's home for the stolen property but not specifically for weapons used in the robbery. During the search, the officer found and seized weapons that matched the description of those used in the robbery, though he did not find the stolen property. The officer admitted he was looking for the weapons, even though they were not listed in the warrant.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court eliminated the "inadvertent discovery" requirement that some courts had imposed as part of the plain view doctrine. The Court held that the Fourth Amendment does not prohibit the seizure of evidence in plain view even if the discovery was not inadvertent, as long as the officer was lawfully in the position to observe the evidence and its incriminating nature was immediately apparent. Justice Stevens, writing for the majority, reasoned that the seizure of an object in plain view does not involve an invasion of privacy beyond that already authorized by the officer's lawful presence, and that the object's incriminating character is immediately apparent. The Court emphasized that the Fourth Amendment's concern with "particularity" relates to the scope of the places to be searched, not the seizure of items not particularized in a warrant.</p></div>
 </div>
 
-<div class="explanation" id="special-needs">
+<div class="explanation" id="search-incident-arrest">
+    <h3>Search Incident to Lawful Arrest (SILA)</h3>
+
+    <p>The search incident to lawful arrest exception permits an officer, without a warrant, to search an arrestee and the area within the arrestee's immediate control at the time of a lawful custodial arrest. The exception rests on two long-recognized justifications: protecting officer safety by removing any weapon the arrestee might reach, and preventing the concealment or destruction of evidence. The search must be substantially contemporaneous with the arrest, and the arrest itself must be lawful; an unlawful arrest cannot support a valid search incident to it.</p>
+
+    <div class="key-point">
+        <h4>Core SILA Rules</h4>
+        <ul>
+            <li><strong>Threshold requirement</strong>: There must be a <strong>lawful custodial arrest</strong>. A search cannot be justified as incident to an arrest that has not occurred or is unlawful.</li>
+            <li><strong>Person and wingspan</strong>: Police may search the arrestee's person and the area within his immediate control ("wingspan") - the area from which he might grab a weapon or destructible evidence (<em>Chimel v. California</em>).</li>
+            <li><strong>Full search of the person</strong>: A full search of the person is automatically permitted upon any lawful custodial arrest, regardless of the offense and without any additional justification (<em>United States v. Robinson</em>).</li>
+            <li><strong>Vehicles</strong>: After an occupant's arrest, police may search the passenger compartment only if (a) the arrestee is unsecured and within reaching distance of the compartment, or (b) it is reasonable to believe the vehicle contains evidence of the offense of arrest (<em>Arizona v. Gant</em>). The trunk is not included.</li>
+            <li><strong>Cell phones</strong>: Police may seize a phone found on the arrestee, but may not search its digital contents without a warrant (<em>Riley v. California</em>).</li>
+            <li><strong>DUI - breath vs. blood</strong>: A warrantless breath test is permitted incident to a DUI arrest, but a blood draw requires a warrant, consent, or exigency (<em>Birchfield v. North Dakota</em>).</li>
+            <li><strong>DNA swab</strong>: A buccal (cheek) swab for DNA is permitted for persons arrested for serious offenses (<em>Maryland v. King</em>).</li>
+            <li><strong>Protective sweep</strong>: When the arrest occurs in a home, officers may make a protective sweep of spaces where a person might hide, on reasonable suspicion of danger (<em>Maryland v. Buie</em>).</li>
+        </ul>
+    </div>
+
+    <div class="mermaid">
+    flowchart TD
+        start["SEARCH INCIDENT TO LAWFUL ARREST ANALYSIS"] --> arrest["STEP 1: Lawful Custodial Arrest?<br/>Was there a lawful arrest supported<br/>by probable cause, resulting in custody?"]
+
+        arrest -- "NO: No lawful custodial arrest" --> invalid["SILA DOES NOT APPLY:<br/>Need a warrant or another exception"]
+
+        arrest -- "YES: Lawful custodial arrest" --> contemporaneous["STEP 2: Contemporaneous?<br/>Is the search substantially contemporaneous<br/>with the arrest in time and place?"]
+
+        contemporaneous -- "NO: Too remote from arrest" --> invalid
+
+        contemporaneous -- "YES: Contemporaneous" --> what["STEP 3: What is being searched?"]
+
+        what --> person["PERSON<br/>Full search of the person always<br/>allowed regardless of offense<br/>(Robinson). Phone may be seized<br/>but contents need a warrant (Riley)"]
+
+        what --> wingspan["WINGSPAN<br/>Area within immediate control from<br/>which arrestee could grab a weapon<br/>or destroy evidence (Chimel)"]
+
+        what --> vehicle["VEHICLE PASSENGER COMPARTMENT<br/>Only if arrestee unsecured and within<br/>reaching distance, OR reasonable to<br/>believe vehicle holds evidence of the<br/>offense of arrest (Gant). Not the trunk"]
+
+        what --> home["ARREST IN A HOME<br/>Protective sweep of spaces where a<br/>person could hide, on reasonable<br/>suspicion of danger (Buie)"]
+
+        person --> valid["VALID SEARCH INCIDENT TO ARREST:<br/>Evidence within permissible scope admissible"]
+        wingspan --> valid
+        vehicle --> valid
+        home --> valid
+
+        classDef process fill:#D5E8E0,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#FFF8E1,stroke:#FF8F00,stroke-width:1px
+        classDef negative fill:#FFEBEE,stroke:#C62828,stroke-width:2px
+        classDef positive fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+        classDef options fill:#FFECB3,stroke:#FFA000,stroke-width:1px
+
+        class start process
+        class arrest,contemporaneous,what question
+        class invalid negative
+        class valid positive
+        class person,wingspan,vehicle,home options
+    </div>
+
+    <h4>Distinguishing the DUI, DNA, and Protective-Sweep Rules</h4>
+    <div class="example">
+        <table>
+            <tr>
+                <th>Context</th>
+                <th>Permitted incident to arrest?</th>
+                <th>Authority</th>
+            </tr>
+            <tr>
+                <td>Breath test after DUI arrest</td>
+                <td>Yes - minimal intrusion, no warrant needed</td>
+                <td><em>Birchfield v. North Dakota</em></td>
+            </tr>
+            <tr>
+                <td>Blood draw after DUI arrest</td>
+                <td>No - requires warrant, consent, or exigency</td>
+                <td><em>Birchfield v. North Dakota</em></td>
+            </tr>
+            <tr>
+                <td>Buccal (cheek) DNA swab, serious-offense arrestee</td>
+                <td>Yes - reasonable booking procedure</td>
+                <td><em>Maryland v. King</em></td>
+            </tr>
+            <tr>
+                <td>Search of cell phone contents</td>
+                <td>No - warrant required (phone may still be seized)</td>
+                <td><em>Riley v. California</em></td>
+            </tr>
+            <tr>
+                <td>Protective sweep of home during arrest</td>
+                <td>Yes - on reasonable suspicion of danger; limited to spaces a person could hide</td>
+                <td><em>Maryland v. Buie</em></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Chimel v. California</div>
+        <div class="case-citation">395 U.S. 752 (1969)</div>
+    </div>
+    <div class="case-rule"><p>Incident to a lawful arrest, police may search the arrestee's person and the area within his immediate control - the "wingspan" from which he might grab a weapon or destroy evidence - but may not search the entire premises without a warrant.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Officers arrested Chimel in his home pursuant to an arrest warrant for a coin-shop burglary. Over his objection, and without a search warrant, they searched his entire three-bedroom house, including drawers in the master bedroom and the garage, directing his wife to open drawers and move contents so they could view items. They seized coins and other evidence used to convict him.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held the search unreasonable insofar as it went beyond Chimel's person and the area within his immediate control. A search incident to arrest is justified only by the need to remove weapons the arrestee might use to resist or escape and to prevent concealment or destruction of evidence. Those justifications extend only to the arrestee's person and the area into which he might reach; they cannot support a search of the entire house. A routine search of rooms other than that in which the arrest occurs, or of concealed areas within the arrest room itself, requires a warrant.</p></div>
+    <div class="case-implications"><p><em>Chimel</em> defines the spatial scope of SILA: the arrestee's person plus his wingspan. Searches beyond that area require a warrant or a separate exception.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">United States v. Robinson</div>
+        <div class="case-citation">414 U.S. 218 (1973)</div>
+    </div>
+    <div class="case-rule"><p>A full search of the person is automatically permitted incident to a lawful custodial arrest. It requires no additional justification and does not depend on the probability that weapons or evidence will be found or on the nature of the offense of arrest.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>An officer lawfully arrested Robinson for driving with a revoked license - an offense that could not itself yield physical evidence. During a search of Robinson's person, the officer felt an object in a coat pocket, removed a crumpled cigarette package, and found heroin capsules inside. Robinson argued the search exceeded what officer safety required for a traffic-type arrest.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court rejected a case-by-case inquiry into whether a weapon or evidence was actually likely to be found. It held that a custodial arrest based on probable cause is a reasonable intrusion, and a full search of the person incident to that arrest is not only an exception to the warrant requirement but a reasonable search under the Fourth Amendment. The authority to search does not turn on the offense of arrest or on a reviewing court's assessment of the danger in a particular case; it is a categorical rule flowing from the lawful custodial arrest itself.</p></div>
+    <div class="case-implications"><p>SILA of the person is automatic and does not require any specific fear for safety or expectation of evidence. Compare <em>Riley</em>, which carves out the digital contents of a cell phone from this automatic authority.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Arizona v. Gant</div>
+        <div class="case-citation">556 U.S. 332 (2009)</div>
+    </div>
+    <div class="case-rule"><p>After the arrest of a vehicle's occupant, police may search the passenger compartment incident to that arrest only if (1) the arrestee is unsecured and within reaching distance of the passenger compartment at the time of the search, or (2) it is reasonable to believe the vehicle contains evidence of the offense of arrest.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Gant was arrested for driving on a suspended license, handcuffed, and locked in the back of a patrol car. Only then did officers search his car, finding cocaine in a jacket in the passenger compartment. Because Gant was already secured and could not reach the car, and because a suspended-license offense would yield no evidence in the vehicle, neither rationale for the search was present.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court rejected a broad reading of <em>New York v. Belton</em> that had been understood to permit a vehicle search whenever an occupant was arrested. Anchoring the vehicle rule to <em>Chimel</em>'s safety-and-evidence justifications, the Court held that once an arrestee is secured and cannot access the passenger compartment, those justifications are absent. A search is permissible only when the arrestee could actually reach the compartment or when the nature of the offense makes it reasonable to believe relevant evidence is inside. Gant's search satisfied neither condition and was therefore unlawful.</p></div>
+    <div class="case-implications"><p><em>Gant</em> sharply narrowed vehicle searches incident to arrest. The trunk is never covered. When both <em>Gant</em> prongs fail, police must look to the automobile exception (which requires probable cause) or another basis to search.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Riley v. California</div>
+        <div class="case-citation">573 U.S. 373 (2014)</div>
+    </div>
+    <div class="case-rule"><p>Police generally may not, without a warrant, search the digital contents of a cell phone seized from an arrestee incident to arrest. The phone itself may be seized and physically inspected, but a search of its data requires a warrant absent a genuine exigency.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>In consolidated cases, officers searched data on cell phones taken from arrestees during searches incident to arrest, uncovering photographs, videos, contacts, and call logs used to link the defendants to gang activity and other crimes. No warrant was obtained for the data searches.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held that the <em>Chimel</em>/<em>Robinson</em> rationales do not justify searching phone data. Digital data cannot be used as a weapon to harm an officer, and once a phone is secured, the risk of remote wiping or encryption can be addressed by less intrusive means. More fundamentally, modern cell phones contain vast quantities of highly personal information - "the privacies of life" - qualitatively and quantitatively different from physical items an arrestee might carry. The immense privacy interests at stake outweigh the diminished government interests that support SILA of physical objects. The Court's answer to a warrantless search of phone data was simple: "get a warrant."</p></div>
+    <div class="case-implications"><p><em>Riley</em> is a major limit on SILA in the digital age. Seizure of the device to prevent destruction is fine; examining its contents almost always requires a warrant.</p></div>
+</div>
+
     <h3>Special Needs Searches</h3>
     
     <p><strong>Note:</strong> Special Needs searches are covered in depth in the <a href="#special-needs-section" data-section="special-needs">dedicated Special Needs & Administrative Searches section</a>, which provides comprehensive coverage of administrative inspections, checkpoints, drug testing, and school searches.</p>
@@ -467,32 +557,17 @@
     
     <div class="mermaid">
     flowchart TD
-        start["SPECIAL NEEDS ANALYSIS"] --> purpose["STEP 1: Primary Purpose
-        Is the primary purpose of the search 
-        beyond ordinary law enforcement?
-        - Administrative/regulatory function
-        - School discipline/safety
-        - Public safety (non-criminal)
-        - Government as employer/supervisor"]
+        start["SPECIAL NEEDS ANALYSIS"] --> purpose["STEP 1: Primary Purpose<br/>Is the primary purpose of the search<br/>beyond ordinary law enforcement?<br/>- Administrative/regulatory function<br/>- School discipline/safety<br/>- Public safety (non-criminal)<br/>- Government as employer/supervisor"]
         
-        purpose -- "NO: Ordinary law enforcement" --> invalid["SPECIAL NEEDS EXCEPTION DOES NOT APPLY:
-        Need warrant, probable cause, or other exception"]
+        purpose -- "NO: Ordinary law enforcement" --> invalid["SPECIAL NEEDS EXCEPTION DOES NOT APPLY:<br/>Need warrant, probable cause, or other exception"]
         
-        purpose -- "YES: Beyond ordinary law enforcement" --> balancing["STEP 2: Balancing Test
-        Apply balancing test:
-        - Government interest/special need
-        - Individual privacy expectation
-        - Nature and intrusiveness of search
-        - Effectiveness of search method"]
+        purpose -- "YES: Beyond ordinary law enforcement" --> balancing["STEP 2: Balancing Test<br/>Apply balancing test:<br/>- Government interest/special need<br/>- Individual privacy expectation<br/>- Nature and intrusiveness of search<br/>- Effectiveness of search method"]
         
-        balancing --> result["Is the search reasonable under the balancing test?
-        Is it a reasonable way to address the special need?"]
+        balancing --> result["Is the search reasonable under the balancing test?<br/>Is it a reasonable way to address the special need?"]
         
         result -- "NO: Not reasonable" --> invalid
         
-        result -- "YES: Reasonable given special need" --> valid["VALID SPECIAL NEEDS SEARCH:
-        Evidence admissible even without
-        warrant or individualized suspicion"]
+        result -- "YES: Reasonable given special need" --> valid["VALID SPECIAL NEEDS SEARCH:<br/>Evidence admissible even without<br/>warrant or individualized suspicion"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -522,7 +597,16 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">New Jersey v. T.L.O.</span> <span class="case-citation">469 U.S. 325 (1985)</span></h4>
-    <p class="case-rule">School officials may search students without a warrant or probable cause when the search is reasonable under all the circumstances. This reasonableness standard requires (1) that the search was justified at its inception and (2) that the scope was reasonably related to the circumstances that justified the search.</p>
-    <p class="case-facts">A high school teacher found two students smoking in a lavatory and took them to the principal's office. When T.L.O. denied smoking, the assistant vice principal searched her purse, finding cigarettes and rolling papers. This prompted a more thorough search, which revealed marijuana, a pipe, plastic bags, money, and notes suggesting drug dealing. T.L.O. moved to suppress this evidence in the subsequent juvenile proceedings.</p>
-    <p class="case-reasoning">The Supreme Court held that the Fourth Amendment applies to searches by school officials, but the standard is reasonableness, not probable cause. The Court recognized that schools have a substantial interest in maintaining discipline and providing a safe
+    <div class="case-header">
+        <div class="case-name">New Jersey v. T.L.O.</div>
+        <div class="case-citation">469 U.S. 325 (1985)</div>
+    </div>
+    <div class="case-rule"><p>School officials may search students without a warrant or probable cause when the search is reasonable under all the circumstances. This reasonableness standard requires (1) that the search was justified at its inception and (2) that the scope was reasonably related to the circumstances that justified the search.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>A high school teacher found two students smoking in a lavatory and took them to the principal's office. When T.L.O. denied smoking, the assistant vice principal searched her purse, finding cigarettes and rolling papers. This prompted a more thorough search, which revealed marijuana, a pipe, plastic bags, money, and notes suggesting drug dealing. T.L.O. moved to suppress this evidence in the subsequent juvenile proceedings.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court held that the Fourth Amendment applies to searches by school officials, but the standard is reasonableness, not probable cause. The Court recognized that schools have a substantial interest in maintaining discipline and providing a safe learning environment, which justifies a relaxed standard. Under this standard, a search must be (1) justified at its inception — supported by reasonable grounds to suspect the search will turn up evidence that the student has violated the law or school rules — and (2) reasonable in scope — the measures used must be reasonably related to the objectives of the search and not excessively intrusive in light of the student's age and sex and the nature of the infraction. Applying this test, the Court found the search of T.L.O.'s purse was justified at its inception by the report of smoking and reasonable in scope.</p></div>
+    <div class="case-implications"><p>T.L.O. established the "reasonable suspicion" standard for searches by public school officials, a lower threshold than the probable cause required of law enforcement. It remains the framework for student searches, later refined by <em>Safford Unified School District v. Redding</em> (2009), which held that a strip search of a student required a higher level of suspicion given its intrusiveness.</p></div>
+</div>
+
+<div class="back-to-top">
+    <a href="#warrant-exceptions-section">Back to Top</a>
+</div>

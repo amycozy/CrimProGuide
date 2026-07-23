@@ -6,6 +6,9 @@
     <a href="#gps-tracking">GPS Tracking</a>
     <a href="#aerial-surveillance">Aerial Surveillance</a>
     <a href="#binary-searches">Binary Searches</a>
+    <a href="#riley-cell-phones">Cell Phone Searches (Riley)</a>
+    <a href="#carpenter-csli">Cell-Site Location Info (Carpenter)</a>
+    <a href="#tech-summary">Digital-Age Summary</a>
 </div>
 
 <div class="explanation" id="technology-overview">
@@ -27,45 +30,25 @@
     flowchart TD
         start["TECHNOLOGY AND FOURTH AMENDMENT ANALYSIS"] --> techType["What type of technology is involved?"]
         
-        techType --> survTech["SURVEILLANCE TECHNOLOGY:
-        Technology used by law enforcement
-        to gather information"]
+        techType --> survTech["SURVEILLANCE TECHNOLOGY:<br/>Technology used by law enforcement<br/>to gather information"]
         
-        techType --> commTech["COMMUNICATION TECHNOLOGY:
-        Technology used by suspect to
-        communicate or store information"]
+        techType --> commTech["COMMUNICATION TECHNOLOGY:<br/>Technology used by suspect to<br/>communicate or store information"]
         
-        survTech --> kyllo["Apply Kyllo Test:
-        1. Did technology obtain information that couldn't 
-           be obtained without physical intrusion?
-        2. Is the technology in general public use?"]
+        survTech --> kyllo["Apply Kyllo Test:<br/>1. Did technology obtain information that couldn't<br/>be obtained without physical intrusion?<br/>2. Is the technology in general public use?"]
         
-        commTech --> katz["Apply Katz/Jones Framework:
-        1. Did suspect exhibit subjective expectation of privacy?
-        2. Is that expectation objectively reasonable?
-        3. Was there physical trespass to obtain information?"]
+        commTech --> katz["Apply Katz/Jones Framework:<br/>1. Did suspect exhibit subjective expectation of privacy?<br/>2. Is that expectation objectively reasonable?<br/>3. Was there physical trespass to obtain information?"]
         
-        commTech --> third["Consider Third-Party Doctrine:
-        Information voluntarily shared with third parties
-        may lose Fourth Amendment protection"]
+        commTech --> third["Consider Third-Party Doctrine:<br/>Information voluntarily shared with third parties<br/>may lose Fourth Amendment protection"]
         
-        kyllo -- "YES to Q1, NO to Q2" --> search1["FOURTH AMENDMENT SEARCH:
-        Warrant generally required"]
+        kyllo -- "YES to Q1, NO to Q2" --> search1["FOURTH AMENDMENT SEARCH:<br/>Warrant generally required"]
         
-        kyllo -- "NO to Q1 or YES to Q2" --> nosearch1["NOT A FOURTH AMENDMENT SEARCH:
-        No warrant required"]
+        kyllo -- "NO to Q1 or YES to Q2" --> nosearch1["NOT A FOURTH AMENDMENT SEARCH:<br/>No warrant required"]
         
-        katz -- "YES to both Katz questions
-        or YES to trespass question" --> search2["FOURTH AMENDMENT SEARCH:
-        Warrant generally required"]
+        katz -- "YES to both Katz questions<br/>or YES to trespass question" --> search2["FOURTH AMENDMENT SEARCH:<br/>Warrant generally required"]
         
-        katz -- "NO to both Katz questions
-        and NO to trespass question" --> nosearch2["NOT A FOURTH AMENDMENT SEARCH:
-        No warrant required"]
+        katz -- "NO to both Katz questions<br/>and NO to trespass question" --> nosearch2["NOT A FOURTH AMENDMENT SEARCH:<br/>No warrant required"]
         
-        third --> third_result["Third-party doctrine may eliminate
-        Fourth Amendment protection even if
-        Katz or Jones would otherwise apply"]
+        third --> third_result["Third-party doctrine may eliminate<br/>Fourth Amendment protection even if<br/>Katz or Jones would otherwise apply"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef question fill:#fff8e1,stroke:#ff8f00,stroke-width:1px
@@ -111,10 +94,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Kyllo v. United States</span> <span class="case-citation">533 U.S. 27 (2001)</span></h4>
-    <p class="case-rule">When the government uses a device that is not in general public use to explore details of the home that would previously have been unknowable without physical intrusion, the surveillance is a "search" and is presumptively unreasonable without a warrant.</p>
-    <p class="case-facts">Federal agents suspected Kyllo was growing marijuana in his home. Without obtaining a warrant, they used a thermal imaging device to detect higher than normal heat emanating from his roof and one wall. Based on the thermal imaging and other information, agents obtained a warrant to search Kyllo's home, where they found marijuana growing. Kyllo moved to suppress the evidence, arguing that the use of thermal imaging constituted an unreasonable search.</p>
-    <p class="case-reasoning">Justice Scalia, writing for the majority, held that the use of the thermal imaging device constituted a search under the Fourth Amendment. The Court emphasized that the thermal imager revealed information about the interior of the home that would not have been obtainable without physical intrusion. The Court rejected the government's argument that thermal imaging only detected "waste heat" emanating from the exterior of the home, noting that such an approach would leave homeowners "at the mercy of advancing technology." Instead, the Court established a bright-line rule that when the government uses a device not in general public use to explore details of the home that would have been unknowable without physical intrusion, a search occurs requiring a warrant. The Court noted the importance of drawing a firm line at the entrance to the house, which represents the very core of Fourth Amendment protection.</p>
+    <div class="case-header">
+        <div class="case-name">Kyllo v. United States</div>
+        <div class="case-citation">533 U.S. 27 (2001)</div>
+    </div>
+    <div class="case-rule"><p>When the government uses a device that is not in general public use to explore details of the home that would previously have been unknowable without physical intrusion, the surveillance is a "search" and is presumptively unreasonable without a warrant.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Federal agents suspected Kyllo was growing marijuana in his home. Without obtaining a warrant, they used a thermal imaging device to detect higher than normal heat emanating from his roof and one wall. Based on the thermal imaging and other information, agents obtained a warrant to search Kyllo's home, where they found marijuana growing. Kyllo moved to suppress the evidence, arguing that the use of thermal imaging constituted an unreasonable search.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Scalia, writing for the majority, held that the use of the thermal imaging device constituted a search under the Fourth Amendment. The Court emphasized that the thermal imager revealed information about the interior of the home that would not have been obtainable without physical intrusion. The Court rejected the government's argument that thermal imaging only detected "waste heat" emanating from the exterior of the home, noting that such an approach would leave homeowners "at the mercy of advancing technology." Instead, the Court established a bright-line rule that when the government uses a device not in general public use to explore details of the home that would have been unknowable without physical intrusion, a search occurs requiring a warrant. The Court noted the importance of drawing a firm line at the entrance to the house, which represents the very core of Fourth Amendment protection.</p></div>
 </div>
 
 <div class="explanation" id="gps-tracking">
@@ -146,10 +132,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">United States v. Jones</span> <span class="case-citation">565 U.S. 400 (2012)</span></h4>
-    <p class="case-rule">The government conducts a Fourth Amendment search when it physically intrudes on a constitutionally protected area (persons, houses, papers, effects) for the purpose of obtaining information, regardless of whether the individual has a reasonable expectation of privacy in the area.</p>
-    <p class="case-facts">Without a valid warrant, law enforcement installed a GPS tracking device on Jones's vehicle and monitored its movements for 28 days, tracking the vehicle across multiple jurisdictions, including when parked in a garage adjoining Jones's residence. The government used this data to link Jones to a drug trafficking conspiracy.</p>
-    <p class="case-reasoning">Justice Scalia, writing for the majority, held that the installation of the GPS device on Jones's vehicle constituted a search under the Fourth Amendment because the government physically occupied private property (the vehicle, an "effect" under the Fourth Amendment) for the purpose of obtaining information. The Court emphasized that the Katz reasonable expectation of privacy test did not replace the traditional property-based understanding of the Fourth Amendment but rather supplemented it. The Court clarified that when the government physically intrudes on constitutionally protected areas to obtain information, a search occurs regardless of whether there is a reasonable expectation of privacy. This case marked a significant return to trespass concepts in Fourth Amendment jurisprudence, particularly in the context of new surveillance technologies.</p>
+    <div class="case-header">
+        <div class="case-name">United States v. Jones</div>
+        <div class="case-citation">565 U.S. 400 (2012)</div>
+    </div>
+    <div class="case-rule"><p>The government conducts a Fourth Amendment search when it physically intrudes on a constitutionally protected area (persons, houses, papers, effects) for the purpose of obtaining information, regardless of whether the individual has a reasonable expectation of privacy in the area.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Without a valid warrant, law enforcement installed a GPS tracking device on Jones's vehicle and monitored its movements for 28 days, tracking the vehicle across multiple jurisdictions, including when parked in a garage adjoining Jones's residence. The government used this data to link Jones to a drug trafficking conspiracy.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Scalia, writing for the majority, held that the installation of the GPS device on Jones's vehicle constituted a search under the Fourth Amendment because the government physically occupied private property (the vehicle, an "effect" under the Fourth Amendment) for the purpose of obtaining information. The Court emphasized that the Katz reasonable expectation of privacy test did not replace the traditional property-based understanding of the Fourth Amendment but rather supplemented it. The Court clarified that when the government physically intrudes on constitutionally protected areas to obtain information, a search occurs regardless of whether there is a reasonable expectation of privacy. This case marked a significant return to trespass concepts in Fourth Amendment jurisprudence, particularly in the context of new surveillance technologies.</p></div>
 </div>
 
 <div class="explanation" id="aerial-surveillance">
@@ -205,10 +194,88 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Florida v. Jardines</span> <span class="case-citation">569 U.S. 1 (2013)</span></h4>
-    <p class="case-rule">The use of a drug-sniffing dog on the curtilage of a home constitutes a search under the Fourth Amendment when officers physically intrude on the curtilage for the purpose of gathering evidence.</p>
-    <p class="case-facts">Police officers brought a drug-detection dog to Jardines' front porch, where the dog alerted to the presence of drugs. Based on this alert, the officers obtained a warrant to search the home, which revealed marijuana plants. Jardines moved to suppress the evidence, arguing that using the drug dog on his porch was a warrantless search.</p>
-    <p class="case-reasoning">Justice Scalia, writing for the majority, held that the use of a drug-sniffing dog on Jardines' front porch was a search under the Fourth Amendment. The Court applied the physical trespass theory from <em>Jones</em>, finding that when police physically enter the curtilage of a home to gather evidence, a search occurs. The Court emphasized that while visitors might have an implied license to approach the front door (the "knock and talk" exception), that license does not extend to bringing a trained police dog to explore the area for evidence. The Court specifically noted that it was resolving the case using the property-based approach rather than the <em>Katz</em> reasonable expectation of privacy test, demonstrating how the two tests operate independently and can yield similar results through different analyses.</p>
+    <div class="case-header">
+        <div class="case-name">Florida v. Jardines</div>
+        <div class="case-citation">569 U.S. 1 (2013)</div>
+    </div>
+    <div class="case-rule"><p>The use of a drug-sniffing dog on the curtilage of a home constitutes a search under the Fourth Amendment when officers physically intrude on the curtilage for the purpose of gathering evidence.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police officers brought a drug-detection dog to Jardines' front porch, where the dog alerted to the presence of drugs. Based on this alert, the officers obtained a warrant to search the home, which revealed marijuana plants. Jardines moved to suppress the evidence, arguing that using the drug dog on his porch was a warrantless search.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Scalia, writing for the majority, held that the use of a drug-sniffing dog on Jardines' front porch was a search under the Fourth Amendment. The Court applied the physical trespass theory from <em>Jones</em>, finding that when police physically enter the curtilage of a home to gather evidence, a search occurs. The Court emphasized that while visitors might have an implied license to approach the front door (the "knock and talk" exception), that license does not extend to bringing a trained police dog to explore the area for evidence. The Court specifically noted that it was resolving the case using the property-based approach rather than the <em>Katz</em> reasonable expectation of privacy test, demonstrating how the two tests operate independently and can yield similar results through different analyses.</p></div>
+</div>
+
+<div class="explanation" id="riley-cell-phones">
+    <h3>Cell Phone Searches Incident to Arrest</h3>
+
+    <p>The search-incident-to-arrest exception has long allowed officers to search an arrestee and the area within their immediate control without a warrant. In <em>Riley v. California</em> (2014), the Supreme Court unanimously held that this exception does not extend to the digital contents of a cell phone seized from an arrestee.</p>
+
+    <div class="key-point">
+        <h4>The Riley Rule</h4>
+        <ul>
+            <li><strong>Seizure permitted, search restricted</strong>: Police may seize and secure a cell phone incident to a lawful arrest, but they generally may <strong>not</strong> search the phone's digital contents without a warrant</li>
+            <li><strong>Digital data is different</strong>: Cell phones differ from physical objects both <em>quantitatively</em> (immense storage capacity aggregating many types of data) and <em>qualitatively</em> (browsing history, location data, private communications, and apps reveal the "privacies of life")</li>
+            <li><strong>Rationales do not apply</strong>: The two historic justifications for searches incident to arrest — officer safety and preventing destruction of evidence — do not justify searching data, because digital data cannot be used as a weapon and can be preserved by other means (seizing the phone, turning it off, using a Faraday bag)</li>
+            <li><strong>Bright-line command</strong>: "Get a warrant." Exigent circumstances may still justify a warrantless search in a specific case, but there is no categorical exception for cell phone data</li>
+        </ul>
+    </div>
+
+    <p>The Court rejected analogies treating a phone as just another item in an arrestee's pocket, observing that comparing a search of physical records to a search of a modern smartphone "is like saying a ride on horseback is materially indistinguishable from a flight to the moon." <em>Riley</em> signaled the Court's willingness to treat digital data categorically differently from physical effects when applying Fourth Amendment doctrine.</p>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Riley v. California</div>
+        <div class="case-citation">573 U.S. 373 (2014)</div>
+    </div>
+    <div class="case-rule"><p>Police may seize a cell phone incident to a lawful arrest, but they generally may not search the phone's digital contents without a warrant; the search-incident-to-arrest exception does not apply to digital data.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>In consolidated cases, officers arrested Riley following a traffic stop and, without a warrant, examined data on his smartphone, finding photographs and video connecting him to a gang shooting. In the companion case, officers searched an older flip phone seized from Wurie, using its call log to trace him to an apartment where drugs and a firearm were found. Both defendants moved to suppress the evidence obtained from the warrantless phone searches.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Chief Justice Roberts, writing for a unanimous Court, held that the search-incident-to-arrest exception does not authorize a warrantless search of the digital contents of a cell phone. The Court explained that the two rationales underlying the exception recognized in <em>Chimel v. California</em> — protecting officers from weapons and preventing the destruction of evidence — have little force when applied to data. Digital information cannot itself harm an officer, and legitimate concerns about remote wiping or encryption can be addressed by securing the device rather than searching it. The Court stressed that cell phones are qualitatively and quantitatively different from other objects: their immense storage capacity collects in one place many distinct types of information — an address, a note, a prescription, a bank statement, a video — that together can reconstruct the sum of an individual's private life. Because that data implicates privacy interests far beyond those at stake in the search of a wallet or cigarette pack, the intrusion cannot be justified as a minor incident of arrest. The Court concluded with a simple rule for officers confronting a phone: "get a warrant," while noting that case-specific exigencies could still support a warrantless search when truly necessary.</p></div>
+    <div class="case-implications"><p>Riley marks a turning point in digital-age Fourth Amendment law, holding that the sheer volume and sensitivity of data on modern devices makes them categorically different from physical effects. It laid the doctrinal groundwork for Carpenter's later limits on the third-party doctrine.</p></div>
+</div>
+
+<div class="explanation" id="carpenter-csli">
+    <h3>Cell-Site Location Information and the Third-Party Doctrine</h3>
+
+    <p>Every time a cell phone connects to a cell tower, the wireless carrier logs time-stamped cell-site location information (CSLI) revealing the phone's approximate location. Because this data is generated automatically and held by the carrier, the government argued it fell squarely within the third-party doctrine, under which information voluntarily shared with a third party loses Fourth Amendment protection. In <em>Carpenter v. United States</em> (2018), the Supreme Court declined to extend that doctrine to comprehensive historical CSLI.</p>
+
+    <div class="key-point">
+        <h4>The Carpenter Rule</h4>
+        <ul>
+            <li><strong>A search occurs</strong>: The government's acquisition of historical CSLI covering seven days or more is a Fourth Amendment search that generally requires a warrant supported by probable cause</li>
+            <li><strong>Third-party doctrine does not extend</strong>: The doctrine of <em>Smith v. Maryland</em> and <em>United States v. Miller</em> does not reach this comprehensive, encyclopedic record of a person's physical movements</li>
+            <li><strong>Not truly voluntary</strong>: CSLI is not meaningfully "shared" in the way bank records or dialed numbers are — a person conveys it passively, simply by carrying a phone, without any affirmative act</li>
+            <li><strong>Narrow holding</strong>: The Court emphasized the decision is narrow and does not disturb conventional surveillance techniques, business records generally, real-time CSLI, or the collection of records for a short period</li>
+        </ul>
+    </div>
+
+    <p>Building on Justice Sotomayor's and Justice Alito's concurrences in <em>Jones</em>, the majority reasoned that tracking a person's location over an extended period generates a detailed, comprehensive chronicle of their life that implicates privacy expectations society is prepared to recognize as reasonable. <em>Carpenter</em> is the major digital-age limit on the third-party doctrine: for the first time, the Court held that information held by a third party can nonetheless retain Fourth Amendment protection because of its comprehensive and revealing character. For the underlying doctrine that <em>Carpenter</em> restricts, see the <a href="#third-party-doctrine-section" data-section="third-party-doctrine">Third-Party Doctrine section</a>.</p>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Carpenter v. United States</div>
+        <div class="case-citation">585 U.S. 296 (2018)</div>
+    </div>
+    <div class="case-rule"><p>The government's acquisition of historical cell-site location information (CSLI) covering seven days or more is a Fourth Amendment search requiring a warrant; the third-party doctrine does not extend to this comprehensive, involuntarily shared record of a person's location.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Investigating a series of robberies, the government obtained court orders under the Stored Communications Act — which required only "reasonable grounds," a standard lower than probable cause — directing Carpenter's wireless carriers to turn over historical CSLI. The records spanned 127 days and placed Carpenter's phone near several robbery locations. Carpenter moved to suppress the CSLI, arguing that its warrantless acquisition violated the Fourth Amendment.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Chief Justice Roberts, writing for a 5-4 majority, held that the government conducted a Fourth Amendment search by accessing Carpenter's historical CSLI, and that it needed a warrant to do so. The Court reasoned that CSLI provides an intimate, encyclopedic window into a person's movements — a comprehensive record that reveals not only a person's particular movements but, through them, familial, political, professional, religious, and sexual associations. Because time-stamped location data is retrospective and effectively tracks nearly everyone, it gives police access to a category of information otherwise unknowable. The Court declined to extend the third-party doctrine of <em>Smith v. Maryland</em> and <em>United States v. Miller</em> to this context, distinguishing the "limited types of personal information" in those cases from the exhaustive chronicle of location data. It also rejected the notion that CSLI is voluntarily shared: carrying a cell phone is indispensable to participation in modern society, and the phone logs location without any affirmative act by the user. The Court stressed the narrowness of its holding, expressly leaving undisturbed conventional surveillance tools, real-time CSLI, tower dumps, and ordinary business records.</p></div>
+    <div class="case-implications"><p>Carpenter is the most significant modern limit on the third-party doctrine, establishing that the digital age can require Fourth Amendment protection even for data held by third parties when that data is comprehensive, revealing, and only nominally "shared." It reframes the search inquiry around the nature and quantity of information rather than mere disclosure to another.</p></div>
+</div>
+
+<div class="explanation" id="tech-summary">
+    <h3>Technology and the Fourth Amendment: Synthesis</h3>
+
+    <p>Read together, the modern technology cases trace the Court's evolving effort to keep Fourth Amendment protection meaningful as surveillance capabilities expand. Two throughlines emerge: a revived attention to physical trespass (<em>Jones</em>, <em>Jardines</em>) and a growing recognition that the volume and character of digital data can warrant protection even absent any trespass (<em>Riley</em>, <em>Carpenter</em>).</p>
+
+    <div class="key-point">
+        <h4>The Core Technology Cases at a Glance</h4>
+        <ul>
+            <li><strong><em>Kyllo v. United States</em> (2001)</strong>: Using sense-enhancing technology not in general public use to reveal details of the home unknowable without physical intrusion is a search</li>
+            <li><strong><em>United States v. Jones</em> (2012)</strong>: Physically attaching a GPS device to a vehicle to gather information is a trespassory search; concurrences flag long-term aggregation ("mosaic") concerns</li>
+            <li><strong><em>Florida v. Jardines</em> (2013)</strong>: Bringing a drug-sniffing dog onto the curtilage to investigate is a trespassory search</li>
+            <li><strong><em>Riley v. California</em> (2014)</strong>: The search-incident-to-arrest exception does not reach the digital contents of a cell phone — get a warrant</li>
+            <li><strong><em>Carpenter v. United States</em> (2018)</strong>: Acquiring seven-plus days of historical CSLI is a search; the third-party doctrine does not extend to comprehensive location data</li>
+        </ul>
+    </div>
 </div>
 
 <div class="back-to-top">

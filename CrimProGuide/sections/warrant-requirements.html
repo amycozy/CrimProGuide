@@ -5,7 +5,10 @@
     <a href="#probable-cause">Probable Cause</a>
     <a href="#particularity">Particularity Requirement</a>
     <a href="#neutral-magistrate">Neutral and Detached Magistrate</a>
+    <a href="#oath-affidavit">Oath and Anticipatory Warrants</a>
     <a href="#warrant-execution">Warrant Execution</a>
+    <a href="#arrests-residence">Arrests in a Residence</a>
+    <a href="#detention-third-parties">Detention and Third Parties</a>
 </div>
 
 <div class="explanation" id="warrant-preference">
@@ -29,39 +32,19 @@
     flowchart TD
         start["WARRANT ANALYSIS"] --> exists["Does a valid search warrant exist?"]
         
-        exists -- "NO: No warrant" --> exception["Does a recognized warrant exception apply?
-        - Exigent circumstances
-        - Search incident to arrest
-        - Automobile exception
-        - Consent
-        - Plain view
-        - Special needs
-        - Terry stop"]
+        exists -- "NO: No warrant" --> exception["Does a recognized warrant exception apply?<br/>- Exigent circumstances<br/>- Search incident to arrest<br/>- Automobile exception<br/>- Consent<br/>- Plain view<br/>- Special needs<br/>- Terry stop"]
         
-        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:
-        Violates Fourth Amendment
-        Evidence likely inadmissible"]
+        exception -- "NO: No exception applies" --> invalid["INVALID SEARCH:<br/>Violates Fourth Amendment<br/>Evidence likely inadmissible"]
         
-        exception -- "YES: Exception applies" --> excReq["Are all requirements for 
-        the specific exception met?"]
+        exception -- "YES: Exception applies" --> excReq["Are all requirements for<br/>the specific exception met?"]
         
         excReq -- "NO: Requirements not met" --> invalid
         
-        excReq -- "YES: Requirements met" --> valid["VALID SEARCH:
-        Fourth Amendment satisfied
-        Evidence potentially admissible"]
+        excReq -- "YES: Requirements met" --> valid["VALID SEARCH:<br/>Fourth Amendment satisfied<br/>Evidence potentially admissible"]
         
-        exists -- "YES: Warrant exists" --> requirements["Does the warrant satisfy all requirements?
-        1. Probable cause
-        2. Particularity 
-        3. Neutral magistrate
-        4. Proper execution"]
+        exists -- "YES: Warrant exists" --> requirements["Does the warrant satisfy all requirements?<br/>1. Probable cause<br/>2. Particularity<br/>3. Neutral magistrate<br/>4. Proper execution"]
         
-        requirements -- "NO: Requirements not met" --> defective["DEFECTIVE WARRANT:
-        May still be valid if:
-        - Good faith exception applies
-        - Severability doctrine applies
-        - Harmless error analysis"]
+        requirements -- "NO: Requirements not met" --> defective["DEFECTIVE WARRANT:<br/>May still be valid if:<br/>- Good faith exception applies<br/>- Severability doctrine applies<br/>- Harmless error analysis"]
         
         requirements -- "YES: All requirements met" --> valid
         
@@ -100,10 +83,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Illinois v. Gates</span> <span class="case-citation">462 U.S. 213 (1983)</span></h4>
-    <p class="case-rule">Probable cause should be determined based on the "totality of the circumstances" rather than rigid tests. Reviewing courts should give "great deference" to a magistrate's determination of probable cause.</p>
-    <p class="case-facts">Police received an anonymous letter claiming that the Gates were drug dealers who regularly traveled to Florida to purchase drugs, with Sue Gates driving the car to Florida, leaving it to be loaded with drugs, and Lance Gates flying down later to drive the car back. The letter predicted an upcoming trip by the couple. Police corroborated some details of the trip but not any criminal activity. Based on this information, they obtained a search warrant for the Gates' home and car.</p>
-    <p class="case-reasoning">The Supreme Court abandoned the rigid "two-pronged test" from <em>Aguilar v. Texas</em> and <em>Spinelli v. United States</em>, which had required showing both an informant's "basis of knowledge" and "veracity." Instead, the Court adopted a more flexible "totality of the circumstances" approach where these factors remain relevant but are not strictly required in every case. The Court emphasized that probable cause is a "practical, common-sense decision" based on all the circumstances, including the veracity, reliability, and basis of knowledge of informants. The Court also stressed the importance of according "great deference" to a magistrate's determination of probable cause. Under this approach, the Court found sufficient probable cause existed given the anonymous letter's detailed predictions that were substantially corroborated by police.</p>
+    <div class="case-header">
+        <div class="case-name">Illinois v. Gates</div>
+        <div class="case-citation">462 U.S. 213 (1983)</div>
+    </div>
+    <div class="case-rule"><p>Probable cause should be determined based on the "totality of the circumstances" rather than rigid tests. Reviewing courts should give "great deference" to a magistrate's determination of probable cause.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police received an anonymous letter claiming that the Gates were drug dealers who regularly traveled to Florida to purchase drugs, with Sue Gates driving the car to Florida, leaving it to be loaded with drugs, and Lance Gates flying down later to drive the car back. The letter predicted an upcoming trip by the couple. Police corroborated some details of the trip but not any criminal activity. Based on this information, they obtained a search warrant for the Gates' home and car.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court abandoned the rigid "two-pronged test" from <em>Aguilar v. Texas</em> and <em>Spinelli v. United States</em>, which had required showing both an informant's "basis of knowledge" and "veracity." Instead, the Court adopted a more flexible "totality of the circumstances" approach where these factors remain relevant but are not strictly required in every case. The Court emphasized that probable cause is a "practical, common-sense decision" based on all the circumstances, including the veracity, reliability, and basis of knowledge of informants. The Court also stressed the importance of according "great deference" to a magistrate's determination of probable cause. Under this approach, the Court found sufficient probable cause existed given the anonymous letter's detailed predictions that were substantially corroborated by police.</p></div>
 </div>
 
 <div class="explanation" id="probable-cause-continued">
@@ -132,48 +118,25 @@
     
     <div class="mermaid">
     flowchart TD
-        start["PROBABLE CAUSE ANALYSIS"] --> informant["Information Source Assessment:
-        - Citizen witness/victim
-        - Police officer
-        - Confidential informant
-        - Anonymous informant"]
+        start["PROBABLE CAUSE ANALYSIS"] --> informant["Information Source Assessment:<br/>- Citizen witness/victim<br/>- Police officer<br/>- Confidential informant<br/>- Anonymous informant"]
         
-        informant --> basisKnowledge["Basis of Knowledge:
-        How did informant obtain information?
-        - Personal observation (strongest)
-        - Second-hand information
-        - Rumor or speculation (weakest)"]
+        informant --> basisKnowledge["Basis of Knowledge:<br/>How did informant obtain information?<br/>- Personal observation (strongest)<br/>- Second-hand information<br/>- Rumor or speculation (weakest)"]
         
-        informant --> veracity["Veracity/Reliability:
-        - Track record of reliability
-        - Motives to be truthful or lie
-        - Admissions against interest
-        - Statements under oath"]
+        informant --> veracity["Veracity/Reliability:<br/>- Track record of reliability<br/>- Motives to be truthful or lie<br/>- Admissions against interest<br/>- Statements under oath"]
         
-        informant --> corroboration["Corroboration:
-        - Independent police verification
-        - Consistency with other information
-        - Consistency with verifiable facts
-        - Predictive information confirmed"]
+        informant --> corroboration["Corroboration:<br/>- Independent police verification<br/>- Consistency with other information<br/>- Consistency with verifiable facts<br/>- Predictive information confirmed"]
         
-        basisKnowledge --> totality["TOTALITY OF CIRCUMSTANCES:
-        Assess all factors together"]
+        basisKnowledge --> totality["TOTALITY OF CIRCUMSTANCES:<br/>Assess all factors together"]
         
         veracity --> totality
         
         corroboration --> totality
         
-        totality --> sufficient["Is there fair probability that:
-        1. Criminal activity has occurred/is occurring, AND
-        2. Evidence will be found in the place to be searched?"]
+        totality --> sufficient["Is there fair probability that:<br/>1. Criminal activity has occurred/is occurring, AND<br/>2. Evidence will be found in the place to be searched?"]
         
-        sufficient -- "YES: Sufficient probability" --> probableCause["PROBABLE CAUSE EXISTS:
-        Warrant may properly issue or
-        warrant exception may apply"]
+        sufficient -- "YES: Sufficient probability" --> probableCause["PROBABLE CAUSE EXISTS:<br/>Warrant may properly issue or<br/>warrant exception may apply"]
         
-        sufficient -- "NO: Insufficient probability" --> noProbableCause["NO PROBABLE CAUSE:
-        Warrant should not issue
-        Search would be improper"]
+        sufficient -- "NO: Insufficient probability" --> noProbableCause["NO PROBABLE CAUSE:<br/>Warrant should not issue<br/>Search would be improper"]
         
         classDef process fill:#d1e8ff,stroke:#2980b9,stroke-width:2px
         classDef factors fill:#e0f7fa,stroke:#00acc1,stroke-width:1px
@@ -224,10 +187,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Groh v. Ramirez</span> <span class="case-citation">540 U.S. 551 (2004)</span></h4>
-    <p class="case-rule">A warrant that completely fails to particularize the items to be seized is invalid on its face, even if the supporting documents contain the required particularity.</p>
-    <p class="case-facts">Agent Groh prepared a warrant application with an attached, detailed description of the firearms believed to be at Ramirez's ranch. However, in the portion of the warrant form that called for a description of the "person or property" to be seized, Groh mistakenly described Ramirez's house rather than the firearms. The magistrate signed the warrant, and Groh executed it, but found no illegal weapons.</p>
-    <p class="case-reasoning">The Supreme Court held that the warrant was plainly invalid because it completely failed to describe the items to be seized as required by the Fourth Amendment. The Court rejected the argument that the detailed description in the warrant application satisfied the particularity requirement, explaining that the particularity must appear on the face of the warrant itself. The Court emphasized that the purpose of the particularity requirement is to assure the subject of the search of the lawful authority of the executing officer and the limits of the officer's power to search. Since the warrant did not describe any items to be seized, it was "so obviously deficient that we must regard the search as 'warrantless.'"</p>
+    <div class="case-header">
+        <div class="case-name">Groh v. Ramirez</div>
+        <div class="case-citation">540 U.S. 551 (2004)</div>
+    </div>
+    <div class="case-rule"><p>A warrant that completely fails to particularize the items to be seized is invalid on its face, even if the supporting documents contain the required particularity.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Agent Groh prepared a warrant application with an attached, detailed description of the firearms believed to be at Ramirez's ranch. However, in the portion of the warrant form that called for a description of the "person or property" to be seized, Groh mistakenly described Ramirez's house rather than the firearms. The magistrate signed the warrant, and Groh executed it, but found no illegal weapons.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court held that the warrant was plainly invalid because it completely failed to describe the items to be seized as required by the Fourth Amendment. The Court rejected the argument that the detailed description in the warrant application satisfied the particularity requirement, explaining that the particularity must appear on the face of the warrant itself. The Court emphasized that the purpose of the particularity requirement is to assure the subject of the search of the lawful authority of the executing officer and the limits of the officer's power to search. Since the warrant did not describe any items to be seized, it was "so obviously deficient that we must regard the search as 'warrantless.'"</p></div>
 </div>
 
 <div class="explanation" id="neutral-magistrate">
@@ -253,6 +219,42 @@
     </ul>
     
     <p>However, the Court has also clarified that the magistrate need not be a lawyer or judge, as long as they are capable of determining probable cause and are genuinely independent of law enforcement.</p>
+</div>
+
+<div class="explanation" id="oath-affidavit">
+    <h3>Oath or Affirmation and Anticipatory Warrants</h3>
+
+    <p>The text of the Fourth Amendment provides that "no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized." The oath-or-affirmation clause is a distinct constitutional element of a valid warrant, separate from the probable-cause and particularity requirements.</p>
+
+    <div class="key-point">
+        <h4>The Sworn-Affidavit (Oath or Affirmation) Requirement</h4>
+        <ul>
+            <li><strong>Sworn Support</strong>: The officer seeking the warrant must support the application by oath or affirmation, attesting under penalty of perjury to the truth of the information presented to the magistrate</li>
+            <li><strong>Accountability</strong>: The oath places legal responsibility on the affiant and deters officers from presenting false or reckless information to obtain a warrant</li>
+            <li><strong>Basis for the Magistrate's Determination</strong>: The magistrate's probable-cause finding must rest on facts presented under oath, typically through a written affidavit (or recorded sworn testimony)</li>
+            <li><strong>Consequence of False Statements</strong>: A deliberate or reckless falsehood in the affidavit that is material to probable cause can void the warrant (see <em>Franks v. Delaware</em>, 438 U.S. 154 (1978))</li>
+        </ul>
+    </div>
+
+    <h4>Anticipatory Search Warrants</h4>
+    <p>An anticipatory warrant is a warrant that, by its own terms, takes effect not upon issuance but only after some future <em>triggering condition</em> occurs. Such warrants are commonly used in controlled deliveries, where police arrange to deliver contraband (for example, a package of narcotics) to a location and want authorization to search once the package arrives. The Supreme Court in <em>United States v. Grubbs</em> confirmed that anticipatory warrants are not categorically unconstitutional.</p>
+
+    <p>For an anticipatory warrant to satisfy the Fourth Amendment, two probable-cause showings must be made to the magistrate:</p>
+    <ul>
+        <li><strong>Triggering Condition</strong>: There must be probable cause to believe the triggering condition will occur</li>
+        <li><strong>Evidence Upon Triggering</strong>: There must be probable cause to believe that, once the triggering condition occurs, the described evidence will be found at the place to be searched</li>
+    </ul>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">United States v. Grubbs</div>
+        <div class="case-citation">547 U.S. 90 (2006)</div>
+    </div>
+    <div class="case-rule"><p>Anticipatory search warrants are not categorically unconstitutional. They are valid where there is probable cause to believe that, at the time a stated triggering condition occurs, the described evidence will be found at the place to be searched, and probable cause to believe the triggering condition will occur.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Grubbs purchased a videotape containing child pornography from a website operated by an undercover postal inspector. Officers obtained an anticipatory warrant to search his home; by its terms, the warrant would become executable only after the package was delivered to and physically taken into the residence. The package was delivered, Grubbs's wife brought it inside, and officers executed the search. The triggering condition was described in an affidavit accompanying the warrant application, but was not set out in the warrant itself.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Scalia, writing for the Court, explained that all warrants are in a sense anticipatory because they authorize a search for evidence that is believed to be, and will still be, at the place when the search occurs. For an anticipatory warrant, probable cause must exist that the triggering condition will occur and that evidence will then be present. The Court also rejected the argument that the Fourth Amendment requires the triggering condition to be set forth on the face of the warrant. The particularity clause governs only the place to be searched and the things to be seized; it does not require the warrant to specify the preconditions to its execution.</p></div>
+    <div class="case-implications"><p>Anticipatory warrants are a valid and common tool, especially for controlled deliveries. The reviewing magistrate must find probable cause for both the triggering event and the presence of evidence once that event occurs.</p></div>
 </div>
 
 <div class="explanation" id="warrant-execution">
@@ -301,40 +303,19 @@
     
     <div class="mermaid">
     flowchart TD
-        start["WARRANT EXECUTION ANALYSIS"] --> announce["KNOCK AND ANNOUNCE RULE:
-        Did officers:
-        1. Announce presence and authority
-        2. State purpose of entry
-        3. Wait reasonable time before forced entry?"]
+        start["WARRANT EXECUTION ANALYSIS"] --> announce["KNOCK AND ANNOUNCE RULE:<br/>Did officers:<br/>1. Announce presence and authority<br/>2. State purpose of entry<br/>3. Wait reasonable time before forced entry?"]
         
-        announce -- "YES: Proper announcement" --> scope["SCOPE OF SEARCH:
-        Did officers stay within authorized scope of warrant?
-        - Searched only places where target items could be
-        - Seized only items described in warrant or exceptions
-        - Completed search in reasonable time"]
+        announce -- "YES: Proper announcement" --> scope["SCOPE OF SEARCH:<br/>Did officers stay within authorized scope of warrant?<br/>- Searched only places where target items could be<br/>- Seized only items described in warrant or exceptions<br/>- Completed search in reasonable time"]
         
-        announce -- "NO: Improper announcement" --> exception["Was an exception to announcement justified?
-        - Destruction of evidence risk
-        - Danger to officers
-        - Futility
-        - Other exigent circumstances"]
+        announce -- "NO: Improper announcement" --> exception["Was an exception to announcement justified?<br/>- Destruction of evidence risk<br/>- Danger to officers<br/>- Futility<br/>- Other exigent circumstances"]
         
         exception -- "YES: Exception applies" --> scope
         
-        exception -- "NO: No exception applies" --> knockViolation["KNOCK & ANNOUNCE VIOLATION:
-        Hudson v. Michigan: 
-        Exclusionary rule does not apply
-        (Evidence still admissible)"]
+        exception -- "NO: No exception applies" --> knockViolation["KNOCK & ANNOUNCE VIOLATION:<br/>Hudson v. Michigan:<br/>Exclusionary rule does not apply<br/>(Evidence still admissible)"]
         
-        scope -- "YES: Within scope" --> properExecution["PROPER WARRANT EXECUTION:
-        Evidence admissible"]
+        scope -- "YES: Within scope" --> properExecution["PROPER WARRANT EXECUTION:<br/>Evidence admissible"]
         
-        scope -- "NO: Exceeded scope" --> exceedScope["SCOPE VIOLATION:
-        Evidence outside scope may be suppressed
-        Unless exception applies:
-        - Plain view
-        - Protective sweep
-        - Inevitable discovery"]
+        scope -- "NO: Exceeded scope" --> exceedScope["SCOPE VIOLATION:<br/>Evidence outside scope may be suppressed<br/>Unless exception applies:<br/>- Plain view<br/>- Protective sweep<br/>- Inevitable discovery"]
         
         knockViolation --> scope
         
@@ -353,10 +334,121 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Wilson v. Arkansas</span> <span class="case-citation">514 U.S. 927 (1995)</span></h4>
-    <p class="case-rule">The common law "knock and announce" principle forms part of the Fourth Amendment's reasonableness inquiry, but may be flexible in cases where law enforcement has a reasonable suspicion that knocking and announcing would inhibit effective investigation of the crime.</p>
-    <p class="case-facts">Police officers with a warrant to search Wilson's home for drugs entered her home without first announcing their presence. The officers found drugs and drug paraphernalia, and Wilson was charged with various drug offenses. Wilson argued that the evidence should be suppressed because the officers failed to knock and announce.</p>
-    <p class="case-reasoning">The Supreme Court unanimously held that the common law knock-and-announce principle forms part of the Fourth Amendment reasonableness inquiry. Justice Thomas, writing for the Court, traced the knock-and-announce principle back to English common law, noting its consistent presence in early American legal traditions. However, the Court also emphasized that the principle was never treated as an absolute requirement. The Court recognized that the "flexible requirement of reasonableness should not be read to mandate a rigid rule of announcement that ignores countervailing law enforcement interests." The Court identified several situations where knock-and-announce might not be required: when there is a threat of physical violence, when officers believe evidence would be destroyed, or when knocking would be futile. The Court remanded the case for further consideration of whether such circumstances existed.</p>
+    <div class="case-header">
+        <div class="case-name">Wilson v. Arkansas</div>
+        <div class="case-citation">514 U.S. 927 (1995)</div>
+    </div>
+    <div class="case-rule"><p>The common law "knock and announce" principle forms part of the Fourth Amendment's reasonableness inquiry, but may be flexible in cases where law enforcement has a reasonable suspicion that knocking and announcing would inhibit effective investigation of the crime.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police officers with a warrant to search Wilson's home for drugs entered her home without first announcing their presence. The officers found drugs and drug paraphernalia, and Wilson was charged with various drug offenses. Wilson argued that the evidence should be suppressed because the officers failed to knock and announce.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court unanimously held that the common law knock-and-announce principle forms part of the Fourth Amendment reasonableness inquiry. Justice Thomas, writing for the Court, traced the knock-and-announce principle back to English common law, noting its consistent presence in early American legal traditions. However, the Court also emphasized that the principle was never treated as an absolute requirement. The Court recognized that the "flexible requirement of reasonableness should not be read to mandate a rigid rule of announcement that ignores countervailing law enforcement interests." The Court identified several situations where knock-and-announce might not be required: when there is a threat of physical violence, when officers believe evidence would be destroyed, or when knocking would be futile. The Court remanded the case for further consideration of whether such circumstances existed.</p></div>
+</div>
+
+<div class="explanation" id="arrests-residence">
+    <h3>Arrests in a Residence</h3>
+
+    <p>Executing an arrest inside a home raises distinct Fourth Amendment problems because the home receives the strongest constitutional protection. The key question is whose home the suspect is arrested in, and what kind of warrant (if any) the police hold. Two cases decided one year apart supply the governing rules.</p>
+
+    <div class="key-point">
+        <h4>Which Warrant Is Needed to Arrest Inside a Home</h4>
+        <ul>
+            <li><strong>Suspect's Own Home</strong>: An <em>arrest</em> warrant implicitly authorizes police to enter the suspect's own home to arrest him when they have <strong>reason to believe the suspect is inside</strong> (<em>Payton v. New York</em>). No separate search warrant is required.</li>
+            <li><strong>No Warrant, No Exigency</strong>: Absent a warrant or exigent circumstances, the Fourth Amendment <strong>prohibits a warrantless, nonconsensual entry into a home</strong> to make a routine felony arrest (<em>Payton</em>).</li>
+            <li><strong>Third Party's Home</strong>: To arrest the suspect inside <em>someone else's</em> home, police need a <strong>search warrant</strong> (in addition to any arrest warrant) — absent consent or exigent circumstances (<em>Steagald v. United States</em>). An arrest warrant alone protects only the named suspect, not the third party's separate privacy interest in the home.</li>
+        </ul>
+    </div>
+
+    <div class="mermaid">
+    flowchart TD
+        start["ARREST INSIDE A HOME"] --> whose["Whose home is being entered?"]
+
+        whose -- "Suspect's own home" --> arrestWarrant["Do police have an arrest warrant AND reason to believe suspect is inside?"]
+
+        arrestWarrant -- "YES" --> paytonOK["ENTRY PERMITTED<br/>Payton: arrest warrant implicitly<br/>authorizes entry into suspect's home"]
+
+        arrestWarrant -- "NO warrant" --> exigency1["Consent or exigent circumstances?"]
+
+        exigency1 -- "YES" --> paytonOK
+        exigency1 -- "NO" --> paytonBad["ENTRY PROHIBITED<br/>Payton: no warrantless, nonconsensual<br/>entry for a routine felony arrest"]
+
+        whose -- "Third party's home" --> searchWarrant["Do police have a SEARCH warrant for the third party's home?"]
+
+        searchWarrant -- "YES" --> steagaldOK["ENTRY PERMITTED<br/>Steagald: search warrant protects<br/>third party's privacy interest"]
+
+        searchWarrant -- "NO" --> exigency2["Consent or exigent circumstances?"]
+
+        exigency2 -- "YES" --> steagaldOK
+        exigency2 -- "NO" --> steagaldBad["ENTRY PROHIBITED as to third party<br/>Steagald: arrest warrant alone<br/>is insufficient"]
+
+        classDef process fill:#D5E8E0,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#FFF8E1,stroke:#FF8F00,stroke-width:1px
+        classDef negative fill:#FFEBEE,stroke:#C62828,stroke-width:2px
+        classDef positive fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+
+        class start process
+        class whose,arrestWarrant,searchWarrant,exigency1,exigency2 question
+        class paytonBad,steagaldBad negative
+        class paytonOK,steagaldOK positive
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Payton v. New York</div>
+        <div class="case-citation">445 U.S. 573 (1980)</div>
+    </div>
+    <div class="case-rule"><p>An arrest warrant founded on probable cause implicitly carries with it the limited authority to enter a dwelling in which the suspect lives when there is reason to believe the suspect is within. Absent a warrant or exigent circumstances, the Fourth Amendment prohibits a warrantless, nonconsensual entry into a home to make a routine felony arrest.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>New York statutes authorized police to enter a private residence without a warrant to make a routine felony arrest. In one consolidated case, officers with probable cause but no warrant broke open Payton's door to arrest him for murder; he was not home, but officers seized a shell casing in plain view. In the companion case, officers entered Riddick's home without a warrant to arrest him and found narcotics.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Stevens, for the Court, held that the New York statutes were unconstitutional insofar as they authorized warrantless, nonconsensual entries into a home for a routine felony arrest. The Court emphasized that the physical entry of the home is the "chief evil" against which the Fourth Amendment is directed, and that the firm line drawn at the entrance to the house may not reasonably be crossed without a warrant. The Court concluded, however, that an arrest warrant, which reflects a magistrate's determination of probable cause to seize the suspect, adequately protects the suspect's interest in the home; when officers have reason to believe the suspect is inside his own residence, the arrest warrant alone justifies entry.</p></div>
+    <div class="case-implications"><p>Establishes the bright-line rule that a home may not be entered to make a routine arrest without a warrant or exigency, while confirming that an arrest warrant suffices to enter the suspect's own home.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Steagald v. United States</div>
+        <div class="case-citation">451 U.S. 204 (1981)</div>
+    </div>
+    <div class="case-rule"><p>To search for the subject of an arrest warrant in the home of a third party, police must obtain a separate search warrant for that home, absent consent or exigent circumstances. An arrest warrant alone does not justify entry into another person's residence.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Acting on an arrest warrant for a federal fugitive named Ricky Lyons, DEA agents entered Steagald's home to look for Lyons. Lyons was not there, but during the search the agents discovered cocaine and arrested Steagald. Steagald, the homeowner, moved to suppress the evidence, arguing that the agents needed a search warrant to enter his home to search for someone else.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Marshall, for the Court, distinguished the two distinct interests at stake: the arrest warrant protected Lyons's interest against an unreasonable seizure of his person, but it did nothing to protect Steagald's separate interest in the privacy of his home from an unreasonable search. Allowing an arrest warrant to authorize entry into any home where police suspect the fugitive might be would create a significant potential for abuse, leaving the homeowner's privacy dependent solely on the discretion of the police. Because the magistrate who issued the arrest warrant never made any determination that the fugitive would be found in Steagald's home, a separate search warrant supported by probable cause was required.</p></div>
+    <div class="case-implications"><p>The rights of a third-party homeowner require a search warrant; an arrest warrant for a guest or fugitive does not authorize a search of another person's residence absent consent or exigency.</p></div>
+</div>
+
+<div class="explanation" id="detention-third-parties">
+    <h3>Detention and Third Parties During Execution</h3>
+
+    <p>The reasonableness inquiry that governs warrant execution also determines what officers may do to the people they encounter while carrying out the search. The Supreme Court has recognized limited authority to detain, sweep, and frisk in order to protect officer safety, prevent flight, and facilitate the orderly completion of the search.</p>
+
+    <div class="key-point">
+        <h4>Authority Over Persons During a Search</h4>
+        <ul>
+            <li><strong>Detention of Occupants</strong>: Officers executing a search warrant for contraband may detain the occupants of the premises for the duration of the search (<em>Michigan v. Summers</em>). No individualized suspicion of the occupant is required; the warrant and the occupant's connection to the premises supply the justification.</li>
+            <li><strong>Spatial Limit</strong>: The detention authority is limited to the <strong>immediate vicinity</strong> of the premises being searched; officers may not detain a former occupant found a distance away from the home (<em>Bailey v. United States</em>, 568 U.S. 186 (2013)).</li>
+            <li><strong>Protective Sweep</strong>: Officers may conduct a <strong>protective sweep</strong> — a quick and limited search of the premises for persons who might pose a danger — when they have a reasonable, articulable suspicion that the area harbors an individual posing a danger (<em>Maryland v. Buie</em>).</li>
+            <li><strong>Frisk of Persons Present</strong>: Officers may frisk persons present at the scene when they have a reasonable belief that the person is armed and dangerous.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Michigan v. Summers</div>
+        <div class="case-citation">452 U.S. 692 (1981)</div>
+    </div>
+    <div class="case-rule"><p>A warrant to search a residence for contraband implicitly carries with it the limited authority to detain the occupants of the premises while a proper search is conducted, without any additional individualized suspicion.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>As officers arrived at Summers's house to execute a warrant to search for narcotics, they encountered him descending the front steps. They detained him while they searched the house. After finding narcotics and confirming that Summers owned the home, they arrested him and, in a search incident to arrest, found heroin in his coat pocket.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held that the detention was a reasonable seizure. It identified three legitimate law enforcement interests supporting the detention of occupants during a search: preventing flight in the event incriminating evidence is found, minimizing the risk of harm to officers and occupants, and facilitating the orderly completion of the search with the occupants' assistance. Because the existence of a valid search warrant for contraband provides an objective justification and the intrusion on the occupant is limited, the detention does not require independent probable cause or reasonable suspicion as to the individual detained.</p></div>
+    <div class="case-implications"><p>Establishes categorical authority to detain occupants during execution of a premises search warrant; later cabined spatially by <em>Bailey v. United States</em> to the immediate vicinity of the premises.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Maryland v. Buie</div>
+        <div class="case-citation">494 U.S. 325 (1990)</div>
+    </div>
+    <div class="case-rule"><p>Incident to an arrest, officers may as a precaution look in spaces immediately adjoining the place of arrest from which an attack could be launched; beyond that, a protective sweep of the premises is permissible only where officers have a reasonable, articulable suspicion that the area harbors an individual posing a danger.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police arrested Buie in his home for armed robbery. After Buie emerged from the basement and was arrested, an officer went down into the basement "in case there was someone else" there and, in plain view, seized a running suit matching the description of clothing worn during the robbery.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Analogizing to the frisk authorized by <em>Terry v. Ohio</em> and the vehicle search in <em>Michigan v. Long</em>, the Court balanced the interest in officer safety against the intrusion of a limited sweep. It held that officers may automatically look in closets and other spaces immediately adjoining the place of arrest, and may extend the sweep further only on reasonable, articulable suspicion that a dangerous individual is present. A protective sweep is not a full search; it is a cursory inspection of spaces where a person may be hiding and may last no longer than necessary to dispel the reasonable suspicion of danger.</p></div>
+    <div class="case-implications"><p>Provides a safety rationale allowing limited searches of a home during arrests and warrant executions, with any evidence found in plain view during a lawful sweep admissible.</p></div>
 </div>
 
 <div class="back-to-top">

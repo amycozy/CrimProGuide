@@ -3,6 +3,7 @@
 <div class="section-navigation">
     <a href="#standing-overview">Standing Overview</a>
     <a href="#reasonable-expectation">Reasonable Expectation Test</a>
+    <a href="#reop-zones">Where REOP Exists</a>
     <a href="#property-interest">Property Interests</a>
     <a href="#target-standing">Target Standing</a>
     <a href="#standing-contexts">Contextual Applications</a>
@@ -28,41 +29,21 @@
     
     <div class="mermaid">
     flowchart TD
-        start["FOURTH AMENDMENT STANDING ANALYSIS"] --> violated["STEP 1: Was defendant's personal Fourth Amendment right violated?
-        Question: Did government action intrude upon either:
-        - Defendant's reasonable expectation of privacy OR
-        - Defendant's property interest protected by the Fourth Amendment?"]
+        start["FOURTH AMENDMENT STANDING ANALYSIS"] --> violated["STEP 1: Was defendant's personal Fourth Amendment right violated?<br/>Question: Did government action intrude upon either:<br/>- Defendant's reasonable expectation of privacy OR<br/>- Defendant's property interest protected by the Fourth Amendment?"]
         
-        violated -- "NO: Not defendant's right" --> nostanding["NO STANDING:
-        Defendant cannot challenge search/seizure
-        even if it was clearly unconstitutional"]
+        violated -- "NO: Not defendant's right" --> nostanding["NO STANDING:<br/>Defendant cannot challenge search/seizure<br/>even if it was clearly unconstitutional"]
         
-        violated -- "YES: Defendant's right affected" --> interest_type["STEP 2: Nature of protected interest
-        What is the basis for standing?"]
+        violated -- "YES: Defendant's right affected" --> interest_type["STEP 2: Nature of protected interest<br/>What is the basis for standing?"]
         
-        interest_type --> privacy["PRIVACY BASIS:
-        Did defendant have reasonable
-        expectation of privacy in
-        area searched?"]
+        interest_type --> privacy["PRIVACY BASIS:<br/>Did defendant have reasonable<br/>expectation of privacy in<br/>area searched?"]
         
-        interest_type --> property["PROPERTY BASIS:
-        Did government physically intrude
-        on defendant's property for
-        purpose of gathering information?"]
+        interest_type --> property["PROPERTY BASIS:<br/>Did government physically intrude<br/>on defendant's property for<br/>purpose of gathering information?"]
         
-        privacy --> katz["Apply Katz Test:
-        1) Subjective expectation of privacy
-        2) Society recognizes expectation as reasonable"]
+        privacy --> katz["Apply Katz Test:<br/>1) Subjective expectation of privacy<br/>2) Society recognizes expectation as reasonable"]
         
-        property --> jones["Apply Jones/Jardines Analysis:
-        Did government physically intrude on:
-        - Defendant's person, house, papers, effects
-        - Without permission
-        - To gather information?"]
+        property --> jones["Apply Jones/Jardines Analysis:<br/>Did government physically intrude on:<br/>- Defendant's person, house, papers, effects<br/>- Without permission<br/>- To gather information?"]
         
-        katz -- "YES: Reasonable expectation" --> standing["STANDING ESTABLISHED:
-        Defendant may challenge
-        constitutionality of search/seizure"]
+        katz -- "YES: Reasonable expectation" --> standing["STANDING ESTABLISHED:<br/>Defendant may challenge<br/>constitutionality of search/seizure"]
         
         katz -- "NO: No reasonable expectation" --> nostanding
         
@@ -111,10 +92,93 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">Rakas v. Illinois</span> <span class="case-citation">439 U.S. 128 (1978)</span></h4>
-    <p class="case-rule">A defendant can claim Fourth Amendment protection only if they demonstrate a legitimate expectation of privacy in the place searched. Passengers in a vehicle generally lack standing to challenge a search of the vehicle unless they have a possessory interest in the vehicle or the items seized.</p>
-    <p class="case-facts">Police stopped a suspected getaway car and searched it, finding a rifle under the front passenger seat and ammunition in the glove compartment. Rakas and other passengers, who did not own the car, sought to suppress this evidence, claiming the search violated their Fourth Amendment rights.</p>
-    <p class="case-reasoning">The Supreme Court rejected the defendants' claim, holding they lacked standing to challenge the search because they had no legitimate expectation of privacy in the areas searched. Justice Rehnquist, writing for the majority, rejected the traditional "legitimately on premises" standard from <em>Jones v. United States</em>, replacing it with the "legitimate expectation of privacy" test. The Court emphasized that Fourth Amendment rights are personal and cannot be vicariously asserted. Mere passengers without ownership or possessory interest in a vehicle or the items seized lack a sufficient expectation of privacy to challenge the search. The Court also effectively merged the standing inquiry with the substantive Fourth Amendment analysis, holding that the question is not whether the defendant has "standing," but whether their own Fourth Amendment rights were violated.</p>
+    <div class="case-header">
+        <div class="case-name">Rakas v. Illinois</div>
+        <div class="case-citation">439 U.S. 128 (1978)</div>
+    </div>
+    <div class="case-rule"><p>A defendant can claim Fourth Amendment protection only if they demonstrate a legitimate expectation of privacy in the place searched. Passengers in a vehicle generally lack standing to challenge a search of the vehicle unless they have a possessory interest in the vehicle or the items seized.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police stopped a suspected getaway car and searched it, finding a rifle under the front passenger seat and ammunition in the glove compartment. Rakas and other passengers, who did not own the car, sought to suppress this evidence, claiming the search violated their Fourth Amendment rights.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court rejected the defendants' claim, holding they lacked standing to challenge the search because they had no legitimate expectation of privacy in the areas searched. Justice Rehnquist, writing for the majority, rejected the traditional "legitimately on premises" standard from <em>Jones v. United States</em>, replacing it with the "legitimate expectation of privacy" test. The Court emphasized that Fourth Amendment rights are personal and cannot be vicariously asserted. Mere passengers without ownership or possessory interest in a vehicle or the items seized lack a sufficient expectation of privacy to challenge the search. The Court also effectively merged the standing inquiry with the substantive Fourth Amendment analysis, holding that the question is not whether the defendant has "standing," but whether their own Fourth Amendment rights were violated.</p></div>
+</div>
+
+<div class="explanation" id="reop-zones">
+    <h3>Where a Reasonable Expectation of Privacy Exists</h3>
+
+    <p>Because standing turns on whether the defendant had his OWN reasonable expectation of privacy (REOP), it is essential to know the recurring places and things in which the Court has found a REOP to exist or not exist. The following reference distills the black-letter results.</p>
+
+    <div class="key-point">
+        <h4>REOP Recognized (Standing Exists)</h4>
+        <ul>
+            <li>A person's own home, and its <strong>curtilage</strong> (the area immediately surrounding and associated with the home)</li>
+            <li>Overnight guest in another's home (<em>Minnesota v. Olson</em>)</li>
+            <li>A hotel/motel room during the rental period</li>
+            <li>A passenger's own belongings carried in a vehicle; a passenger who is the driver's spouse; a rider in a taxi/for-hire vehicle</li>
+            <li>Seven or more days of historical cell-site location information (CSLI) held by the phone company (<em>Carpenter v. United States</em>)</li>
+        </ul>
+    </div>
+
+    <div class="key-point">
+        <h4>No REOP (No Standing)</h4>
+        <ul>
+            <li><strong>Open fields</strong>, even if fenced or posted with "No Trespassing" signs (<em>Oliver v. United States</em>)</li>
+            <li>A passenger in the areas of a car he neither owns nor controls (<em>Rakas v. Illinois</em>)</li>
+            <li>A <strong>prison cell</strong> (<em>Hudson v. Palmer</em>)</li>
+            <li>Abandoned property, including trash left for collection (<em>California v. Greenwood</em>)</li>
+            <li>What is knowingly exposed to the public, including curtilage or open fields viewed by naked-eye <strong>aerial surveillance</strong> from public navigable airspace (<em>California v. Ciraolo</em>; <em>Florida v. Riley</em>)</li>
+        </ul>
+    </div>
+
+    <h4>Curtilage: A Protected REOP Zone</h4>
+    <p>Curtilage is the area immediately surrounding and associated with the home that harbors the intimate activity associated with the sanctity of the home. It receives the same Fourth Amendment protection as the home itself. Whether an area is curtilage is governed by the four-factor test of <em>United States v. Dunn</em>:</p>
+    <ol>
+        <li><strong>Proximity</strong> of the area to the home;</li>
+        <li>Whether the area is within an <strong>enclosure</strong> surrounding the home;</li>
+        <li>The <strong>nature of the use</strong> to which the area is put; and</li>
+        <li>The <strong>steps taken to protect</strong> the area from observation by people passing by.</li>
+    </ol>
+    <p>The factors are not a mechanical checklist; they are analytical tools bearing on whether the area is so intimately tied to the home that it should be placed under the home's umbrella of protection. Areas outside the curtilage are treated as open fields.</p>
+
+    <h4>Open Fields Doctrine</h4>
+    <p>There is no REOP in open fields, even when the owner fences the land or posts "No Trespassing" signs, because such areas do not provide the setting for the intimate activities the Fourth Amendment shields (<em>Oliver v. United States</em>). Government agents may therefore enter and observe open fields without implicating the Fourth Amendment. Aerial observation of even the curtilage, made with the naked eye from public navigable airspace, is likewise not a search (<em>California v. Ciraolo</em>; <em>Florida v. Riley</em>).</p>
+
+    <h4>Prisoners</h4>
+    <p>A prisoner has no reasonable expectation of privacy in his prison cell, so a shakedown search of the cell and seizure of its contents does not violate the Fourth Amendment (<em>Hudson v. Palmer</em>).</p>
+
+    <h4>Digital-Age Limit: Cell-Site Location Information</h4>
+    <p>Modern doctrine recognizes a REOP in the whole of a person's physical movements as captured by historical CSLI. A person has a reasonable expectation of privacy in seven or more days of historical cell-site records held by the wireless carrier, so the government generally must obtain a warrant to compel their production (<em>Carpenter v. United States</em>). Carpenter is an important qualification on the third-party doctrine.</p>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">United States v. Dunn</div>
+        <div class="case-citation">480 U.S. 294 (1987)</div>
+    </div>
+    <div class="case-rule"><p>Whether an area is curtilage, and thus entitled to the home's Fourth Amendment protection, is determined by four factors: proximity to the home, whether the area is within an enclosure surrounding the home, the nature of the use of the area, and the steps taken to protect the area from observation.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Officers, without a warrant, crossed over a perimeter fence and several interior fences on Dunn's ranch and approached a barn located about 60 yards from the house and 50 yards beyond the fence enclosing the house. Standing outside the barn, they shined a flashlight in and observed a drug laboratory, which they later used to obtain a warrant.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held the barn and the area around it lay outside the curtilage and were part of the open fields. Applying its four factors, the Court stressed that the barn stood a substantial distance from the house, sat outside the fence immediately enclosing the home, was not being used for intimate activities of the home, and that Dunn had done little to shield the barn's interior from observation by those standing in the open fields. Because the barn was not within the curtilage, the officers' observation from the open fields did not intrude upon any reasonable expectation of privacy.</p></div>
+    <div class="case-implications"><p>Supplies the controlling four-factor framework for separating protected curtilage from unprotected open fields.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Oliver v. United States</div>
+        <div class="case-citation">466 U.S. 170 (1984)</div>
+    </div>
+    <div class="case-rule"><p>There is no reasonable expectation of privacy in open fields, even if the owner fences the land, locks a gate, and posts "No Trespassing" signs; entry onto and observation of open fields is therefore not a Fourth Amendment search.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Acting on a tip, officers went to Oliver's farm, drove past his house to a locked gate marked with a "No Trespassing" sign, walked around the gate along a footpath, and about a mile from the house found a field of marijuana. Oliver moved to suppress, arguing his fenced and posted land was constitutionally protected.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held that open fields are not among the "persons, houses, papers, and effects" the Fourth Amendment protects, and that society is not prepared to recognize as reasonable an expectation of privacy in such lands. Open fields do not furnish the setting for the intimate activities the Amendment is intended to shelter, and the public and police may lawfully survey them from adjoining land or the air. Steps such as fencing and posting signs do not create a legitimate expectation of privacy, because they do not bar observation from vantage points the law leaves open. The reasonableness of the expectation is measured by these general principles, not by the fact of a common-law trespass.</p></div>
+    <div class="case-implications"><p>Establishes the open-fields doctrine: a defendant has no standing to challenge a search of open fields regardless of fences or "No Trespassing" signs.</p></div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Carpenter v. United States</div>
+        <div class="case-citation">585 U.S. 296 (2018)</div>
+    </div>
+    <div class="case-rule"><p>A person has a reasonable expectation of privacy in the record of his physical movements captured by historical cell-site location information; the government must generally obtain a warrant to access seven or more days of such records held by a wireless carrier.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Investigating a series of robberies, the government obtained, without a warrant, 127 days of Carpenter's historical cell-site records from his wireless carriers, revealing thousands of location points that placed him near the crime scenes.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held that accessing this comprehensive chronicle of a person's movements is a Fourth Amendment search. Although the records were held by a third-party carrier, the Court declined to extend the third-party doctrine to the exhaustive and effortlessly compiled record of a person's whereabouts, given the deeply revealing nature, depth, and retrospective reach of CSLI. Because society recognizes a reasonable expectation of privacy in the whole of one's physical movements, the government generally needs a warrant supported by probable cause to compel these records.</p></div>
+    <div class="case-implications"><p>Recognizes a REOP in long-term historical CSLI and narrows the third-party doctrine in the digital age.</p></div>
 </div>
 
 <div class="explanation" id="property-interest">
@@ -144,10 +208,13 @@
 </div>
 
 <div class="case-box">
-    <h4><span class="case-name">United States v. Jones</span> <span class="case-citation">565 U.S. 400 (2012)</span></h4>
-    <p class="case-rule">The government's installation of a GPS tracking device on a vehicle, and its use of that device to monitor the vehicle's movements, constitutes a search under the Fourth Amendment. A physical intrusion (trespass) into a constitutionally protected area for the purpose of obtaining information qualifies as a "search" independent of the Katz reasonable-expectation-of-privacy test.</p>
-    <p class="case-facts">Police placed a GPS tracking device on Jones's wife's vehicle (which Jones used exclusively) without a valid warrant and tracked its movements for 28 days. Jones was eventually convicted of drug trafficking based in part on evidence obtained through the GPS tracking.</p>
-    <p class="case-reasoning">The Supreme Court held that the government's physical intrusion on Jones's "effect" (the vehicle) for the purpose of obtaining information constituted a Fourth Amendment search. Justice Scalia, writing for the majority, revived the property-based approach to the Fourth Amendment, explaining that the Katz reasonable-expectation-of-privacy test added to, rather than replaced, the common-law trespassory test. The Court emphasized that, at minimum, the Fourth Amendment protects against physical intrusions into constitutionally protected areas (persons, houses, papers, and effects) for the purpose of gathering information. Because the government physically occupied private property (the vehicle) for this purpose, a search occurred regardless of whether Jones had a reasonable expectation of privacy in the vehicle's locations on public roads. The Court noted that Jones had standing because he was the exclusive driver of the vehicle, even though his wife was the registered owner.</p>
+    <div class="case-header">
+        <div class="case-name">United States v. Jones</div>
+        <div class="case-citation">565 U.S. 400 (2012)</div>
+    </div>
+    <div class="case-rule"><p>The government's installation of a GPS tracking device on a vehicle, and its use of that device to monitor the vehicle's movements, constitutes a search under the Fourth Amendment. A physical intrusion (trespass) into a constitutionally protected area for the purpose of obtaining information qualifies as a "search" independent of the Katz reasonable-expectation-of-privacy test.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Police placed a GPS tracking device on Jones's wife's vehicle (which Jones used exclusively) without a valid warrant and tracked its movements for 28 days. Jones was eventually convicted of drug trafficking based in part on evidence obtained through the GPS tracking.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Supreme Court held that the government's physical intrusion on Jones's "effect" (the vehicle) for the purpose of obtaining information constituted a Fourth Amendment search. Justice Scalia, writing for the majority, revived the property-based approach to the Fourth Amendment, explaining that the Katz reasonable-expectation-of-privacy test added to, rather than replaced, the common-law trespassory test. The Court emphasized that, at minimum, the Fourth Amendment protects against physical intrusions into constitutionally protected areas (persons, houses, papers, and effects) for the purpose of gathering information. Because the government physically occupied private property (the vehicle) for this purpose, a search occurred regardless of whether Jones had a reasonable expectation of privacy in the vehicle's locations on public roads. The Court noted that Jones had standing because he was the exclusive driver of the vehicle, even though his wife was the registered owner.</p></div>
 </div>
 
 <div class="explanation" id="target-standing">
@@ -186,8 +253,8 @@
     <h4>Vehicles</h4>
     <ul>
         <li><strong>Owners/drivers</strong>: Generally have standing</li>
-        <li><strong>Passengers</strong>: Generally lack standing to challenge vehicle searches (<em>Rakas</em>)</li>
-        <li><strong>Passengers - personal items</strong>: Have standing to challenge searches of their own belongings in the vehicle</li>
+        <li><strong>Passengers</strong>: Generally have NO REOP in the areas of a car they neither own nor control, and so cannot challenge a search of those areas (<em>Rakas</em>)</li>
+        <li><strong>Passenger exceptions (REOP recognized)</strong>: A passenger may still have a REOP where the passenger is (a) the driver's spouse, (b) a rider using a taxi or other for-hire service, or (c) challenging a search of the passenger's OWN belongings</li>
         <li><strong>Rental cars</strong>: Authorized drivers have standing; unauthorized drivers generally don't (<em>Byrd v. United States</em>, 2018)</li>
         <li><strong>Seized vehicles</strong>: All occupants have standing to challenge the stop/seizure of the vehicle itself (<em>Brendlin v. California</em>, 2007)</li>
     </ul>
@@ -242,6 +309,26 @@
                 <td>Unauthorized driver of rental car</td>
                 <td>Possibly Yes</td>
                 <td><em>Byrd v. United States</em> (2018)</td>
+            </tr>
+            <tr>
+                <td>Curtilage of the home</td>
+                <td>Yes</td>
+                <td><em>United States v. Dunn</em> (1987)</td>
+            </tr>
+            <tr>
+                <td>Open fields (even if fenced/posted)</td>
+                <td>No</td>
+                <td><em>Oliver v. United States</em> (1984)</td>
+            </tr>
+            <tr>
+                <td>Prison cell</td>
+                <td>No</td>
+                <td><em>Hudson v. Palmer</em> (1984)</td>
+            </tr>
+            <tr>
+                <td>7+ days of historical cell-site location info</td>
+                <td>Yes</td>
+                <td><em>Carpenter v. United States</em> (2018)</td>
             </tr>
         </table>
     </div>
