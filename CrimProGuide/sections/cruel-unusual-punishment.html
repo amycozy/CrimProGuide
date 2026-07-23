@@ -1,0 +1,184 @@
+<h2 id="cruel-unusual-punishment-section">Cruel and Unusual Punishment</h2>
+
+<div class="section-navigation">
+    <a href="#punishment-overview">Eighth Amendment Overview</a>
+    <a href="#proportionality">Proportionality and Terms of Imprisonment</a>
+    <a href="#death-penalty">The Death Penalty</a>
+    <a href="#categorical-exemptions">Categorical Exemptions from Execution</a>
+    <a href="#juveniles">Juvenile Offenders</a>
+</div>
+
+<div class="explanation" id="punishment-overview">
+    <h3>Overview of the Eighth Amendment</h3>
+
+    <p>The Eighth Amendment provides that "cruel and unusual punishments" shall not be inflicted. The Cruel and Unusual Punishments Clause bars two distinct categories of penalties: (1) inherently barbaric or torturous punishments, and (2) punishments that are grossly disproportionate to the crime for which they are imposed. The Clause applies to the states through the Due Process Clause of the Fourteenth Amendment.</p>
+
+    <div class="key-point">
+        <h4>The Two Core Prohibitions</h4>
+        <ul>
+            <li><strong>Barbaric Punishments</strong>: Methods of punishment that are inherently cruel, torturous, or degrading are forbidden regardless of the crime</li>
+            <li><strong>Grossly Disproportionate Punishments</strong>: A sentence that is grossly disproportionate to the gravity of the offense violates the Eighth Amendment</li>
+            <li><strong>Evolving Standards of Decency</strong>: The Court measures what is "cruel and unusual" against "the evolving standards of decency that mark the progress of a maturing society," looking to objective indicia such as legislative enactments and jury practice</li>
+        </ul>
+    </div>
+
+    <p>Two analytical tracks flow from the Clause. For terms of imprisonment, the Court applies a narrow, highly deferential proportionality review and rarely strikes down a sentence. For the death penalty, by contrast, the Court applies far more searching scrutiny, imposing procedural requirements and categorical limits on who may be executed and for which crimes.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        start["EIGHTH AMENDMENT ANALYSIS"] --> type["STEP 1: Type of Punishment<br/>Is the challenged punishment a term of<br/>imprisonment or a death sentence?"]
+        type -- "Term of imprisonment" --> gross["STEP 2A: Gross Disproportionality<br/>Threshold: Is the sentence grossly<br/>disproportionate to the gravity of the offense?<br/>(Court is highly deferential)"]
+        gross -- "NO: Not grossly disproportionate" --> valid["PUNISHMENT VALID:<br/>Sentence upheld (Harmelin, Ewing)"]
+        gross -- "YES: Inference of gross disproportionality" --> solem["STEP 3A: Solem Factors<br/>1. Gravity of offense vs. harshness of penalty<br/>2. Sentences for other crimes in same jurisdiction<br/>3. Sentences for same crime in other jurisdictions"]
+        solem -- "Comparison confirms disproportion" --> invalid["PUNISHMENT INVALID:<br/>Violates Eighth Amendment"]
+        solem -- "Comparison does not confirm" --> valid
+        type -- "Death sentence" --> life["STEP 2B: Did the Crime Take a Life?<br/>Death is disproportionate for crimes<br/>against the person that do not take a life"]
+        life -- "NO: Nonhomicide crime" --> invalid2["DEATH PENALTY INVALID:<br/>No death for rape of adult (Coker)<br/>or rape of a child (Kennedy)"]
+        life -- "YES: Homicide" --> offender["STEP 3B: Eligible Offender?<br/>Not intellectually disabled (Atkins)<br/>Not legally insane (Ford)<br/>Not under 18 at time of crime (Roper)"]
+        offender -- "NO: Categorically exempt" --> invalid2
+        offender -- "YES: Eligible" --> procedure["STEP 4B: Guided Discretion<br/>Is death imposed under a guided-discretion<br/>statute, not a mandatory scheme?"]
+        procedure -- "NO: Mandatory death" --> invalid2
+        procedure -- "YES: Guided discretion" --> valid2["DEATH PENALTY PERMISSIBLE:<br/>Consistent with Gregg v. Georgia"]
+        classDef process fill:#D5E8E0,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#FFF8E1,stroke:#FF8F00,stroke-width:1px
+        classDef negative fill:#FFEBEE,stroke:#C62828,stroke-width:2px
+        classDef positive fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+        class start process
+        class type,gross,solem,life,offender,procedure question
+        class invalid,invalid2 negative
+        class valid,valid2 positive
+    </div>
+</div>
+
+<div class="explanation" id="proportionality">
+    <h3>Proportionality and Terms of Imprisonment</h3>
+
+    <p>The Eighth Amendment contains a "narrow proportionality principle" that applies to noncapital sentences. A punishment is unconstitutional only if it is <em>grossly</em> disproportionate to the crime. The leading framework comes from <em>Solem v. Helm</em>, which identifies three factors courts use to assess proportionality.</p>
+
+    <div class="key-point">
+        <h4>The Solem Proportionality Factors</h4>
+        <ol>
+            <li><strong>Gravity of the Offense vs. Harshness of the Penalty</strong>: How serious is the crime compared to the severity of the punishment imposed?</li>
+            <li><strong>Intra-Jurisdiction Comparison</strong>: The sentences imposed on other criminals for other crimes in the same jurisdiction</li>
+            <li><strong>Inter-Jurisdiction Comparison</strong>: The sentences imposed for the same crime in other jurisdictions</li>
+        </ol>
+    </div>
+
+    <p>In practice the Court is <strong>highly deferential</strong> to legislative sentencing judgments for terms of imprisonment. A reviewing court reaches the comparative second and third <em>Solem</em> factors only after a threshold inference of gross disproportionality arises from comparing the crime to the sentence. That threshold is rarely met, and successful challenges to prison terms are exceedingly rare.</p>
+
+    <div class="key-point">
+        <h4>Highly Deferential Review in Practice</h4>
+        <ul>
+            <li><strong><em>Harmelin v. Michigan</em></strong>: Upheld a sentence of life without the possibility of parole for possession of a large quantity of cocaine, even as a first offense</li>
+            <li><strong><em>Ewing v. California</em></strong>: Upheld a sentence of 25 years to life imposed under California's "three-strikes" recidivist law for the theft of golf clubs</li>
+            <li><strong><em>Rummel v. Estelle</em></strong>: Upheld a life sentence under a recidivist statute for a series of minor property/fraud offenses</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <p>A defendant with two prior convictions is sentenced to 25 years to life under a three-strikes law after shoplifting merchandise worth several hundred dollars. Although the triggering offense is minor, the sentence reflects the state's legitimate interest in incapacitating and deterring repeat offenders. Under <em>Ewing</em>, the sentence is not grossly disproportionate and does not violate the Eighth Amendment.</p>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Solem v. Helm</div>
+        <div class="case-citation">463 U.S. 277 (1983)</div>
+    </div>
+    <div class="case-rule"><p>The Eighth Amendment prohibits sentences that are grossly disproportionate to the crime, and courts assess proportionality using three objective factors.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Helm was convicted of uttering a "no account" check for $100, ordinarily punishable by a maximum of five years. Because he had six prior nonviolent felony convictions, he was sentenced under South Dakota's recidivist statute to life imprisonment without the possibility of parole.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>The Court held that the Eighth Amendment's proportionality principle applies to prison sentences, not just the death penalty. It articulated three guiding factors: (1) the gravity of the offense compared with the harshness of the penalty; (2) the sentences imposed on other criminals in the same jurisdiction; and (3) the sentences imposed for commission of the same crime in other jurisdictions. Applying these factors, the Court found the life-without-parole sentence grossly disproportionate to a series of minor nonviolent offenses, particularly because it was the harshest available and exceeded what other jurisdictions would impose.</p></div>
+    <div class="case-implications"><p>Provides the analytical framework for noncapital proportionality challenges, though later decisions such as <em>Harmelin</em> and <em>Ewing</em> confined it to a threshold, highly deferential inquiry rarely resolved in the defendant's favor.</p></div>
+</div>
+
+<div class="explanation" id="death-penalty">
+    <h3>The Death Penalty</h3>
+
+    <p>Capital punishment is not per se unconstitutional. In <em>Gregg v. Georgia</em>, the Court held that the death penalty may be imposed consistent with the Eighth Amendment when it is administered under a <strong>guided-discretion</strong> statute that channels and limits the sentencer's discretion, typically through bifurcated proceedings and consideration of aggravating and mitigating factors. This holding followed <em>Furman v. Georgia</em>, which had invalidated then-existing capital schemes for being applied in an arbitrary and capricious manner.</p>
+
+    <div class="key-point">
+        <h4>Procedural Requirements for Capital Sentencing</h4>
+        <ul>
+            <li><strong>Guided Discretion Required</strong>: The sentencer's discretion must be guided by clear and objective standards to prevent arbitrary imposition (<em>Gregg v. Georgia</em>)</li>
+            <li><strong>No Mandatory Death Sentences</strong>: A statute that automatically imposes death for a given crime, without individualized consideration of the offender and the offense, is unconstitutional (<em>Woodson v. North Carolina</em>)</li>
+            <li><strong>Individualized Consideration of Mitigation</strong>: The sentencer must be permitted to consider all relevant mitigating evidence about the defendant's character and record</li>
+        </ul>
+    </div>
+
+    <div class="key-point">
+        <h4>Death Is Disproportionate for Crimes That Do Not Take a Life</h4>
+        <ul>
+            <li><strong>Rape of an Adult Woman</strong>: The death penalty is grossly disproportionate and unconstitutional as punishment for the rape of an adult woman (<em>Coker v. Georgia</em>)</li>
+            <li><strong>Rape of a Child</strong>: The death penalty may not be imposed for the rape of a child where the crime did not result, and was not intended to result, in the victim's death (<em>Kennedy v. Louisiana</em>)</li>
+            <li><strong>General Principle</strong>: Absent a death, the death penalty is a disproportionate penalty for crimes against individuals; the Court reserves capital punishment for the most serious homicides</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <p>A state enacts a statute making death the automatic penalty for the murder of a police officer, with no separate sentencing phase and no opportunity to present mitigating evidence. Even though the underlying crime is a homicide for which death may be constitutional, the mandatory nature of the scheme violates the Eighth Amendment under <em>Woodson</em> because it denies individualized consideration of the offender and offense.</p>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Kennedy v. Louisiana</div>
+        <div class="case-citation">554 U.S. 407 (2008)</div>
+    </div>
+    <div class="case-rule"><p>The Eighth Amendment bars imposition of the death penalty for the rape of a child where the crime did not result in, and was not intended to result in, the victim's death.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Kennedy was convicted under a Louisiana statute that authorized capital punishment for the rape of a child under twelve. The victim, his stepdaughter, survived the assault. Kennedy was sentenced to death, and the Louisiana Supreme Court affirmed.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Applying the evolving standards of decency, the Court surveyed objective indicia of a national consensus and found that a large majority of jurisdictions did not authorize death for child rape. Exercising its own independent judgment, the Court reasoned that the death penalty must be reserved for the most serious crimes and, in crimes against individuals, for those that take the life of the victim. Because the crime, however grievous, did not result in death, capital punishment was a grossly disproportionate penalty. The Court also expressed concern about the reliability and consistency of applying death for nonhomicide crimes.</p></div>
+    <div class="case-implications"><p>Extends <em>Coker v. Georgia</em> beyond adult rape and establishes a categorical rule that, for crimes against individuals, the death penalty is limited to offenses that result in the victim's death.</p></div>
+</div>
+
+<div class="explanation" id="categorical-exemptions">
+    <h3>Categorical Exemptions from Execution</h3>
+
+    <p>Even where the crime is a death-eligible homicide, certain categories of offenders may not be executed at all because doing so would be cruel and unusual. These are status-based, categorical bars keyed to the characteristics of the defendant.</p>
+
+    <div class="key-point">
+        <h4>Offenders Who May Not Be Executed</h4>
+        <ul>
+            <li><strong>The Intellectually Disabled</strong>: Execution of an intellectually disabled offender violates the Eighth Amendment because such offenders have diminished culpability and the penological purposes of retribution and deterrence are not adequately served (<em>Atkins v. Virginia</em>)</li>
+            <li><strong>The Legally Insane</strong>: A prisoner who is insane at the time of the scheduled execution—who lacks a rational understanding of the reason for and reality of the punishment—may not be executed (<em>Ford v. Wainwright</em>)</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <p>A defendant convicted of capital murder presents clinical evidence establishing significant intellectual disability that manifested before adulthood. Regardless of the aggravating circumstances of the crime, the Eighth Amendment categorically bars his execution under <em>Atkins v. Virginia</em>; the appropriate sentence is a term of imprisonment rather than death.</p>
+    </div>
+</div>
+
+<div class="explanation" id="juveniles">
+    <h3>Juvenile Offenders</h3>
+
+    <p>The Eighth Amendment imposes special limits on punishing offenders who were juveniles—under 18—at the time they committed their crimes. These limits rest on the recognition that juveniles have diminished culpability and greater capacity for change: they are less mature, more susceptible to negative influences, and their characters are not yet fully formed. The relevant age is the offender's age <strong>at the time of the crime</strong>, not at trial or sentencing.</p>
+
+    <div class="key-point">
+        <h4>Progression of Juvenile Sentencing Limits</h4>
+        <ul>
+            <li><strong>No Execution of Juveniles</strong>: The death penalty may not be imposed on an offender who was under 18 at the time of the crime (<em>Roper v. Simmons</em>)</li>
+            <li><strong>No LWOP for Juvenile Nonhomicide Crimes</strong>: A juvenile who did not commit homicide may not be sentenced to life without the possibility of parole; the state must give some meaningful opportunity for release based on demonstrated maturity and rehabilitation (<em>Graham v. Florida</em>)</li>
+            <li><strong>No Mandatory LWOP for Juveniles</strong>: Even for homicide, a sentencing scheme that <em>mandates</em> life without parole for a juvenile is unconstitutional; the sentencer must be able to consider the offender's youth and its attendant characteristics before imposing that penalty (<em>Miller v. Alabama</em>)</li>
+            <li><strong>Retroactivity</strong>: The rule of <em>Miller</em> applies retroactively to cases on collateral review (<em>Montgomery v. Louisiana</em>)</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <p>A 17-year-old is convicted of felony murder under a statute that requires an automatic sentence of life without parole for all murder convictions. Because the scheme forecloses any consideration of the defendant's youth, immaturity, and capacity for rehabilitation, it violates the Eighth Amendment under <em>Miller v. Alabama</em>. Under <em>Montgomery</em>, a defendant already serving such a mandatory sentence may seek relief even after his conviction became final.</p>
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Roper v. Simmons</div>
+        <div class="case-citation">543 U.S. 551 (2005)</div>
+    </div>
+    <div class="case-rule"><p>The Eighth and Fourteenth Amendments forbid imposition of the death penalty on offenders who were under 18 years of age at the time of their crimes.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Simmons, at age 17, planned and committed a brutal murder, later confessing and reenacting the crime. He was tried as an adult, convicted, and sentenced to death. After the Court held in <em>Atkins</em> that the intellectually disabled could not be executed, Simmons challenged his death sentence on the ground that executing juvenile offenders was likewise unconstitutional.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Consulting the evolving standards of decency, the Court found objective evidence of a national consensus against executing juveniles in the number of states rejecting the practice and the infrequency of its use where permitted. Exercising independent judgment, the Court reasoned that juveniles categorically have diminished culpability: they lack maturity and have an underdeveloped sense of responsibility, they are more vulnerable to negative influences and peer pressure, and their characters are more transitory and less fixed than an adult's. These differences mean the penological justifications of retribution and deterrence apply with lesser force, so death is a disproportionate punishment for juveniles. The Court drew a categorical line at 18, the age society otherwise draws between childhood and adulthood.</p></div>
+    <div class="case-implications"><p>Establishes a bright-line categorical bar on the juvenile death penalty and supplies the diminished-culpability rationale later extended to juvenile life-without-parole sentences in <em>Graham</em> and <em>Miller</em>.</p></div>
+</div>
+
+<div class="back-to-top">
+    <a href="#cruel-unusual-punishment-section">Back to Top</a>
+</div>

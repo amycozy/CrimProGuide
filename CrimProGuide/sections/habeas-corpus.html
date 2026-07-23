@@ -1,0 +1,165 @@
+<h2 id="habeas-corpus-section">Post-Conviction Remedies and Habeas Corpus</h2>
+
+<div class="section-navigation">
+    <a href="#habeas-overview">Nature of the Writ and Custody</a>
+    <a href="#aedpa-framework">AEDPA and Federal Habeas</a>
+    <a href="#aedpa-deference">The Deferential Standard of Review</a>
+    <a href="#fourth-amendment-habeas">Fourth Amendment Claims</a>
+    <a href="#procedural-default">Procedural Default</a>
+</div>
+
+<div class="explanation" id="habeas-overview">
+    <h3>Nature of the Writ and the Custody Requirement</h3>
+
+    <p>The writ of habeas corpus is a post-conviction, <strong>collateral</strong> civil remedy by which a prisoner challenges the lawfulness of his detention on constitutional or jurisdictional grounds. It is not an appeal and does not relitigate the question of guilt or innocence. Because habeas is a civil action attacking the legality of custody rather than a continuation of the criminal prosecution, a successful petitioner does not obtain an acquittal; he obtains <strong>release from unlawful custody</strong>, or more commonly an order directing the State either to release him or to grant a new trial within a fixed period.</p>
+
+    <div class="key-point">
+        <h4>Defining Features of Habeas Corpus</h4>
+        <ul>
+            <li><strong>Collateral, not direct</strong>: Habeas is a separate civil proceeding that runs alongside or after the ordinary appellate process; it is not part of the direct appeal from the conviction.</li>
+            <li><strong>Constitutional or jurisdictional grounds only</strong>: The petitioner must identify a violation of the Constitution, laws, or treaties of the United States, not mere errors of state law.</li>
+            <li><strong>Remedy is release, not acquittal</strong>: Relief vacates the unlawful detention; the State generally remains free to retry the petitioner.</li>
+            <li><strong>Burden of proof</strong>: The petitioner bears the burden of proving a constitutional violation by a <strong>preponderance of the evidence</strong>.</li>
+        </ul>
+    </div>
+
+    <h4>The "In Custody" Requirement</h4>
+    <p>A federal court has jurisdiction to entertain a habeas petition only if the petitioner is "in custody" pursuant to the judgment he attacks, and he must challenge the <strong>fact or duration</strong> of that custody. "Custody" is construed broadly and is not limited to physical incarceration; it reaches parole, probation, release on one's own recognizance, and other significant restraints on liberty. A petitioner who has fully served his sentence and is no longer subject to any restraint is generally not "in custody" and cannot invoke the writ. A challenge that would not affect the fact or length of confinement, such as a claim about conditions of confinement, is ordinarily pursued through a civil rights action rather than habeas.</p>
+
+    <div class="example">
+        A prisoner serving a 20-year sentence files a federal habeas petition arguing that his confession was coerced in violation of the Fifth Amendment. He is plainly "in custody," he challenges the fact of his detention, and he raises a constitutional ground. If he prevails, the court orders the State to release him or retry him without the tainted confession, not to declare him innocent.
+    </div>
+</div>
+
+<div class="explanation" id="aedpa-framework">
+    <h3>AEDPA and Federal Habeas for State Prisoners</h3>
+
+    <p>Federal habeas review of state convictions is governed by the Antiterrorism and Effective Death Penalty Act of 1996 (AEDPA), codified for state prisoners at <strong>28 U.S.C. § 2254</strong>. AEDPA was enacted to reduce delay, promote finality, and respect the independence of state courts. It imposes a series of stringent gatekeeping requirements that a petition must clear before a federal court may reach the merits, and it sharply limits the relief available even when the merits are reached.</p>
+
+    <div class="key-point">
+        <h4>AEDPA's Four Principal Restrictions</h4>
+        <ul>
+            <li><strong>One-year statute of limitations</strong>: A state prisoner generally must file within one year, ordinarily running from the date the conviction becomes final on direct review. The limitations period is tolled while a properly filed application for state post-conviction relief is pending.</li>
+            <li><strong>Bar on second or successive petitions</strong>: A prisoner may not file a second or successive habeas petition without first obtaining <strong>authorization from the court of appeals</strong>, which is granted only in narrow circumstances (such as a new, previously unavailable rule of constitutional law made retroactive, or newly discovered facts establishing innocence).</li>
+            <li><strong>Exhaustion of state remedies</strong>: The petitioner must first <strong>exhaust</strong> the remedies available in state court, fairly presenting each federal claim to the state's highest court, before seeking federal relief. This gives the state courts the first opportunity to correct their own alleged constitutional errors.</li>
+            <li><strong>Deferential standard of review</strong>: For claims adjudicated on the merits in state court, a federal court may not grant relief unless the state decision was "contrary to, or involved an unreasonable application of, clearly established Federal law," or rested on an unreasonable determination of the facts.</li>
+        </ul>
+    </div>
+
+    <p>These requirements operate as sequential gates. A petition that fails at any stage, by being untimely, unexhausted, successive, or barred by procedural default, will be dismissed without the federal court ever reaching the constitutional merits. Even a petition that clears every gate faces the deferential standard of review that makes relief the exception rather than the rule.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        start["FEDERAL HABEAS GATEKEEPING<br/>28 U.S.C. &sect; 2254"] --> custody["GATE 1: IN CUSTODY?<br/>Is the petitioner in custody and<br/>challenging the fact or duration<br/>of that custody?"]
+
+        custody -- "NO: Not in custody / conditions claim" --> dismiss["PETITION DISMISSED:<br/>No habeas jurisdiction"]
+
+        custody -- "YES: In custody" --> exhaust["GATE 2: EXHAUSTION<br/>Were all federal claims fairly<br/>presented to the state's<br/>highest court?"]
+
+        exhaust -- "NO: State remedies not exhausted" --> dismiss
+
+        exhaust -- "YES: Exhausted" --> timely["GATE 3: TIMELINESS<br/>Filed within the one-year<br/>AEDPA limitations period<br/>(subject to tolling)?"]
+
+        timely -- "NO: Time-barred" --> dismiss
+
+        timely -- "YES: Timely" --> successive["GATE 4: NOT SUCCESSIVE<br/>Is this a first petition, or has the<br/>court of appeals authorized a<br/>second or successive petition?"]
+
+        successive -- "NO: Unauthorized successive petition" --> dismiss
+
+        successive -- "YES: Permitted" --> deference["GATE 5: AEDPA DEFERENCE<br/>Was the state merits decision contrary to,<br/>or an unreasonable application of, clearly<br/>established federal law, or based on an<br/>unreasonable determination of the facts?"]
+
+        deference -- "NO: State decision reasonable" --> denyRelief["RELIEF DENIED:<br/>State judgment stands"]
+
+        deference -- "YES: Unreasonable" --> grant["RELIEF GRANTED:<br/>Release or new trial ordered"]
+
+        classDef process fill:#D5E8E0,stroke:#83BCA9,stroke-width:2px
+        classDef question fill:#FFF8E1,stroke:#FF8F00,stroke-width:1px
+        classDef negative fill:#FFEBEE,stroke:#C62828,stroke-width:2px
+        classDef positive fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+
+        class start process
+        class custody,exhaust,timely,successive,deference question
+        class dismiss,denyRelief negative
+        class grant positive
+    </div>
+</div>
+
+<div class="explanation" id="aedpa-deference">
+    <h3>The Deferential Standard of Review</h3>
+
+    <p>The most consequential of AEDPA's restrictions is the deferential standard governing claims that were "adjudicated on the merits" in state court. Under § 2254(d), a federal court may not grant relief on such a claim unless the state adjudication (1) "was contrary to, or involved an unreasonable application of, clearly established Federal law, as determined by the Supreme Court of the United States," or (2) "was based on an unreasonable determination of the facts in light of the evidence presented" in the state proceeding.</p>
+
+    <div class="key-point">
+        <h4>Unpacking the Standard</h4>
+        <ul>
+            <li><strong>"Contrary to" clause</strong>: The state court applied a rule that contradicts governing Supreme Court precedent, or reached a different result than the Supreme Court did on materially indistinguishable facts.</li>
+            <li><strong>"Unreasonable application" clause</strong>: The state court identified the correct legal principle but applied it to the facts in an <strong>objectively unreasonable</strong> manner. An incorrect application is not enough; it must be unreasonable, so that fairminded jurists could not disagree that it conflicts with Supreme Court precedent.</li>
+            <li><strong>"Clearly established Federal law"</strong>: Limited to the holdings, not the dicta, of the United States Supreme Court in existence at the time of the state-court decision. Circuit precedent does not qualify.</li>
+            <li><strong>Unreasonable factual determination</strong>: State-court factual findings are presumed correct, and the petitioner must rebut that presumption by clear and convincing evidence.</li>
+        </ul>
+    </div>
+
+    <p>The Supreme Court has repeatedly stressed that § 2254(d) reflects a "highly deferential standard" that "demands that state-court decisions be given the benefit of the doubt." A federal habeas court does not sit to correct ordinary error; it asks only whether the state decision was so wrong that no reasonable jurist could agree with it. The distinction between an <em>incorrect</em> application of law, which does not warrant relief, and an <em>unreasonable</em> one, which does, is the heart of AEDPA deference.</p>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Williams v. Taylor</div>
+        <div class="case-citation">529 U.S. 362 (2000)</div>
+    </div>
+    <div class="case-rule"><p>Under 28 U.S.C. &sect; 2254(d)(1), the "contrary to" and "unreasonable application" clauses have independent meanings; a federal court may grant relief only where the state decision is objectively unreasonable, not merely incorrect.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Terry Williams was convicted of capital murder and sentenced to death in Virginia. On state collateral review he argued that his trial counsel had been constitutionally ineffective for failing to investigate and present substantial mitigating evidence at sentencing, including evidence of his abusive childhood and impaired mental capacity. The Virginia Supreme Court rejected the claim, and Williams sought federal habeas relief under the newly enacted AEDPA.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice O'Connor, writing for the Court on the interpretation of the statute, held that a state-court decision is "contrary to" clearly established federal law if it applies a rule contradicting governing Supreme Court precedent or reaches an opposite result on materially indistinguishable facts. A decision involves an "unreasonable application" of that law when it correctly identifies the governing principle but applies it to the facts in an objectively unreasonable way. Crucially, the Court held that "unreasonable" is not the same as "incorrect": a federal court may not issue the writ simply because it concludes, in its independent judgment, that the state court applied the law erroneously. Applying that standard, the Court agreed that the Virginia Supreme Court had unreasonably applied the ineffective-assistance framework of <em>Strickland v. Washington</em> by failing to evaluate the totality of the omitted mitigating evidence, and Williams was entitled to relief on that claim.</p></div>
+    <div class="case-implications"><p>Williams supplied the foundational interpretation of AEDPA's deference standard, establishing the now-central line between an incorrect and an objectively unreasonable application of Supreme Court precedent and defining the demanding threshold a state prisoner must meet to obtain federal habeas relief.</p></div>
+</div>
+
+<div class="explanation" id="fourth-amendment-habeas">
+    <h3>Fourth Amendment Claims Are Generally Not Cognizable</h3>
+
+    <p>Even where a petitioner satisfies AEDPA's gatekeeping requirements, certain categories of claims are simply not available on federal habeas. The most important is the Fourth Amendment exclusionary-rule claim. Under <em>Stone v. Powell</em>, where the State has provided a <strong>full and fair opportunity</strong> to litigate a Fourth Amendment claim, a state prisoner may not obtain federal habeas relief on the ground that evidence obtained in an unconstitutional search or seizure was introduced at trial.</p>
+
+    <div class="key-point">
+        <h4>Rationale and Scope</h4>
+        <ul>
+            <li><strong>Deterrence, not innocence</strong>: The exclusionary rule is a deterrent remedy, not a personal constitutional right. Because the additional deterrent effect of allowing federal habeas relitigation is minimal, and because excluding reliable evidence does nothing to establish that the petitioner is innocent, the social costs outweigh the benefits.</li>
+            <li><strong>"Full and fair opportunity" is the trigger</strong>: The bar applies so long as the state courts afforded a genuine opportunity to raise and litigate the Fourth Amendment claim; the petitioner need not have actually prevailed, or even raised it well.</li>
+            <li><strong>Limited to Fourth Amendment</strong>: The <em>Stone</em> bar does not extend to most other constitutional claims. Fifth Amendment (self-incrimination) and Sixth Amendment (ineffective assistance, including counsel's failure to litigate a Fourth Amendment issue) claims remain fully cognizable on habeas.</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        A state prisoner litigated a motion to suppress at trial, lost, and raised the same search-and-seizure argument on direct appeal, again losing. He may not relitigate that Fourth Amendment claim on federal habeas, because the State gave him a full and fair opportunity to be heard. He could, however, argue that his trial counsel was constitutionally ineffective in the way he handled the suppression motion, because that is a Sixth Amendment claim outside the <em>Stone</em> bar.
+    </div>
+</div>
+
+<div class="case-box">
+    <div class="case-header">
+        <div class="case-name">Stone v. Powell</div>
+        <div class="case-citation">428 U.S. 465 (1976)</div>
+    </div>
+    <div class="case-rule"><p>Where a State has provided an opportunity for full and fair litigation of a Fourth Amendment claim, a state prisoner may not be granted federal habeas corpus relief on the ground that evidence obtained in an unconstitutional search or seizure was introduced at his trial.</p></div>
+    <div class="case-facts"><h4>Facts</h4><p>Two state prisoners, Powell and Rice, had each unsuccessfully sought to suppress evidence they claimed was the product of unlawful searches, litigating the Fourth Amendment issues at trial and on direct appeal in the state courts. Having lost there, each sought federal habeas relief, again arguing that the challenged evidence should have been excluded.</p></div>
+    <div class="case-reasoning"><h4>Reasoning</h4><p>Justice Powell, writing for the Court, emphasized that the exclusionary rule is not a personal constitutional right of the aggrieved party but a judicially created remedy designed to deter police misconduct. The Court weighed the costs and benefits of extending that remedy to federal habeas. On the benefit side, the incremental deterrent effect of permitting a second and third round of litigation in federal collateral proceedings, long after the police conduct at issue, was thought to be minimal, since the officer's incentive is shaped principally by the prospect of exclusion at trial and on direct review. On the cost side, applying the rule on habeas diverts attention from the central question of guilt or innocence, excludes reliable and probative evidence, and undermines finality and respect for state judgments. Because the deterrent purpose was already substantially served by the opportunity to litigate at trial and on appeal, the Court held that federal habeas relief is unavailable for Fourth Amendment claims that the State gave the petitioner a full and fair opportunity to raise.</p></div>
+    <div class="case-implications"><p>Stone carved Fourth Amendment exclusionary-rule claims out of federal habeas review, reflecting the Court's finality-based, cost-benefit approach to collateral review and confining habeas largely to claims that bear on the accuracy of the guilt determination.</p></div>
+</div>
+
+<div class="explanation" id="procedural-default">
+    <h3>Procedural Default</h3>
+
+    <p>Beyond exhaustion, the doctrine of <strong>procedural default</strong> bars federal habeas review of a claim that the petitioner failed to raise properly in state court under an adequate and independent state procedural rule. If the last state court to consider the claim rejected it on a state procedural ground, such as a failure to make a contemporaneous objection or to raise the claim on direct appeal, the federal court is generally barred from reviewing the merits.</p>
+
+    <div class="key-point">
+        <h4>Escaping a Procedural Default</h4>
+        <p>A procedurally defaulted claim may be reviewed on federal habeas only if the petitioner can satisfy one of two exceptions:</p>
+        <ul>
+            <li><strong>Cause and prejudice</strong>: The petitioner must show (1) <strong>cause</strong> for the default, meaning some objective external factor that impeded compliance with the state rule (such as interference by officials, a factual or legal basis not reasonably available at the time, or constitutionally ineffective assistance of counsel), and (2) actual <strong>prejudice</strong> resulting from the alleged constitutional violation.</li>
+            <li><strong>Fundamental miscarriage of justice</strong>: Even absent cause and prejudice, review is available where failure to consider the claim would result in a fundamental miscarriage of justice. This narrow exception is reserved for cases of <strong>actual innocence</strong>, requiring the petitioner to show that, in light of new reliable evidence, it is more likely than not that no reasonable juror would have convicted him.</li>
+        </ul>
+    </div>
+
+    <p>Procedural default rests on the same values that animate the exhaustion requirement and AEDPA generally: comity toward state courts, respect for state procedural rules, and the interest in finality. Together with the custody requirement, exhaustion, timeliness, the bar on successive petitions, the deferential standard of review, and the <em>Stone</em> limitation on Fourth Amendment claims, procedural default forms part of the dense web of restrictions that make federal habeas a genuinely extraordinary remedy rather than an ordinary avenue of further appeal.</p>
+</div>
+
+<div class="back-to-top">
+    <a href="#habeas-corpus-section">Back to Top</a>
+</div>
