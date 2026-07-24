@@ -415,8 +415,14 @@ em { font-style: italic; }
 
 /* ---- Flowcharts ---------------------------------------------------------- */
 .bs-main .mermaid {
-  text-align: center; margin: 28px 0; overflow-x: auto; padding: 8px 0;
+  margin: 28px 0; overflow-x: auto; overflow-y: hidden; padding: 8px 0;
   background: transparent; border-radius: 0; box-shadow: none;
+  text-align: center;
+}
+/* Natural-size diagrams: never let mermaid clamp the SVG smaller than drawn;
+   center when it fits, scroll (via the container) when it doesn't. */
+.bs-main .mermaid > svg {
+  max-width: none !important; height: auto; margin: 0 auto; display: inline-block;
 }
 
 /* ---- Guides gallery (overview) ------------------------------------------- */

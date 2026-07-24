@@ -106,8 +106,11 @@ function initMermaid() {
     startOnLoad: false,
     theme: 'base',
     fontFamily: '"Source Serif 4", Georgia, serif',
-    fontSize: 14,
-    flowchart: { htmlLabels: true, useMaxWidth: true, curve: 'basis', nodeSpacing: 55, rankSpacing: 70 },
+    fontSize: 15,
+    // useMaxWidth:false renders each diagram at its natural size (legible text)
+    // rather than shrinking a large decision tree to fit the narrow prose
+    // column; .bs-main .mermaid scrolls horizontally when a diagram is wider.
+    flowchart: { htmlLabels: true, useMaxWidth: false, curve: 'basis', nodeSpacing: 45, rankSpacing: 55 },
     themeVariables: {
       primaryColor: '#e9f8ff', primaryTextColor: '#201e1d', primaryBorderColor: '#0088b0',
       lineColor: '#605d5d', secondaryColor: '#fff1f4', tertiaryColor: '#f8f4f4',
