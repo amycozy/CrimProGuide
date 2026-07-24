@@ -419,23 +419,8 @@ em { font-style: italic; }
   background: transparent; border-radius: 0; box-shadow: none;
   text-align: center;
 }
+/* useMaxWidth scales each diagram to fit the column; keep it centered. */
 .bs-main .mermaid > svg { height: auto; margin: 0 auto; display: block; }
-/* Bias flowcharts toward portrait: cap each node label's width so long lines
-   wrap into narrow, taller boxes instead of stretching the tree sideways.
-   This CSS is present before mermaid measures, so the layout respects it. */
-.bs-main .mermaid .nodeLabel,
-.bs-main .mermaid foreignObject > div,
-.bs-main .mermaid .label foreignObject > div {
-  white-space: normal !important;
-  overflow-wrap: anywhere;
-  max-width: 168px;
-  line-height: 1.25;
-}
-/* Edge labels ("YES / NO") stay on one line — don't wrap those. */
-.bs-main .mermaid .edgeLabel .nodeLabel,
-.bs-main .mermaid .edgeLabel foreignObject > div {
-  max-width: none; white-space: nowrap !important;
-}
 
 /* ---- Guides gallery (overview) ------------------------------------------- */
 .bs-main .guides-section {
