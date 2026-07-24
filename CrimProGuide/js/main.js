@@ -16,6 +16,14 @@ const MASCOTS = {
     desc: 'Gatekeeper who blocks improperly obtained evidence.' },
   miguel: { img: 'assets/miguel.png', name: 'Miguel the Miranda Macaw',
     desc: 'Communicator of rights and protector against self-incrimination.' },
+  // Proposed guides — art pending; the guide block hides itself until the
+  // portrait file exists (see buildGuide).
+  jada:   { img: 'assets/jada.png', name: 'Jada the Jury-Trial Jaguar',
+    desc: 'Steward of guilty pleas and the right to a fair trial by an impartial jury.' },
+  deja:   { img: 'assets/deja.png', name: 'Deja the Double-Jeopardy Deer',
+    desc: 'Keeper of the bar against a second prosecution and of proportional punishment.' },
+  harlan: { img: 'assets/harlan.png', name: 'Harlan the Habeas Owl',
+    desc: 'Reviewer of error on appeal and of the habeas corpus writ.' },
 };
 
 /* ---- Taxonomy: 7 groups / 19 topics ------------------------------------- */
@@ -49,18 +57,18 @@ const GROUPS = [
   ]},
   { num: '05', phase: 'Pleas, Trial & Jury', track: 'accent-2',
     kickerTop: 'Sixth Amendment', kickerBottom: 'Pleas, Trial & Jury', items: [
-      { id: 'guilty-pleas', label: 'Guilty Pleas', title: 'Guilty Pleas', mascot: null },
-      { id: 'fair-trial', label: 'Fair Trial & Jury', title: 'Fair Trial & Jury', mascot: null },
+      { id: 'guilty-pleas', label: 'Guilty Pleas', title: 'Guilty Pleas', mascot: 'jada' },
+      { id: 'fair-trial', label: 'Fair Trial & Jury', title: 'Fair Trial & Jury', mascot: 'jada' },
   ]},
   { num: '06', phase: 'Double Jeopardy & Punishment', track: 'accent-2',
     kickerTop: 'Fifth & Eighth Amendments', kickerBottom: 'Double Jeopardy & Punishment', items: [
-      { id: 'double-jeopardy', label: 'Double Jeopardy', title: 'Double Jeopardy', mascot: null },
-      { id: 'cruel-unusual-punishment', label: 'Cruel & Unusual Punishment', title: 'Cruel & Unusual Punishment', mascot: null },
+      { id: 'double-jeopardy', label: 'Double Jeopardy', title: 'Double Jeopardy', mascot: 'deja' },
+      { id: 'cruel-unusual-punishment', label: 'Cruel & Unusual Punishment', title: 'Cruel & Unusual Punishment', mascot: 'deja' },
   ]},
   { num: '07', phase: 'Post-Conviction Review', track: 'accent-2',
     kickerTop: 'Post-Conviction', kickerBottom: 'Review', items: [
-      { id: 'appeals-and-error', label: 'Appeal & Error', title: 'Appeal & Error', mascot: null },
-      { id: 'habeas-corpus', label: 'Habeas Corpus', title: 'Habeas Corpus', mascot: null },
+      { id: 'appeals-and-error', label: 'Appeal & Error', title: 'Appeal & Error', mascot: 'harlan' },
+      { id: 'habeas-corpus', label: 'Habeas Corpus', title: 'Habeas Corpus', mascot: 'harlan' },
   ]},
 ];
 
@@ -261,6 +269,14 @@ function buildGuide(id) {
       '<p class="bs-guide-desc">' + esc(m.desc) + '</p>' +
       '<a class="btn btn-primary btn-block" href="#" id="bs-test-yourself">Test yourself</a>' +
     '</div>';
+  // If the portrait art doesn't exist yet, hide the whole guide block rather
+  // than show a broken image (lets proposed mascots be wired up before art).
+  const portrait = wrap.querySelector('.bs-guide-portrait img');
+  if (portrait) portrait.addEventListener('error', function () {
+    const block = wrap.querySelector('.bs-guide');
+    if (block) block.style.display = 'none';
+  });
+
   const btn = document.getElementById('bs-test-yourself');
   if (btn) btn.addEventListener('click', function (e) {
     e.preventDefault();
