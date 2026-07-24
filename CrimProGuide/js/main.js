@@ -107,11 +107,10 @@ function initMermaid() {
     theme: 'base',
     fontFamily: '"Source Serif 4", Georgia, serif',
     fontSize: 15,
-    // Keep diagrams within the column (useMaxWidth) but bias the layout toward
-    // portrait: narrow node boxes (labels wrap — see .nodeLabel max-width in
-    // broadsheet.css) and tight sibling spacing so the tree grows DOWN, not
-    // across. rankSpacing > nodeSpacing reinforces the vertical flow.
-    flowchart: { htmlLabels: true, useMaxWidth: true, curve: 'basis', nodeSpacing: 26, rankSpacing: 60 },
+    // With multi-line labels restored (see renderMermaid), the trees are
+    // compact and portrait, so useMaxWidth:true scales them to fit the column
+    // while staying legible — no horizontal scroll.
+    flowchart: { htmlLabels: true, useMaxWidth: true, curve: 'basis', nodeSpacing: 36, rankSpacing: 48 },
     themeVariables: {
       primaryColor: '#e9f8ff', primaryTextColor: '#201e1d', primaryBorderColor: '#0088b0',
       lineColor: '#605d5d', secondaryColor: '#fff1f4', tertiaryColor: '#f8f4f4',
@@ -425,12 +424,15 @@ function renderMermaid(container) {
   diagrams.forEach((d) => {
     if (d.dataset.processed) return;
     // Retint the legacy palette to the Broadsheet scale before rendering.
-    let src = d.textContent;
+    // Operate on innerHTML, NOT textContent: the section markup's <br/> line
+    // breaks are real <br> elements here, and textContent would flatten them
+    // away — collapsing every multi-line node label onto one very wide line.
+    let src = d.innerHTML;
     Object.keys(MERMAID_RECOLOR).forEach((from) => {
       src = src.split(from).join(MERMAID_RECOLOR[from]);
       src = src.split(from.toLowerCase()).join(MERMAID_RECOLOR[from]);
     });
-    d.textContent = src;
+    d.innerHTML = src;
   });
   try { mermaid.init(undefined, diagrams); }
   catch (e) { console.error('Mermaid render error:', e); }
